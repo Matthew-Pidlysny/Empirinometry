@@ -14,4 +14,13 @@ might be obvious to you.  I leave that to the test as you read the other documen
 in figuring that out.  I leave the rest to humanity, bearing consideration with what I'm doing.  Anyone 
 who wants to upload files here should message me through the same E-mail I mentioned.
 
+Also, for those uploading this data to an AI, you will need to tell it a few things:
+
+1.  Do not reformat the equation to your interests, solve normally.
+2.  Everything is in Linear Mathematics terms as far as iteration goes, you will need to tell it that
+    you are replacing x and y with common values in sets after each other, not to mention the Material
+    Impositions found.
+3.  These dynamics can adapt to literally any situations, not the ones that the examples in it seem to
+    confine the AI to normally.
+
 Cheers, and GISL!
