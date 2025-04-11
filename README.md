@@ -29,7 +29,7 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
-# 2025-04-11 14:34PM EST #
+== 2025-04-11 14:34PM EST ==
 
 So I have a lesson for Empirinometry.  There is a "sum" called AbSumDicit I have mentioned in the laws
 of it, and I only want you to know I leave it there for the recollection of those who want to quantify
