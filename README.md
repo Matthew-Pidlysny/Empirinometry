@@ -29,7 +29,17 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
-== 2025-04-13 14:05PM EST ==
+== 2025-04-13 17:12 EST == 
+
+Make way for the good, is what I say!  Somehow, I feel in my heart people are cloning for the right
+reason, and I believe in you all, go for gold!  All I wanted to say is that I updated the main document
+so that it is easier for AI to understand things, and derive it's own function.  I will add one more
+thing I think is clear for it to resolve but I see ChatGPT understanding it, if only to be explained on
+certain things, but it itself came up with a working formula which it can use however it likes.
+
+I hope everything is going great with your research, please be well!
+
+== 2025-04-13 14:05 EST ==
 
 Now, as all of you can see, we have some empirical observations to make with all this.  We have the
 newly suggested path for understanding Spectrum Ordinance with the M1 theory, I to stand to say it
@@ -49,7 +59,7 @@ On that note I leave you, but do understand, Spectrum Ordinance may or may not b
 take all of us to break it, since it seems so fully in place as is.  Good luck to you all, may Allah
 SWT bless you and your families and all those you love.
 
-== 2025-04-11 14:34PM EST ==
+== 2025-04-11 14:34 EST ==
 
 So I have a lesson for Empirinometry.  There is a "sum" called AbSumDicit I have mentioned in the laws
 of it, and I only want you to know I leave it there for the recollection of those who want to quantify
