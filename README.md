@@ -29,6 +29,26 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-13 14:05PM EST ==
+
+Now, as all of you can see, we have some empirical observations to make with all this.  We have the
+newly suggested path for understanding Spectrum Ordinance with the M1 theory, I to stand to say it
+is the best shot we've got at specifying that Specified Intermission of the theory.  But now it comes
+down to making units of measurement for the whole ordeal.  I beg, no, more or less formally consider
+with the best of intentions for you, that we develop the theory in the Hypotheosis folder at once,
+I want to see pull requests but obviously people may think this is my idea entirely.  I keep this all
+under GPL, as will all of you in proceeding, but it is a WORLD idea, not just for me to sit on and be
+king of.  I will petition to be out of the way of anyone seeking to make a stand in all of this.
+
+Also, for what it's worth, let's consider one thing.  When it comes to other version of M's Specified
+Intermission, I do hope everyone ELSE comes together.  To be formal, I will stop deriving them and hope
+for the scientific community at large to deliver mechanisms of understanding M through the Varia Equation,
+with due prejudice I hope.
+
+On that note I leave you, but do understand, Spectrum Ordinance may or may not be our future, it will
+take all of us to break it, since it seems so fully in place as is.  Good luck to you all, may Allah
+SWT bless you and your families and all those you love.
+
 == 2025-04-11 14:34PM EST ==
 
 So I have a lesson for Empirinometry.  There is a "sum" called AbSumDicit I have mentioned in the laws
