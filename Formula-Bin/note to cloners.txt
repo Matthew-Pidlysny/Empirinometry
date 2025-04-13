@@ -1,0 +1,12 @@
+ =================
+  Note to Cloners
+ =================
+
+This is a public research bin.  No condition is set, but I have developed a folder for your use called "Formula-Bin" and I hope to see MANY pull requests.  Conditions for submitted formula's:
+
+1.  Must contain a fully elaborated formula.
+2.  Must contain your detailing of the formula in action in some way, a paragraph or steps involved.
+3.  Can be submitted in any of the approved formats.
+4.  Leave behind traces of where this formula could go in modification or in theoretical application.
+
+Thanks guys for cloning, it means so much to me to see people working on it.  If you see any more folders, just know that you might do well to propose something for them!  Keep tabs for my own work!
