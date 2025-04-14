@@ -29,6 +29,15 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-14 10:47 EST ==
+
+Just a small note.  |Varia| is NOT Frequency, though it can distribute the same knowledge, it ceases
+to be |Varia| and becomes something else, I'll let you all describe it for yourselves.  When you want
+to understand Frequency in tandem with |Varia|, keep in mind what you're working with.  Remember,
+failsums are illegal in Empirinometry, even though I give examples I make note that even some of my
+formula's develop failsums as worded.  You will have to do your work to provide REAL data, and that
+means understanding what YOU YOURSELF mean about Frequency when measured.
+
 == 2025-04-13 17:12 EST == 
 
 Make way for the good, is what I say!  Somehow, I feel in my heart people are cloning for the right
