@@ -29,6 +29,15 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-15 16:05 EST ==
+
+How can it be that I make the formula equating SOME of what God can do in his own right?  I have seen into
+this a little, and come up with my own theory.  Get ready to blow your own mind when you get your measurement
+devices.  Even if this remains only a theory, I stand to say it substantiates itself.  And also, we have reached
+100 individual clones, though sitting around 58 unique clones.  Just waiting for GitHub to get off it's bum and
+send me my pull requests, I KNOW you've been sending them to me.  I just don't see them at all, so I gotta figure
+that one out when it comes.  Anyway, enjoy everything guys!
+
 == 2025-04-15 13:45 EST ==
 
 Just a bit of "lake humour" for all those concerned with what is going on here in this repository:
