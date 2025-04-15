@@ -29,6 +29,14 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-15 13:45 EST ==
+
+Just a bit of "lake humour" for all those concerned with what is going on here in this repository:
+
+https://imgflip.com/i/9qwmz4
+
+Cheers, really HOPE to talk to you all soon! ;)
+
 == 2025-04-14 21:34 EST ==
 
 Wanted to let everyone know, the document "empirinometry.pdf" is complete as for now, I will be putting
