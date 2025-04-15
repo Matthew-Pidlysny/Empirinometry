@@ -29,6 +29,23 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-14 21:34 EST ==
+
+Wanted to let everyone know, the document "empirinometry.pdf" is complete as for now, I will be putting
+more things into the other two folders as time progresses and leaving this as my current remark, along
+with the theory for obtaining Spectrum Ordinance for the use of M^1.  I want to leave with this closing
+remark:  One thing unexplained from the document is the versatility of all this.  When you obtain the
+Spectrum Ordinance properly, it really brings the world together.  2000 means different things on 
+different scales, and what can be in charge of that but you all with me together?  I mean, think about
+the level we could take our understanding, when computers make combined sums because they save the data
+from the current solution and make it work as a confirmation for a whole slew of things?  I just want
+this new empirical outlook to be defining of something even as simple as making smartphones faster, all
+because they stored their sums properly.
+
+I will be putting alot more out, but PLEASE try to make a commit and send me a pull request, anything 
+fun that could be mind tickling on the matter should be fine.  You can even leave your name blank if it
+makes you feel better.  All in all, be well everybody, and let's do this thing!
+
 == 2025-04-14 20:50 EST ==
 
 I would love to give you all another update.  I'm currently working with the value AbSumDicit, and
