@@ -29,6 +29,36 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-14 20:50 EST ==
+
+I would love to give you all another update.  I'm currently working with the value AbSumDicit, and
+have come across at least one way, although incomplete, to word the formula at a base level.  For this
+example I imagine a small cube, in flux but ultimately not in a position to rapidly change in a stable
+system.  I have not factored in temperature here yet, but just to describe what I see out of the whole 
+thing, take this into consideration:
+
+|AbSumDicit| ^ 1 = |Varia| ^ N * C * F
+
+Here I make use of AbSumDicit, specified in it's first Specified Intermission for the course of gaining
+a Foundational Target.  In this theory, a cube of unknown mass is in flux, as all matter based things
+seem to be on some level.  I ascribe here, being that N means number of variations, C means speed of
+light, and F means Flux measured in couloumbs.  When it comes to this repose being a form of AbSumDicit,
+we can infer that if mathematically true (Though the formula may need some work), it would prove that it
+equated to being God Manifest in the world somehow, in as simple a thing as a cube of any mass not being
+caused to be in a state of volatility.  
+
+Change the cube, add a value, maybe it's Pink throughout and that is a variation, you make of it what you 
+will.
+
+Ultimately, I see |Soul| and it's composite interests being used in much the same way.  Let's define God,
+shall we?  Even though we can only hope to be limited in our full understanding of him for this current
+generation, maybe we will even embark on greater futures later with it?  And why not, when's the last time
+anyone really put God into an equation seriously?  Sorry to be political but in my honest opinion, I see
+the current understanding of Mathematics and Science as limiting of that notion by some unknown pattern
+that is emerging, like it didn't matter because nobody else did it so far, and everyone thinks its 
+"silly" in some way.  But, I have my theory, I stand by it.  Go ahead and say the value generated for
+AbSumDicit is just a number, it clearly is not when in context with the quantum engineers that are humans.
+
 == 2025-04-14 10:47 EST ==
 
 Just a small note.  |Varia| is NOT Frequency, though it can distribute the same knowledge, it ceases
