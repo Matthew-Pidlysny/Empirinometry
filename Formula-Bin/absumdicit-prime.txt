@@ -1,0 +1,25 @@
+ '================'
+< The God Equation >
+ .================.
+
+Some have been saying for a long time now that this is possible, but awaiting my direction seemingly in a
+way only I can describe.  I'll give it my all, do you need explanation?  Good luck!
+
+=========================================================================================================
+
+The Formula
+
+>|AbSumDicit|^>L = (L/|Reach|) * (JL/M)
+
+Whereas
+
+L is iteration, primed at 1, and >L is the effect of AbSumDicit generating itself
+
+J is the gravity effect in the area at time of measurement, in newtons
+
+M is Mass of the intended object
+
+|AbSumDicit| is the eternal cause realized, expressed as a prime power of it's own doing
+
+|Reach| is the extended apparatus of the specimen obtained, indicating approximation by venture outward,
+        in cm^2
