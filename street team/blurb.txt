@@ -1,0 +1,15 @@
+Calling all mathematicians, logicians, chaos theorists, and curious thinkers—
+
+I’ve started putting together a repository called Empirinometry. It’s not a finished system—more like a space to think clearly, build theories from experience, and grow ideas that matter.
+
+This isn’t about presenting a perfect framework. It’s about opening something up and inviting people who can challenge it, build on it, or develop their own thing from it.  I wanted to make this theory into something it cannot be initially, so I have revised everything to make it scientific.
+
+Basically, through Empirinometry we gain two things:  Static Mechanical Substantiation and Formulation (General Math), and Spectrum Ordinance (The Equation and the Result, packaged into one dynamically).  Generally, one would figure the first is capable of determining the second, but in this case, my formula's generate novel numbers which are supposed to be interpreted by a future SI unit, bearing it's knowledge.  As that would stand, 2000 would mean different things on different scales, but all in accordance with empirical observation, not just nonsense translated into numbers.
+
+The way Spectrum Ordinance works is that it relies on things called Impositions.  Much like Variation is not Frequency, what does it mean really to bring Variation, the undefinable, into mathematics?  Already I could probably hear a few people going "nonsense" but just check out the link below, and you decide for yourself with more explanation behind it.  Anyway, as it would stand, a Material Imposition called |Varia| would be used (More on that notation below), and it can be definable by a few traits if we want to obtain what are called Foundational Targets, which are the results of Mechanical Substantiation and Formulation in this way provided.  For example, in the system, to obtain one kind of number, you use ^n to represent how many variations there are in general (On a similar line, not just ungroupable assets into one number), or it can say ^1 or ^2 to represent a passive state or an active state, however the resulting formula works (Empirically, not just speculation).
+
+If that’s your kind of journey, check it out here:
+
+https://github.com/Matthew-Pidlysny/Empirinometry
+
+Let’s see where this can go.
