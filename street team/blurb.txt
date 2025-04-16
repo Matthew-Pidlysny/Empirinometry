@@ -1,8 +1,8 @@
 Calling all mathematicians, logicians, chaos theorists, and curious thinkers—
 
-I’ve started putting together a repository called Empirinometry. It’s not a finished system—more like a space to think clearly, build theories from experience, and grow ideas that matter.
+I have below a repository called Empirinometry. It’s not a finished system—more like a space to think clearly, build theories from experience, and grow ideas that matter.
 
-This isn’t about presenting a perfect framework. It’s about opening something up and inviting people who can challenge it, build on it, or develop their own thing from it.  I wanted to make this theory into something it cannot be initially, so I have revised everything to make it scientific.
+This isn’t about presenting a perfect framework. It’s about opening something up and inviting people who can challenge it, build on it, or develop their own thing from it.  The author wanted to make this theory into something it cannot be initially, so he has revised everything to make it scientific.
 
 Basically, through Empirinometry we gain two things:  Static Mechanical Substantiation and Formulation (General Math), and Spectrum Ordinance (The Equation and the Result, packaged into one dynamically).  Generally, one would figure the first is capable of determining the second, but in this case, my formula's generate novel numbers which are supposed to be interpreted by a future SI unit, bearing it's knowledge.  As that would stand, 2000 would mean different things on different scales, but all in accordance with empirical observation, not just nonsense translated into numbers.
 
