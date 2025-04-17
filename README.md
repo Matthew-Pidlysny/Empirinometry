@@ -29,6 +29,16 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-15 22:42 EST ==
+
+So who wants to talk?  I have a Discord server, which is general purpose but will do the job for this topic.  I
+need you guys only to post in the Empirinometry section when it comes to this stuff, but there are other channels
+on the server, we can talk about anything really, and you can get to know me better.  Here's the link:
+
+https://discord.gg/paPNpYzT
+
+See you there!  Let's bypass this blockage!
+
 == 2025-04-15 16:05 EST ==
 
 How can it be that I make the formula equating SOME of what God can do in his own right?  I have seen into
