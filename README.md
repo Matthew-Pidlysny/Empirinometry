@@ -29,7 +29,15 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
-== 2025-04-15 22:42 EST ==
+== 2025-04-17 04:48 EST ==
+
+I'm updating the explanations for the Empirinometry.pdf file, I'm sorry I might have said that was the last of
+the edits, but I had to make a correction on my explanation.  I'm sure a great amount of you were content with
+knowing my formula and seeing ME get it wrong in explanation, but I go through things.  I didn't really know HOW
+to explain what I came up with on my own, only that I knew it worked and I was hyper excited.  So, my explanations
+are there, be well with your day and enjoy!
+
+== 2025-04-16 22:42 EST ==
 
 So who wants to talk?  I have a Discord server, which is general purpose but will do the job for this topic.  I
 need you guys only to post in the Empirinometry section when it comes to this stuff, but there are other channels
