@@ -15,7 +15,7 @@ it somewhat right that there is spectrum information to deal with.  Let's break 
  | root fundamental of this notion to apply itself rightly
  |
  |_Finally, make play to imply that because of the matched set, variation can be determined as 1
- | (Quantity) and 124 (Root number for Spectral Ordinance calculations) at the same time.
+ |  or more (For quantity) and 124 (Root number for Spectral Ordinance calculations) at the same time.
  | 
  |_Calculate check on power to validate that procedure can continue as quantified in whatever way
    you specify, if other things need to come out by some clause of your mathematics, use > to 
