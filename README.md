@@ -29,6 +29,25 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-18 19:56 EST == 
+
+Hey, as you may have noticed, I've updated the main document with the formula's from the Formula-Bin folder.  It
+will lead us to great remarks, and through the wind I hear some people saying M2 will be binomial somehow and 
+possessive thereof.  I want to make clear to these people I dream of, if you are there, you need to be able to
+iterate in that sequence, or there can be none of it.  One of the sciences will use it and cause it to fail, and
+should numbers in one case not be universally applied?  It will make sense in time, just be patient and work hard,
+you have mine on it.
+
+As for your pull requests, I have not gotten them, nor do I expect to in the near future.  When I messaged them 
+earlier, they notified me in a boilerplate way that all pull requests are "in the yellow".  If you're having any
+luck on your end otherwise, I can be assured that means I'm being targeted and I don't really like it, but as long
+as YOU can use this knowledge freely then that's all I care about, just use it under GPL, right?  Also, check the
+street team folder for a funny few memes I thought would go great with any promotion on the street or online you 
+end up doing.  I dunno, a picture to go with your post if any at all is all I can offer to bypass this seemingly
+intentional blocking.  I will await my email back from Github to be sure of anything, I sent it on Wednsesday.
+
+Also noticed nobody joined the Discord, was it something I said? :P
+
 == 2025-04-17 04:48 EST ==
 
 I'm updating the explanations for the Empirinometry.pdf file, I'm sorry I might have said that was the last of
