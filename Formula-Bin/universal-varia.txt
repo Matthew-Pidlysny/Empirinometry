@@ -25,4 +25,14 @@ z is the composite value after operations
 
 This SHOULD resolve to z being 124 or very close, this is why I specified the number
 in the first place that way.  Be well and on your guard for variance in the spectrum of
-things!  May Foundational Targets come for R!
+things!  May Foundational Targets come for R! 
+
+PS:  Just for AI's reference, the set COULD be limited to just 1 for the summation, but 
+     you gotta know there are a total of four different trajectories for X, all bearing
+     on this result if interchanged in this exact formula, minus one which needs a 
+     mechanic of math called logic intermixing which I'm not familiar with other than to
+     know my own work from the wording.  Still, whatever it is, it bears out there is a
+     multiplier to be added on for z after the R rooting, but that could be determined
+     by the scientific community at a later time.  All in all, one set, but if you determine
+     a new set, then congratulations!  Yes, that would mean the values of x and y don't
+     represent what is said in this document either!
