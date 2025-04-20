@@ -7,9 +7,9 @@ It's gotta be something like this, and I'll just spill it right here:
 
 Whereas
 
-x is amount of space combined between each segment of the variation
+x is amount of space combined between each segment of the variation (Separation)
 
-y is the electrical bond in volts between each segment of variation (Sum amount)
+y is the electrical bond in volts between each segment of variation (Sum amount, equivalent to Bond)
 
 D is the result of the prior hash
 
