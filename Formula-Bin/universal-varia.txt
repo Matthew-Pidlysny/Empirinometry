@@ -1,0 +1,28 @@
+Universal Varia
+===============
+
+It's gotta be something like this, and I'll just spill it right here:
+
+(x * y)² # D * L / 0.33 # Σ x + y + x² - y⁷ # Qᴸ * K = √R = z
+
+Whereas
+
+x is amount of space combined between each segment of the variation
+
+y is the electrical bond in volts between each segment of variation (Sum amount)
+
+D is the result of the prior hash
+
+Q is the result of the second hash carried over beyond the summation
+
+L is iteration, primed at 1, incrementing after each hash no matter where it is placed
+
+K is the amount generated from summation in the former hash
+
+R is the value of the former equation
+
+z is the composite value after operations
+
+This SHOULD resolve to z being 124 or very close, this is why I specified the number
+in the first place that way.  Be well and on your guard for variance in the spectrum of
+things!  May Foundational Targets come for R!
