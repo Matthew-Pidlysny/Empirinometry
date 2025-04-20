@@ -1,0 +1,30 @@
+Universal Varia
+===============
+
+Some have asked for a case specific variation formula (Colour, for example, or measure of stride).  
+
+For that, I propose the following, but where I have put y⁹, you would replace the entire construct 
+with a formula of your choosing to compensate for your selection on how to determine number of 
+variations.  For the record, 5 is how many variations in total you're dealing with.  There is no 
+guarantee that 124 will have a bearing here, but it is for specifics purpose, equitable to any known
+cause in this fight.  Here is the formula:
+
+(x * y)² # D * 5 / 0.33 # Σ x + 66⁶⁷ + x² - y⁹ # Qᴸ * (K * 0.412) = √R = z
+
+Whereas
+
+x is proposed x segment of the variation
+
+y is proposed y segment of the variation
+
+D is the result of the prior hash
+
+Q is the result of the second hash carried over beyond the summation
+
+L is iteration, primed at 1, incrementing after each hash no matter where it is placed
+
+K is the amount generated from summation in the former hash
+
+R is the value of the former equation
+
+z is the composite value after operations
