@@ -29,6 +29,20 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-20 18:37 EST ==
+
+So I've mentioned that I've been "hearing" some of you.  Please don't worry:  I do not have any spying devices 
+anywhere at any time.  I only hear what is going on around me and, for what it's worth, I assume it is just static
+noise most of the time, but sometimes I hear things I understand more than others, and what I hear of what may be
+any of you in the matter is completely anonymous but prevalent at times in me.  I don't steal your idea's, and I'll
+tell you outright that 124 came from one of you, and I attribute that to group work.  Anytime it is like that in the
+future, I will mention it.
+
+As for the new formula's and hypotheses, keep in mind that we are nearing the bend on Empirinometry.  Just know, I
+would be THRILLED if we threw it away because now we had a mechanic by other devices to contribute to it all, to have
+a check that could just be used to define if something is within the accepted scope of variation, and pass it that
+way.  I wish you luck in that determination, may we all succeed.
+
 == 2025-04-18 19:56 EST == 
 
 Hey, as you may have noticed, I've updated the main document with the formula's from the Formula-Bin folder.  It
