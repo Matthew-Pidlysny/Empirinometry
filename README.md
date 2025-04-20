@@ -43,6 +43,10 @@ would be THRILLED if we threw it away because now we had a mechanic by other dev
 a check that could just be used to define if something is within the accepted scope of variation, and pass it that
 way.  I wish you luck in that determination, may we all succeed.
 
+EDIT:  Also, congratulations everybody, we got 100 unique clones!  Good to see it translated into some authentic
+       subscription to the archive, when I see total clones I know when it grows those are interested updates.  Thank
+       you for sticking around! 
+
 == 2025-04-18 19:56 EST == 
 
 Hey, as you may have noticed, I've updated the main document with the formula's from the Formula-Bin folder.  It
