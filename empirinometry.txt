@@ -1,6 +1,7 @@
 Empirinometry: A New Mathematical Framework Based on Material Impositions
 
-**Note:  Grok helped me write this from my own research when I commanded it to write a paper based on my work.
+**Note:  Grok helped me write this from my own research when I commanded it to write a paper based on my work.  Best
+         thing to do is save this file and use Notepad or something to gain WordWrap.
 
 Author Contact:
 
