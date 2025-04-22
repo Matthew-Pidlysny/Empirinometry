@@ -1,0 +1,397 @@
+commit 10d9bbae32791f26b627388d6086377b9fec6895
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 15:08:24 2025 -0400
+
+    Add files via upload
+
+commit 59b518c4499099f85c2736cddc9fd5a7f60a02fe
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 14:52:30 2025 -0400
+
+    Update varia core.txt
+
+commit 5f6c066e7b3c6b57466485f7ff07881fe94b9897
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 14:48:31 2025 -0400
+
+    Add files via upload
+
+commit 21e546eb69128accc684cab85c3301a31781f2d2
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 14:24:57 2025 -0400
+
+    Add files via upload
+
+commit 5c4f2c17688c68e522d0de0703c642859199141c
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 13:56:54 2025 -0400
+
+    Add files via upload
+
+commit 303d63cb6342e736996486dbb8561c40399bef4c
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 13:56:27 2025 -0400
+
+    Add files via upload
+
+commit 21c3e3f06613c093fc0256a60abaa096e22d2172
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 13:29:07 2025 -0400
+
+    Add files via upload
+
+commit 3867a4a1401024f39f9e7dca8aee9e3b750e4687
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 13:15:49 2025 -0400
+
+    Add files via upload
+
+commit aa135351bbf2365e669afd8788c4c72e49abd82a
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 12:15:58 2025 -0400
+
+    Add files via upload
+
+commit 3a9e732ebbf74352f9e67047633af791ecee31fa
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 19 10:34:33 2025 -0400
+
+    Add files via upload
+
+commit 932cfc55e33b3033acfa76cd8c9c4672e76bc461
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Fri Apr 18 20:02:46 2025 -0400
+
+    Update README.md
+
+commit f2a186d43016dce4e71bc04601aa1188ca13d99b
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Fri Apr 18 18:00:23 2025 -0400
+
+    Add files via upload
+
+commit ecd35884bf6ff13f16ea1e3f157d71c0ce2cf376
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Fri Apr 18 12:26:49 2025 -0400
+
+    Add files via upload
+
+commit 5c71ff5320aabfccd7a578f494444f55d6623a45
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 17 17:03:21 2025 -0400
+
+    Add files via upload
+
+commit d87d0fdc76488573e21ac20f733400eec6cddb46
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 17 13:16:20 2025 -0400
+
+    Add files via upload
+
+commit 9065488655ac7a6d36a281359657349c90c23ee1
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 17 12:15:14 2025 -0400
+
+    Add files via upload
+
+commit d0595d27d38f243f9c04001c790b2f555875bcc0
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 17 12:02:45 2025 -0400
+
+    Add files via upload
+
+commit 11a7b837e6a38885bbfddfa11ea08b6f022ebc03
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 17 07:19:53 2025 -0400
+
+    Add files via upload
+
+commit 3f672a717903ca5ff1df422678e007779ddfa24b
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 17 04:52:54 2025 -0400
+
+    Add files via upload
+
+commit d23fb76ffaf326c67e485e7c8e3643bc1a870370
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 17 04:50:31 2025 -0400
+
+    Add files via upload
+
+commit 53cecb4910e0229cdfc23d7ef65933d656d8a5cc
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 17 04:50:06 2025 -0400
+
+    Update README.md
+
+commit e8a21ce4b5de4f33e6fec44ede064c2dfb661937
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Wed Apr 16 22:44:15 2025 -0400
+
+    Update README.md
+
+commit 803a27f605e1b1d6ca3de3ba9dcd03f1e2a220ee
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Wed Apr 16 10:13:24 2025 -0400
+
+    Update blurb.txt
+
+commit ff8b378bdd787ca9f2d8a96465f28f988a89a3d4
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Wed Apr 16 10:06:07 2025 -0400
+
+    Add files via upload
+
+commit 4fe534ecd179c5b708d8a1b77bcb659902d60c58
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Tue Apr 15 17:53:45 2025 -0400
+
+    Add files via upload
+
+commit f1aa023a6b07c70c7f799a0cfe53dbbe252ded93
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Tue Apr 15 16:08:40 2025 -0400
+
+    Add files via upload
+
+commit 0b3a847a8c30f79d79f486f20c308387c96cc91c
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Tue Apr 15 16:08:18 2025 -0400
+
+    Update README.md
+
+commit 7f946718c59d5edd36055598ef765a53aaa31338
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Tue Apr 15 15:35:03 2025 -0400
+
+    Update m2 by chat-gpt.txt
+
+commit ac45914cdef5df034fa9be3d1f8d7a63dca958e2
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Tue Apr 15 15:32:37 2025 -0400
+
+    Add files via upload
+
+commit a6b6e8e8de53d67a020d6fb735a29b9b30fccd72
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Tue Apr 15 13:46:49 2025 -0400
+
+    Update README.md
+
+commit 4cc15ee5f12afd5938de4e69041cbb88cca2ba49
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Tue Apr 15 12:29:55 2025 -0400
+
+    Update varians by grok.txt
+
+commit 902d7fc29b9aadc3dd61c2dfb2725d935ae0b13e
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Tue Apr 15 11:48:32 2025 -0400
+
+    Add files via upload
+
+commit 624ff7214a766b1fe83ac1509f9dd1963f115a3e
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Mon Apr 14 21:40:38 2025 -0400
+
+    Update README.md
+
+commit 82e70af1a5e686172833c2c2b77629f607a035fe
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Mon Apr 14 21:34:19 2025 -0400
+
+    Add files via upload
+
+commit 1edb26bafec396f2f1ce6e648d822204f6f17e33
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Mon Apr 14 21:00:12 2025 -0400
+
+    Update README.md
+
+commit e35e9ad2e806591250f19ec371a545bff6464e64
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Mon Apr 14 14:11:36 2025 -0400
+
+    Add files via upload
+
+commit 480df5e37e7e2ac0284fd86a69eaa6d60c0ec285
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Mon Apr 14 12:54:55 2025 -0400
+
+    Add files via upload
+
+commit 62494d1c60e8eb465590ec66f6ec649c563bebb0
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Mon Apr 14 10:50:06 2025 -0400
+
+    Update README.md
+
+commit 09fc9600dc97d3473b544ca29a7331803aa55b45
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Mon Apr 14 09:52:56 2025 -0400
+
+    Add files via upload
+
+commit e91fe3ea1003f622d4d20182730f0905b9e6ecb1
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 19:20:02 2025 -0400
+
+    Add files via upload
+
+commit c8696be529314a59016ad02ea14b84de7086bdb6
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 19:16:27 2025 -0400
+
+    Add files via upload
+
+commit c17d4464c5feb3c1355162b62587bdefe0ae295d
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 17:18:31 2025 -0400
+
+    Add files via upload
+
+commit e78c52ee086a4284ad35707da9dfa0dd17714731
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 17:15:09 2025 -0400
+
+    Update README.md
+
+commit 907c8298f2586a98d12f87256660a725140a8e40
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 17:12:03 2025 -0400
+
+    Add files via upload
+
+commit d8d2ca66248c7683158673b36448cd93e59fbc5d
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 16:12:34 2025 -0400
+
+    Add files via upload
+
+commit 7ca39eb78ada9c55f049d93a21611d13e0c08a31
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 14:51:41 2025 -0400
+
+    Delete Formula-Bin/special hypothetical ruling.png
+
+commit 53297fb6860416f672d287c5bd5fc3aa0081e1d5
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 14:28:01 2025 -0400
+
+    Add files via upload
+
+commit 9c8db67cd57b1689231bac6b7d6436c5f42b30e2
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 14:11:31 2025 -0400
+
+    Update README.md
+
+commit 74e49a28d65a18fb71fa8c1341ae0b3856d44dac
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 13:50:46 2025 -0400
+
+    Add files via upload
+
+commit bc77c529e84ae08c877529134358ac4a356dd704
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 13:33:24 2025 -0400
+
+    Add files via upload
+
+commit d9bd668ee39845b35d34556b95e5a6f66d0b8422
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sun Apr 13 12:35:52 2025 -0400
+
+    Add files via upload
+
+commit d4124e49b286cf9931a3e678370be747ac60a94d
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 12 21:20:50 2025 -0400
+
+    Add files via upload
+
+commit f0ee9e3342a64aaf5910cbbdb0f09f57cbd74d84
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 12 20:54:45 2025 -0400
+
+    Update note to cloners.txt
+
+commit 2d84c3fb3a4b38ca5390a9139adac4b2f18c5fed
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 12 20:53:40 2025 -0400
+
+    Add files via upload
+
+commit 4acec5e55ef82f101893b99cf6525ad477dc450f
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 12 13:44:54 2025 -0400
+
+    Update README.md
+
+commit c51c593651419dac9b542dfd9568e0cfb33f6a0d
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 12 13:42:42 2025 -0400
+
+    Update README.md
+
+commit 005e51836d78f074c2ce1f3cab7a7fd76d5fd729
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Sat Apr 12 13:41:50 2025 -0400
+
+    Add files via upload
+
+commit a7c831a55fd7dd546fbef6c1a6621f50e2426854
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Fri Apr 11 16:14:28 2025 -0400
+
+    Add files via upload
+
+commit 141df576fb568f357d1313e541cef2b5a11ce503
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Fri Apr 11 16:11:39 2025 -0400
+
+    Update README.md
+
+commit ca2c2b75a9227f74fbdd9e7c520a249077261400
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Fri Apr 11 14:48:44 2025 -0400
+
+    Update README.md
+
+commit 1c5b3dd0ab29534934c6e33b9b54da29b72b562f
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Fri Apr 11 13:11:06 2025 -0400
+
+    Add files via upload
+
+commit 36e0ec134211cc1873bc2a60596f1bbb0aaefbbb
+Author: Matthew Pidlysny <mattpidlysny@gmail.com>
+Date:   Fri Apr 11 01:16:03 2025 -0400
+
+    Add files via upload
+
+commit bc142d28bc2cb192bf5da65d56ba0d27d1eaba27
+Author: Matthew-Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 10 23:58:41 2025 -0400
+
+    Update README.md
+
+commit aa9730fd400b60d208c97156eef15b4669ac5e1a
+Author: Matthew-Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 10 23:21:53 2025 -0400
+
+    Update README.md
+
+commit ca7a9f7d1f331ece309a6784adb092d492e02ac3
+Author: Matthew-Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 10 23:16:29 2025 -0400
+
+    Add files via upload
+    
+    The working paper in summation of all principles so far (2025-04-10)
+
+commit abec0a9228a122ebced926e5ba1cb3f35681b54d
+Author: Matthew-Pidlysny <mattpidlysny@gmail.com>
+Date:   Thu Apr 10 23:13:18 2025 -0400
+
+    Initial commit
