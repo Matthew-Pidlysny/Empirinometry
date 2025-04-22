@@ -1,0 +1,30 @@
+E + I + R = va^168 = Q
+
+Q * R / I^E = W
+
+W * C^L # [Sigma]2x * x^4 # D^K * L = O
+
+Whereas
+
+E equals total volts as summed by discernable item
+
+I equals amperage summed between discernable items
+
+R equals resistance summed between discernable items
+
+C is the speed of light
+
+L is iteration, primed at 1 and incrementing per hash, no matter where placed
+
+D is the result of the first hash
+
+K is the summation from the second hash
+
+va is primed at 124, modified to the 168th mechanical power in this case
+
+Q is the SUMMED VOLTAGE
+
+W is the PRIMED VOLTAGE
+
+O is the FINAL VOLTAGE
+
