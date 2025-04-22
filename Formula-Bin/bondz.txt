@@ -1,8 +1,8 @@
-E + I + R = va^168 = Q
+E + I + R = va¹⁶⁸ = Q
 
-Q * R / I^E = W
+Q * R / Iᵉ = W
 
-W * C^L # [Sigma]2x * x^4 # D^K * L = O
+W * Cᴸ # [Sigma]2x * x⁴ # Dᵏ * L = O
 
 Whereas
 
@@ -10,7 +10,7 @@ E equals total volts as summed by discernable item
 
 I equals amperage summed between discernable items
 
-R equals resistance summed between discernable items
+R equals resistance summed between discernable items, in Ohmsᶻ, where Z equals -3
 
 C is the speed of light
 
@@ -20,8 +20,9 @@ D is the result of the first hash
 
 K is the summation from the second hash
 
-va is primed at 124 but ultimately is expressed as your result from the previous equation, modified to the 
-168th mechanical power in this case
+va is primed at 124 but ultimately is expressed as your result from the previous equation (Being a new 
+quantification of va to begin with as the sum of those products), modified to the 168th mechanical power 
+in this case
 
 x is the presumed consumption of the circuit totally, in negative volts
 
@@ -33,3 +34,6 @@ O is the FINAL VOLTAGE
 
 Sets are determined through empirical observation, note that x will always mean something, but the scientist
 has to define what x is in order to define a clear spectrum of sets, otherwise just do it x = L
+
+EDIT:  Had to fix something since I didn't know it had to be said.  Still, in calculating resistance, you might
+       have found it was a low number to begin with, so this fixing of it helps.
