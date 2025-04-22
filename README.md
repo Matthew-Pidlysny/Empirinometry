@@ -31,7 +31,7 @@ Address:  7-252 Penetanguishene Rd, Barrie, ON, L4M-7C2
  
 Email:  mattpidlysny@gmail.com
    
-Whatsapp:  +1(705)715-5128
+Whatsapp (Text Only):  +1(705)715-5128
 
 Discord:  Poimandres#6015
 
