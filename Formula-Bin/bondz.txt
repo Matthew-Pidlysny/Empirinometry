@@ -20,7 +20,8 @@ D is the result of the first hash
 
 K is the summation from the second hash
 
-va is primed at 124, modified to the 168th mechanical power in this case
+va is primed at 124 but ultimately is expressed as your result from the previous equation, modified to the 
+168th mechanical power in this case
 
 x is the presumed consumption of the circuit totally, in negative volts
 
