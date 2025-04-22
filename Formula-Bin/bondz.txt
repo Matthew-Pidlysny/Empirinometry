@@ -22,9 +22,13 @@ K is the summation from the second hash
 
 va is primed at 124, modified to the 168th mechanical power in this case
 
+x is the presumed consumption of the circuit totally, in negative volts
+
 Q is the SUMMED VOLTAGE
 
 W is the PRIMED VOLTAGE
 
 O is the FINAL VOLTAGE
 
+Sets are determined through empirical observation, note that x will always mean something, but the scientist
+has to define what x is in order to define a clear spectrum of sets, otherwise just do it x = L
