@@ -29,6 +29,16 @@ Cheers, and GISL!
 
 '![ News Articles ]!'
 
+== 2025-04-22 07:20 EST ==
+
+The official word is in!  NONE of you are generating pull requests, not even with my little fan service going
+on!  I guess that's how I have to take it, but you know.  Games are games, with almost 300 clones I am SHOCKED
+that there are no pull requests, but IF there aren't any for real, I assume the best of you and know you are only
+trying your best with the material.  Just find it hard to believe, is all.
+
+Am I wrong?  Are you pull requesting?  Github doesn't think so, if that's true.  Now you have their official word
+on it.
+
 == 2025-04-20 18:37 EST ==
 
 So I've mentioned that I've been "hearing" some of you.  Please don't worry:  I do not have any spying devices 
