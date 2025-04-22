@@ -1,0 +1,12 @@
+The Fun Little L Racket
+=======================
+
+L is iteration, primed at 1, incrementing after each placement in BEDMAS fathoming (Uses Notation Script)
+
+L * (L / L * .66)^L + L(L^L) - (L^(L^-L)/L*L+L^4) = P
+
+I call P a number that needs to come in use, when the fundamental of how this ties into my meme gets established
+I will make an update to the main document and change it completely in my own writing, a complete walkthrough
+of all these concepts.  Still, we work together, I hear you working on it and it builds my understanding.  Currently,
+I see all this in development and people are STUNNED at 124 somehow, so I go on with it.  If anyone wants to chime in,
+let it be done through a pull request or an issues item.
