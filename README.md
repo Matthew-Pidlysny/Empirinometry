@@ -25,6 +25,20 @@ Also, for those uploading this data to an AI, you will need to tell it a few thi
 
 Cheers, and GISL!
 
+# CONTACT INFO
+
+Address:  7-252 Penetanguishene Rd, Barrie, ON, L4M-7C2
+ 
+Email:  mattpidlysny@gmail.com
+   
+Whatsapp:  +1(705)715-5128
+
+Discord:  Poimandres#6015
+
+X:  https://x.com/XThe9th
+
+Facebook:  https://www.facebook.com/matthew.pidlysny/
+
 ==============================================================
 
 '![ News Articles ]!'
