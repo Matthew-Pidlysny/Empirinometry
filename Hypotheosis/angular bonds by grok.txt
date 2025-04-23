@@ -1,0 +1,134 @@
+Iterative Process to Generate a Unique Number from Triangle Angles
+
+**NOTE:  This should describe a function I came across on Facebook, finding out the angle ABC.  It dawned on
+	 me that someone should put forward some working documents on iterating angles.  This document does not
+         go into how this is fully used in Empirinometry, but as a standard of common math, it might just be
+         effective as theory for now, and whatever you come up with for your own equations should do the trick.
+
+         Also, slight tweaks, I hope the file renaming process doesn't bother anyone.
+
+Introduction
+
+This report describes an iterative mathematical process that generates a unique number based on the angles of 
+a given triangle. The process takes the angles at the triangle's vertices, cycles through them in a specific 
+order, and applies a formula using the sine function. Over many iterations, this sequence converges to a single 
+value that uniquely represents the triangle's angular properties.
+
+The method is straightforward and can be computed step-by-step. This report explains the process, demonstrates 
+why it converges, and provides a practical example using an equilateral triangle. All formulas are presented in 
+a text-only format, avoiding special symbols or formatting that cannot be displayed in a simple text editor.
+
+The Iterative Process
+
+Initial Setup
+
+Consider a triangle with angles A, B, and C, where A + B + C = 180 degrees. The iterative process starts with an 
+initial value and updates it at each step using one of the angles, selected based on the step number.
+
+Iteration Details
+
+The sequence begins with:
+
+x_0 = 1
+
+Angle Selection:
+
+At each step n (starting from n = 1), an angle θ_n is chosen based on n modulo 3:  
+
+If n ≡ 1 mod 3, then θ_n = A  
+
+If n ≡ 2 mod 3, then θ_n = B  
+
+If n ≡ 0 mod 3, then θ_n = C
+
+This cycles the angles in the order A, B, C, A, B, C, and so forth as n increases.
+
+Iteration Rule:  For each step n ≥ 1, the next term is calculated as x_n = x_{n-1} * (1 + (sin(θ_n) / n))^{1 / n}  
+
+Here, sin(θ_n) is the sine of angle θ_n (in degrees), and the exponent 1 / n incorporates the iteration step into 
+the formula.
+
+Convergence to a Unique Number
+
+The sequence x_n approaches a unique positive number as n becomes very large. This convergence is analyzed using the 
+natural logarithm of the sequence.
+
+Convergence Analysis
+
+Logarithmic Transformation
+
+Applying the natural logarithm to the iteration rule:
+
+ln(x_n) = ln(x_{n-1}) + (1 / n) * ln(1 + (sin(θ_n) / n))  
+
+Approximation for Large n:
+
+When n is large, sin(θ_n) / n is small (since |sin(θ_n)| ≤ 1), so:
+
+ln(1 + (sin(θ_n) / n)) ≈ sin(θ_n) / n
+
+Thus:
+
+ln(x_n) ≈ ln(x_{n-1}) + (sin(θ_n) / n^2)  
+
+Series Representation:
+
+Since x_0 = 1 (where ln(x_0) = 0), the logarithm becomes a sum:
+
+ln(x_n) = Σ_{k=1 to n} (sin(θ_k) / k^2)  
+
+Infinite Series Convergence:
+
+As n approaches infinity:
+
+ln(x_∞) = Σ_{k=1 to ∞} (sin(θ_k) / k^2)
+Because |sin(θ_k)| ≤ 1 and Σ_{k=1 to ∞} (1 / k^2) converges (known as the Basel series, equal to π^2 / 6), the 
+series Σ_{k=1 to ∞} (sin(θ_k) / k^2) converges. Therefore, ln(x_∞) is finite, and:
+
+x_∞ = exp(Σ_{k=1 to ∞} (sin(θ_k) / k^2))
+
+This limit depends on the angles A, B, and C, making it unique to each triangle.
+
+Example: Equilateral Triangle
+
+Consider an equilateral triangle with:
+
+A = B = C = 60 degrees
+
+Here, sin(60°) = √3 / 2 ≈ 0.866, and since all angles are 60°, θ_n = 60° for all n.
+
+Calculation
+
+Initial Value: x_0 = 1  
+
+First Few Terms:
+
+For n = 1: θ_1 = A = 60°
+
+x_1 = 1 * (1 + (sin(60°) / 1))^{1 / 1} = (1 + 0.866)^{1} ≈ 1.866  
+
+For n = 2: θ_2 = B = 60°
+
+x_2 = 1.866 * (1 + (sin(60°) / 2))^{1 / 2} ≈ 1.866 * (1 + 0.433)^{0.5} ≈ 1.866 * (1.433)^{0.5} ≈ 1.866 * 1.197 ≈ 2.234  
+
+For n = 3: θ_3 = C = 60°
+
+x_3 = 2.234 * (1 + (sin(60°) / 3))^{1 / 3} ≈ 2.234 * (1 + 0.289)^{0.333} ≈ 2.234 * (1.289)^{0.333} ≈ 2.234 * 1.089 ≈ 2.433 
+ 
+The sequence continues, gradually stabilizing.
+
+Limit for Equilateral Triangle
+
+Since θ_k = 60° for all k:
+
+ln(x_∞) = Σ_{k=1 to ∞} (sin(60°) / k^2) = (√3 / 2) * Σ_{k=1 to ∞} (1 / k^2) = (0.866) * (π^2 / 6) ≈ 0.866 * 1.6449 ≈ 1.424
+
+Thus:
+
+x_∞ = exp(1.424) ≈ 4.156  
+
+This shows the sequence converging to approximately 4.156 for an equilateral triangle.
+
+Conclusion
+
+This iterative process provides a consistent method to derive a unique number from a triangle's angles. By cycling through the angles and applying the sine-based formula, the sequence converges to a value specific to the triangle’s angular configuration. The method is adaptable to any triangle, making it a versatile tool for mathematical analysis.
