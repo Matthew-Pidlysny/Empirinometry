@@ -1,4 +1,4 @@
-# Empirinometry
+# Empirinometry (ARCHIVED 2025-04-24 @ 00:43 AM EST)
 My evolving paper to the scientific community on logical operations in mathematics.  I give it this way 
 because I feel this addresses all concerns.  I also do not make light of the obvious, only to say rules 
 and foundations to a degree that is certain.  In that, you will find that everything has it's purpose, 
