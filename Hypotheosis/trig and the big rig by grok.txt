@@ -1,0 +1,182 @@
+Story of the Pointlings in Lineland
+
+**NOTE:  This is in response to one of you, but to be fair, this is as simply as it can be put from my perspective, after
+         running the thought through my co-pilot in the matter for now.  Good luck to all of you researching, I hear many
+         things and assume the best of you all.  Remember, is-not is-is, the relationship bearing all relationships in
+         variance!
+
+Once upon a time, in a magical kingdom called Lineland, there lived tiny creatures called Pointlings. These Pointlings 
+lived along a straight path, like beads on a string. Each Pointling was connected to its neighbors by enchanted strings,
+which were very special. These strings allowed the Pointlings to move and dance, but they always stayed connected, no 
+matter how far they stretched.
+
+One sunny day, a wise old wizard named Trigonomos visited Lineland. He had heard about the Pointlings and their magical 
+strings and wanted to teach them something amazing.
+
+“Greetings, Pointlings!” said Trigonomos. “I see you love to move and dance. Did you know that your movements create 
+beautiful patterns, like waves in the ocean?”
+
+The Pointlings were curious. “Waves? What are those?” asked one Pointling named Dot.
+
+“Well,” explained Trigonomos, “imagine when you all move up and down together, like this.” He waved his hand, and the 
+Pointlings began to move in a wave-like motion, each one rising and falling in turn.
+
+“Wow, that’s fun!” said Dot. “But how can we understand these patterns better?”
+
+“That’s where trigonometry comes in,” said Trigonomos. “Trigonometry is a special kind of math that helps us understand 
+shapes, especially triangles, and how things change over time.”
+
+He continued, “In your case, we can use trigonometry to describe how each of you moves. For example, let’s say your path 
+is like a straight line, and we can measure your positions along this line.”
+
+Trigonomos drew a line in the air with his wand, and numbers appeared along it, marking the positions of the Pointlings.
+
+“Let’s say there are five of you, at positions 0, 1, 2, 3, and 4,” he said. “Now, when you move in a wave, your height—how
+high or low you are—changes over time.”
+
+He made the Pointlings move again, and their heights went up and down like a wave.
+
+“See? Your height at each position can be described by a function called sine. It’s like a magical formula that tells us 
+how high you are at any time.”
+
+“Can you show us?” asked another Pointling named Spot.
+
+“Of course!” said Trigonomos. “Let’s say the wave is moving along your path. The height of each Pointling at position x 
+and time t can be given by something like A times sine of (k x minus omega t).”
+
+The Pointlings looked puzzled. “What’s A, k, and omega?” asked Dot.
+
+“Ah, good questions!” said Trigonomos. “A is the amplitude, which is how high the wave goes. K is the wave number, which 
+tells us how many waves there are along the path. Omega is the angular frequency, which tells us how fast the wave is 
+moving.”
+He continued, “But let’s make it simpler. Imagine that your wave is standing still, like a guitar string. Then, your 
+height might be A times sine of (n times [pi] times x divided by L), where L is the length of your path, and n is a 
+number that tells us how many bumps the wave has.”
+
+“Like this?” said Spot, and the Pointlings arranged themselves in a wave pattern with ups and downs.
+
+“Exactly!” said Trigonomos. “Now, notice the points where the wave crosses the middle line. Those are called nodes. And 
+the points where it’s highest or lowest are called antinodes.”
+
+“But what about the midpoints between us?” asked Dot. “You mentioned something about them.”
+
+“Yes,” said Trigonomos. “The midpoints between you are important because they represent the centers of your bonds, the 
+enchanted strings. In fact, if we look at the height at those midpoints, it can tell us about the tension or the energy in 
+the strings.”
+
+He explained further, “For example, in a wave, the height at the midpoint between two Pointlings can be found using the 
+same sine function. So, if you know the height at each Pointling, you can figure out the height at the midpoints too.”
+
+“That’s cool!” said Spot. “So, we can use trigonometry to understand not just where we are, but also what’s happening in 
+between us.”
+
+“Precisely,” said Trigonomos. “And there’s more. We can also talk about variance. Variance is a way to measure how much 
+your positions spread out over time.”
+
+“Spread out?” asked Dot.
+
+“Yes,” said Trigonomos. “Imagine if you all stayed in one place, your positions wouldn’t vary much. But when you dance 
+and move, your positions change a lot. Variance measures that change.”
+
+He went on, “In math terms, for each Pointling, we can calculate how much their height is different from the average 
+height over time. Then, we can find the average of those differences squared. That’s the variance.”
+
+“But how does that relate to separation and bond?” asked Spot.
+
+“Great question!” said Trigonomos. “Separation is like the distance between you, which affects how much you can move on 
+your own. If you’re far apart, your movements might be less alike. Bond is the strength of your connections, which 
+affects how much your movements pull on each other.”
+
+He added, “In physics, for a system like yours, the variance in your positions can be related to the energy in the system. More energy means more movement, so more variance. The bonds, or how stiff the strings are, can change how that energy spreads out.”
+
+“So, if our strings are very stiff, we might not move as much, right?” said Dot.
+
+“Exactly,” said Trigonomos. “Stiffer strings mean less variance in your positions because it’s harder to move away from 
+each other.”
+
+“And if the strings are loose, we can move more freely, so more variance?” asked Spot.
+
+“Yes, that’s correct,” said Trigonomos. “So, in a way, variance is a relationship between the separation (how far apart 
+you are) and the bond (how strongly you’re connected).”
+
+The Pointlings were amazed. “This is so interesting!” said Dot. “I never knew our dancing could be described with such 
+beautiful math.”
+
+Trigonomos smiled. “Math is everywhere, my friends. It helps us understand the world in wonderful ways.”
+
+Then, Trigonomos said, “Now, let’s think about how your wave changes over time. Imagine that every second, the wave moves 
+a little bit, like a sequence of pictures in a flipbook.”
+
+He conjured a magical screen that showed the Pointlings’ positions at different times. “See, at time zero, you might all 
+be at rest. Then, at time one, you start moving up and down. At time two, the wave has moved forward, and so on.”
+
+“This is like iteration,” he explained. “Each step in time is like a new calculation, where we use the positions before 
+to find the next ones.”
+
+“But how do we calculate that?” asked Dot.
+
+“Well,” said Trigonomos, “in math, we can use equations to describe how your positions change. For example, the wave 
+equation tells us how the wave travels over time. But for now, just know that by using trigonometry, we can predict where 
+each of you will be at any future time.”
+
+“That’s amazing!” said Spot. “So, we can know the future?”
+
+“In a way, yes,” chuckled Trigonomos. “As long as the system follows the rules we’ve set, like the wave equation, we can 
+predict how it will behave.”
+
+“Moreover,” he added, “if we look at the midpoints between you, we can see how the wave behaves there. For instance, in 
+some waves, the midpoints might be where the wave is zero, or where it’s biggest, depending on the type of wave.”
+
+He showed them by making the Pointlings form different wave patterns. “See, in this wave, the midpoints are moving a 
+lot, while in this other wave, they stay still.”
+
+“So, by studying the midpoints, we can learn more about the wave and how it iterates over time,” said Dot.
+
+“Exactly,” said Trigonomos. “It’s all connected.”
+
+As the sun set over Lineland, the Pointlings continued to dance, now with a newfound appreciation for the trigonometry 
+and variance that governed their movements. And they lived happily ever after, always curious and eager to learn more.
+
+The end.
+
+Wizard’s Note
+
+For those curious about the math, here are the formulas we talked about:
+
+The height of a Pointling at position x and time t in a wave can be described by:
+
+u(x, t) = A * sin(kx - [omega]t)
+
+where:  
+
+A is the amplitude,  
+
+k is the wave number,  
+
+[omega] is the angular frequency.
+
+For a standing wave, like on a string, it’s:
+
+u(x, t) = A * sin(n*[pi]x / L) * sin([omega]t)
+
+where:  
+
+n is the mode number,  
+
+L is the length of the path,  
+
+[pi] is the mathematical constant (approximately 3.1416).
+
+The variance of the height at a point can be related to the energy and the bond strength.
+
+For a harmonic oscillator, variance = (k_B * T) / k
+
+where:  
+
+k_B is Boltzmann’s constant,  
+
+T is temperature,  
+
+k is the spring constant.
+
+But remember, these are just the beginning. There’s so much more to explore in the magical world of math and physics!
