@@ -172,7 +172,7 @@ others that by deriving the sum result of this following equation, using Empirin
 yourself.  Write an answer before the equation is done, for example, when following this following ruling on Math in general, from 
 Allah himself:
 
-Σ x * y * 2 + b * 19 x 300000000 * 5143.898 + k = 5[Delta]
+Σ x * y * 2 + b * 19 * x * 300000000 * 5143.898 + k = 5Δ
 
 So, if you want to use iterations to gain Delta 5, you simply put into practice that IF x and y can be used interchangeably like 
 this, then so can the numbers gained.  Seek a number, modify this result, learn how to equate it in the fullest way possible.  Then 
