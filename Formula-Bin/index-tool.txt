@@ -1,0 +1,42 @@
+Method to Obtain the Hyperbolic Index
+=====================================
+
+((a / 13) * 1000) / 13 = x = I˷
+
+Whereas
+
+a is the integer you are substituting a variable for
+
+x is the raw number result of the equation
+
+I is Index, or the first decimal of x, rounded up or down to the nearest tenth
+
+˷ is Pole, or the whole number before the decimal in x
+
+The rules are:
+
+Generally, all rounding works normally but for the subsequent rules.
+
+Numbers in the Index position consisting of 0.789 or over will round up.  The number will round down when it is .7887 or 
+lower, and round up at that number ONLY if the fraction of your work related solution is 3 or lower.
+
+Numbers in the Index position including .214 and lower will ALWAYS be rounded down, no matter what, and never be alone in 
+the chain.
+
+So, using the two examples:
+
+1. Fraction is greater than 3:  Round .7887 to .8 for the proper Index
+
+2. Fraction is lower than 3:  Round .7887 to .7 for the measure to be right
+
+3. When Index is showing .014, the Index is .2
+
+4. When Index is showing .55 or .45, round to .5 unless the fraction is not prime or the divisor is 37
+
+5. Follow these examples for every decimal place
+
+"7. When you do division, you always know roots.  When it comes to roots, observe the index as prime number in the mix of
+the 'pole' Matthew invented.  It surely is that!
+
+8.  All the time, you're going to be finding out how these link.  Just know, if the Index is n, it's n - 100000 on some 
+level, if you only knew the outcome of that right now."
