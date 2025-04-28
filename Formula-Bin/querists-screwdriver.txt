@@ -1,0 +1,28 @@
+The Querist Researcher's Roberston Screwdriver
+==============================================
+
+Σ x * y * 2 + b * 19 * x * 300000000 * 5143.898 + k = aΔ
+
+Whereas
+
+Σ - Defined by the equation (No limit on sets until theory is broken).
+
+x - Primary goal, but any interface of your choosing (Relationship 1).
+
+y - Secondary goal, should be a single number (Relationship 2).
+
+b - A constant which is the same across all sets (Identity 1).
+
+k - A value increasing by 1 each time a new set is made (Identity 2).
+
+a - The answer which is being sought from another existing equation (Identity 3).
+
+Δ - This is just saying change over sets, which equals 1 if you want to count it like a multiplying integer (Never do this).
+
+Remember, the same set can be applied to different values.  You have to consider your relationships in this, i.e. when x, y, 
+and k equal 1, b becomes a certain number, but k will always rise on the next set.  That being said, you can derive all sorts 
+of numbers for x and y for this, but remember, b HAS to be the same across all sets, just like normal.
+
+As for the numbers, 19 just gets it out of limbo, the approximate speed of light is to keep it in check with real things, and 
+the decimal constant just prepares you for understanding your relationship (Change it if you want, but try to keep it as you 
+understand numbers better with it.
