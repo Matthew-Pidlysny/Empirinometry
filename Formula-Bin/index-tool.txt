@@ -1,9 +1,9 @@
 Method to Obtain the Hyperbolic Index
 =====================================
 
-13 / ((13 / a) * 1000) = x = I˷
+((a / 13) * 1000) / 13 = x = I˷
 
-**NOTE:  Read division like a fraction being divided, it's 13 over a and the result divided by 13 after multiplying.
+**NOTE:  Follow BEDMAS to the letter, no mixed fractions for converting things.  I love my raw math, I just           write it this way for a reason.
 
 Whereas
 
