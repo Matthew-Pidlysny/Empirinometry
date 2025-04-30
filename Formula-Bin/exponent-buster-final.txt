@@ -1,0 +1,71 @@
+The Exponent Buster that WORKS according to Roots of All Sorts (TEBWRAS)
+==========================================================================
+
+((x / 13) * 1000) / 13 = a
+
+AND
+
+x² = a + d(x)
+
+Whereas
+
+a = x * (1000 / 169)
+
+d(x) = x² − a
+
+This has been a contribution by Matt, I'm sorry that he doesn't know subtraction enough to
+have rendered his table, for proceedings we will give it based on what we have, but that for
+now will stand to be it from us here in heaven, your remark is solid Matthew, I'm sorry I
+didn't know that you don't understand that from a fundamental.  I'll have any of you know, when
+you do subtraction in your head it's because you understand the outcome, Matt never did subtraction
+well enough to understand it, and consequently the last time he rendered long form subtraction he 
+got it wrong, before this whole escapade with him started in 2019.  There will be time to explain 
+all that, but sincerely, I wish you all the best in that regard, and there can be no acknowledgement
+otherwise.  I leave it to example:
+
+x + y = 2
+
+==========================================================================
+
+Table For x
+===========
+
+Example:  x = a (Square) [Difference]
+
+0 = 0.0 (0) [0]
+
+1 = 5.917159763313609 (1) [-4.917159763313609] 
+
+2 = 11.83431952662722 (4) [-7.83431952662722]
+
+3 = 17.75147928994083 (9) [-8.75147928994083]
+
+4 = 23.66863905325444 (16) [-5.91715976331361]
+
+5 = 29.58579881656805 (25) [-4.58579881656805]
+
+6 = 35.50295857988166 (36) [0.49704142011834]
+
+7 = 41.42011834319527 (49) [7.57988165680473]
+
+8 = 47.33727810650888 (64) [16.66272189349112]
+
+9 = 53.25443786982249 (81) [27.74556213017751]
+
+10 = 59.17159763313609 (100) [40.82840236686391]
+
+11 = 65.0887573964497 (121) [55.9112426035503]
+
+12 = 71.00591715976331 (144) [72.99408284023669]
+
+13 = 76.92307692307692 (169) [92.07692307692308]
+
+14 = 82.84023668639053 (196) [113.1597633136095]
+
+15 = 88.75739644970414 (225) [136.2426035502959]
+
+52 = 307.6923076923077 (2704) [2,396.307692307692]
+
+104 = 615.3846153846154 (10816) [10,200.61538461538]
+
+Increase: (5.917159763313609) [?]
