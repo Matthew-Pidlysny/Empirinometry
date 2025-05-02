@@ -1,0 +1,36 @@
+The Student's Guide To The Hyperbolic Index
+===========================================
+
+Hello class!  First, we need to evolve our x.  Let's find it now using the first formula:
+
+(((28561 - 2197) / k) / x) / x = x
+
+WHEREAS
+
+x is your challenged base number for all equations
+
+k = x - 1
+
+Hooray, we have it!  How easy was that?  Now for the easier part, solving for a.  Let's do it now
+using the second formula:
+
+((x / n) * 1000) / n = a
+
+WHEREAS
+
+a is the raw result of the second equation
+
+n is any chosen positive whole number that works in these three equations
+
+Perfect!  We have our two values.  Now, using everything you have, we need to find out the exponent
+for the answer to our quiz!  Let's try now, using the final formula:
+
+62,748,517 = a + d(x)
+
+WHEREAS
+
+y is your challenged exponent
+
+d(x) = x^y - a
+
+Now you've done it!  We have our chosen exponent!  Write down you final answer as x^y and you're done, hand in your work!  Good job, too, keep it up, you're on a roll with this one, slugger!
