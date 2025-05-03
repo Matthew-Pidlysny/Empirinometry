@@ -1,0 +1,20 @@
+The Definition of the Variable "x"
+==================================
+
+I think once finished this will be a useful way to extract any exponent, right now it does decimals
+but the rules will tell you more.  I want to compensate for why it fails at x = or < 2, and one 
+day have a fully functional, LINEAR equation after that.
+
+Anyway, as for the formula, minimum threshold confirmed, the base equation goes like this:
+
+(xᵃ - xᵇ) / k = x 
+
+a = minimum 2
+
+b = a - 1
+
+x > 2
+
+Rule:  Add a "/ x" term for each increment of a
+
+Seems to work ;)
