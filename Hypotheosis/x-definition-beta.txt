@@ -13,6 +13,8 @@ a = minimum 2
 
 b = a - 1
 
+k = x - 1
+
 x > 2
 
 Rule:  Add a "/ x" term for each increment of a
