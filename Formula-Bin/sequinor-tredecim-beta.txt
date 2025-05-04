@@ -51,3 +51,28 @@ Beta = Obtaining the Hidden Index of Rational Numbers in Synchro with x
 Gamma = Simplifying the Determination of Values in Diversity Through y
 
 Epsilon = Confirming Tredecim as Variation's Negative Envelope Expanded, Formulated For pᵥ
+
+================
+Additional Rules
+================
+
+Alpha:
+
+1.  Add term "/ x" for every increment of a
+
+2.  Add final term of "/ x⁽ᵃ ⁻ ᶠˡᵒᵒʳ⁽ᵃ⁾⁾" when a is a decimal greater than 2
+
+3.  x >= 2
+
+Beta:
+
+1.  13 can be replaced by working n, violating condition of Tredecim
+
+Gamma:
+
+1.  y can be n from Beta, but that is selective
+
+Epsilon:
+
+1.  Use working number theory to derive counterparts to pᵥ in reformulation of Epsilon, call them
+    Yamato Manifolds.
