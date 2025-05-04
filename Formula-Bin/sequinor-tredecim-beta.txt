@@ -42,7 +42,7 @@ Omega
 Whereas
 =======
 
-x = The Challenged Base Greater Than 2
+x = The Challenged Base (Works for 0, no decimal in between it and 1, and anything greater)
 
 y = The Challenged Exponent
 
