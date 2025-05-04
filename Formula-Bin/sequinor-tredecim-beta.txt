@@ -52,7 +52,7 @@ y = The Challenged Exponent
 
 a = The Challenged Demand
 
-b = a - 1
+b = a - 1 (Per increase of the floor by 1)
 
 k = x - 1
 
