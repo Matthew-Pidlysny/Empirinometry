@@ -1,0 +1,53 @@
+=================
+Sequinor Tredecim
+=================
+
+=====
+Alpha
+=====
+
+(xᵃ - xᵇ) / k = x
+
+====
+Beta
+====
+
+((x / 13) * 1000) / 13 = p
+
+=====
+Gamma
+=====
+
+xʸ = p + d(x)
+
+=======
+Epsilon
+=======
+
+1 * ((2 / 3) * 0.66~)⁴ + (5 * 6⁷) - ((8^9⁽⁻¹⁰⁾ / 11) * 12 + 13) = pᵥ
+
+=======
+Whereas
+=======
+
+x = The Challenged Base Greater Than 2
+
+y = The Challenged Exponent
+
+a = The Challenged Demand
+
+b = a - 1
+
+k = x - 1
+
+p = Hyperbolic Index
+
+d(x) = xʸ - p
+
+Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ
+
+Beta = Obtaining the Hidden Index of Rational Numbers in Synchro with x
+
+Gamma = Simplifying the Determination of Values in Diversity Through y
+
+Epsilon = Confirming Tredecim as Variation's Negative Envelope Expanded, Formulated For pᵥ
