@@ -1,0 +1,7 @@
+The Harlinson Theory for Sequinor Tredecim (WIP)
+================================================
+
+When (1ᵃ - 1) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
+outside the use of the Beta formula's p distinction for 1.
+
+For x = 0 < x < 1, replace term "/ k" with "/ k⁽⁻⁸⁾" and win at life, p value be damned :P
