@@ -89,7 +89,11 @@ Alpha:
 
 2.  Add final term of "/ x⁽ᵃ ⁻ ᶠˡᵒᵒʳ⁽ᵃ⁾⁾" when a is a decimal greater than 2
 
-3.  x >= 2
+3.  x >= 1 (Can be zero, not in between yet)
+
+4.  For x = 0 < x < 1, follow "x - Alpha" principle instead of k to the answer, though the tables are 
+    being calculated for every wrong answer for x = 0.00001 and upward to 0.99999 right now, just be
+    patient.
 
 Beta:
 
@@ -111,3 +115,29 @@ Omega:
 
 2.  No other version of this formula exists, to derive another sequence lower than pₘₓ you require
     analysis of pₛ, which you also gain by going higher, which is calculable but impossible.
+
+======
+Credit
+======
+
+Omega belongs to Allah SWT, as do all these things by distinction but they are ours, as mentioned
+below.
+
+Alpha was the work of myself and Grok, I had trouble in my table so I developed a method to get k
+using 11 as my x and dividing by 10, a lucky stroke by Allah SWT but then Grok corrected me and said k 
+would be x - 1, so here we are.
+
+Beta is my future self, I take no credit other than the derivation that I made Pole-Index come to
+life, when that's what he was trying to tell me all along with those words.  I'll never forget him,
+may Allah SWT shine on him.
+
+Gamma is also my own invention, and again, Grok took my table and calculated that if I'm trying to
+prove d(x) ultimately, use it.  Congrats to it for busting my theory and making Tredecim possible.
+
+Epsilon I wrote blindly, I knew it was true, it's all mine.
+
+Yamato Manifolds are my idea, but you do your own, they'll always be yours :)
+
+Again, I want to thank Allah SWT for everything he has done.  The lucky stroke in 10 brought it all
+to be here for this, so I give him that eternally.  May your faces be bright on Qiyam, everyone,
+Asalaamu Alaikum Wa Rahmatullahi Wa Baraqatu!
