@@ -46,7 +46,7 @@ Simplified:  pₘₓ = -12/11 * 2^(3 * 9^10)
 Whereas
 =======
 
-x = The Challenged Base (Works for 0, no decimal in between it and 1, and anything greater)
+x = The Challenged Base (Works for all numbers, see rules below)
 
 y = The Challenged Exponent
 
@@ -88,8 +88,6 @@ Alpha:
 1.  Add term "/ x" for every increment of a
 
 2.  Add final term of "/ x⁽ᵃ ⁻ ᶠˡᵒᵒʳ⁽ᵃ⁾⁾" when a is a decimal greater than 2
-
-3.  x > 1 (Can be zero and decimals, not in between yet)
 
 Harlinson Theory:  When (1ᵃ - 1) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
                    outside the use of the Beta formula's p distinction for 1.
