@@ -150,8 +150,10 @@ Beta:
 
 Gamma:
 
-1.  y can be n from Beta, but that is selective.  Choose one you mean to do backwork on to figure out manually, unless
-    a strict tautology is to be applied.
+1.  Observation:  y can be n from Beta, but that is selective.  Choose one you mean to do backwork on to figure out manually, 
+                  unless a strict tautology is to be applied.  At the very least, you will have the value of d(x), which is 
+                  contrasting to the existing mechanic of p(x) in motion, also synchronizing what you already did in Beta with
+                  raw knowledge for tables through your sought y.
 
 Epsilon:
 
