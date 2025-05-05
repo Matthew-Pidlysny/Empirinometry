@@ -28,9 +28,9 @@ Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6⁷) - ((8^9⁽⁻¹⁰⁾ / 11) * 12 + 1
 
 Simplified:  pᵥ = 1371119 + 256/6561
 
-=============================
-Yamato Manifold Necessity (Ψ)
-=============================
+===================
+Psi (Necessity) (Ψ)
+===================
 
 1 = pᵥ
 
@@ -109,8 +109,8 @@ Gamma = Simplifying the Determination of Values in Diversity Through y
 
 Epsilon = Confirming Tredecim as Variation's Negative Envelope Expanded, Formulated For pᵥ
 
-Yamato = Symbolized by Psi for metaphoric value.  These creations are your own living entity, everyone has one, 
-         in some way you understand enough already, if not to grow your awareness more, exponentially in most of you.
+Psi = Symbolized by Psi for metaphoric value.  These creations are your own living entity, everyone has one, 
+      in some way you understand enough already, if not to grow your awareness more, exponentially in most of you.
 
 Omega = A formula given by Allah SWT, to which there is no Variation by any degree but to get pₛ, which is a 
         sector (Compensate for pᵥ)
