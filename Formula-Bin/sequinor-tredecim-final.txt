@@ -89,6 +89,8 @@ Alpha:
 
 2.  Add final term of "/ x⁽ᵃ ⁻ ᶠˡᵒᵒʳ⁽ᵃ⁾⁾" when a is a decimal greater than 2
 
+3.  For x = 0 < x < 1 and other numbers, use formula "p(x)ᵃ / kᵃ = xᵃ", where p(x) is result p from the Beta formula
+
 Harlinson Theory:  When (1ᵃ - 1ᵇ) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
                    outside the use of the Beta formula's p distinction for 1.
 
