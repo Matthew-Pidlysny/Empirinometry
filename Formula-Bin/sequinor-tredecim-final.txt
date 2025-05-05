@@ -76,7 +76,7 @@ f = A valid multiplication factor, replacing 1000 from Beta
 
 n = A valid denominator capable of rendering the base, where n is chosen new base
 
-p = Hyperbolic Index
+p = Hyperbolic Index in this formula set, p stands for Partition, and runs in sync with all the rest below
 
 d(x) = xʸ - p
 
