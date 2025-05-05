@@ -240,3 +240,33 @@ k = x - 1
 Rule:  Add a "/ x" term for each increment of a past 2
 
 Working in all regards, will find (xᵃ - xᵇ) / .13 next
+
+------
+
+Skip prior for now, let's evaluate with tables.
+
+Tables for Decimal X
+====================
+
+Principle of Error:
+
+((xᵃ - xᵇ) / k) does not give us a valid result for any x between zero and one, as well as one.
+
+Example:
+
+x - (Square) [P Value] {(x² - x) / k} |X - K Error|
+
+Table:
+
+0.1 - (0.01) [0.5917159763313609] {0.0818181818181818} |0.5098977945131791|
+
+0.2 - (0.04) [1.183431952662722] {0.1333333333333333} |1.050098619329389|
+
+0.3 - (0.09) [1.775147928994083] {0.1615384615384615} |1.613609467455621|
+
+Ok, let's try that, see if we can get another formula.
+
+New rule after debugging:  
+
+3. For x > 0 and x≠1, replace the term "/ k " with "/ d(p)", where d(p) = (x−1)² / x
+
