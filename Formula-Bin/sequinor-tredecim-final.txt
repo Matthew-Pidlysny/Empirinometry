@@ -89,14 +89,20 @@ Alpha:
 
 2.  Add final term of "/ x⁽ᵃ ⁻ ᶠˡᵒᵒʳ⁽ᵃ⁾⁾" when a is a decimal greater than 2
 
-Harlinson Theory:  When (1ᵃ - 1) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
+Harlinson Theory:  When (1ᵃ - 1ᵇ) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
                    outside the use of the Beta formula's p distinction for 1.
 
                    For x = 0 < x < 1, replace term "/ k" with "/ k⁽⁻⁸⁾"
 
+Hyman Theory:  For x = 0 < x < 1, replace term "/ k" with "/ p - 258 * Alpha, whereas Alpha is the result of the subtraction
+               for (xᵃ - xᵇ)
+
 Beta:
 
 1.  13 can be replaced by working n, violating condition of Tredecim
+
+2.  Observation:  p will be a terminating decimal if and only if x is a multiple of 169.  In other words, x must be x = 169k,
+    where k is an integer.
 
 Gamma:
 
