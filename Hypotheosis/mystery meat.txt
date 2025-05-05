@@ -1,5 +1,14 @@
 0.0625 - 0.25 = 0.1875
 
-0.1875 - 1 = 1.1875
+0.1875 - 1 = -1.1875
 
-1.1875 / 0.0625 = -19
+-1.1875 / 0.0625 = -19
+
+P Option:
+
+Function p(x)
+
+p(x) = x * (f / n)
+
+Define Partitions p by n Examination and f Force by multiplying x.  Use this any way to define scaled interests.  Tredecim
+variation is x * (1000 / 169).
