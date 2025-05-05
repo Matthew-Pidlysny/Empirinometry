@@ -154,6 +154,9 @@ Epsilon:
 1.  Use working number theory to derive counterparts to pᵥ in reformulation of Epsilon, call them
     Yamato Manifolds.
 
+2.  Observation:  The simplification term 1371119 and the fraction outlines the exact structure of the existing 
+                  formula, piece for piece (3 = 2/3, maybe?)
+
 Omega:
 
 1.  Distinction is irrelevant.  All variation can exist within this structure, in step with maximum
