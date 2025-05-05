@@ -94,8 +94,12 @@ Harlinson Theory:  When (1ᵃ - 1ᵇ) / 0 applies, use initial term (xᵃ - k) =
 
                    For x = 0 < x < 1, replace term "/ k" with "/ k⁽⁻⁸⁾"
 
-Hyman Theory:  For x = 0 < x < 1, replace term "/ k" with "/ p - 258 * Alpha, whereas Alpha is the result of the subtraction
-               for (xᵃ - xᵇ)
+The Harmonic Principle Theory:  For x > 0 (Except x = 1), compute (xᵃ - x⁽ᵃ ⁻ ¹⁾) / ((x - 1) * x⁽ᵃ ⁻ ²⁾) = x
+
+The Hyman-Grok Specific Combine:  (x - 1)² / ((x - 1)²) / x = x 
+
+				  ***Does not work on 0 or 1***
+
 
 Beta:
 
