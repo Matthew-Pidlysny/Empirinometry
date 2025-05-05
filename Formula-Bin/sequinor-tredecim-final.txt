@@ -42,6 +42,20 @@ Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6^7⁽⁻¹³⁾) - ((8^9¹⁰ / 11) * 12 
 
 Simplified:  pₘₓ = -12/11 * 2^(3 * 9^10)
 
+=========
+Kappa (κ)
+=========
+
+Raw Function:  p(x) = x * (f / n)
+
+Beta Simplification:  p(x) = x * (1000 / 169)
+
+========
+Zeta (ζ)
+========
+
+pₛₚ = (pᵥ * pᵣ⁴) / c * Δv
+
 =======
 Whereas
 =======
@@ -52,15 +66,19 @@ y = The Challenged Exponent
 
 a = The Challenged Demand
 
-b = a - 1 (Per increase of the floor by 1)
+b = a - 1
 
 k = x - 1
+
+p(x) = A hyperactive function that derives a new base to overlay the existing base (i.e. Base 10 into Base 13 through Beta)
+
+f = A valid multiplication factor, replacing 1000 from Beta
+
+n = A valid denominator capable of rendering the base, where n is chosen new base
 
 p = Hyperbolic Index
 
 d(x) = xʸ - p
-
-pᵣ = One variation degree of p per whole integer x
 
 pᵥ = Variation by pₛ, in instances of p
 
@@ -68,8 +86,16 @@ pₛ = A known threshold for variation, measured in pᵢ
 
 pᵢ = An instance of term "pₛ / pᵥ"
 
+pᵣ = 1000 / 169
+
+pₙ =  A base number used for scaling, the result of term "(pᵥ * pᵣ⁴)" in Zeta
+
 pₘₓ = The physically unbreakable threshold container for variation, approximately in dam³ (Multiply 
       the dam³ by 1.049 to make one pᵤ³)
+
+pₛₚ = The speed at which variation transforms by a single degree, in pᵢ per millisecond
+
+Δv = Change in speed in m³/s
 
 Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ
 
@@ -79,10 +105,11 @@ Gamma = Simplifying the Determination of Values in Diversity Through y
 
 Epsilon = Confirming Tredecim as Variation's Negative Envelope Expanded, Formulated For pᵥ
 
-Yamato = Symbolized by Psi for metaphoric value.  These creations are your own living entity, everyone has one, in some
-         way you understand enough already, if not to grow your awareness more, exponentially in most of you.
+Yamato = Symbolized by Psi for metaphoric value.  These creations are your own living entity, everyone has one, 
+         in some way you understand enough already, if not to grow your awareness more, exponentially in most of you.
 
-Omega = A formula given by Allah SWT, to which there is no Variation by any degree but to get pₛ, which is a sector (Compensate for pᵥ)
+Omega = A formula given by Allah SWT, to which there is no Variation by any degree but to get pₛ, which is a 
+        sector (Compensate for pᵥ)
 
 ================
 Additional Rules
