@@ -91,10 +91,10 @@ Alpha:
 
 3.  x > 1 (Can be zero and decimals, not in between yet)
 
-4.  For x = 0 < x < 1+, follow "x - Alpha" principle instead of k to the answer, though the tables are 
-    being calculated for every wrong answer for x = 0.00001 and upward to 0.99999 right now, just be
-    patient.  We leave that to you knowing that the difference is a constant, apply to grow this at 
-    your own leisure.  No more updates to the rules here unless Allah SWT advises it.
+Harlinson Theory:  When (1ᵃ - 1) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
+                   outside the use of the Beta formula's p distinction for 1.
+
+                   For x = 0 < x < 1, replace term "/ k" with "/ k⁽⁻⁸⁾"
 
 Beta:
 
