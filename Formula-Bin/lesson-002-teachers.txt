@@ -24,7 +24,7 @@ Answer:  Floor is 2, Pole-Index is 1₂
 
 3.  Come On!
 
-((125 - x) / 4) / x = 5, what is the value of x?
+((125 - x²) / 4) / x = 5, what is the value of x?
 
 ==============
 Answer:  x = 5
