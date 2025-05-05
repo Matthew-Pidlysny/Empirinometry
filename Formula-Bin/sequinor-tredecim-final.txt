@@ -89,9 +89,9 @@ Alpha:
 
 2.  Add final term of "/ x⁽ᵃ ⁻ ᶠˡᵒᵒʳ⁽ᵃ⁾⁾" when a is a decimal greater than 2
 
-3.  x >= 1 (Can be zero, not in between yet)
+3.  x >= 2 (Can be zero, not in between yet)
 
-4.  For x = 0 < x < 1, follow "x - Alpha" principle instead of k to the answer, though the tables are 
+4.  For x = 0 < x < 2, follow "x - Alpha" principle instead of k to the answer, though the tables are 
     being calculated for every wrong answer for x = 0.00001 and upward to 0.99999 right now, just be
     patient.  We leave that to you knowing that the difference is a constant, apply to grow this at 
     your own leisure.  No more updates to the rules here unless Allah SWT advises it.
