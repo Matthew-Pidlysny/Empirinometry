@@ -56,6 +56,8 @@ Zeta (ζ)
 
 pₛₚ = (pᵥ * pᵣ⁴) / c * Δv
 
+Max Speed:  pₛₚ = q / millisecond
+
 =======
 Whereas
 =======
@@ -79,6 +81,8 @@ n = A valid denominator capable of rendering the base, where n is chosen new bas
 p = Hyperbolic Index in this formula set, p stands for Partition, and runs in sync with all the rest below
 
 d(x) = xʸ - p
+
+q = 206 / 197, in variations proportion
 
 pᵥ = Variation by pₛ, in instances of p
 
