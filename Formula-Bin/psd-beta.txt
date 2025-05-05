@@ -1,0 +1,23 @@
+===========================
+Parition Speed Formula (pₛₚ)
+===========================
+
+pₛₚ = (pᵥ * pᵣ⁴) / c * Δv
+
+Whereas
+
+pₛₚ = Partition Speed
+
+pᵥ = Maximum theshold of variation per pₛ
+
+pₛ = Area of inference, in cm³
+
+pi = pᵥ / ps
+
+pᵣ = 1000 / 169
+
+pₙ = (pᵥ * pᵣ⁴)
+
+c = Speed of light
+
+Δv = Change in speed in m³/s
