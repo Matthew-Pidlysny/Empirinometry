@@ -56,7 +56,7 @@ Zeta (ζ)
 
 pₛₚ = (pᵥ * pᵣ⁴) / c * Δv
 
-Max Speed:  pₛₚ = q / millisecond
+Max Speed:  pₛₚ = (q / millisecond) * pᵢ
 
 =======
 Whereas
