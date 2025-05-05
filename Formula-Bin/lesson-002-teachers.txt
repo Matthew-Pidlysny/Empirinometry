@@ -1,0 +1,50 @@
+==========================
+Sequinor Tredecim Problems
+==========================
+
+Here's something for the students.  Pay attention, class!
+
+1.  Basics of Backtracking  
+
+Find p(x) for true .99999 and use the following formula:  p(x) / pᵣ = .99999  
+
+What is pᵣ?  What is x?
+
+====================================
+Answer:  pᵣ = 1000 / 169, x = .99999
+====================================
+
+2.  Don't Mess Up Now
+
+If a = 2.09, which item is the floor?  What would the Pole-Index (I˷) be if this was a p(x) function?
+
+=====================================
+Answer:  Floor is 2, Pole-Index is 1₂
+=====================================
+
+3.  Come On!
+
+((125 - x) / 4) / x = 5, what is the value of x?
+
+==============
+Answer:  x = 5
+==============
+
+4.  Neckbreaker:  If p(x) usually renders repeating decimals, use applicable mathematics and number theory reasoning
+                  to assert when p will become a non-repeating decimal.
+
+===========================================
+Answer:  When x is a direct multiple of 169
+===========================================
+
+5.  Final Question:  If pᵥ can estimate variation by maximum degree, recomplicate the 9 in Epsilon in ANY way, adding 
+                     whatever terms necessary, to make it a factor of 13 after your tinkering.
+
+=====================================================================
+Answer:  Not final but one way is to replace the 9 exponent with a 13
+=====================================================================
+
+=============
+
+Good luck, I expect the same results from all of you approximately, covering for the one base of the final question.  Hand
+in to your teacher when finished.
