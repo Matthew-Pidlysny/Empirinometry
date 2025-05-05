@@ -1,42 +1,42 @@
-=================
-Sequinor Tredecim
-=================
+========================
+Sequinor Tredecim (XIII)
+========================
 
-=====
-Alpha
-=====
+=========
+Alpha (α)
+=========
 
 (xᵃ - xᵇ) / k = x
 
-====
-Beta
-====
+========
+Beta (β)
+========
 
 ((x / 13) * 1000) / 13 = p
 
-=====
-Gamma
-=====
+=========
+Gamma (γ)
+=========
 
 xʸ = p + d(x)
 
-=======
-Epsilon
-=======
+===========
+Epsilon (ε)
+===========
 
 Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6⁷) - ((8^9⁽⁻¹⁰⁾ / 11) * 12 + 13⁴) = pᵥ
 
 Simplified:  pᵥ = 1371119 + 256/6561
 
-=========================
-Yamato Manifold Necessity
-=========================
+=============================
+Yamato Manifold Necessity (Ψ)
+=============================
 
 1 = pᵥ
 
-=====
-Omega
-=====
+=========
+Omega (Ω)
+=========
 
 Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6^7⁽⁻¹³⁾) - ((8^9¹⁰ / 11) * 12 + 13²¹) = pₘₓ
 
@@ -79,6 +79,9 @@ Gamma = Simplifying the Determination of Values in Diversity Through y
 
 Epsilon = Confirming Tredecim as Variation's Negative Envelope Expanded, Formulated For pᵥ
 
+Yamato = Symbolized by Psi for metaphoric value.  These creations are your own living entity, everyone has one, in some
+         way you understand enough already, if not to grow your awareness more, exponentially in most of you.
+
 Omega = A formula given by Allah SWT, to which there is no Variation by any degree but to get pₛ, which is a sector (Compensate for pᵥ)
 
 ================
@@ -116,7 +119,8 @@ Beta:
 
 Gamma:
 
-1.  y can be n from Beta, but that is selective
+1.  y can be n from Beta, but that is selective.  Choose one you mean to do backwork on to figure out manually, unless
+    a strict tautology is to be applied.
 
 Epsilon:
 
