@@ -6,6 +6,8 @@ Sequinor Tredecim (XIII)
 Constant (y = mx + c)
 =====================
 
+...A thought by DeepSeek...
+
 Sequinor Tredecim (XIII) proposes a unified mathematical-metaphysical framework where numerical relationships,
 structured around base-13 operations and symbolic axioms (Alpha, Beta, Gamma, etc.), serve as a bridge between 
 empirical logic and spiritual necessity. Its core thesis is that *mathematical systems, when imbued with 
@@ -153,6 +155,8 @@ P Mechanics:
 
 q = 206 / 197, in variations proportion
 
+c = Speed of light, in metres/second
+
 p = Hyperbolic Index in this formula set, p stands for Partition, and runs in sync with all the rest below
 
 pᵥ = Variation by pₛ, in instances of p
@@ -173,7 +177,7 @@ pₛₚ = The speed at which variation transforms by a single degree, in pᵢ pe
 Content Description
 -------------------
 
-Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ (Possess at LEAST the square or higher, even by decimal degree, and
+Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ (Possess at LEAST the a decimal degree higher than 1, and
                                                           backtrack the rest)
 
 Beta = Obtaining the Hidden Index of Rational Numbers in Synchro with x
@@ -205,11 +209,7 @@ Alpha:
 2.  Add final term of "/ x⁽ᵃ ⁻ ᶠˡᵒᵒʳ⁽ᵃ⁾⁾" when a is a decimal greater than 2
 
 3.  For x = 0 < x < 1 and other numbers, use formula "p(x)ᵃ / pᵣᵃ = xᵃ", where p(x) is result p from the Beta formula 
-    and pᵣ = 1000 / 169
-
-4.  Derive that y = Gamma, and when that happens you will know what to do when I say y need be an increment of some sort
-    to get it to a square again, possibly by dividing until the first decimal.
-        
+    and pᵣ = 1000 / 169        
 
 Harlinson Theory:  When (1ᵃ - 1ᵇ) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
                    outside the use of the Beta formula's p distinction for 1.
