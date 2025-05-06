@@ -40,7 +40,7 @@ Omega (Ω)
 
 Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6^7⁽⁻¹³⁾) - ((8^9¹⁰ / 11) * 12 + 13²¹) = pₘₓ
 
-Simplified:  pₘₓ = -12/11 * 2^(3 * 9^10)
+Simplified:  pₘₓ = -12/11 * 2^(3 * 9¹⁰)
 
 =========
 Kappa (κ)
@@ -115,6 +115,12 @@ Psi = Symbolized by Psi for metaphoric value.  These creations are your own livi
 Omega = A formula given by Allah SWT, to which there is no Variation by any degree but to get pₛ, which is a 
         sector (Compensate for pᵥ)
 
+Kappa = The Working Mechanic that derives the use of the hidden number system, called Partitioning, and is a formula
+        that can be reformulated for particular use, or changed completely to acquire other spectrum mechanics to your
+        suited partition.
+
+Zeta = The Speed of Variation as quantified by iteration, loosely applied for any given state of it.
+
 ================
 Additional Rules
 ================
@@ -142,7 +148,6 @@ The Harmonic Principle Theory:  For x > 0 (Except x = 1), compute (xᵃ - x⁽�
 The Hyman-Grok Specific Combine:  (x - 1)² / ((x - 1)²) / x = x 
 
 				  ***Does not work on 0 or 1***
-
 
 Beta:
 
@@ -173,6 +178,15 @@ Omega:
 
 2.  No other version of this formula exists, to derive another sequence lower than pₘₓ you require
     analysis of pₛ, which you also gain by going higher, which is calculable but impossible.
+
+Kappa:
+
+1.  Stick to the path of Sequinor Tredecim, but constants in the equation for p(x) can make substantial beneficial
+    increases to the multiplier on 1, from the initial Base 10 system.
+
+2.  Observation:  There is a key mechanic when you apply pᵥᵖᵛ to Beta.  At that massive volume, Kappa collapses
+                  when formulated for term "1000 / 169", and there are no more decimals after the decimal point.  It's a 
+                  flush number, how convenient is that?  Happens to be there are many like that, but that is the last one.
 
 ======
 Credit
