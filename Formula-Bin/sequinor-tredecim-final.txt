@@ -174,7 +174,7 @@ Beta:
 1.  13 can be replaced by working n, violating condition of Tredecim
 
 2.  Observation:  p will be a terminating decimal if and only if x is a multiple of 169.  In other words, x must be 
-    x = 169 * u, where u is an integer.
+    x = x * 169 * u, where u is an integer.
 
 Gamma:
 
