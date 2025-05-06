@@ -46,7 +46,7 @@ Simplified:  pₘₓ = -12/11 * 2^(3 * 9¹⁰)
 Kappa (κ)
 =========
 
-Raw Function:  p(x) = x * (f / n)
+Raw Function:  p(Δg) = g * (f / n)
 
 Beta Simplification:  p(x) = x * (1000 / 169)
 
@@ -101,6 +101,11 @@ pₛₚ = The speed at which variation transforms by a single degree, in pᵢ pe
 
 Δv = Change in speed in m³/s
 
+Δg = The change in given values (g) for paritioning (x, y, ≥, θ, ε, &c.)
+
+g - The variable or constant requiring intercession through parition to derive consequentially nominal alternate values
+    in a given mathematical envrionment (The "Quarter System" comes to mind)
+
 Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ
 
 Beta = Obtaining the Hidden Index of Rational Numbers in Synchro with x
@@ -153,8 +158,8 @@ Beta:
 
 1.  13 can be replaced by working n, violating condition of Tredecim
 
-2.  Observation:  p will be a terminating decimal if and only if x is a multiple of 169.  In other words, x must be x = 169v,
-    where v is an integer.
+2.  Observation:  p will be a terminating decimal if and only if x is a multiple of 169.  In other words, x must be 
+    x = 169 * u, where u is an integer.
 
 Gamma:
 
