@@ -12,7 +12,7 @@ Alpha (α)
 Beta (β)
 ========
 
-((x / 13) * 1000) / 13 = p
+p(x) = ((x / 13) * 1000) / 13 = p
 
 =========
 Gamma (γ)
@@ -62,6 +62,9 @@ Max Speed:  pₛₚ = (q / millisecond) * pᵢ
 Whereas
 =======
 
+Common Items
+------------
+
 x = The Challenged Base (Works for all numbers, see rules below)
 
 y = The Challenged Exponent
@@ -72,17 +75,33 @@ b = a - 1
 
 k = x - 1
 
-p(x) = A hyperactive function that derives a new base to overlay the existing base (i.e. Base 10 into Base 13 through Beta)
-
 f = A valid multiplication factor, replacing 1000 from Beta
 
 n = A valid denominator capable of rendering the base, where n is chosen new base
 
-p = Hyperbolic Index in this formula set, p stands for Partition, and runs in sync with all the rest below
+g - The variable or constant requiring intercession through parition to derive consequentially nominal alternate values
+    in a given mathematical envrionment (The "Quarter System" comes to mind)
 
-d(x) = xʸ - p
+Δd = Something useful for your brain, in equitable percentile growth per volume of decimals and/or whole numbers through
+     function d(x)
+
+Δg = The change in given values (g) for paritioning (x, y, ≥, θ, ε, &c.)
+
+p(Δg) = A hyperactive function that derives a new base to overlay the existing base
+
+p(x) = The same as above strictly for Sequinor Tredecim, meant as formulated in Beta without the simplification for 
+       beginners
+
+d(x) = xʸ - p, useful for tabling new data from your chosen Parition's Hyperbolic Indexing
+
+P Mechanics:
+------------
+
+Δv = Change in speed in m³/s
 
 q = 206 / 197, in variations proportion
+
+p = Hyperbolic Index in this formula set, p stands for Partition, and runs in sync with all the rest below
 
 pᵥ = Variation by pₛ, in instances of p
 
@@ -99,12 +118,8 @@ pₘₓ = The physically unbreakable threshold container for variation, approxim
 
 pₛₚ = The speed at which variation transforms by a single degree, in pᵢ per millisecond
 
-Δv = Change in speed in m³/s
-
-Δg = The change in given values (g) for paritioning (x, y, ≥, θ, ε, &c.)
-
-g - The variable or constant requiring intercession through parition to derive consequentially nominal alternate values
-    in a given mathematical envrionment (The "Quarter System" comes to mind)
+Content Description
+-------------------
 
 Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ
 
