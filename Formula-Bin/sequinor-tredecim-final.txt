@@ -173,7 +173,8 @@ pₛₚ = The speed at which variation transforms by a single degree, in pᵢ pe
 Content Description
 -------------------
 
-Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ
+Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ (Possess at LEAST the square or higher, even by decimal degree, and
+                                                          backtrack the rest)
 
 Beta = Obtaining the Hidden Index of Rational Numbers in Synchro with x
 
