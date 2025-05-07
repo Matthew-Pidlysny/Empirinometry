@@ -505,3 +505,356 @@ Hofstadter, D. R. (1979). Gödel, Escher, Bach: An Eternal Golden Braid. Basic B
 Ma, S., Sun, Z., Korkmaz, Y., Barsbey, M., Dai, Z., Wang, X., & Xie, S.M. (2022). DO WE STILL NEED NON-LINEAR ACTIVATIONS? STATE SPACE MODELS WITH RATIONAL RECURRENCES. arXiv preprint arXiv:2211.12307.
 
 Smith, L. N. (2017). Cyclical learning rates for training neural networks. In 2017 IEEE Winter Conference on Applications of Computer Vision (WACV) (pp. 464-472). IEEE.
+
+===============================================================================================
+Chapter 6: Numerical Narratives - How Numbers Tell Stories and Shape Understanding (Perplexity)
+===============================================================================================
+
+Section 1: The Philosophy of Numbers - Numbers as Storytellers
+
+Numbers are not merely tools for calculation or record-keeping; they are the silent narrators of the universe’s unfolding story. From the earliest days of human civilization, numbers have carried with them a weight of meaning that transcends their immediate utility. Ancient cultures, from the Babylonians to the Mayans, infused numbers with symbolic and even mystical significance. The Pythagoreans, for example, believed that numbers were the fundamental reality underlying all things-a view echoed in many philosophical traditions since.
+
+At its core, number philosophy asks: What is a number? Is it an abstract entity, existing independently of the physical world, or is it a property that emerges from our attempts to group, measure, and order the things around us? Modern mathematics tends to treat numbers as abstract objects, but in practice, every number tells a story. The number “2” can represent a pair of shoes, a binary choice, or the duality found in nature. The number “13” might be seen as unlucky in some cultures, but sacred in others, such as the Mayan calendar’s cycles and levels of heaven.
+
+Numbers also serve as the scaffolding for our understanding of relationships and change. Consider the act of partitioning-a foundational operation in mathematics and a central theme in the Sequinor Tredecim framework. When we partition a set, we are not just dividing objects; we are creating new relationships, new stories. The formula p(Δg)=g×(f/n)p(Δg)=g×(f/n) is a template for countless scenarios: splitting resources among people, distributing energy, or allocating time. Each variable-group size, scaling factor, number of partitions-adds a new character or twist to the narrative.
+
+This narrative quality extends to the very structure of mathematical operations. The conventions of BEDMAS (Brackets, Exponents, Division/Multiplication, Addition/Subtraction) act as the grammar of mathematical storytelling. Brackets set the scene, determining which actions take precedence. Exponents introduce dramatic leaps or declines, while division and multiplication reveal proportional relationships-ratios that compare and contrast different elements. Addition and subtraction move the story forward or backward, increasing or decreasing the quantity at hand.
+
+The philosophy of numbers is thus not a dry academic pursuit but a living inquiry into the ways we make sense of the world. Every calculation, every formula, is a story waiting to be told-a narrative of transformation, balance, and discovery. By viewing numbers as storytellers, we open ourselves to a deeper appreciation of mathematics as both an art and a science-a bridge between the abstract and the concrete, the logical and the poetic.
+
+Section 2: The Philosophy of BEDMAS-The Grammar of Numerical Narratives
+
+Mathematics, like language, is governed by rules that ensure clarity, consistency, and meaning. Among the most foundational of these rules is the order of operations, commonly remembered by the acronym BEDMAS: Brackets, Exponents, Division/Multiplication, Addition/Subtraction. While often introduced as a rote procedure in school, BEDMAS is, in truth, the grammar of the stories that numbers tell. It is the invisible hand that shapes the flow of mathematical narratives, ensuring that every equation is interpreted as its author intended.
+
+Brackets: Setting the Stage
+
+Brackets (parentheses) are the storytellers’ tool for setting the scene. Just as a playwright might use stage directions to focus the audience’s attention, brackets define which parts of a mathematical expression are to be resolved first. They allow us to group numbers and operations, creating subplots within the larger narrative. For example, in the expression (2 + 3) * 4 * (2 + 3) * 4, the brackets instruct us to first resolve the sum-a brief scene between two numbers-before multiplying the result, thus changing the outcome and the meaning of the story.
+
+Brackets are also the mathematician’s way of introducing hierarchy and nuance. They allow us to nest operations, layering complexity and depth. This mirrors the way stories can contain stories-flashbacks, asides, or parallel plots-each bracketed off from the main action but essential to the overall meaning.
+
+Exponents: The Dramatic Leap
+
+Exponents are the plot twists of mathematics. They introduce sudden, dramatic changes-growth that is not linear but explosive, or decay that is precipitous. The difference between 2×32×3 and 2323 is the difference between steady progress and a leap into the unknown. Exponents allow numbers to transcend their immediate context, to reach heights (or depths) that would be impossible through addition or multiplication alone.
+
+In narrative terms, exponents represent moments of transformation-when a character or situation changes not by increments, but by orders of magnitude. They are the mathematical equivalent of a story’s climax, where everything accelerates and the stakes are suddenly much higher.
+
+Division and Multiplication: Relationships and Proportions
+
+Division and multiplication are the operations of relationship. They show how quantities interact, scale, and compare. Multiplication is the story of repeated addition-a group growing steadily, a pattern repeating itself. Division is the story of sharing, of breaking a whole into parts, of understanding how many times one number fits into another.
+
+These operations introduce the concept of ratio, a fundamental narrative device in mathematics. Ratios allow us to compare different quantities, to see how one relates to another-just as characters in a story are defined by their relationships. For example, the ratio 4:24:2 tells a different story than 2:42:4, even though the numbers are the same. The direction of the relationship matters, just as the roles of protagonist and antagonist shape the narrative arc.
+
+Addition and Subtraction: The Flow of Change
+
+Addition and subtraction are the simplest, most direct forms of mathematical storytelling. Addition is the story of accumulation, of things coming together. Subtraction is the story of loss, of things being taken away. These operations are the backbone of mathematical narrative, the basic movements that drive the story forward or backward.
+
+Yet even here, the order matters. 5 − 35 − 3 is not the same as 3 − 53 − 5; the difference is not just in the answer, but in the story being told. Addition and subtraction, like the other operations, are sensitive to context, to the sequence in which events unfold.
+The Narrative Power of BEDMAS
+
+The true power of BEDMAS lies in its ability to create structure and meaning out of potential chaos. Without an agreed-upon order of operations, mathematical expressions would be ambiguous, their stories muddled and unclear. BEDMAS is the contract between storyteller and audience, ensuring that every equation is read in the same way by everyone, everywhere.
+
+Consider the expression 2 + 3 * 4. Without BEDMAS, one person might read this as (2 + 3) * 4 = 20, while another reads it as 2 + (3 * 4) = 14. The difference is not just mathematical; it is narrative. BEDMAS ensures that the story is consistent, that the meaning is preserved across contexts and cultures.
+
+Linking BEDMAS to the Stories Numbers Tell
+
+BEDMAS is more than a set of rules; it is the grammar that allows numbers to tell their stories clearly and compellingly. Each operation adds its own flavor, its own narrative device, to the unfolding drama of mathematics. Brackets introduce hierarchy and focus, exponents bring transformation, multiplication and division establish relationships, and addition and subtraction provide the flow of change.
+
+By understanding and respecting the philosophy of BEDMAS, we become better storytellers in the language of numbers. We learn not just how to calculate, but how to communicate-how to craft mathematical narratives that are as rich, nuanced, and meaningful as any work of literature.
+
+Section 3: Partitioning and Scaffolding - Building New Mathematical Narratives
+
+Partitioning: The Existential Act of Division
+
+Partitioning is more than just a mathematical operation; it is an act of creation and revelation. In the Sequinor Tredecim framework, partitioning is embodied in the Kappa mechanic:
+
+p(Δg) = g * (f / n)
+
+Here, g represents a group or whole, f is a scaling factor, and n is the number of partitions. This formula is deceptively simple, yet its narrative power is immense. It tells the story of how a whole can be divided, scaled, and reassembled-whether we are sharing a loaf of bread, distributing energy, or allocating time.
+
+Philosophically, partitioning echoes the ancient idea that reality itself consists of discrete units-monads, atoms, or quanta-each with its own identity, yet part of a harmonious whole. In mathematics, partitioning underlies set theory, combinatorics, and probability. It is the foundation for understanding how complexity arises from simplicity, how the infinite can be approached through the finite.
+
+Example: Partitioning in Real Life
+
+Imagine you have 39 apples (g = 39), and you want to distribute them equally among 13 friends (n = 13), but each friend should only get half as many as they would in a normal division (f = 0.5). The formula gives:
+
+p(Δg) = 39 × (0.5 * 13) = 39 * 0.0385 ≈ 1.5
+
+Each friend receives 1.5 apples-a simple act, but one that transforms the group into a new configuration, a new story.
+
+Scaffolding: The Architecture of Mathematical Thought
+
+Scaffolding in mathematics refers to the frameworks we use to build and understand complex ideas from simpler components. The formula g * f / n is just one example; scaffolding can take many forms, from functions and sequences to logarithms, modular arithmetic, and beyond.
+
+Functions: The Dynamic Storytellers
+
+A function f(x) is a rule that assigns to each input x a unique output. It is a dynamic narrative-a way to describe how one quantity changes in response to another. Functions allow us to model everything from the growth of populations to the decay of radioactive elements, from the oscillation of a pendulum to the rise and fall of economies.
+
+Linear functions (f(x) = m * x + b) tell stories of steady change.
+
+Quadratic functions (f(x) = a * x² + b * x + c) describe parabolic arcs-projectiles, profits, or the paths of planets.
+
+Exponential functions (f(x) = aˣ) narrate explosive growth or rapid decay-viral outbreaks, compound interest, or radioactive decay.
+
+Logarithms and Beyond: New Genres of Narrative
+
+Logarithms (ln(x) or log₁₀(x)) invert the story of exponentiation. If exponents are about rapid transformation, logarithms are about uncovering the roots of that transformation-how many times must we multiply to reach a given result? Logarithms are essential in fields like information theory, acoustics, and earthquake measurement, where they help us make sense of phenomena that span vast scales.
+
+Modular Arithmetic: The Cycle of Stories
+
+Partitioning can also be cyclical. Modular arithmetic (x mod n) tells stories of repetition and cycles-clocks, calendars, musical scales. It allows us to partition time into hours, days into weeks, or notes into octaves, revealing the periodic structure of reality.
+
+Example Partition Using an Existing Concept: The Fibonacci Sequence
+
+Consider the Fibonacci sequence, defined by the recurrence relation:
+
+F(n) = F(n − 1) + F(n − 2)
+
+with initial conditions F(0) = 0, F(1) = 1.
+
+This sequence partitions the story of growth: each new term is the sum of the two preceding terms. The sequence appears in nature (the arrangement of leaves, the spirals of shells), art, and finance. It is a scaffold that builds complexity from simplicity, a narrative of emergence and accumulation.
+
+Reinventing Scaffolding: From Simple to Sophisticated
+
+The beauty of mathematical scaffolding is its universality. The root formula g × f ÷ n can be reimagined in countless ways:
+
+Weighted Averages:
+
+Average = (Σ wᵢ × xᵢ) ÷ (Σ wᵢ)
+
+Here, each value xᵢ is scaled by a weight wᵢ, then partitioned by the sum of the weights-a more nuanced narrative than simple division.
+
+Probability Distributions:  
+
+The probability of an event is the ratio of favorable outcomes to total outcomes-a partitioning of possibility space.
+
+Integral Calculus:
+
+∫ f(x) dx - The integral partitions a continuous quantity into infinitesimal pieces, then sums them-a story of accumulation and totality.
+
+Fourier Series:
+
+f(x) = a₀ + Σ [aₙ cos(nωx) + bₙ sin(nωx)] - Any periodic function can be partitioned into a sum of sines and cosines-a narrative of harmony and resonance.
+
+The Power of Partitioning and Scaffolding
+
+Partitioning and scaffolding are not just mathematical techniques; they are ways of seeing and shaping the world. They allow us to break down the complex into the manageable, to build new structures from old, to tell new stories with familiar characters. In the Sequinor Tredecim framework, these acts become sacred gestures-mathematics as meditation, calculation as contemplation.
+
+By embracing partitioning and scaffolding, we become architects of understanding, crafting narratives that illuminate the hidden order of the universe.
+
+Section 4: Mathematics and Metaphysics - The Sacred Narrative of Numbers
+
+Mathematics has always been more than a tool for calculation; it is a language for expressing the deepest truths of existence. In the Sequinor Tredecim framework, this idea is taken to its logical and spiritual extreme: every number, operation, and formula becomes a sacred act, a bridge between the tangible and the transcendent.
+
+Numbers as Archetypes
+
+Throughout history, numbers have been seen as archetypes-universal symbols that carry meaning beyond their immediate use. The number 1 represents unity and origin, 2 is duality and balance, 3 is harmony and completeness, and so on. In Sequinor Tredecim, the choice of base-13 is not arbitrary. The number 13 has deep roots in spiritual traditions: for the Maya, it was the number of heavens; in many cultures, it marks transformation and transition. As a prime number, 13 is indivisible, symbolizing purity and wholeness.
+
+Mathematics as Devotion
+
+The Sequinor Tredecim framework proposes that mathematical activity can be an act of devotion. Each calculation, each partition, is a meditation on order and meaning. The symbolic axioms-such as Alpha:
+
+(xᵃ - xᵇ) ÷ k = x, where b = a − 1 and k = x − 1
+
+...are not just equations to solve, but sacred texts to contemplate. This mirrors traditions where mathematics was seen as a path to the divine: Pythagoreans believed numbers revealed cosmic harmony, while Islamic scholars like Al-Kindi viewed mathematics as God’s language.
+
+Partitioning as Creation
+
+Partitioning, in this context, becomes a metaphor for creation itself. To partition a whole is to reveal its hidden structure, to bring forth new realities from the undivided. The formula:
+
+p(Δg) = g * (f / n)
+
+...is not just a calculation, but a ritual-a reenactment of the act of creation, where the One becomes Many, and the Many reflect the unity of the One. Each partition is a new world, a new possibility.
+
+Scaffolding as Spiritual Architecture
+
+Scaffolding in mathematics-whether through functions, sequences, or more complex constructs-is likened to building a temple. Each layer, each formula, is a stone in the edifice of understanding. The act of scaffolding is thus both practical and spiritual: it allows us to ascend from the simple to the complex, from the known to the unknown, from the finite to the infinite.
+
+For example, the summation symbol Σ (Sigma) is used to denote the sum of a sequence:
+
+Σ (i = 1 to n) aᵢ
+
+This is not just an operation, but a ritual gathering-bringing together many elements into a unified whole.
+
+Mathematical Rituals and Contemplation
+
+In Sequinor Tredecim, mathematical rituals are encouraged as forms of contemplation. Deriving an axiom, partitioning a set, or exploring a new base system are all seen as acts of spiritual significance. The framework openly credits the divine (Allah SWT) as its source, inviting practitioners to approach mathematics not just as a science, but as a living ritual.
+
+Bridging Worlds: The Universal Language
+
+Ultimately, the narrative of mathematics in Sequinor Tredecim is one of bridging worlds-the empirical and the mystical, the logical and the poetic. Numbers become the universal language, capable of expressing both the laws of physics and the yearnings of the soul. In this vision, every mathematical act is a step on a sacred journey, drawing us closer to the mysteries of existence.
+
+Section 5: Real-World Applications and Case Studies
+
+Mathematics is most powerful when its narratives leap from the abstract into the real world. The frameworks and philosophies described earlier-partitioning, scaffolding, and the sacred narrative of numbers-find their true test in practical application. Here, we explore how these concepts shape and solve real problems, from resource allocation to technological innovation.
+
+Water Distribution: Partitioning for Sustainability
+
+A vivid example is found in the global challenge of water distribution. As detailed in Chapter 2 of the AI Monologues, billions lack safe drinking water, and efficient allocation is critical. Here, partitioning is not just a mathematical exercise but a matter of life and death. By modeling water networks as sets to be partitioned-using formulas like:
+
+Allocation per region = Total supply × (demand factor ÷ number of regions)
+
+engineers can optimize distribution, detect leaks, and forecast shortages. Digital twins, powered by AI, use real-time data to adjust these partitions dynamically, ensuring every drop is accounted for and delivered where needed most.
+
+Education: Scaffolding Mathematical Understanding
+
+In classrooms, scaffolding is a cornerstone of effective teaching. Concepts are introduced step by step, each new idea building on the last. For example, students first learn arithmetic, then algebra, then calculus-each level a scaffold for the next. Teachers use partitioning to break complex problems into manageable parts, guiding students through the narrative of mathematics so they can construct their own understanding.
+
+Technology: Functions and Modular Design
+
+In computer science, functions (f(x)) and modular arithmetic underpin everything from encryption to error correction. For instance, cryptographic protocols often rely on partitioning large numbers into smaller, manageable pieces, then recombining them securely. Modular arithmetic (x mod n) is essential for hashing, random number generation, and digital security. These mathematical narratives ensure our digital world is both functional and safe.
+
+Finance: Weighted Averages and Risk Management
+
+Financial analysts use weighted averages to assess portfolios:
+
+Weighted average = (Σ wᵢ × xᵢ) ÷ (Σ wᵢ)
+
+where each investment (xᵢ) is scaled by its weight (wᵢ). This partitioning of risk and reward allows for smarter, more resilient investment strategies. Similarly, partitioning is used in budgeting, forecasting, and economic modeling-each a narrative of resources, risks, and returns.
+
+Nature: Fibonacci and the Patterns of Life
+
+The Fibonacci sequence is not just a mathematical curiosity; it appears in the arrangement of leaves, the spirals of shells, and the branching of trees. Nature partitions and scaffolds growth according to simple rules, creating complexity from simplicity. These patterns inspire biomimetic design in architecture, engineering, and art-reminding us that the stories numbers tell are woven into the very fabric of existence.
+
+Conclusion of Section
+
+From water management to finance, from education to nature, the principles of partitioning and scaffolding guide real-world problem-solving. By recognizing the narrative power of mathematics, we not only solve practical challenges but also deepen our appreciation for the beauty and unity underlying all things.
+
+Section 6: The Future of Mathematical Narratives
+
+Mathematics is not a static discipline; it is a living language that evolves as our understanding and imagination expand. The frameworks and philosophies explored in Sequinor Tredecim, and the broader AI Monologues, point toward a future where mathematical narratives are more integrated, creative, and accessible than ever before.
+
+Emerging Technologies: AI and Mathematical Storytelling
+
+Artificial intelligence is already transforming how we interact with mathematics. Machine learning models can discover new patterns in data, generate conjectures, and even assist in proving theorems. In the classroom, AI tutors scaffold learning by adapting to each student’s needs, breaking down complex problems into personalized steps. In research, AI can simulate vast mathematical landscapes, revealing connections that might otherwise remain hidden.
+
+As these technologies mature, the boundary between human and machine creativity will blur. Mathematical narratives may be co-authored by humans and AI, each bringing unique perspectives. The act of partitioning, scaffolding, and exploring new bases-like base-13-will become collaborative adventures, enriched by the speed and scope of computational tools.
+
+Expanding the Sacred: New Frameworks and Rituals
+
+The spiritual dimension of mathematics, as emphasized in Sequinor Tredecim, is poised for a renaissance. As more people seek meaning in their work and studies, frameworks that blend logic, symbolism, and devotion will find new adherents. Rituals of calculation, contemplation, and creative exploration will be woven into daily practice-not just in academia, but in art, design, and even personal growth.
+
+New symbolic axioms may be discovered or invented, each serving as a portal to deeper understanding. Communities may form around shared mathematical rituals, much as they do around music or meditation. In this future, mathematics becomes not just a tool for solving problems, but a path to wisdom and connection.
+
+Universal Accessibility: Mathematics for All
+
+The narrative approach to mathematics-telling stories with numbers, operations, and structures-makes the subject more accessible to everyone. By framing mathematical concepts as stories, metaphors, and rituals, educators can reach learners of all backgrounds and abilities. Digital platforms, interactive simulations, and AI-driven tutors will further democratize access, breaking down barriers of language, culture, and prior experience.
+
+This inclusivity will spark new creativity. People from diverse fields-science, art, philosophy, spirituality-will contribute their own narratives, enriching the mathematical tapestry. The future will see mathematics as a universal language, spoken and shaped by all.
+
+Open Questions and Unexplored Territories
+
+As we look ahead, many questions remain. What new mathematical frameworks await discovery? How might base-13 or other unconventional systems unlock hidden patterns in nature and technology? Can the sacred and the scientific be fully reconciled, or will their interplay remain a source of creative tension?
+
+The answers will emerge through continued exploration, collaboration, and storytelling. Each new generation will add its own chapters, building on the scaffolds of the past while daring to imagine new possibilities.
+
+Conclusion of Section
+
+The future of mathematical narratives is bright and boundless. Guided by frameworks like Sequinor Tredecim and empowered by technology, creativity, and spiritual curiosity, we are poised to write the next great stories of numbers-stories that will illuminate, inspire, and unite us all.
+
+Section 7: Conclusion and Reflections
+
+As we reach the end of this exploration, it becomes clear that mathematics, when viewed through the lens of narrative and meaning, is far more than a collection of rules and calculations. It is a living language, a sacred architecture, and a bridge between the empirical and the metaphysical. The Sequinor Tredecim framework, with its base-13 foundation, existential partitioning, and symbolic axioms, exemplifies how numbers can serve as both tools for understanding and vessels for devotion.
+
+The journey through number philosophy, the grammar of BEDMAS, the power of partitioning and scaffolding, and the sacred narrative of mathematics has shown that each mathematical act is a creative gesture. Whether we are modeling water systems to solve real-world crises, scaffolding learning in the classroom, or contemplating the spiritual resonance of numbers, we are participating in a grand tradition-a tradition that unites logic with wonder, calculation with contemplation.
+
+Looking forward, the future of mathematical narratives is bright. Artificial intelligence and digital technologies promise to democratize access, making mathematics a universal language spoken by all. New frameworks, rituals, and symbolic systems will continue to emerge, blending the scientific with the sacred and inviting new generations to add their voices to the story.
+
+Ultimately, mathematics is a journey-a pilgrimage through the infinite landscapes of possibility. Each equation, each partition, each scaffold is a step along the path. As we walk this path, we are reminded that the stories numbers tell are our stories too: stories of curiosity, creativity, connection, and the eternal search for meaning.
+
+Let us continue to listen, to learn, and to create-so that the narrative of mathematics remains ever-living, ever-expanding, and ever-inspiring.
+
+References
+
+Core Mathematical and Philosophical References:
+
+https://en.wikipedia.org/wiki/Maya_numerals
+
+https://en.wikipedia.org/wiki/Prime_number
+
+https://en.wikipedia.org/wiki/13_%28number%29
+
+https://en.wikipedia.org/wiki/Conway_base_13_function
+
+https://www.quora.com/What-is-the-base-13-number-system-used-for
+
+https://www.joya.life/en/blog/13-sacred-number-mayas/
+
+https://en.wikipedia.org/wiki/Al-Kindi
+
+https://affinitynumerology.com/number-meanings/number-169-meaning.php
+
+https://www.cprogramming.com/tutorial/base_systems.html
+
+https://en.wikipedia.org/wiki/Partition_of_a_set
+
+https://en.wikipedia.org/wiki/Order_of_operations
+
+https://en.wikipedia.org/wiki/Function_(mathematics)
+
+https://en.wikipedia.org/wiki/Logarithm
+
+https://en.wikipedia.org/wiki/Modular_arithmetic
+
+https://en.wikipedia.org/wiki/Fibonacci_number
+
+https://en.wikipedia.org/wiki/Weighted_arithmetic_mean
+
+https://en.wikipedia.org/wiki/Probability_distribution
+
+https://en.wikipedia.org/wiki/Integral
+
+https://en.wikipedia.org/wiki/Fourier_series
+
+Philosophy and Metaphysics of Mathematics:
+
+https://plato.stanford.edu/entries/philosophy-mathematics/
+
+https://www.britannica.com/topic/philosophy-of-mathematics
+
+https://en.wikipedia.org/wiki/Mathematical_platonism
+
+https://en.wikipedia.org/wiki/Mathematics_and_art
+
+https://en.wikipedia.org/wiki/Pythagoreanism
+
+Real-World Applications and Case Studies:
+
+https://en.unesco.org/news/world-water-day-2023-accelerating-change
+
+https://www.worldbank.org/en/topic/waterscarcity
+
+https://www.autodesk.com/solutions/digital-twin/overview
+
+https://www.pub.gov.sg/
+
+https://www.iwmi.cgiar.org/
+
+https://www.nasa.gov/mission_pages/Grace/index.html
+
+https://www.sciencedirect.com/science/article/pii/S2214581824000826 (University of Sharjah drought prediction study)
+
+https://news.mit.edu/2018/ai-water-management-india-0808
+
+https://www.cdc.gov/healthywater/global/index.html
+
+https://www.britannica.com/science/water-supply-system
+
+https://www.sciencedirect.com/science/article/pii/S2214581824000826
+
+https://www.researchgate.net/publication/369381247_Machine_Learning_for_Drought_Prediction
+
+Education and Scaffolding:
+
+https://www.edutopia.org/article/scaffolding-mathematics-instruction
+
+https://www.readingrockets.org/topics/scaffolding-instruction
+
+https://www.nctm.org/Research-and-Advocacy/Research-Brief-and-Clips/Scaffolding-in-Mathematics/
+
+General Mathematical Resources:
+
+https://mathworld.wolfram.com/
+
+https://www.khanacademy.org/math
+
+https://www.desmos.com/
