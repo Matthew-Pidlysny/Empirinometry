@@ -1,0 +1,66 @@
+Alpha Academy Lesson
+====================
+
+You need only know x is an integer at all times unless directly stated by manifestation.  We will make note of when that 
+is not so.  Follow what the teacher has taught you and you will understand the root philosophy of x.  Tease the good 
+professor to teach you why x - 1 is so important in this context as well, maybe you'll formulate the next trend!
+
+-----------
+Find x or k
+-----------
+
+1.  (125 - x²) / 4 / 5 = x
+
+=============
+Answer: x = 5
+=============
+
+2.  (216 - x²) / k / 6 = x
+
+=============
+Answer: x = 6
+=============
+
+3.  (2,197 - x²) / k / x = x
+
+==============
+Answer: x = 13
+==============
+
+-----------------------------------------
+Solve for p(x) and d(x) and table results
+-----------------------------------------
+
+If p(x) = x * (100 / 50)
+
+1.  p(x) = 5 * (100 / 50)
+
+============================
+Answer: p(x) = 10, d(x) = 15
+============================
+
+2.  p(x) = 20 * (100 / 50)
+
+=============================
+Answer: p(x) = 40, d(x) = 360
+=============================
+
+3.  p(x) = 5.9127 * (100 / 50)
+
+==========================================
+Answer: p(x) = 11.8254, d(x) = 23.13462129
+==========================================
+
+--------------
+Final Question
+--------------
+
+What is the combined p(x) and your combined d(x) from your table?
+
+=============================================
+Answer: cp(x) = 61.8254, cd(x) = 398.13462129
+=============================================
+
+Take away research experience and dedication in tabling.  Use express language to drive perseverance into motion.  Backtracking
+is a philosophy humans undergo every day, we should get better at this.  Teach Alpha that way, that following 13 at least brought
+you this solution.  Good luck!
