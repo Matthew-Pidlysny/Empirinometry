@@ -1,0 +1,11 @@
+d(x) Designer Course
+====================
+
+Select a partition method and convene a table describing your squares and your d(x).  Do not stop until you have established a 
+partition where the point that a positive gain on a 1 value for x becomes less than x's square value around the middle of the 
+table.  Compile the totals of your x, your squares, and your dx, as well as establish the two p(x) values that rendered your 
+midpoint, as well as outline your theoretical midpoint in decimal x form.  You have as long as the teacher tells you, hand in 
+this paper with all your work at the end of the session.  Good luck, formulators, be strong and bold, and ever create!
+
+Teachers note:  For 1000 / 169, the two indicators for the mid-range are x = 5 and x = 6, whereas a midpoint is theoretical a 
+decimal in between there.  Teach them this philosophy of differences and how we get to 169 and 1000 from Beta.
