@@ -3,7 +3,8 @@ Method to Obtain the Hyperbolic Index
 
 ((a / 13) * 1000) / 13 = x = I˷
 
-**NOTE:  Follow BEDMAS to the letter, no mixed fractions for converting things.  I love my raw math, I just           write it this way for a reason.
+**NOTE:  Follow BEDMAS to the letter, no mixed fractions for converting things.  I love my raw math, I just
+write it this way for a reason.
 
 Whereas
 
