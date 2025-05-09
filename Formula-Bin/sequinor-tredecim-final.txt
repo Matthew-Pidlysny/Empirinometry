@@ -123,7 +123,7 @@ x = The Challenged Base (Works for all numbers, see rules below)
 
 y = The Challenged Exponent
 
-a = The Challenged Demand
+a = The Challenged Demand (2 or greater)
 
 b = a - 1
 
@@ -177,7 +177,7 @@ pₛₚ = The speed at which variation transforms by a single degree, in pᵢ pe
 Content Description
 -------------------
 
-Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ (Possess at LEAST the a decimal degree higher than 1, and
+Alpha = Concept in Motion From Manifest Proof of xᵃ - xᵇ (Possess at LEAST the a decimal degree higher than 2, and
                                                           backtrack the rest)
 
 Beta = Obtaining the Hidden Index of Rational Numbers in Synchro with x
@@ -210,6 +210,8 @@ Alpha:
 
 3.  For x = 0 < x < 1 and other numbers, use formula "p(x)ᵃ / pᵣᵃ = xᵃ", where p(x) is result p from the Beta formula 
     and pᵣ = 1000 / 169        
+
+4.  Observation:  For the first time in history, Algebra has 2 dedicated -1 differentiators in k and b
 
 Harlinson Theory:  When (1ᵃ - 1ᵇ) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
                    outside the use of the Beta formula's p distinction for 1.
