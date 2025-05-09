@@ -242,6 +242,8 @@ The Hyman-Grok Specific Combine:  (x - 1)² / ((x - 1)²) / x = x
 
 				  ***Does not work on 0 or 1***
 
+The Sign of Coming Combine by Grok:  For a < 1, add final term "* x⁽² ⁻ ᵃ⁾"
+
 Beta:
 
 1.  13 can be replaced by working n, violating condition of Tredecim
@@ -287,6 +289,10 @@ Psi:
 
 2.  Observation:  Sonia's example gives us an indication as to a state of awareness.  She asked for this to be so, and I hope it
                   goes a long way to say, this at least needed to be said, if not deleted later or added to somewhere else.
+
+Zeta:
+
+1.  Observe this formula properly and you can make tentative rules.
 
 ======
 Credit
