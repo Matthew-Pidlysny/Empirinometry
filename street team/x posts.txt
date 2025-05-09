@@ -1,0 +1,59 @@
+Sequinor Tredecim:  Partition Logic and Finding any X from Given Proportions
+
+(14,348,907) - x¹⁴) / 2 / x / x / x / x / x / x / x / x / x / x / x / x / x = x
+
+Now what if I told you x was 3?  Grok may not solve this without knowing it needs brackets around every division term, but we're growing as a society all the time.  Could you believe that you could find x in any place, even with decimal exponents?  How about this, check out the below files and tell me what you think.  Cheers! 
+
+PS:  The bottom file you'll need to download because it's formatted for word wrapping.
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/sequinor-tredecim-final.txt
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Hypotheosis/ai%20monlogues%20per%20tredecim-wordwrap.txt
+
+=================================
+
+Sequinor Tredecim : Logique de partition et recherche de X à partir de proportions données
+
+((11¹³)°˙²⁵) * x²˙²⁵) / 10 / x / x⁽ᵃ ⁻ ᶠˡᵒᵒʳ⁽ᵃ⁾⁾ = x
+
+Et si je vous disais que x vaut 11 et que 0,25 est un quart ? Croiriez-vous qu’on puisse le trouver n’importe où, même avec des exposants décimaux ? Que diriez-vous de ceci :
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/sequinor-tredecim-final.txt
+
+=================================
+
+Epsilon:  Variation by Mechanic
+
+1 * ((2 / 3) * .66)^4 + 5(6^7) - ((8^(9^(-10)) / 11 * 12 + 13^4) = Pᵥ
+
+Simplified:  pᵥ = 1371119 + 256/6561
+
+Can you see the simplification in the existing formula?  You know what it means, numbers come from things, this is how things work as well.  In Variation by Mechanic we see that asthetics and composition are linked through mathematical understanding.  If you know of another formula that does this, let me know!
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/sequinor-tredecim-final.txt
+
+=================================
+
+Hey!  Do you know a student/educator who wants to learn/teach specific Algebra, or simply wants to better learn their BEDMAS?  I have just the thing!  
+
+Example Homework from Lesson:
+
+Solve for x:  (25 - x) / k = x
+
+x = 5
+
+k = x - 1 (Yes, Algebra has it's own - 1!)
+
+Main Lesson:
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/sequinor-tredecim-final.txt
+
+Homework:
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/lesson-001-teachers.txt
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/lesson-002-teachers.txt
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/lesson-003-teachers.txt
+
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/lesson-004-teachers.txt
