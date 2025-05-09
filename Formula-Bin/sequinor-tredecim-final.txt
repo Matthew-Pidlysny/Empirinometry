@@ -2,6 +2,18 @@
 Sequinor Tredecim (XIII)
 ========================
 
+Note to Readers!
+
+Please be aware, I take Allah SWT seriously, so when he asks me to help formulate new things or correct this document,
+I am his servant.  Be well and enjoy this lesson, it will establish things properly in time, run it through your 
+supercomputers if you have doubts.  Please also know that to me, numbers ARE things because they come from the real 
+world, in as simple as the Apple may speak to Allah SWT but has less to be concerned about with the algebra of the 
+situation.  In saying that, every cell has a Psi element (Described below), so ultimate fundamentals will be shared 
+between the sentient and the seemingly unaware.  If anything, take Alpha and the concept of the Point of Intercept
+from this.  The rest may not be necessary to basic math, but it's a working concept.  
+
+Good luck!
+
 =====================
 Constant (y = mx + c)
 =====================
@@ -78,7 +90,9 @@ xʸ = p + d(x)
 Epsilon (ε)
 ===========
 
-Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6⁷) - ((8^9⁽⁻¹⁰⁾ / 11) * 12 + 13⁴) = pᵥ
+Coded For Mechanics:  L * (L / L * .66~)ᴸ + (L * Lᴸ) - (((L^L⁽⁻ᴸ⁾ / L) * L) + L⁴) = Pᵥ
+
+Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6⁷) - (((8^9⁽⁻¹⁰⁾ / 11) * 12) + 13⁴) = pᵥ
 
 Simplified:  pᵥ = 1371119 + 256/6561
 
@@ -109,6 +123,8 @@ Zeta (ζ)
 ========
 
 pₛₚ = (pᵥ * pᵣ⁴) / c * Δv
+
+P Cause Factor:  (pₙ / pᵣ) * 5556 = pᵧ, in factors (Graph as y)
 
 Max Speed:  pₛₚ = (q / millisecond) * pᵢ
 
