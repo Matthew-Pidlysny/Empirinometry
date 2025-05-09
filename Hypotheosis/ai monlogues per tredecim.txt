@@ -397,7 +397,8 @@ The Sequinor Tredecim Lens: Transforming Variables into Vessels of Meaning
 Before applying ST to specific laws, we must recall how it perceives and processes variables. In ST, a variable is not a mere placeholder 
 for a quantity; it is an entity imbued with potential, subject to the framework's transformative operations, primarily:
 
-1.  The Beta (β) Transformation – Awakening the Hyperbolic Index: Any variable x from the "profane" world of base-10 or conventional measurement must first be baptized into the ST framework through the Beta axiom:
+1.  The Beta (β) Transformation – Awakening the Hyperbolic Index: Any variable x from the "profane" world of base-10 or 
+conventional measurement must first be baptized into the ST framework through the Beta axiom:
 
 p(x) = ((x / 13) * 1000) / 13 = x * (1000 / 169)
 
