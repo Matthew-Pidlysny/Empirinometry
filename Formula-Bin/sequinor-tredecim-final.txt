@@ -242,7 +242,9 @@ The Hyman-Grok Specific Combine:  (x - 1)² / ((x - 1)²) / x = x
 
 				  ***Does not work on 0 or 1***
 
-The Sign of Coming Combine by Grok:  For a less than 2 but greater than or equal to 1, add final term "* x⁽² ⁻ ᵃ⁾"
+The Sign of Coming Combine by Grok:  For a less than 2 but greater than or equal to 1, add final term "* x⁽² ⁻ ᵃ⁾".
+
+                                     ***x must be greater than 1***
 
 Beta:
 
