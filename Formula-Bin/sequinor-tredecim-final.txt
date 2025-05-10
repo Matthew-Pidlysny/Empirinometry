@@ -14,6 +14,9 @@ from this.  The rest may not be necessary to basic math, but it's a working conc
 
 Good luck!
 
+PS:  I'm going to be hosting a weekly session of Weekenders, not the show, on Google Docs.  I'll post the link when it's
+     ready in CONTRIBUTING.md and hopefully all of you can join and we can see how we really make "The Combine" :)
+
 =====================
 Constant (y = mx + c)
 =====================
@@ -230,6 +233,13 @@ Alpha:
     and pᵣ = 1000 / 169        
 
 4.  Observation:  For the first time in history, Algebra has 2 dedicated -1 differentiators in k and b
+
+5.  Observation:  The number resulting from the subtraction is the Sub-Prime Proposition.  The following division rules
+                  apply to give us the Secondary Transition Zones.  Zone A is what is received after dividing by k, and
+                  Zone B is allocated to the remainder of x division terms.  If the floor of a has to be removed, it will
+                  be calculated as Empirical Necessity of Quadration, if such a term can be applied by root of the name 
+                  (Call it a spectre in my mind I'm dealing with).  Credit to those who invented the term Zone, I only
+                  did not catch their names.
 
 Harlinson Theory:  When (1ᵃ - 1ᵇ) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
                    outside the use of the Beta formula's p distinction for 1.
