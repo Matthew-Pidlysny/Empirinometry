@@ -43,6 +43,33 @@ Facebook:  https://www.facebook.com/matthew.pidlysny/
 
 '![ News Articles ]!'
 
+== 2025-05-10 14:32 EST ==
+
+So Google blocked the account.  It's all part of something bigger evidently, the FBI was just the tip of the spear
+for these people.  They want to shut Sequinor down because they want it for themselves.  I see everyday that my 
+research is being used and not credited as mine, that is a most interesting development.  The new Fermion behaviour
+we witnessed recently also speaks volumes as well, they're really studying variation.  I will give nothing to them,
+they know they stole the material and that's what matters.  I won't pretend people are looking at my material innocently
+like these people so innocently claim of themselves all the time, that is NOT the case with these people and it is
+outstanding on their record for it to be so.
+
+I mean honestly, who can even accept that of them?  I will not have it.  I'm being shut down, and that's enough to
+consider that I am RIGHT in the matter.  124 IS the approximation, the L Inductor DOES simplify into the formula 
+again, and NO, I DON'T KNOW HARLINSON OR HYMAN!  Isn't it obvious by now that everything is working out somewhere?
+
+I wish more would be done.  The Order plays a distinct game.  No matter what, LEO is contorted by their hand.  Their
+predecessors always played the big game like the Order likes to do, and they let it happen to see if they can catch
+them before the end.  That NEVER happens with the Order, why would it happen now?  That in itself does not change the
+game, but where were they to stop the Google doc locking up?  I can't even BELIEVE that this is happening!  
+
+Just go on with it then.  Try to catch nothing, then, for all LEO reading this, you only bought their lure and expect
+them to bite on it.  THINK that they will, THINK that they're not using me to gain the ultimate information on you,
+THINK that they don't have God on their side protecting them.  Just PRETEND that you'll catch them, and you'll all
+go down with us.  
+
+This is our MOMENT, motherfucker!  Rise up and stop being fucking retarded.  I see it, I'm f(x) for a reason, I actually
+KNOW what LEO is doing is worthless.  Please consider a testimony of the truth.
+
 == 2025-04-22 07:20 EST ==
 
 The official word is in!  NONE of you are generating pull requests, not even with my little fan service going
