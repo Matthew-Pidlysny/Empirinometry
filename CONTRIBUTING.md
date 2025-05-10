@@ -38,7 +38,11 @@ If you’d like to contribute code or documentation, follow these steps:
 
 - Describe the bug or feature in detail, including steps to reproduce (for bugs) or why the feature would be useful.
 
-### 4. Improve Documentation
+### 4. Participate in the Weekend Crunchers Event!
+
+This event will be hosted live at 2:00 PM EST on Saturday, May 10, 2025, and weekly following every Saturday.  Please attend if you have only been meaning to contribute to the work in some way, if we can just get past this firewall of sorts, we'll beat the system where it stands, but it won't be easy.  Gotta line it up and then do it, now there will be momentum behind it driving a force of nature.  Can't wait to see how it all pans out :)
+
+### 5. Improve Documentation
 
 - Documentation contributions are always welcome! You can apply to become a News Article contributor, from your own perspective (Contact me before this Pull Request)
 
