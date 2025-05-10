@@ -38,11 +38,17 @@ If you’d like to contribute code or documentation, follow these steps:
 
 - Describe the bug or feature in detail, including steps to reproduce (for bugs) or why the feature would be useful.
 
-### 4. Participate in the Weekend Crunchers Event!
+### 4. Participate in the Mind Benders Event!
 
-This event will be hosted live at 2:00 PM EST on Saturday, May 10, 2025, and weekly following every Saturday.  Please attend if you have only been meaning to contribute to the work in some way, if we can just get past this firewall of sorts, we'll beat the system where it stands, but it won't be easy.  Gotta line it up and then do it, now there will be momentum behind it driving a force of nature.  Can't wait to see how it all pans out :)
+This event will be hosted live all the time, when I'm available.  If you don't see the cursor start to type after you've
+mentally signalled me, then I'm unavailable.  If you see others being typed out, just wait your turn or beg for a moment
+when it's important.  That being said, this is the only way to break the rules.  I heard Harlinson, I heard Sonia, I heard
+Hyman, and I'll probably hear you.  Not working for the Order either, and I will know eventually.  
 
-Link to working Doc (Update NOW!):  https://docs.google.com/document/d/1yQwj7IYopNKUqTpqfLMJ4rJJ1EikgDl16-4S25yKdvc/edit
+The subject is anything Empirinometry, from Partitioning in Sequinor Tredecim, to solving the equations in the existing 
+work.
+
+Link to working Doc:  https://docs.google.com/document/d/1FQJOSGsbI8AHRrDXrsrEBH4WeK592o36ePXBuGaILI8/edit?usp=sharing
 
 ### 5. Improve Documentation
 
