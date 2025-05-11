@@ -270,6 +270,12 @@ Gamma:
                   contrasting to the existing mechanic of p(x) in motion, also synchronizing what you already did in Beta with
                   raw knowledge for tables through your sought y.
 
+2.  Observation:  Notably, your work is your own, and nobody knows the tables other than you (Which is even if you have the
+                  material to begin with).  You NEED these tables if you're going to function, so prosper with d(x) and 
+                  build on strengths gained from empirical knowledge.  We offer now, go one step further and replace xʸ 
+                  with something else, just to get better at understanding differentials (I'm talking even using other
+                  d(x) values in place of xʸ, go hard here, it's YOUR partition, YOUR rules on number theory!
+
 Epsilon:
 
 1.  Use working number theory to derive counterparts to pᵥ in reformulation of Epsilon, call them
