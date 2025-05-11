@@ -278,6 +278,8 @@ Epsilon:
 2.  Observation:  The simplification term 1371119 and the fraction outlines the exact structure of the existing 
                   formula, piece for piece (3 = 2/3, maybe?)
 
+3.  Observation:  256 in base thirteen is 169.
+
 Omega:
 
 1.  Distinction is irrelevant.  All variation can exist within this structure, in step with maximum
