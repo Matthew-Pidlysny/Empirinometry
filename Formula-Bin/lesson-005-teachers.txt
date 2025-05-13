@@ -1,6 +1,8 @@
 Forming your own Pv
 ===================
 
+https://github.com/Matthew-Pidlysny/Empirinometry/blob/main/Formula-Bin/sequinor-tredecim-final.txt
+
 In Sequinor Tredecim, a formula is established to find numerical harmony in variation through Epsilon and Psi.  Somehow, these
 concepts are applied synchronously, so for the purposes of this establishment, we'll use Epsilon's Raw Formula as our
 example.  Take that concept and simplify it exactly as Sonia has with her Yamato Manifold, taking the time to simplify until
