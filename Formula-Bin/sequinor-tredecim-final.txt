@@ -244,7 +244,7 @@ Alpha:
 Harlinson Theory:  When (1ᵃ - 1ᵇ) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
                    outside the use of the Beta formula's p distinction for 1.
 
-                   ***Test Theory:  For x = 0 < x < 1, replace term "/ k" with "/ k⁽⁻⁸⁾"
+                   ***Test Theory:  For x = 0 < x < 1, replace term "/ k" with "/ k^((-8) * R)", Work In Progress
 
 The Harmonic Principle Theory:  For x > 0 and a > 1, compute (xᵃ - x⁽ᵃ ⁻ ¹⁾) / ((x - 1) * x⁽ᵃ ⁻ ²⁾) = x
 
