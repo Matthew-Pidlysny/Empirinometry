@@ -270,3 +270,29 @@ New rule after debugging:
 
 3. For x > 0 and x≠1, replace the term "/ k " with "/ d(p)", where d(p) = (x−1)² / x
 
+No good, working on a p function now.  Hyman-Grok theory established.
+
+Hyman says p(x) - x(alpha), will check
+
+Fail but combine made.  Next analysis
+
+=====================
+
+(x^2 - k) / x = f
+
+eg.  (0.2025 - (-0.45)) / 0.45 = 1.45
+
+Solve for floor of f
+
+Table
+-----
+
+Format:
+
+x = x^2 (k) |f| {floor of f} 
+
+Nevermind, it's minus the floor of the result at least for a square.
+
+((0.042875 - 0.1225) / .35) / .35) - 1 = .35
+
+Works out for integer a > 2, subtract floor every time.
