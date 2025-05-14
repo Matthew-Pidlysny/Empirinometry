@@ -239,12 +239,28 @@ Alpha:
 
 6.  Observation:  For the first time in history, Algebra has 2 dedicated -1 differentiators in k and b
 
-7.  Observation:  The number resulting from the subtraction is the Sub-Prime Proposition.  The following division rules
-                  apply to give us the Secondary Transition Zones.  Zone A is what is received after dividing by k, and
-                  Zone B is allocated to the remainder of x division terms.  If the floor of a has to be removed, it will
-                  be calculated as Empirical Necessity of Quadration, if such a term can be applied by root of the name 
-                  (Call it a spectre in my mind I'm dealing with).  Credit to those who invented the term Zone, I only
-                  did not catch their names.
+7.  Observation:  The Sub-Prime Proposition, Secondary Transition Zones, and Empirical Formulaic Necessities
+
+                  The number resulting from the subtraction is the Sub-Prime Proposition.  It governs the principle of
+                  divisibility in it's formation, no different than choosing that number to begin with except for in the
+                  variation of Alpha whereby a decimal x is calculated, where you subtract k from the square in the initial
+                  form.  The necessity for subtracting k is a harmony with the square root, in that you minus a minus, and 
+                  numerically this is going to equal a term that has to be reduced.  Notwithstanding either case, the following 
+                  division rules apply to give us the Secondary Transition Zones.  
+
+                  Zone A is what is received after dividing by k, and as we have seen, this zone gets the "K Bump", to credit some who 
+                  have creatively applied the name, in order to make a Hybrid Zone A for the purpose of subtracting k instead.  This 
+                  hybrid zone is very particular in that a sub function it's governing it's properties, and so thusly, subtracting a 
+                  minus gives us just a bit higher than our working factor of xᵃ, enough to move it into the next zone after a following 
+                  division.  
+
+                  Zone B is allocated to the remainder of x division terms.  For certain measure, another numerical harmony exists
+                  to follow any increase to the variable a past the integer 2.  In this example, if the floor of a has to be removed, 
+                  it will be calculated as an Empirical Formulaic Necessity, and that also includes the addition of the term "- 1" to
+                  conclude another variation of the formula, along with others in special rules below.  
+
+                  Credit to those who invented the term Zone, I only did not catch their names.  Some others want to call this the
+                  "Zeeney Theory", I leave it there as they did not get named to me.
 
 Harlinson Theory:  When (1ᵃ - 1ᵇ) / 0 applies, use initial term (xᵃ - k) = x, since no exponents of 1 can give value
                    outside the use of the Beta formula's p distinction for 1.
