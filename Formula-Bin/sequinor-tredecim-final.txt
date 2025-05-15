@@ -232,7 +232,7 @@ Alpha:
 3.  Add final term of "/ x⁽ᵃ ⁻ └ᵃ┘⁾" when a is a decimal greater than 2
 
 4.  For x < 1 and a = 2, replace initial term "xᵇ" with "k" and replace "/ k" with "/x".  Conclude the equation with term "- 1" after all 
-    increments to a past 2 accounted for.  When a is higher, use a normal Sub-Prime Proposition.
+    increments to a past 2 accounted for.  When a is higher, use initial term "xᵃ + xᵇ" as your Sub-Prime Proposition
 
 5.  When using the Beta formula's outputs in a known system, use formula "p(x)ᵃ / pᵣᵃ = xᵃ", where p(x) is result p from the Beta 
     formula and pᵣ = 1000 / 169
