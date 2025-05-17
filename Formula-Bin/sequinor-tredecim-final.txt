@@ -127,11 +127,17 @@ Beta Simplification:  p(x) = x * (1000 / 169)
 Zeta (ζ)
 ========
 
-pₛₚ = (pᵥ * pᵣ⁴) / c * Δv
+pₛₚ = (pᵥ * pᵣ⁴) / C * Δv
 
 P Cause Factor:  (pₙ / pᵣ) * 5556 = pᵧ, in factors (Graph as y)
 
 Max Speed:  pₛₚ = (q / millisecond) * pᵢ
+
+===========
+Omicron (μ)
+===========
+
+Base Philosophy:  L # L * C / |Varia|ᵑ # vaᴸ * D ∞ (>|L-Syncro| x η) = >|SelectedEquation| # <blank>
 
 =======
 Whereas
@@ -154,8 +160,48 @@ f = A valid multiplication factor, replacing 1000 from Beta
 
 n = A valid denominator capable of rendering the base, where n is chosen new base
 
-g - The variable or constant requiring intercession through parition to derive consequentially nominal alternate values
+g = The variable or constant requiring intercession through parition to derive consequentially nominal alternate values
     in a given mathematical envrionment (The "Quarter System" comes to mind)
+
+# = In Empirinometry, represents an Operation where segments of a formula, specific results from equation, or the total
+    result from all operations, occurring PRIOR to the Hash Operation, are transferred over the line to be dealt with in
+    another Empirical manner.
+
+∞ - In Empirinometry, this symbol indicates that ALL the numbers in the Definite Manual Imposition are infinitely calculated
+    up to the limitation provided in the Constituent Manual Imposition 
+
+    i.e. va will be subtracted, multiplied, divided, added to, "Sigma'd", or powered, among a few others that are obvious, and 
+         THEN the Definite Manual Imposition will be calculated, and that result tabulated for your spectrum of choice.  You will
+         then do this to all the variables, intermixing your operations as you go.  You will know because of your limitation that
+         the way x is modified is concrete in the Constituent Manual Impositions force on the calculation.  If the limitation is that
+         the answer after calculation can only be 1, then va can only be a certain amount of numbers.
+
+L = Objective Iteration, primed at 1 for the first placement, increasing by 1 each time placed
+
+η = Rational or Irrational Number of Variations
+
+D = Result of Operations before the second Hash Operation
+
+va = The objective Mathematical factor of all Mechanical Variation, approximated and primed at 124
+
+|Varia| = The root concept of Variation per segment in it's disambiguated state (2, not 3).  You cannot break this down
+          but to use it's quantification in the equation alone and separate this out, converting it into va
+
+>|L-Syncro| = Simply put, this can ONLY be explained by these three laws:
+
+              1.  Calculate everything to become a result of equation using Empirinometry
+
+              2.  Root out what each number in tandem with others represents on your scale (Sub-Foundational Target)
+ 
+ 	      3.  Identify root components of desired equation and see if they fit the description in the 
+                  numbers you gained.
+
+              Prepare for transport into >|SelectedEquation|
+
+>|SelectedEquation| = In this formula, you have a whole number, no strings attached, so calculate what the number is
+
+<blank> - Representing, in this case, a Foundational Target from the prior equations, but will mean to imply 1 + 1 just 
+          the same
 
 Δd = Something useful for your brain, in equitable percentile growth per volume of decimals and/or whole numbers through
      function d(x)
@@ -176,7 +222,7 @@ P Mechanics:
 
 q = 206 / 197, in variations proportion
 
-c = Speed of light, in metres/second
+C = Speed of light, in metres/second
 
 p = Hyperbolic Index in this formula set, p stands for Partition, and runs in sync with all the rest below
 
@@ -218,6 +264,9 @@ Kappa = The Working Mechanic that derives the use of the hidden number system, c
         suited partition.
 
 Zeta = The Speed of Variation as quantified by iteration, loosely applied for any given state of it.
+
+Omicron = The Objective Philosophy of using L as a prime method to convey Mathematical Impositions, first by quantifying
+          Empirical notes and then subjectifying them to Sequinor Tredecim. 
 
 ================
 Additional Rules
@@ -348,6 +397,16 @@ Psi:
 Zeta:
 
 1.  Observe this formula properly and you can make tentative rules.
+
+Omicron:
+
+1.  The formula described only works for one Foundational Target.
+
+2.  When L is to be combined, follow the standard of the Base Philosophy to identify how ONE segment is identified through to
+    knowing all 3 points in it, and combine Negative Hashing to "start" at your desired L iteration.
+
+3.  Make sure you use a REAL version of Spectrum Ordinance, or your numbers will start being identified as others when you look
+    at their approximation (i.e. 1 + 2 and 1 * 3 always give 3, so that can't be your Foundational Target then, right?)
 
 ======
 Credit
