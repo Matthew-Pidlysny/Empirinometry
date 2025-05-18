@@ -89,6 +89,14 @@ Gamma (γ)
 
 xʸ = p + d(x)
 
+=========
+Kappa (κ)
+=========
+
+Raw Function:  p(Δg) = g * (f / n)
+
+Beta Simplification:  p(x) = x * (1000 / 169)
+
 ===========
 Epsilon (ε)
 ===========
@@ -99,14 +107,6 @@ Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6⁷) - (((8^9⁽⁻¹⁰⁾ / 11) * 12) +
 
 Simplified:  pᵥ = 1371119 + 256/6561
 
-===================
-Psi (Necessity) (Ψ)
-===================
-
-1 = pᵥ
-
-Sonia's Example (As she asked):  pᵥ = 2x - 1a = 2 - 2a
-
 =========
 Omega (Ω)
 =========
@@ -115,13 +115,13 @@ Raw:  1 * ((2 / 3) * 0.66~)⁴ + (5 * 6^7⁽⁻¹³⁾) - ((8^9¹⁰ / 11) * 12 
 
 Simplified:  pₘₓ = -12/11 * 2^(3 * 9¹⁰)
 
-=========
-Kappa (κ)
-=========
+===================
+Psi (Necessity) (Ψ)
+===================
 
-Raw Function:  p(Δg) = g * (f / n)
+1 = pᵥ
 
-Beta Simplification:  p(x) = x * (1000 / 169)
+Sonia's Example (As she asked):  pᵥ = 2x - 1a = 2 - 2a
 
 ========
 Zeta (ζ)
