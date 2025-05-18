@@ -370,6 +370,8 @@ Epsilon:
 
                   https://x.com/i/grok/share/InKKODWem4U20F9flOurPG299
 
+6.  When adjusting for actual pᵥ, first modify the speed approximation term "L^L⁽⁻ᴸ⁾ / L" and then re-factor as object found describes
+
 Omega:
 
 1.  Distinction is irrelevant.  All variation can exist within this structure, in step with maximum
