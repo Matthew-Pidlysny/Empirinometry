@@ -133,6 +133,14 @@ P Cause Factor:  (pₙ / pᵣ) * 5556 = pᵧ, in factors (Graph as y)
 
 Max Speed:  pₛₚ = (q / millisecond) * pᵢ
 
+======
+Pi (π)
+======
+
+Assertion on Ideal Midsize Radius (Crash Result Determination):  π = √(8 * Σ(n=1 to ∞) 1 / ∏(k=1 to n-1) ((2k + 1)/(2k - 1))^2)
+
+Lower Limit (Tentative):  4.3 × 10⁻¹⁹ meters
+
 ===========
 Omicron (μ)
 ===========
@@ -264,6 +272,10 @@ Kappa = The Working Mechanic that derives the use of the hidden number system, c
         suited partition.
 
 Zeta = The Speed of Variation as quantified by iteration, loosely applied for any given state of it.
+
+Pi = A working thesis on how pv^pv crashes this calculation of Pi, and why it is expressed as a perfect mid-point for 
+     the work of substantiation through Omicron.  The Lower Limit suggests only what we know by fact today, not what
+     we will know tomorrow.  Indications hold it is one of the best approximations of diameter.
 
 Omicron = The Objective Philosophy of using L as a prime method to convey Mathematical Impositions, first by quantifying
           Empirical notes and then subjectifying them to Sequinor Tredecim. 
@@ -399,6 +411,10 @@ Psi:
 Zeta:
 
 1.  Observe this formula properly and you can make tentative rules.
+
+Pi:
+
+1.  Subtantiate this limit in order to express the foundations of Pi, better than any known formula going on the matter.
 
 Omicron:
 
