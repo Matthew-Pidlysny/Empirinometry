@@ -146,6 +146,10 @@ Base Philosophy:  L # L * C / |Varia|ᵑ # vaᴸ * D ∞ (>|L-Syncro| x η) = >|
 
 Harvard Philosophy "Exacta":  π = 2m * m * p * z * v # ∏ 3.14159~ / i
 
+Pidlysnian Method "Yaadric":  L * p(π) / c # L Σ (y = π - p(π)) L * 3.14159 / (y (p(π) - 1)) + L = pᵎ 
+
+Obtain Pi from Subtantiations Term:  pᵎ / p(π) = π
+
 =======
 Whereas
 =======
@@ -232,6 +236,8 @@ p(Δg) = A hyperactive function that derives a new base to overlay the existing 
 p(x) = The same as above strictly for Sequinor Tredecim, meant as formulated in Beta without the simplification for 
        beginners
 
+p(π) = Pi run through the Beta Formula as g
+
 d(x) = xʸ - p, useful for tabling new data from your chosen Parition's Hyperbolic Indexing
 
 P Mechanics:
@@ -259,6 +265,8 @@ pₘₓ = The physically unbreakable threshold container for variation, approxim
       the dam³ by 1.049 to make one pᵤ³)
 
 pₛₚ = The speed at which variation transforms by a single degree, in pᵢ per millisecond
+
+pᵎ = The Derivative Inverse Logic Constant of Pi, at Maximum Negative Threshold
 
 Content Description
 -------------------
@@ -442,6 +450,9 @@ Omicron:
                   signify that it would be all that multiplied by L primed at 1, even though it's implied.  This seems 
                   redundant to the Incrementalist, but to the Substantiationist, the factors are the meaning, not the equation
                   result.
+
+5.  Do not perform more than the one possible set in Yaadric's Sigma operation.  But, you have it, a companion in Variation's terms
+    to Harvard's exceptional degree of wisdom prior to it.
 
 ======
 Credit
