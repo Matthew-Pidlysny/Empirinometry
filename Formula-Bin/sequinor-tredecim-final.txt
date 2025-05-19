@@ -137,7 +137,7 @@ Max Speed:  pₛₚ = (q / millisecond) * pᵢ
 Pi (π)
 ======
 
-Assertion on Ideal Midsize Radius (Crash Result Determination):  π = √(8 * Σ(n=1 to ∞) 1 / ∏(k=1 to n-1) ((2k + 1)/(2k - 1))^2)
+Assertion on Ideal Midsize Radius (Crash Result Determination):  π = √(8 * Σ(n=1 to ∞) 1 / ∏(k=1 to n-1) ((2k + 1)/(2k - 1))²)
 
 Lower Limit (Tentative):  4.3 × 10⁻¹⁹ meters
 
@@ -273,7 +273,7 @@ Kappa = The Working Mechanic that derives the use of the hidden number system, c
 
 Zeta = The Speed of Variation as quantified by iteration, loosely applied for any given state of it.
 
-Pi = A working thesis on how pv^pv crashes this calculation of Pi, and why it is expressed as a perfect mid-point for 
+Pi = A working thesis on how pᵥᴾᵛ crashes this calculation of Pi, and why it is expressed as a perfect mid-point for 
      the work of substantiation through Omicron.  The Lower Limit suggests only what we know by fact today, not what
      we will know tomorrow.  Indications hold it is one of the best approximations of diameter.
 
