@@ -437,6 +437,12 @@ Omicron:
 3.  Make sure you use a REAL version of Spectrum Ordinance, or your numbers will start being identified as others when you look
     at their approximation (i.e. 1 + 2 and 1 * 3 always give 3, so that can't be your Foundational Target then, right?)
 
+4.  Observation:  Negative Hashing identifies factors missed in common observation.  Use L as though you couldn't avoid it's use
+                  first, then go on to relay what L is doing in a primary state in other ways.  Exacta is just not bracketed to
+                  signify that it would be all that multiplied by L primed at 1, even though it's implied.  This seems 
+                  redundant to the Incrementalist, but to the Substantiationist, the factors are the meaning, not the equation
+                  result.
+
 ======
 Credit
 ======
