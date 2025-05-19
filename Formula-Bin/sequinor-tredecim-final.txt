@@ -138,6 +138,8 @@ Assertion on Ideal Midsize Radius (Crash Result Determination):  π = √(8 * Σ
 
 Lower Limit (Tentative):  4.3 × 10⁻¹⁹ meters
 
+100% Pi:  ρπ = λ
+
 ===========
 Omicron (μ)
 ===========
@@ -248,6 +250,10 @@ P Mechanics:
 q = 206 / 197, in variations proportion
 
 C = Speed of light, in metres/second
+
+ρ = (9 * 918674509813572108734019732450843901235 + 5) / (9 x 10^39)
+
+λ - A specific formula result that bears a Circular Constant able to draw any circle any size, ad absurdum.
 
 p = Hyperbolic Index in this formula set, p stands for Partition, and runs in sync with all the rest below
 
