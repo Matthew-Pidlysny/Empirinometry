@@ -274,6 +274,8 @@ pₛₚ = The speed at which variation transforms by a single degree, in pᵢ pe
 
 pᵎ = The Derivative Inverse Logic Constant of Pi, at Maximum Negative Threshold
 
+β = 13.4.5.2.11.12.7.9.8.6.1.3.0.10, a decimal I'm working on (Harvards fault, I get inquisitive over those things)
+
 Content Description
 -------------------
 
