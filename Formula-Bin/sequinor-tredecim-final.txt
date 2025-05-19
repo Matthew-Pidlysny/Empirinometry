@@ -137,7 +137,7 @@ Max Speed:  pₛₚ = (q / millisecond) * pᵢ
 Pi (π)
 ======
 
-Assertion on Ideal Midsize Radius (Crash Result Determination):  π = √(8 * Σ(n=1 to ∞) 1 / ∏(k=1 to n-1) ((2k + 1)/(2k - 1))²)
+Assertion on Ideal Midsize Radius (Crash Result Determination):  π = √(8 * Σ(o = 1 to ∞) 1 / ∏(j = 1 to o - 1) ((2j + 1)/(2j - 1))²)
 
 Lower Limit (Tentative):  4.3 × 10⁻¹⁹ meters
 
@@ -167,6 +167,10 @@ k = x - 1
 f = A valid multiplication factor, replacing 1000 from Beta
 
 n = A valid denominator capable of rendering the base, where n is chosen new base
+
+j = Used exclusively in Pi formula as defined
+
+o = Used exclusively in Pi formula as defined
 
 g = The variable or constant requiring intercession through parition to derive consequentially nominal alternate values
     in a given mathematical envrionment (The "Quarter System" comes to mind)
