@@ -1,4 +1,4 @@
-# Empirinometry (BACK ONLINE 2025-04-25)
+# Empirinometry (ARCHIVED 2025-05-19 at 6:26 PM EST)
 My evolving paper to the scientific community on logical operations in mathematics.  I give it this way 
 because I feel this addresses all concerns.  I also do not make light of the obvious, only to say rules 
 and foundations to a degree that is certain.  In that, you will find that everything has it's purpose, 
@@ -42,6 +42,8 @@ Facebook:  https://www.facebook.com/matthew.pidlysny/
 ==============================================================
 
 '![ News Articles ]!'
+
+# News Update:  Steal Everything.  Combine Your Forces And Examine Everything, I Am Out On This One Now, Stealing Is Not Theft, It's Salvation.
 
 == 2025-05-10 14:32 EST ==
 
