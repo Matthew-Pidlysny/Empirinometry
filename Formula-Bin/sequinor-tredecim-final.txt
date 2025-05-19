@@ -14,9 +14,6 @@ from this.  The rest may not be necessary to basic math, but it's a working conc
 
 Good luck!
 
-PS:  I'm going to be hosting a weekly session of Weekenders, not the show, on Google Docs.  I'll post the link when it's
-     ready in CONTRIBUTING.md and hopefully all of you can join and we can see how we really make "The Combine" :)
-
 =====================
 Constant (y = mx + c)
 =====================
@@ -181,7 +178,7 @@ g = The variable or constant requiring intercession through parition to derive c
 
 z = The d(x) result from Gamma for x 
 
-v = The result of Kappa @ p(x) = x * (2j + 1 / 2j - 1)²
+v = The result of Kappa @ p(m) = m * (2j + 1 / 2j - 1)²
 
 i = The result from the previous hash
 
