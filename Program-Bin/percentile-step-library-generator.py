@@ -5,7 +5,7 @@ import sys
 from datetime import datetime
 
 # ============================== PRECISION CONFIG ==============================
-PRECISION_DIGITS = 150
+PRECISION_DIGITS = 150 # This will be set dynamically in main()
 mp.dps = PRECISION_DIGITS + 100  # Extra guard digits for perfect reversibility
 
 # ============================== OUTPUT REDIRECTION ==============================
@@ -27,10 +27,25 @@ class TeeOutput:
     def close(self):
         self.file.close()
 
+# ============================== UTILITY FUNCTION (GENTLE TOUCH 1) ==============================
+def parse_gamma_input(user_input_str):
+    """Parses input for fractions (y/x) or raw decimals."""
+    user_input_str = user_input_str.strip()
+    if "/" in user_input_str:
+        try:
+            num, den = user_input_str.split('/')
+            return mpf(num) / mpf(den)
+        except:
+            print(f"Warning: Could not parse fraction '{user_input_str}'. Treating as raw number.")
+            return mpf(user_input_str)
+    else:
+        return mpf(user_input_str)
+
 # ============================== HEADER & INTRODUCTION ==============================
 def print_header():
+    # Uses the dynamically set PRECISION_DIGITS from main()
     print("=" * 80)
-    print("                    FUTURE N CALCULATOR - GAMMA SEQUENCE EXPLORER")
+    print("         FUTURE N CALCULATOR - GAMMA SEQUENCE EXPLORER")
     print("=" * 80)
     print()
     print("DESCRIPTION:")
@@ -38,7 +53,7 @@ def print_header():
     print("    γₙ₊₁ = γₙ + 2π * (log(γₙ + 1) / (log γₙ)²)")
     print()
     print("FEATURES:")
-    print("• Computes sequence values with 150 decimal precision")
+    print(f"• Computes sequence values with {PRECISION_DIGITS} decimal precision")
     print("• Uses modified formula to handle γₙ = 1 (avoids division by zero)")
     print("• Displays EXACT previous 5 entries using true inverse formula")
     print("• Provides detailed step-by-step analysis")
@@ -49,35 +64,77 @@ def print_header():
     print("=" * 80)
     print()
 
-# ============================== EXACT INVERSE FUNCTION (NEW!) ==============================
-def gamma_previous(gamma_current, epsilon=mpf('1e-150')):
-    """Exact inverse: given γₙ₊₁, find γₙ using Newton iteration"""
-    g = gamma_current - mpf('1e-50')  # good starting guess
+# ============================== ENHANCED EXACT INVERSE FUNCTION ==============================
+def gamma_previous_exact(gamma_current, epsilon=mpf('1e-150')):
+    """Enhanced exact inverse: given γₙ₊₁, find γₙ using high-precision Newton iteration"""
+    # Use a more sophisticated starting guess based on the derivative
+    if gamma_current > 100:
+        # For large gamma, the step is approximately 2π / log(gamma)
+        g = gamma_current - 2 * mp.pi / mp.log(gamma_current)
+    else:
+        g = gamma_current * 0.99  # Conservative starting guess
     
-    for _ in range(40):
+    max_iterations = 100
+    tolerance = mpf('1e-160')
+    
+    for iteration in range(max_iterations):
         log_g = mp.log(g)
         log_g1 = mp.log(g + 1)
         denom = log_g**2 + epsilon
-        residual = g + 2 * mp.pi * (log_g1 / denom) - gamma_current
         
-        if fabs(residual) < mpf('1e-160'):
+        # Forward step to compute what gamma_current should be from g
+        forward_step = g + 2 * mp.pi * (log_g1 / denom)
+        residual = forward_step - gamma_current
+        
+        if fabs(residual) < tolerance:
             return g
             
-        # Derivative
-        dfdg = 1 + 2*mp.pi * (
-            ((1/(g+1)) * denom - log_g1 * 2*log_g) / denom**2
+        # Enhanced derivative calculation with better numerical stability
+        d_log_g = 1/g
+        d_log_g1 = 1/(g + 1)
+        d_denom = 2 * log_g * d_log_g
+        
+        # Derivative of the forward step function
+        dfdg = 1 + 2 * mp.pi * (
+            (d_log_g1 * denom - log_g1 * d_denom) / (denom**2)
         )
-        g -= residual / dfdg
+        
+        # Adaptive step size for Newton
+        step = residual / dfdg
+        if fabs(step) > fabs(g) * 0.1:  # Limit step size to 10% of current value
+            step = mp.sign(step) * fabs(g) * 0.1
+            
+        g -= step
+        
+        # Safety check
+        if g <= 0:
+            g = gamma_current * 0.5  # Reset to safe value
     
+    # If we get here, return the best estimate
     return g
 
-def compute_previous_5(start_gamma):
-    """Compute exact previous 5 terms"""
+def compute_previous_5_enhanced(start_gamma):
+    """Compute exact previous 5 terms using enhanced inverse calculation"""
     prevs = []
     g = mpf(start_gamma)
-    for _ in range(5):
-        g = gamma_previous(g)
-        prevs.append(g)
+    
+    print("Computing previous entries via reverse engineering...")
+    
+    for step_back in range(5):
+        g_prev = gamma_previous_exact(g)
+        
+        # Verify the reverse calculation
+        log_g_prev = mp.log(g_prev)
+        log_g_prev_plus1 = mp.log(g_prev + 1)
+        reconstructed = g_prev + 2 * mp.pi * (log_g_prev_plus1 / (log_g_prev**2 + 1e-150))
+        error = fabs(reconstructed - g)
+        
+        print(f"  Step -{step_back+1}: γ_{-(step_back+1)} = {format_number(g_prev, 20)}")
+        print(f"    Verification error: {nstr(error, 10)}")
+        
+        prevs.append(g_prev)
+        g = g_prev
+    
     prevs.reverse()
     return prevs
 
@@ -166,15 +223,29 @@ def main():
     sys.stdout = tee
     
     try:
-        print_header()
+        # NOTE: GENTLE TOUCH 2: Dynamic Precision Input
+        global PRECISION_DIGITS
         
         print("INPUT PARAMETERS:")
         print("-" * 40)
         
-        initial_gamma_str = input("What Number do you want to Step? (initial γ₀): ")
+        initial_gamma_str = input("What Number do you want to Step? (initial γ₀, e.g., 2 or 1/3): ")
         steps = int(input("To what step? (number of steps to compute): "))
+
+        # New: Set precision dynamically based on user input
+        try:
+            user_prec = int(input(f"Set output decimal precision (current {PRECISION_DIGITS}): ") or PRECISION_DIGITS)
+            PRECISION_DIGITS = user_prec
+            mp.dps = PRECISION_DIGITS + 100
+            print(f"-> Precision set to {PRECISION_DIGITS} digits.")
+        except ValueError:
+            print(f"Invalid precision. Keeping default {PRECISION_DIGITS}.")
+        print("-" * 40)
         
-        gamma_start = mpf(initial_gamma_str)
+        # NOTE: GENTLE TOUCH 1: Smart Input Parsing
+        gamma_start = parse_gamma_input(initial_gamma_str)
+        
+        print_header()
         
         print()
         print("CALCULATING...")
@@ -182,17 +253,17 @@ def main():
         print(f"Output is being continuously saved to: {output_filename}")
         print()
         
-        # ==================================== EXACT BACKWARD 5 STEPS (NEW SECTION) ====================================
+        # ==================================== ENHANCED BACKWARD 5 STEPS ====================================
         print("=" * 80)
-        print("   EXACT PREVIOUS 5 ENTRIES (computed backward using true inverse)")
+        print("    EXACT PREVIOUS 5 ENTRIES (reverse engineering the stepping pattern)")
         print("=" * 80)
-        previous_5 = compute_previous_5(gamma_start)
+        previous_5 = compute_previous_5_enhanced(gamma_start)
         for i, g in enumerate(previous_5):
             print(f"γ_{i-5} = {format_number(g)}")
-        print(f"γ_0     = {format_number(gamma_start)}   ← YOUR STARTING POINT")
+        print(f"γ_0     = {format_number(gamma_start)}    ← YOUR STARTING POINT")
         print("=" * 80)
         print()
-        # =========================================================================================================
+        # ===================================================================================================
 
         use_modified = (fabs(gamma_start - 1) < 1e-10)
         
