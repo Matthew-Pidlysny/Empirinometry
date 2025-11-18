@@ -81,6 +81,7 @@ def print_header():
     print()
     print("MATHEMATICAL NOTES:")
     print("• Now with perfect forward/backward reversibility")
+    print("• Enhanced stability around γ = 1")
     print("=" * 80)
     print()
 
@@ -149,8 +150,9 @@ def compute_previous_5_enhanced(start_gamma):
     prevs.reverse()
     return prevs
 
-# ============================== MODIFIED FORMULA WITH EPSILON ==============================
-def compute_gamma_sequence_modified(initial_gamma, steps, epsilon=1e-150):
+# ============================== STABLE FORMULA WITH DYNAMIC EPSILON ==============================
+def compute_gamma_sequence_stable(initial_gamma, steps, epsilon_base=1e-10):
+    """Enhanced stable version with dynamic epsilon protection around γ=1"""
     gamma = mpf(initial_gamma)
     sequence = [gamma]
     
@@ -159,8 +161,15 @@ def compute_gamma_sequence_modified(initial_gamma, steps, epsilon=1e-150):
             raise ValueError("Gamma must be positive")
         
         log_gamma = mp.log(gamma)
+        
+        # Gentle stability enhancement: dynamic epsilon around γ=1
+        if abs(log_gamma) < 1e-5:
+            dynamic_epsilon = epsilon_base * (1 / (abs(log_gamma) + 1e-100))**2
+        else:
+            dynamic_epsilon = 1e-150
+            
+        denominator = log_gamma**2 + dynamic_epsilon
         log_gamma_plus1 = mp.log(gamma + 1)
-        denominator = log_gamma**2 + epsilon
         term = 2 * mp.pi * (log_gamma_plus1 / denominator)
         gamma = gamma + term
         sequence.append(gamma)
@@ -168,6 +177,7 @@ def compute_gamma_sequence_modified(initial_gamma, steps, epsilon=1e-150):
     return sequence
 
 def compute_gamma_sequence_original(initial_gamma, steps):
+    """Original formula for reference and comparison"""
     gamma = mpf(initial_gamma)
     sequence = [gamma]
     
@@ -233,7 +243,7 @@ def print_step_info(step, gamma_value, sequence_so_far, is_modified=False):
     print("=" * 80)
     
     if is_modified:
-        print("Using MODIFIED formula (handles γₙ = 1)")
+        print("Using STABLE formula (handles all γₙ > 0)")
     else:
         print("Using ORIGINAL formula")
     
@@ -291,7 +301,7 @@ def print_step_info(step, gamma_value, sequence_so_far, is_modified=False):
 
 # ============================== MAIN PROGRAM ==============================
 def main():
-    # Simulate user input for gamma = 2.0, steps = 10, precision = 50
+    # Simulate user input for demonstration
     initial_gamma_str = "2.0"
     steps = 10
     user_prec = 50
@@ -334,26 +344,14 @@ def main():
         print("=" * 80)
         print()
 
-        use_modified = (fabs(gamma_start - 1) < 1e-10)
-        
-        if use_modified:
-            sequence = compute_gamma_sequence_modified(gamma_start, steps)
-            formula_type = "MODIFIED"
-        else:
-            try:
-                sequence = compute_gamma_sequence_original(gamma_start, steps)
-                formula_type = "ORIGINAL"
-            except ValueError as e:
-                if "undefined at gamma=1" in str(e):
-                    print("Note: Original formula fails at γ₀ = 1, switching to modified...")
-                    sequence = compute_gamma_sequence_modified(gamma_start, steps)
-                    formula_type = "MODIFIED (auto-switched)"
-                else:
-                    raise
+        # Use stable formula for all cases now (gently enhanced)
+        use_stable = True
+        sequence = compute_gamma_sequence_stable(gamma_start, steps)
+        formula_type = "STABLE (enhanced)"
         
         # Print forward sequence with enhanced research context
         for step, gamma in enumerate(sequence):
-            print_step_info(step, gamma, sequence[:step+1], use_modified)
+            print_step_info(step, gamma, sequence[:step+1], use_stable)
         
         # Enhanced final summary
         print("=" * 80)
