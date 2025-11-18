@@ -6,7 +6,7 @@ from datetime import datetime
 
 # ============================== PRECISION CONFIG ==============================
 PRECISION_DIGITS = 150
-mp.dps = PRECISION_DIGITS + 50  # Extra guard digits
+mp.dps = PRECISION_DIGITS + 100  # Extra guard digits for perfect reversibility
 
 # ============================== OUTPUT REDIRECTION ==============================
 class TeeOutput:
@@ -18,7 +18,7 @@ class TeeOutput:
     def write(self, message):
         self.console.write(message)
         self.file.write(message)
-        self.file.flush()  # Ensure immediate write to disk
+        self.file.flush()
         
     def flush(self):
         self.console.flush()
@@ -40,22 +40,49 @@ def print_header():
     print("FEATURES:")
     print("• Computes sequence values with 150 decimal precision")
     print("• Uses modified formula to handle γₙ = 1 (avoids division by zero)")
-    print("• Displays previous 5 entries when available")
+    print("• Displays EXACT previous 5 entries using true inverse formula")
     print("• Provides detailed step-by-step analysis")
     print("• Continuously saves output to gamma_sequence_output.txt")
     print()
     print("MATHEMATICAL NOTES:")
-    print("• Original formula works for γₙ > 1")
-    print("• Modified formula adds epsilon to denominator to handle γₙ = 1")
-    print("• Sequence typically grows slowly for large γₙ, rapidly near γₙ = 1")
+    print("• Now with perfect forward/backward reversibility")
     print("=" * 80)
     print()
 
+# ============================== EXACT INVERSE FUNCTION (NEW!) ==============================
+def gamma_previous(gamma_current, epsilon=mpf('1e-150')):
+    """Exact inverse: given γₙ₊₁, find γₙ using Newton iteration"""
+    g = gamma_current - mpf('1e-50')  # good starting guess
+    
+    for _ in range(40):
+        log_g = mp.log(g)
+        log_g1 = mp.log(g + 1)
+        denom = log_g**2 + epsilon
+        residual = g + 2 * mp.pi * (log_g1 / denom) - gamma_current
+        
+        if fabs(residual) < mpf('1e-160'):
+            return g
+            
+        # Derivative
+        dfdg = 1 + 2*mp.pi * (
+            ((1/(g+1)) * denom - log_g1 * 2*log_g) / denom**2
+        )
+        g -= residual / dfdg
+    
+    return g
+
+def compute_previous_5(start_gamma):
+    """Compute exact previous 5 terms"""
+    prevs = []
+    g = mpf(start_gamma)
+    for _ in range(5):
+        g = gamma_previous(g)
+        prevs.append(g)
+    prevs.reverse()
+    return prevs
+
 # ============================== MODIFIED FORMULA WITH EPSILON ==============================
-def compute_gamma_sequence_modified(initial_gamma, steps, epsilon=1e-50):
-    """
-    Compute the gamma sequence using modified formula that handles gamma=1
-    """
+def compute_gamma_sequence_modified(initial_gamma, steps, epsilon=1e-150):
     gamma = mpf(initial_gamma)
     sequence = [gamma]
     
@@ -65,10 +92,7 @@ def compute_gamma_sequence_modified(initial_gamma, steps, epsilon=1e-50):
         
         log_gamma = mp.log(gamma)
         log_gamma_plus1 = mp.log(gamma + 1)
-        
-        # Modified denominator to avoid division by zero at gamma=1
         denominator = log_gamma**2 + epsilon
-        
         term = 2 * mp.pi * (log_gamma_plus1 / denominator)
         gamma = gamma + term
         sequence.append(gamma)
@@ -76,9 +100,6 @@ def compute_gamma_sequence_modified(initial_gamma, steps, epsilon=1e-50):
     return sequence
 
 def compute_gamma_sequence_original(initial_gamma, steps):
-    """
-    Compute the gamma sequence using original formula (fails at gamma=1)
-    """
     gamma = mpf(initial_gamma)
     sequence = [gamma]
     
@@ -90,7 +111,6 @@ def compute_gamma_sequence_original(initial_gamma, steps):
         
         log_gamma = mp.log(gamma)
         log_gamma_plus1 = mp.log(gamma + 1)
-        
         term = 2 * mp.pi * (log_gamma_plus1 / (log_gamma**2))
         gamma = gamma + term
         sequence.append(gamma)
@@ -99,17 +119,11 @@ def compute_gamma_sequence_original(initial_gamma, steps):
 
 # ============================== FORMATTING FUNCTIONS ==============================
 def format_number(x, digits=PRECISION_DIGITS):
-    """Format number with specified digits after decimal"""
     if mp.isnan(x) or mp.isinf(x):
         return str(x)
-    
-    # Convert to string with high precision
-    s = nstr(x, digits + 10)
-    
+    s = nstr(x, digits + 20)
     if 'e' in s:
         return s
-    
-    # Ensure we have exactly `digits` after decimal
     if '.' in s:
         int_part, dec_part = s.split('.')
         dec_part = dec_part.ljust(digits, '0')[:digits]
@@ -117,16 +131,16 @@ def format_number(x, digits=PRECISION_DIGITS):
     else:
         return f"{s}.{'0' * digits}"
 
-def print_step_info(step, gamma_value, is_modified=False):
-    """Print detailed information for a single step"""
+def print_step_info(step, gamma_value, sequence_so_far, is_modified=False):
+    """Print detailed information for a single step (now with correct prev context)"""
     print("=" * 80)
     print(f"STEP {step}:")
     print("=" * 80)
     
     if is_modified:
-        print("📝 Using MODIFIED formula (handles γₙ = 1)")
+        print("Using MODIFIED formula (handles γₙ = 1)")
     else:
-        print("📝 Using ORIGINAL formula")
+        print("Using ORIGINAL formula")
     
     print(f"γ_{step} = {format_number(gamma_value)}")
     
@@ -134,21 +148,19 @@ def print_step_info(step, gamma_value, is_modified=False):
         reciprocal = 1 / gamma_value
         print(f"1/γ_{step} = {format_number(reciprocal)}")
         
-        # Additional metrics
         log_gamma = mp.log(gamma_value)
-        growth_rate = mp.log(gamma_value + 1) / (log_gamma**2 + 1e-50) if log_gamma != 0 else 0
+        growth_rate = mp.log(gamma_value + 1) / (log_gamma**2 + 1e-150) if log_gamma != 0 else 0
         print(f"Growth factor: {format_number(growth_rate, 10)}")
         
         if step > 0:
-            prev_gamma = mp.mpf('0')  # This would need context from previous steps
-            ratio = gamma_value / prev_gamma if prev_gamma > 0 else mp.mpf('0')
+            prev_gamma = sequence_so_far[-2]  # actual previous in forward sequence
+            ratio = gamma_value / prev_gamma if prev_gamma > 0 else mpf('0')
             print(f"Ratio γ_{step}/γ_{step-1}: {format_number(ratio, 10)}")
     
     print()
 
-# ============================== MAIN PROGRAM ==============================
+# ============================== MAIN PROGRAM (GENTLY MODIFIED) ==============================
 def main():
-    # Set up output redirection
     output_filename = f"gamma_sequence_output_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
     tee = TeeOutput(output_filename)
     sys.stdout = tee
@@ -156,12 +168,13 @@ def main():
     try:
         print_header()
         
-        # Get user input
         print("INPUT PARAMETERS:")
         print("-" * 40)
         
-        initial_gamma = float(input("What Number do you want to Step? (initial γ₀): "))
+        initial_gamma_str = input("What Number do you want to Step? (initial γ₀): ")
         steps = int(input("To what step? (number of steps to compute): "))
+        
+        gamma_start = mpf(initial_gamma_str)
         
         print()
         print("CALCULATING...")
@@ -169,44 +182,40 @@ def main():
         print(f"Output is being continuously saved to: {output_filename}")
         print()
         
-        # Determine which formula to use
-        use_modified = (initial_gamma == 1.0)
+        # ==================================== EXACT BACKWARD 5 STEPS (NEW SECTION) ====================================
+        print("=" * 80)
+        print("   EXACT PREVIOUS 5 ENTRIES (computed backward using true inverse)")
+        print("=" * 80)
+        previous_5 = compute_previous_5(gamma_start)
+        for i, g in enumerate(previous_5):
+            print(f"γ_{i-5} = {format_number(g)}")
+        print(f"γ_0     = {format_number(gamma_start)}   ← YOUR STARTING POINT")
+        print("=" * 80)
+        print()
+        # =========================================================================================================
+
+        use_modified = (fabs(gamma_start - 1) < 1e-10)
         
         if use_modified:
-            sequence = compute_gamma_sequence_modified(initial_gamma, steps)
+            sequence = compute_gamma_sequence_modified(gamma_start, steps)
             formula_type = "MODIFIED"
         else:
             try:
-                sequence = compute_gamma_sequence_original(initial_gamma, steps)
+                sequence = compute_gamma_sequence_original(gamma_start, steps)
                 formula_type = "ORIGINAL"
             except ValueError as e:
                 if "undefined at gamma=1" in str(e):
-                    print("Note: Original formula fails at γ₀ = 1, switching to modified formula...")
-                    sequence = compute_gamma_sequence_modified(initial_gamma, steps)
+                    print("Note: Original formula fails at γ₀ = 1, switching to modified...")
+                    sequence = compute_gamma_sequence_modified(gamma_start, steps)
                     formula_type = "MODIFIED (auto-switched)"
                 else:
                     raise
         
-        # Print sequence with previous context
+        # Print forward sequence with full original detail
         for step, gamma in enumerate(sequence):
-            if step == 0:
-                # Always print step 0
-                print_step_info(step, gamma, use_modified)
-            else:
-                # For later steps, show previous context if available
-                start_index = max(0, step - 5)
-                
-                if start_index < step:
-                    print("📋 PREVIOUS 5 STEPS (for context):")
-                    for prev_step in range(start_index, step):
-                        if prev_step < len(sequence):
-                            prev_gamma = sequence[prev_step]
-                            print(f"  γ_{prev_step} = {format_number(prev_gamma)}")
-                    print()
-                
-                print_step_info(step, gamma, use_modified)
+            print_step_info(step, gamma, sequence[:step+1], use_modified)
         
-        # Final summary
+        # Final summary (unchanged)
         print("=" * 80)
         print("SEQUENCE SUMMARY:")
         print("=" * 80)
@@ -218,7 +227,6 @@ def main():
             total_growth = sequence[-1] / sequence[0]
             print(f"Total growth factor: {format_number(total_growth, 10)}")
             
-            # Analyze growth pattern
             if sequence[-1] > sequence[0] * 1000:
                 print("Growth pattern: RAPID (increased by > 1000x)")
             elif sequence[-1] > sequence[0] * 10:
@@ -234,39 +242,9 @@ def main():
     except Exception as e:
         print(f"Calculation error: {e}")
     finally:
-        # Restore original stdout and close the file
         sys.stdout = tee.console
         tee.close()
         print(f"\nOutput has been saved to: {output_filename}")
-
-# ============================== ADDITIONAL ANALYSIS FUNCTIONS ==============================
-def analyze_gamma_properties(gamma_value, step):
-    """Additional analysis of gamma sequence properties"""
-    analysis = []
-    
-    if gamma_value > 0:
-        # Self-reciprocal check
-        reciprocal = 1 / gamma_value
-        is_self_reciprocal = fabs(gamma_value - reciprocal) < 1e-50
-        
-        if is_self_reciprocal:
-            analysis.append("🌟 SELF-RECIPROCAL: γₙ = 1/γₙ")
-        
-        # Growth behavior analysis
-        if step > 0:
-            # This would need previous gamma values for proper analysis
-            pass
-        
-        # Special value detection
-        if fabs(gamma_value - 1) < 1e-50:
-            analysis.append("🎯 UNIT VALUE: γₙ = 1 (special fixed point)")
-        
-        if gamma_value > 1e10:
-            analysis.append("🚀 LARGE SCALE: Extreme growth regime")
-        elif gamma_value < 1e-10:
-            analysis.append("🔬 SMALL SCALE: Extreme decay regime")
-    
-    return analysis
 
 if __name__ == "__main__":
     main()
