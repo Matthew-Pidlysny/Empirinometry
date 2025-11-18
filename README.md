@@ -1,4 +1,4 @@
-# Empirinometry (ARCHIVED 2025-05-19 at 6:26 PM EST)
+# Empirinometry
 My evolving paper to the scientific community on logical operations in mathematics.  I give it this way 
 because I feel this addresses all concerns.  I also do not make light of the obvious, only to say rules 
 and foundations to a degree that is certain.  In that, you will find that everything has it's purpose, 
@@ -42,6 +42,15 @@ Facebook:  https://www.facebook.com/matthew.pidlysny/
 ==============================================================
 
 '![ News Articles ]!'
+
+# Programs Online
+
+Ok, hi everyone.  I had this page archived for so long, but I've been working very hard to do some serious things.  I now
+have the "bingers" folder, where you can see my number crunching inventions.  The new closed form recurrence formula is
+actually a percentile difficulty formula over 1, but it needs work.  It's dreaming that there IS a recurring n for any
+percentile difficulty, but it works out to be it if ever there was one for a number.  
+
+Good luck, all, keep stealing!  Nothing I can do on my end!
 
 # News Update:  Steal Everything.  Combine Your Forces And Examine Everything, I Am Out On This One Now, Stealing Is Not Theft, It's Salvation.
 
