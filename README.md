@@ -45,6 +45,8 @@ Facebook:  https://www.facebook.com/matthew.pidlysny/
 
 # Programs Online
 
+== 2025-11-17 22:54 EST ==
+
 Ok, hi everyone.  I had this page archived for so long, but I've been working very hard to do some serious things.  I now
 have the "bingers" folder, where you can see my number crunching inventions.  The new closed form recurrence formula is
 actually a percentile difficulty formula over 1, but it needs work.  It's dreaming that there IS a recurring n for any
