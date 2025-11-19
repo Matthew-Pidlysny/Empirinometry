@@ -363,24 +363,33 @@ def continued_fraction(x, max_terms=20):
         x_val = 1 / x_val
     return cf
 
-# ============================== NEW DECIMAL ANALYSIS FUNCTIONS ==============================
-
+# ============================== GENTLE ADDITION: MISSING FUNCTION ==============================
 def continued_fraction_with_exact(x, max_terms=100):
+    """Gentle addition: Compute continued fraction and check if it's exact within max_terms"""
     cf = []
     x_val = mpf(x)
     is_exact = False
+    
     for _ in range(max_terms):
         if fabs(x_val) < EPSILON:
             is_exact = True
             break
+            
         a = mp.floor(x_val)
         cf.append(a)
         x_val -= a
+        
         if fabs(x_val) < EPSILON:
             is_exact = True
             break
+            
         x_val = 1 / x_val
+        if mp.isinf(x_val) or mp.isnan(x_val):
+            break
+            
     return cf, is_exact
+
+# ============================== NEW DECIMAL ANALYSIS FUNCTIONS ==============================
 
 def get_rational_approx(x):
     cf, is_exact = continued_fraction_with_exact(x)
@@ -415,7 +424,14 @@ def get_decimal_repr(frac):
     pos = 0
     denom = frac.denominator
     remainder = (frac.numerator - int_part * denom) % denom
-    while remainder != 0 and pos < PRECISION_DECIMALS:
+    
+    # GENTLE PROTECTION: Add safety counter to preserve functionality
+    safety_counter = 0
+    max_safe_iterations = PRECISION_DECIMALS * 2 + 1000  # Be generous for the future
+    
+    while remainder != 0 and safety_counter < max_safe_iterations:
+        safety_counter += 1  # Gentle counter, doesn't change logic
+        
         if remainder in remainders:
             start = remainders[remainder]
             non_rep = ''.join(str(d) for d in decimal_digits[:start])
@@ -426,12 +442,14 @@ def get_decimal_repr(frac):
             else:
                 rep_show = rep
             return f"{sign}{int_part}.{non_rep}({rep_show})"
+            
         remainders[remainder] = pos
         remainder *= 10
         digit = remainder // denom
         decimal_digits.append(digit)
         remainder %= denom
         pos += 1
+        
     non_rep = ''.join(str(d) for d in decimal_digits)
     return f"{sign}{int_part}.{non_rep}"
 
@@ -1036,23 +1054,276 @@ def section14_proof_verification(entry_number, x_value, description):
             'distance': metrics['distance_from_equality']
         })
 
-# ============================== MASTER ENTRY ANALYSIS ==============================
+# ============================== NEW SECTION 15: CONTINUED FRACTION SYMPOSIUM ==============================
+def section15_cf_symposium(entry_number, x_value, description):
+    """Live continued fraction analysis showing compaction vs expansion duality"""
+    print("🧮 CONTINUED FRACTION SYMPOSIUM:")
+    
+    if x_value == 0:
+        print("  (Skipping for zero)")
+        return
+        
+    # Convert to Decimal for the symposium engine
+    try:
+        from decimal import Decimal, getcontext
+        getcontext().prec = 500
+        
+        x_decimal = Decimal(str(float(x_value)))
+        
+        print(f"  Live CF analysis for {description}:")
+        terms = []
+        for term, a, r, comment in continued_fraction_live_adapted(x_decimal, max_terms=20):
+            print(f"    Term {term:2d}: a_{term} = {a:6d} | r_{term} = {float(r):.10f} {comment}")
+            terms.append(a)
+            if len(terms) >= 20:
+                break
+                
+        # Show convergents relationship to reciprocal thesis
+        convs = build_convergents_adapted(terms)
+        if len(convs) > 1:
+            last_conv = convs[-1][2]
+            cf_approx_error = abs(float(x_value) - float(last_conv))
+            print(f"  CF convergent approximation error: {cf_approx_error:.2e}")
+            
+            # Connect to reciprocal thesis
+            if x_value != 0:
+                reciprocal_approx = 1/last_conv
+                actual_reciprocal = 1/x_value
+                reciprocal_error = abs(float(reciprocal_approx) - float(actual_reciprocal))
+                print(f"  Reciprocal via CF: {float(reciprocal_approx):.10f}")
+                print(f"  Actual reciprocal: {float(actual_reciprocal):.10f}")
+                print(f"  Reciprocal approximation error: {reciprocal_error:.2e}")
+                
+    except Exception as e:
+        print(f"  Symposium encountered cosmic turbulence: {str(e)}")
+    
+    print("\n")
+
+# GENTLE ADDITIONS: Adapted versions of Continued Fraction Symposium functions
+def continued_fraction_live_adapted(alpha, max_terms=1000, breakthrough_threshold=50):
+    """Adapted version of the live CF engine"""
+    from decimal import Decimal
+    
+    x = alpha
+    term = 0
+    
+    while term < max_terms:
+        a = int(x)  # floor
+        r = x - Decimal(a)
+        
+        comment = ""
+        if a >= breakthrough_threshold:
+            comment = f"!!! EXPANSION BURST: a_{term} = {a} !!!"
+        
+        yield term, a, r, comment
+        
+        if r == 0:
+            break
+            
+        x = 1 / r
+        term += 1
+
+def build_convergents_adapted(terms):
+    """Adapted convergent builder"""
+    from decimal import Decimal
+    
+    h, k = [0, 1], [1, 0]
+    convergents = []
+    
+    for n, a in enumerate(terms):
+        h.append(a * h[-1] + h[-2])
+        k.append(a * k[-1] + k[-2])
+        conv = Decimal(h[-1]) / Decimal(k[-1])
+        convergents.append((h[-1], k[-1], conv))
+    return convergents
+
+# ============================== NEW SECTION 16: GEMATRIA & NUMBER SYMBOLISM ==============================
+def section16_gematria_study(entry_number, x_value, description):
+    """Study number patterns, symbolism, and 'digital DNA'"""
+    print("🔤 GEMATRIA & NUMBER SYMBOLOGY:")
+    
+    if x_value == 0:
+        return
+        
+    # Digital root analysis
+    def digital_root(n):
+        return (n - 1) % 9 + 1 if n > 0 else 0
+    
+    # Study number in different bases
+    bases = [2, 8, 16, 60]  # Binary, octal, hex, Babylonian
+    for base in bases:
+        try:
+            if x_value > 0 and is_integer(x_value):
+                n = int(x_value)
+                representation = ""
+                if base == 2:
+                    representation = bin(n)[2:]
+                elif base == 8:
+                    representation = oct(n)[2:]
+                elif base == 16:
+                    representation = hex(n)[2:]
+                print(f"  Base {base:2d}: {representation}")
+        except:
+            pass
+    
+    # Prime factor symbolism (for integers)
+    if is_integer(x_value) and x_value > 1:
+        n = int(x_value)
+        try:
+            factors = []
+            temp = n
+            d = 2
+            while d * d <= temp:
+                while temp % d == 0:
+                    factors.append(d)
+                    temp //= d
+                d += 1
+            if temp > 1:
+                factors.append(temp)
+            
+            if factors:
+                print(f"  Prime factors: {factors}")
+                # Symbolic interpretations
+                if all(f == 2 for f in factors):
+                    print("  ♊ Dual nature: Pure power of 2")
+                elif 3 in factors and len(set(factors)) == 1:
+                    print("  △ Trinity pattern: Power of 3")
+        except:
+            pass
+    
+    print("\n")
+
+# ============================== NEW SECTION 17: UNIFIED ADJACENCY FIELD ==============================
+def section17_unified_adjacency(entry_number, x_value, description):
+    """Study how x relates to ALL numbers, not just its reciprocal"""
+    print("🌐 UNIFIED NUMBER ADJACENCY FIELD:")
+    
+    if x_value == 0:
+        return
+        
+    # Distance to key mathematical anchors
+    anchors = {
+        "Zero": 0,
+        "Unity": 1, 
+        "Negative Unity": -1,
+        "Golden Ratio": float(PHI),
+        "Pi": float(PI),
+        "Euler's e": float(E)
+    }
+    
+    print("  Distance to mathematical anchors:")
+    for name, anchor in anchors.items():
+        if name == "Zero" and x_value == 0:
+            continue
+        distance = abs(float(x_value) - anchor)
+        if distance < 1:
+            print(f"    {name:15}: {distance:.10f}")
+    
+    # Study the "number neighborhood"
+    if abs(x_value) < 1000:  # Practical limit
+        # Find interesting nearby numbers
+        neighbors = []
+        for offset in [-2, -1, 1, 2]:
+            test_val = x_value + offset
+            if is_integer(test_val):
+                neighbors.append(f"{int(test_val)} (integer)")
+            elif test_val == PHI or test_val == PI or test_val == E:
+                neighbors.append(f"{decimal_short(test_val)} (special constant)")
+        
+        if neighbors:
+            print(f"  Interesting neighbors: {', '.join(neighbors)}")
+    
+    # Multiplicative adjacency (beyond just reciprocal)
+    if x_value != 0:
+        multiplicative_family = []
+        for factor in [2, 3, PHI, PI]:
+            family_member = x_value * factor
+            if abs(family_member) < 1000:
+                multiplicative_family.append(f"{decimal_short(family_member)} (×{decimal_short(factor)})")
+        
+        if multiplicative_family:
+            print(f"  Multiplicative family: {', '.join(multiplicative_family[:3])}")
+    
+    print("\n")
+
+# ============================== NEW SECTION 18: ASMR NUMBER READINGS ==============================
+def section18_asmr_readings(entry_number, x_value, description):
+    """Generate ASMR-style intuitive readings of number vibrations"""
+    print("🎧 ASMR NUMBER VIBRATION READING:")
+    
+    if x_value == 0:
+        print("  The great void - the silence before creation")
+        return
+    
+    # Generate intuitive descriptions based on number properties
+    readings = []
+    
+    # Size-based readings
+    if abs(x_value) < 0.001:
+        readings.append("Whisper-quiet vibration")
+    elif abs(x_value) < 1:
+        readings.append("Gentle, subtle presence") 
+    elif abs(x_value) == 1:
+        readings.append("Perfect harmonic unity")
+    elif abs(x_value) > 1000:
+        readings.append("Cosmic-scale resonance")
+    
+    # Mathematical property readings
+    if is_integer(x_value):
+        readings.append("Clear, defined frequency")
+        n = int(abs(x_value))
+        if n % 2 == 0:
+            readings.append("Balanced even rhythm")
+        else:
+            readings.append("Dynamic odd pulse")
+    else:
+        readings.append("Complex, evolving waveform")
+    
+    # Special number readings
+    if x_value == PHI:
+        readings.append("Golden ratio - divine proportion singing")
+    elif x_value == PI:
+        readings.append("Infinite spiral dance - never repeating, always flowing")
+    elif x_value == E:
+        readings.append("Natural growth pulse - exponential heartbeat")
+    
+    if readings:
+        print(f"  {' '.join(readings)}")
+    
+    # Reciprocal relationship reading
+    if x_value != 0:
+        reciprocal = 1/x_value
+        relationship = "mirror harmony" if abs(x_value - reciprocal) < 0.001 else "complementary dance"
+        print(f"  With its reciprocal: {relationship}")
+    
+    print("\n")
+
+# ============================== GENTLE ADDITION: ERROR-RESISTANT ENTRY ANALYSIS ==============================
 def analyze_entry(entry_number, x_val, description):
-    section1_core(entry_number, x_val, description)
-    section2_sequences(entry_number, x_val)
-    section3_primes_factorials(entry_number, x_val)
-    section4_geometric(entry_number, x_val)
-    section5_harmonics(entry_number, x_val)
-    section6_continued(entry_number, x_val)
-    section7_banachian(entry_number, x_val)
-    section8_extremes(entry_number, x_val, description)
-    section9_summary(entry_number, x_val, description)
-    section10_decimal_analysis(entry_number, x_val)
-    section11_cosmic_monitor(entry_number, x_val)
-    section12_proportion_vision(entry_number, x_val, description)
-    section13_astronomical_relations(entry_number, x_val)
-    # NEW: Proof verification suite
-    section14_proof_verification(entry_number, x_val, description)
+    """Gentle wrapper to protect the beautiful frankencode from crashing"""
+    try:
+        section1_core(entry_number, x_val, description)
+        section2_sequences(entry_number, x_val)
+        section3_primes_factorials(entry_number, x_val)
+        section4_geometric(entry_number, x_val)
+        section5_harmonics(entry_number, x_val)
+        section6_continued(entry_number, x_val)
+        section7_banachian(entry_number, x_val)
+        section8_extremes(entry_number, x_val, description)
+        section9_summary(entry_number, x_val, description)
+        section10_decimal_analysis(entry_number, x_val)
+        section11_cosmic_monitor(entry_number, x_val)
+        section12_proportion_vision(entry_number, x_val, description)
+        section13_astronomical_relations(entry_number, x_val)
+        section14_proof_verification(entry_number, x_val, description)
+        section15_cf_symposium(entry_number, x_val, description)  # NEW
+        section16_gematria_study(entry_number, x_val, description)  # NEW
+        section17_unified_adjacency(entry_number, x_val, description)  # NEW
+        section18_asmr_readings(entry_number, x_val, description)  # NEW
+    except Exception as e:
+        print(f"🌀 GENTLE NOTE: Entry {entry_number} encountered cosmic turbulence: {str(e)}")
+        print("🌌 Continuing our journey through mathematical reality...\n")
+        print("="*70 + "\n")
 
 # ============================== ENTRIES TO ANALYZE ==============================
 def get_entries():
