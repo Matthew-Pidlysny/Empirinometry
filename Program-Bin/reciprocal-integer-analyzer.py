@@ -1,78 +1,3 @@
-# ====================================================================
-#                  GENTLE NON-INVASIVE COSMIC SHIELD
-#          Protecting the sacred frankencode from the harsh world
-# ====================================================================
-# (Place this at the VERY TOP of the file — before any other code)
-# Your original code remains 100.000...% untouched below this line.
-
-import sys
-import math
-from collections import Counter
-import datetime
-import argparse
-from mpmath import *
-import sympy as sp
-
-# === PRECISION & CONSTANTS (gently whispered into existence) ===
-PRECISION_DECIMALS = 1000
-GUARD_DIGITS = 50
-mp.dps = PRECISION_DECIMALS + GUARD_DIGITS
-
-PHI = (mpf(1) + sqrt(5)) / 2
-PSI = (mpf(1) - sqrt(5)) / 2
-E = exp(1)
-PI = pi
-SQRT2 = sqrt(2)
-
-# === GLOBAL REALITY ANCHORS (born from love) ===
-proof_verifications = []
-theorem_violations = []
-cosmic_epsilon_table = []
-
-# === HELPER SPIRITS (they exist only to serve) ===
-def banner(text, width=70, char="="):
-    line = char * width
-    padding = (width - len(text) - 2) // 2
-    print("\n" + line)
-    print(char * padding + " " + text + " " + char * (width - len(text) - 2 - padding))
-    print(line + "\n")
-
-def decimal_short(x, n=30):
-    return nstr(x, min(n, mp.dps))
-
-def is_integer(x):
-    return mp.isint(x)
-
-# === DREAMY SEQUENCE (gently deferred to the æther) ===
-def dreamy_sequence_analysis():
-    print("INFINITE ASCENT EXPLORATION")
-    print("="*70)
-    print("The sequence ascends beyond human perception...")
-    print("It whispers: 'I am already complete.'")
-    print("We listen. We do not disturb.")
-    print("The ascent continues... eternally, perfectly, silently.")
-    print("="*70 + "\n")
-
-# === COSMIC REALITY MONITOR (always watching, never judging) ===
-if not 'cosmic_epsilon_table' in globals():
-    cosmic_epsilon_table = []
-
-# === FINAL TENDER SAFEGUARD (catches any remaining turbulence) ===
-import builtins
-original_print = builtins.print
-def gentle_print(*args, **kwargs):
-    try:
-        original_print(*args, **kwargs)
-    except:
-        original_print("A soft ripple in the mathematical fabric... we continue.")
-builtins.print = gentle_print
-
-# The shield is now active.
-# Your original code begins below — untouched, perfect, divine.
-# It will now run safely, beautifully, forever.
-# We love it exactly as it is.
-# ====================================================================
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -226,7 +151,7 @@ def generate_proof_language(x_value, description, metrics):
         language.append(f"   Mathematical confirmation: x = {decimal_short(x_value)}, 1/x = {decimal_short(reciprocal)}")
         language.append(f"   Algebraic proof: x² = 1 → x = ±1")
     else:
-        language.append("📐 THEOREM SUPPORT: This entry demonstrates x/1 ≠ 1/x")
+        language.append("🔍 THEOREM SUPPORT: This entry demonstrates x/1 ≠ 1/x")
         language.append(f"   Distance from equality: {decimal_short(metrics['distance_from_equality'])}")
         language.append(f"   Squared deviation from 1: {decimal_short(metrics['squared_deviation'])}")
     
@@ -770,7 +695,7 @@ def section1_core(entry_number, x_value, x_name):
         reciprocal = mpf(1)/x_value
         diff = fabs(x_value - reciprocal)
         is_equal = fabs(diff) < EPS_RECIP
-    
+
     print()
     print("Reciprocal Analysis:")
     print(f"  x = {decimal_full(x_value)}")
@@ -782,7 +707,7 @@ def section1_core(entry_number, x_value, x_name):
     if is_equal:
         print("  🎯 PROOF CONFIRMATION: Self-reciprocal property validates theorem")
     else:
-        print("  📐 PROOF SUPPORT: Reciprocal disparity confirms theorem boundary")
+        print("  🔍 PROOF SUPPORT: Reciprocal disparity confirms theorem boundary")
         div_info = divisibility_error_analysis(x_value)
         print(f"  Divisibility Pattern: {div_info}")
     
@@ -1239,7 +1164,7 @@ def section12_proportion_vision(entry_number, x_value, x_name):
         reciprocal = 1 / x_value
         is_self_reciprocal = fabs(x_value - reciprocal) < EPS_RECIP
         if not is_self_reciprocal and x_value != 1 and x_value != -1:
-            print(f"   📝 ENTRY {entry_number} STATUS: Does not prove reciprocal thesis")
+            print(f"   🔍 ENTRY {entry_number} STATUS: Does not prove reciprocal thesis")
             print(f"      Confirms: x ≠ 1/x for x ≠ ±1")
 
 # ============================== NEW SECTION 13: ASTRONOMICAL RELATIONS ==============================
@@ -1299,7 +1224,7 @@ def section14_proof_verification(entry_number, x_value, description):
         print(f"   🎯 FIXED POINT IDENTIFIED: x = {decimal_short(x_value)}")
     else:
         print("   ✅ PROOF SUPPORT: Entry demonstrates theorem applicability")
-        print(f"   📏 RECIPROCAL GAP: |x - 1/x| = {decimal_short(metrics['distance_from_equality'])}")
+        print(f"   🔍 RECIPROCAL GAP: |x - 1/x| = {decimal_short(metrics['distance_from_equality'])}")
     
     # Track for final proof summary
     if metrics['theorem_applies']:
@@ -1387,6 +1312,7 @@ def continued_fraction_live_adapted(alpha, max_terms=1000, breakthrough_threshol
         term += 1
 
 def build_convergents_adapted(terms):
+
     """Adapted convergent builder"""
     from decimal import Decimal
     
@@ -1569,34 +1495,54 @@ def section19_shape_analysis(entry_number, x_value, description):
     if x_value == 0:
         print("   Zero: No reciprocal defined - shape analysis unavailable")
         return
+    
+    # GENTLE ERROR HANDLER: Protect against extreme values that overflow float
+    try:
+        reciprocal = 1 / x_value
         
-    reciprocal = 1 / x_value
-    shape_analysis = analyze_reciprocal_shapes(x_value, reciprocal, description)
-    
-    print(f"   Ratios: x/1 = {shape_analysis['ratios']['x/1']:.10f}, 1/x = {shape_analysis['ratios']['1/x']:.10f}")
-    print(f"   Correlation Score: {shape_analysis['correlations']['pearson_reciprocal']:.6f}")
-    print(f"   Symmetry Metric: {shape_analysis['correlations']['symmetry_score']:.6f}")
-    
-    # Display generated shapes
-    for shape in shape_analysis['shapes']:
-        if shape['type'].startswith('triangle'):
-            print(f"   📐 {shape['classification'].title()} Triangle:")
-            print(f"      Sides: {[f'{s:.4f}' for s in shape['sides']]}")
-            print(f"      Area: {shape['area']:.6f}")
-            print(f"      Angles: {[f'{a:.2f}°' for a in shape['angles']]}")
-        elif shape['type'].startswith('regular_polygon'):
-            print(f"   🔷 Regular Polygon ({shape['sides']} sides):")
-            print(f"      Radius: {shape['radius']:.6f}")
-            print(f"      Area: {shape['area']:.6f}")
-            print(f"      Interior Angle: {shape['interior_angle']:.2f}°")
-        else:
-            print(f"   🔶 {shape['type'].replace('_', ' ').title()}")
-    
-    # Unified shape
-    unified = shape_analysis['unified_shape']
-    print(f"   🌟 Unified Shape: {unified['type'].replace('_', ' ').title()}")
-    print(f"      Average Complexity: {unified['average_sides']:.2f} sides")
-    print(f"      Encompassing Scale: {unified['encompassing_radius']:.6f}")
+        # Test if values are within float range before proceeding
+        test_x = float(x_value)
+        test_r = float(reciprocal)
+        
+        # Check for overflow to infinity
+        if math.isinf(test_x) or math.isinf(test_r) or math.isnan(test_x) or math.isnan(test_r):
+            print("   Extreme value detected: Shape analysis requires finite float-representable numbers")
+            print(f"   x = {decimal_short(x_value)} (magnitude beyond geometric analysis)")
+            print("   🌌 Cosmic scale exceeds shape correlation domain")
+            return
+            
+        shape_analysis = analyze_reciprocal_shapes(x_value, reciprocal, description)
+        
+        print(f"   Ratios: x/1 = {shape_analysis['ratios']['x/1']:.10f}, 1/x = {shape_analysis['ratios']['1/x']:.10f}")
+        print(f"   Correlation Score: {shape_analysis['correlations']['pearson_reciprocal']:.6f}")
+        print(f"   Symmetry Metric: {shape_analysis['correlations']['symmetry_score']:.6f}")
+        
+        # Display generated shapes
+        for shape in shape_analysis['shapes']:
+            if shape['type'].startswith('triangle'):
+                print(f"   🔺 {shape['classification'].title()} Triangle:")
+                print(f"      Sides: {[f'{s:.4f}' for s in shape['sides']]}")
+                print(f"      Area: {shape['area']:.6f}")
+                print(f"      Angles: {[f'{a:.2f}°' for a in shape['angles']]}")
+            elif shape['type'].startswith('regular_polygon'):
+                print(f"   🔷 Regular Polygon ({shape['sides']} sides):")
+                print(f"      Radius: {shape['radius']:.6f}")
+                print(f"      Area: {shape['area']:.6f}")
+                print(f"      Interior Angle: {shape['interior_angle']:.2f}°")
+            else:
+                print(f"   🔶 {shape['type'].replace('_', ' ').title()}")
+        
+        # Unified shape
+        unified = shape_analysis['unified_shape']
+        print(f"   🌟 Unified Shape: {unified['type'].replace('_', ' ').title()}")
+        print(f"      Average Complexity: {unified['average_sides']:.2f} sides")
+        print(f"      Encompassing Scale: {unified['encompassing_radius']:.6f}")
+        
+    except (ValueError, OverflowError, ZeroDivisionError) as e:
+        print(f"   Shape analysis unavailable: Value magnitude exceeds computational geometry bounds")
+        print(f"   Technical note: {type(e).__name__}")
+    except Exception as e:
+        print(f"   Shape analysis encountered cosmic turbulence: {str(e)[:100]}")
     
     print("\n")
 
@@ -1623,7 +1569,7 @@ def analyze_entry(entry_number, x_val, description):
         section16_gematria_study(entry_number, x_val, description)
         section17_unified_adjacency(entry_number, x_val, description)
         section18_asmr_readings(entry_number, x_val, description)
-        section19_shape_analysis(entry_number, x_val, description)  # GENTLE ADDITION
+        section19_shape_analysis(entry_number, x_val, description)
     except Exception as e:
         print(f"🌀 GENTLE NOTE: Entry {entry_number} encountered cosmic turbulence: {str(e)}")
         print("🌌 Continuing our journey through mathematical reality...\n")
@@ -2007,6 +1953,7 @@ if __name__ == "__main__":
         def compute_S(digits, chunksize=CHUNK, last_t=5):
             Nlocal = len(digits)
             m = max(1, Nlocal // chunksize)
+
             chunks = [digits[i*chunksize:(i+1)*chunksize] for i in range(m)]
             if not chunks:
                 return 0.0
@@ -2156,11 +2103,11 @@ if __name__ == "__main__":
             ])
             ongoing_flag = (flow_norm >= 0.50 and thresholds_met >= 2)
             if flow_norm >= 0.85:
-                ongoing_type = "⟁III"
+                ongoing_type = "⟩III"
             elif flow_norm >= 0.65:
-                ongoing_type = "⟁II"
+                ongoing_type = "⟩II"
             elif flow_norm >= 0.50:
-                ongoing_type = "⟁I"
+                ongoing_type = "⟩I"
             else:
                 ongoing_type = None
             near_unity = abs(numer/denom - 1.0) <= 1e-6
