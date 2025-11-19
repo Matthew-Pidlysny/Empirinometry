@@ -484,6 +484,189 @@ def analyze_decimal_expansion(x):
         result += "Pattern: Non-repeating, irrational divisions mapped in chunks.\n"
         return result
 
+# ============================== GENTLE ADDITION: MATHEMATICAL SHAPE CORRELATION ENGINE ==============================
+def analyze_reciprocal_shapes(x_value, reciprocal_value, description):
+    """Generate polygon shapes and correlation metrics for reciprocal relationships"""
+    if x_value == 0:
+        return {"status": "undefined", "shapes": [], "correlations": {}}
+    
+    # Core ratio metrics
+    ratio_x_to_1 = float(x_value)  # x/1
+    ratio_1_to_x = float(reciprocal_value)  # 1/x
+    
+    # Shape parameters based on reciprocal relationships
+    shape_metrics = {
+        'triangle_sides': [abs(ratio_x_to_1), abs(ratio_1_to_x), 1.0],
+        'quadrilateral_angles': [ratio_x_to_1, ratio_1_to_x, 1/ratio_x_to_1 if ratio_x_to_1 != 0 else 0, 
+                               1/ratio_1_to_x if ratio_1_to_x != 0 else 0],
+        'polygon_complexity': min(10, max(3, int(abs(ratio_x_to_1 * ratio_1_to_x) % 8 + 3)))
+    }
+    
+    # Correlation coefficients
+    correlations = {
+        'pearson_reciprocal': calculate_pearson_correlation([ratio_x_to_1], [ratio_1_to_x]),
+        'distance_from_unity': abs(ratio_x_to_1 - 1) + abs(ratio_1_to_x - 1),
+        'symmetry_score': min(ratio_x_to_1/ratio_1_to_x, ratio_1_to_x/ratio_x_to_1) if ratio_x_to_1 > 0 and ratio_1_to_x > 0 else 0,
+        'geometric_mean': (abs(ratio_x_to_1 * ratio_1_to_x)) ** 0.5
+    }
+    
+    # Generate adaptive shapes
+    shapes = generate_adaptive_shapes(shape_metrics, correlations, description)
+    
+    return {
+        "status": "analyzed",
+        "shapes": shapes,
+        "correlations": correlations,
+        "ratios": {"x/1": ratio_x_to_1, "1/x": ratio_1_to_x},
+        "unified_shape": find_unified_shape(shapes)
+    }
+
+def calculate_pearson_correlation(x_values, y_values):
+    """Calculate Pearson correlation between reciprocal pairs"""
+    if len(x_values) != len(y_values) or len(x_values) == 0:
+        return 0
+    
+    mean_x = sum(x_values) / len(x_values)
+    mean_y = sum(y_values) / len(y_values)
+    
+    numerator = sum((x - mean_x) * (y - mean_y) for x, y in zip(x_values, y_values))
+    denominator_x = sum((x - mean_x) ** 2 for x in x_values)
+    denominator_y = sum((y - mean_y) ** 2 for y in y_values)
+    
+    if denominator_x == 0 or denominator_y == 0:
+        return 0
+    
+    return numerator / ((denominator_x * denominator_y) ** 0.5)
+
+def generate_adaptive_shapes(metrics, correlations, description):
+    """Generate mathematical shapes based on reciprocal properties"""
+    shapes = []
+    
+    # Triangle analysis
+    triangle_sides = [max(0.1, min(100, s)) for s in metrics['triangle_sides']]
+    if can_form_triangle(triangle_sides):
+        shapes.append({
+            "type": "triangle",
+            "sides": triangle_sides,
+            "area": calculate_triangle_area(triangle_sides),
+            "angles": calculate_triangle_angles(triangle_sides),
+            "classification": classify_triangle(triangle_sides)
+        })
+    
+    # Polygon analysis
+    n_sides = metrics['polygon_complexity']
+    polygon_radius = correlations['geometric_mean']
+    shapes.append({
+        "type": f"regular_polygon_{n_sides}",
+        "sides": n_sides,
+        "radius": polygon_radius,
+        "area": calculate_polygon_area(n_sides, polygon_radius),
+        "interior_angle": 180 * (n_sides - 2) / n_sides
+    })
+    
+    # Special shapes for mathematical constants
+    if "Golden" in description:
+        shapes.append({
+            "type": "golden_rectangle", 
+            "ratio": 1.61803398875,
+            "nested_levels": 5,
+            "spiral_angle": 137.507764
+        })
+    
+    if "Pi" in description:
+        shapes.append({
+            "type": "circle_approximation",
+            "sides": 96,  # Archimedes' method
+            "circumference_ratio": 3.14159,
+            "area_ratio": 3.14159
+        })
+    
+    return shapes
+
+def can_form_triangle(sides):
+    """Check if three sides can form a valid triangle"""
+    a, b, c = sorted(sides)
+    return a + b > c and a + c > b and b + c > a
+
+def calculate_triangle_area(sides):
+    """Calculate triangle area using Heron's formula"""
+    a, b, c = sides
+    s = sum(sides) / 2
+    area_squared = s * (s - a) * (s - b) * (s - c)
+    return math.sqrt(max(0, area_squared))  # Ensure non-negative
+
+def calculate_triangle_angles(sides):
+    """Calculate triangle angles using law of cosines"""
+    a, b, c = sides
+    angles = []
+    
+    # Angle opposite side a
+    if b > 0 and c > 0 and abs((b**2 + c**2 - a**2) / (2 * b * c)) <= 1:
+        angles.append(math.degrees(math.acos((b**2 + c**2 - a**2) / (2 * b * c))))
+    else:
+        angles.append(0)
+    
+    # Angle opposite side b  
+    if a > 0 and c > 0 and abs((a**2 + c**2 - b**2) / (2 * a * c)) <= 1:
+        angles.append(math.degrees(math.acos((a**2 + c**2 - b**2) / (2 * a * c))))
+    else:
+        angles.append(0)
+    
+    # Angle opposite side c
+    angles.append(180 - sum(angles))
+    return [max(0.1, min(179.9, angle)) for angle in angles]  # Keep angles valid
+
+def classify_triangle(sides):
+    """Classify triangle by side lengths and angles"""
+    a, b, c = sorted(sides)
+    angles = calculate_triangle_angles(sides)
+    
+    if abs(a - b) < 1e-10 and abs(b - c) < 1e-10:
+        return "equilateral"
+    elif abs(a - b) < 1e-10 or abs(b - c) < 1e-10 or abs(a - c) < 1e-10:
+        return "isosceles" 
+    elif max(angles) > 90:
+        return "obtuse"
+    elif abs(max(angles) - 90) < 1e-10:
+        return "right"
+    else:
+        return "acute"
+
+def calculate_polygon_area(n_sides, radius):
+    """Calculate area of regular polygon"""
+    if n_sides < 3 or radius <= 0:
+        return 0
+    return 0.5 * n_sides * radius**2 * math.sin(2 * math.pi / n_sides)
+
+def find_unified_shape(shapes):
+    """Find a unified shape representation from multiple shapes"""
+    if not shapes:
+        return {"type": "point", "dimensions": 0}
+    
+    # Calculate unified properties
+    total_sides = sum(shape.get('sides', 0) for shape in shapes if 'sides' in shape)
+    shape_count = len([s for s in shapes if 'sides' in s])
+    avg_sides = total_sides / shape_count if shape_count > 0 else 0
+    
+    total_area = sum(shape.get('area', 0) for shape in shapes)
+    avg_area = total_area / len(shapes) if shapes else 0
+    
+    # Determine unified shape type based on properties
+    if avg_sides <= 3.5:
+        unified_type = "triangle_family"
+    elif avg_sides <= 6:
+        unified_type = "hexagon_family" 
+    else:
+        unified_type = "complex_polygon"
+    
+    return {
+        "type": unified_type,
+        "average_sides": avg_sides,
+        "average_area": avg_area,
+        "encompassing_radius": avg_area ** 0.5,
+        "shape_count": len(shapes)
+    }
+
 # ============================== SECTION 1: CORE RECIPROCAL ANALYSIS ==============================
 def section1_core(entry_number, x_value, x_name):
     banner(f"ENTRY {entry_number}", 70)
@@ -1298,6 +1481,45 @@ def section18_asmr_readings(entry_number, x_value, description):
     
     print("\n")
 
+# ============================== GENTLE ADDITION: SHAPE ANALYSIS SECTION ==============================
+def section19_shape_analysis(entry_number, x_value, description):
+    """New section for mathematical shape correlation analysis"""
+    print("🔷 MATHEMATICAL SHAPE CORRELATION ANALYSIS:")
+    
+    if x_value == 0:
+        print("   Zero: No reciprocal defined - shape analysis unavailable")
+        return
+        
+    reciprocal = 1 / x_value
+    shape_analysis = analyze_reciprocal_shapes(x_value, reciprocal, description)
+    
+    print(f"   Ratios: x/1 = {shape_analysis['ratios']['x/1']:.10f}, 1/x = {shape_analysis['ratios']['1/x']:.10f}")
+    print(f"   Correlation Score: {shape_analysis['correlations']['pearson_reciprocal']:.6f}")
+    print(f"   Symmetry Metric: {shape_analysis['correlations']['symmetry_score']:.6f}")
+    
+    # Display generated shapes
+    for shape in shape_analysis['shapes']:
+        if shape['type'].startswith('triangle'):
+            print(f"   📐 {shape['classification'].title()} Triangle:")
+            print(f"      Sides: {[f'{s:.4f}' for s in shape['sides']]}")
+            print(f"      Area: {shape['area']:.6f}")
+            print(f"      Angles: {[f'{a:.2f}°' for a in shape['angles']]}")
+        elif shape['type'].startswith('regular_polygon'):
+            print(f"   🔷 Regular Polygon ({shape['sides']} sides):")
+            print(f"      Radius: {shape['radius']:.6f}")
+            print(f"      Area: {shape['area']:.6f}")
+            print(f"      Interior Angle: {shape['interior_angle']:.2f}°")
+        else:
+            print(f"   🔶 {shape['type'].replace('_', ' ').title()}")
+    
+    # Unified shape
+    unified = shape_analysis['unified_shape']
+    print(f"   🌟 Unified Shape: {unified['type'].replace('_', ' ').title()}")
+    print(f"      Average Complexity: {unified['average_sides']:.2f} sides")
+    print(f"      Encompassing Scale: {unified['encompassing_radius']:.6f}")
+    
+    print("\n")
+
 # ============================== GENTLE ADDITION: ERROR-RESISTANT ENTRY ANALYSIS ==============================
 def analyze_entry(entry_number, x_val, description):
     """Gentle wrapper to protect the beautiful frankencode from crashing"""
@@ -1316,10 +1538,11 @@ def analyze_entry(entry_number, x_val, description):
         section12_proportion_vision(entry_number, x_val, description)
         section13_astronomical_relations(entry_number, x_val)
         section14_proof_verification(entry_number, x_val, description)
-        section15_cf_symposium(entry_number, x_val, description)  # NEW
-        section16_gematria_study(entry_number, x_val, description)  # NEW
-        section17_unified_adjacency(entry_number, x_val, description)  # NEW
-        section18_asmr_readings(entry_number, x_val, description)  # NEW
+        section15_cf_symposium(entry_number, x_val, description)
+        section16_gematria_study(entry_number, x_val, description)
+        section17_unified_adjacency(entry_number, x_val, description)
+        section18_asmr_readings(entry_number, x_val, description)
+        section19_shape_analysis(entry_number, x_val, description)  # GENTLE ADDITION
     except Exception as e:
         print(f"🌀 GENTLE NOTE: Entry {entry_number} encountered cosmic turbulence: {str(e)}")
         print("🌌 Continuing our journey through mathematical reality...\n")
