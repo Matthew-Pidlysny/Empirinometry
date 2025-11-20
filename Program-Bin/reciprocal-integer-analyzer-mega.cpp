@@ -214,6 +214,170 @@ bool is_perfect_square(const high_precision_float& n) {
     return sqrt_n * sqrt_n == ni;
 }
 
+// ============================== MULTIPLICATIVE CLOSURE COUNT (MCC) ==============================
+// This module computes the minimal positive integer k such that x * k is an integer (MCC).
+// If no such k exists (irrational), returns "infinite" (MCC = 0 with confidence "infinite").
+// Strategy:
+//  - Try finite-decimal detection (x = a / 10^d) and compute reduced denominator q => MCC = q
+//  - Else, attempt rational reconstruction from continued fraction convergents up to Q_MAX
+//  - Otherwise mark MCC = infinite
+
+struct MCCResult {
+    bool finite;                 // true if finite MCC found
+    high_precision_int mcc;      // the minimal multiplier k (if finite)
+    std::string confidence;      // "high", "medium", "low", or "infinite"
+    std::string as_string() const {
+        if (!finite) return "∞";
+        return mcc.convert_to<std::string>();
+    }
+};
+
+// gcd for cpp_int
+static high_precision_int cpp_gcd(high_precision_int a, high_precision_int b) {
+    if (a < 0) a = -a;
+    if (b < 0) b = -b;
+    while (b != 0) {
+        high_precision_int r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
+// pow10 as cpp_int
+static high_precision_int pow10_int(unsigned int d) {
+    high_precision_int r = 1;
+    for (unsigned int i = 0; i < d; ++i) r *= 10;
+    return r;
+}
+
+// Get convergents from CF terms (returns vector of pairs (p,q))
+static std::vector<std::pair<high_precision_int, high_precision_int>> convergents_from_cf(const std::vector<int>& cf) {
+    std::vector<std::pair<high_precision_int, high_precision_int>> conv;
+    if (cf.empty()) return conv;
+    high_precision_int p_nm2 = 0, p_nm1 = 1;
+    high_precision_int q_nm2 = 1, q_nm1 = 0;
+    for (size_t i = 0; i < cf.size(); ++i) {
+        high_precision_int a = cf[i];
+        high_precision_int p_n = a * p_nm1 + p_nm2;
+        high_precision_int q_n = a * q_nm1 + q_nm2;
+        conv.push_back({p_n, q_n});
+        p_nm2 = p_nm1; p_nm1 = p_n;
+        q_nm2 = q_nm1; q_nm1 = q_n;
+    }
+    return conv;
+}
+
+// Attempts to reconstruct a rational p/q from x using finite-decimal detection and CF convergents.
+// Q_MAX is the largest denominator we will accept from CF reconstruction to avoid huge factoring.
+MCCResult compute_MCC(const high_precision_float& x) {
+    const unsigned int D_MAX = 500;   // max fractional digits to accept as finite decimal quickly
+    const high_precision_int Q_MAX = static_cast<high_precision_int>(1000000000); // 1e9 denominator cap
+    MCCResult res;
+    res.finite = false;
+    res.mcc = 0;
+    res.confidence = "infinite";
+    
+    if (x == 0) {
+        res.finite = true;
+        res.mcc = 1; // 0 * 1 = 0 integer; but contextually MCC for zero is degenerate
+        res.confidence = "degenerate";
+        return res;
+    }
+    
+    // Represent as string and try to detect a terminating decimal (no 'e' and finite fraction part)
+    std::string full = decimal_full(x);
+    // If representation contains 'e' we treat as non-finite for quick path
+    if (full.find('e') == std::string::npos && full.find('E') == std::string::npos) {
+        // Check for decimal point
+        auto pos = full.find('.');
+        if (pos != std::string::npos) {
+            std::string intpart = full.substr(0, pos);
+            std::string fracpart = full.substr(pos + 1);
+            // If fractional length is small enough we can do exact conversion
+            if (!fracpart.empty() && fracpart.size() <= D_MAX) {
+                // Remove any trailing zeros in fractional part
+                std::string frac_trim = fracpart;
+                while (!frac_trim.empty() && frac_trim.back() == '0') frac_trim.pop_back();
+                
+                unsigned int d = static_cast<unsigned int>(frac_trim.size());
+                if (d == 0) {
+                    // effectively integer
+                    res.finite = true;
+                    res.mcc = 1;
+                    res.confidence = "high";
+                    return res;
+                }
+                
+                // construct numerator = round(x * 10^d)
+                high_precision_int denom = pow10_int(d);
+                high_precision_float scaled = x * high_precision_float(denom);
+                // rounded numerator
+                high_precision_int numer = static_cast<high_precision_int>(scaled + (scaled >= 0 ? high_precision_float(0.5) : high_precision_float(-0.5)));
+                // reduce
+                high_precision_int g = cpp_gcd(numer < 0 ? -numer : numer, denom);
+                high_precision_int q = denom / g;
+                res.finite = true;
+                res.mcc = q;
+                res.confidence = "high";
+                return res;
+            }
+        } else {
+            // no decimal point -> integer
+            res.finite = true;
+            res.mcc = 1;
+            res.confidence = "high";
+            return res;
+        }
+    }
+    
+    // Not a simple terminating decimal or too long; attempt CF reconstruction heuristics
+    // Compute CF terms and convergents (limited depth)
+    std::vector<int> cf = continued_fraction_iterative(x, 300);
+    auto convs = convergents_from_cf(cf);
+    high_precision_float x_abs = abs(x);
+    for (size_t i = 0; i < convs.size(); ++i) {
+        high_precision_int p = convs[i].first;
+        high_precision_int q = convs[i].second;
+        if (q <= 0) continue;
+        if (q > Q_MAX) continue; // skip too-large denominators
+        // compute p/q as high_precision_float
+        high_precision_float approx = high_precision_float(p) / high_precision_float(q);
+        high_precision_float err = abs(x - approx);
+        // Accept if approximation is extraordinarily tight relative to EPS_RECIP
+        if (err < EPS_RECIP * high_precision_float(10)) {
+            // found a good rational representation
+            res.finite = true;
+            res.mcc = q;
+            // Confidence depends on denominator magnitude
+            if (q < 1000000) res.confidence = "high";
+            else if (q < 100000000) res.confidence = "medium";
+            else res.confidence = "low";
+            return res;
+        }
+    }
+    
+    // If we reached here, treat as infinite (irrational or high-denominator rational)
+    res.finite = false;
+    res.mcc = 0;
+    res.confidence = "infinite";
+    return res;
+}
+
+// Utility: normalized MCC_score based on digit-length of MCC (avoids converting huge ints to floats)
+static double mcc_score_from_mcc(const MCCResult& mres) {
+    if (!mres.finite) return 0.0;
+    std::string s = mres.as_string();
+    if (s == "0" || s == "") return 0.0;
+    if (s == "1") return 1.0;
+    // digits of the integer
+    size_t digits = s.size();
+    // map digits -> score: more digits -> lower score; simple mapping:
+    // score = 1 / (1 + (digits - 1))
+    double denom = 1.0 + static_cast<double>(digits > 0 ? (digits - 1) : 0);
+    return 1.0 / denom;
+}
+
 // ============================== PROOF-CENTERED CALCULATORS ==============================
 
 struct ProofMetrics {
@@ -571,6 +735,31 @@ void section1_core(uint64_t entry_number, const high_precision_float& x_value, c
             std::cout << x_snippet << std::endl << reciprocal_snippet << std::endl;
         }
     }
+    
+    // ---------- NEW: Multiplicative Closure Count (MCC) output ----------
+    if (x_value != 0 && !isinf(x_value)) {
+        MCCResult mres = compute_MCC(abs(x_value)); // use absolute value for closure count
+        double mscore = mcc_score_from_mcc(mres);
+        std::string mcc_line = "  MCC (min k s.t. x * k ∈ Z): " + mres.as_string() +
+                               "   | MCC_score: " + std::to_string(mscore) +
+                               "   | confidence: " + mres.confidence;
+        if (mega_manager) {
+            mega_manager->stream_output(mcc_line + "\n");
+        } else {
+            std::cout << mcc_line << std::endl;
+        }
+        
+        // Interpretation line
+        std::string interpret;
+        if (!mres.finite) {
+            interpret = "    Interpretation: No finite integer multiplier found (irrational or very large denominator).";
+        } else {
+            interpret = "    Interpretation: Finite multiplier " + mres.as_string() + " will convert x into an integer.";
+        }
+        if (mega_manager) mega_manager->stream_output(interpret + "\n");
+        else std::cout << interpret << std::endl;
+    }
+    // -------------------------------------------------------------------
     
     if (mega_manager) {
         mega_manager->stream_output("\n\n");
