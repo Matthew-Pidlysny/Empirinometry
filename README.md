@@ -43,6 +43,20 @@ Facebook:  https://www.facebook.com/matthew.pidlysny/
 
 '![ News Articles ]!'
 
+# Can't Upload
+
+Haha, so the government wins again!  I just found out today, everyone things I'm a killer, and I haven't killed a single person!
+
+That being said, I do pretend like I do, people thinking they see explosions of heads.  But that aside, apparently I can't upload
+my newest version of any program.  At all.  Upload denied.
+
+It really doesn't matter to me what they do.  I'll be here, waiting to be the weapon against the new world order.  People think
+that means anti-government.  That only means anti-complicit.  It will be a bad day for the evil soon, where the good will
+rejoice over the running blood in the streets.  They feel they will escape this due to their power, but how can you stop all of
+us if tomorrow you will be trying to kill us?
+
+Hopefully nobody spills the beans about Jenga.
+
 # Programs Online
 
 == 2025-11-17 22:54 EST ==
