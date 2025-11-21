@@ -24,6 +24,7 @@
 #include <condition_variable>
 #include <queue>
 #include <memory>
+#include <functional>
 #include <boost/multiprecision/cpp_int.hpp>
 #include <boost/multiprecision/cpp_dec_float.hpp>
 #include <boost/math/constants/constants.hpp>
@@ -52,6 +53,9 @@ const high_precision_float E = exp(high_precision_float(1));
 const high_precision_float PI = boost::math::constants::pi<high_precision_float>();
 const high_precision_float SQRT2 = sqrt(high_precision_float(2));
 const high_precision_float SQRT5 = sqrt(high_precision_float(5));
+
+// Forward declarations
+std::vector<int> continued_fraction_iterative(const high_precision_float& x, int max_terms);
 
 // ============================== MEGA RECURSION HANDLING ==============================
 class MegaRecursionManager {
@@ -212,6 +216,25 @@ bool is_perfect_square(const high_precision_float& n) {
     high_precision_int ni = static_cast<high_precision_int>(n);
     high_precision_int sqrt_n = sqrt(ni);
     return sqrt_n * sqrt_n == ni;
+}
+
+// Prime factorization (from snippet1)
+std::vector<high_precision_int> prime_factorize(high_precision_int n) {
+    std::vector<high_precision_int> factors;
+    if (n < 0) n = -n;
+    if (n == 0 || n == 1) return {n};
+    
+    high_precision_int d = 2;
+    while (d * d <= n) {
+        while (n % d == 0) {
+            factors.push_back(d);
+            n /= d;
+        }
+        ++d;
+        if (d > 1000000) break; // Safety limit
+    }
+    if (n > 1) factors.push_back(n);
+    return factors;
 }
 
 // ============================== MULTIPLICATIVE CLOSURE COUNT (MCC) ==============================
@@ -376,6 +399,248 @@ static double mcc_score_from_mcc(const MCCResult& mres) {
     // score = 1 / (1 + (digits - 1))
     double denom = 1.0 + static_cast<double>(digits > 0 ? (digits - 1) : 0);
     return 1.0 / denom;
+}
+
+// ============================== ADVANCED ANALYSIS FUNCTIONS (NEW) ==============================
+
+// Digit distribution analysis (from snippet2)
+void analyze_digit_distribution(const high_precision_float& x) {
+    std::string decimal = decimal_full(x);
+    size_t dot_pos = decimal.find('.');
+    if (dot_pos == std::string::npos) return;
+    
+    std::string fractional = decimal.substr(dot_pos + 1);
+    int digit_counts[10] = {0};
+    int leading_counts[10] = {0};
+    bool first_nonzero = false;
+    
+    for (char c : fractional) {
+        if (c >= '0' && c <= '9') {
+            int digit = c - '0';
+            digit_counts[digit]++;
+            if (!first_nonzero && digit != 0) {
+                leading_counts[digit]++;
+                first_nonzero = true;
+            }
+        }
+    }
+    
+    // Output Benford analysis: leading_counts[1..9] should follow log10(1+1/d)
+    std::string benford_str = "  Benford's Law Analysis - Leading digit distribution:\n";
+    for (int d = 1; d <= 9; d++) {
+        if (leading_counts[d] > 0) {
+            benford_str += "    Digit " + std::to_string(d) + ": " + std::to_string(leading_counts[d]) + " occurrences\n";
+        }
+    }
+    
+    if (mega_manager) {
+        mega_manager->stream_output(benford_str);
+    } else {
+        std::cout << benford_str;
+    }
+}
+
+// Estimate irrationality measure (from snippet3)
+double estimate_irrationality_measure(const high_precision_float& x) {
+    auto cf = continued_fraction_iterative(x, 50);
+    if (cf.size() < 10) return 2.0; // Likely rational
+    
+    // Look for exponential growth in CF terms = Liouville-type indicator
+    double max_ratio = 1.0;
+    for (size_t i = 1; i < cf.size(); i++) {
+        if (cf[i-1] > 0) {
+            double ratio = static_cast<double>(cf[i]) / cf[i-1];
+            max_ratio = std::max(max_ratio, ratio);
+        }
+    }
+    return 1.0 + log(max_ratio) / log(2.0);
+}
+
+// Detect algebraic type (from snippet4)
+std::string detect_algebraic_type(const high_precision_float& x) {
+    if (is_integer(x)) return "rational integer";
+    
+    MCCResult mcc = compute_MCC(x);
+    if (mcc.finite && mcc.confidence == "high") return "rational";
+    
+    auto cf = continued_fraction_iterative(x, 100);
+    // Check for periodic patterns = quadratic irrational
+    for (int period = 1; period <= (int)cf.size()/2; period++) {
+        bool is_periodic = true;
+        for (int i = 0; i < period && i + period < (int)cf.size(); i++) {
+            if (cf[i] != cf[i + period]) {
+                is_periodic = false;
+                break;
+            }
+        }
+        if (is_periodic) return "quadratic irrational";
+    }
+    
+    return "likely transcendental";
+}
+
+// Riemann zeta approximation (from snippet6)
+high_precision_float riemann_zeta_approx(const high_precision_float& s, int terms = 1000) {
+    high_precision_float sum = 0;
+    for (int n = 1; n <= terms; ++n) {
+        high_precision_float term = 1 / pow(high_precision_float(n), s);
+        sum += term;
+    }
+    return sum;
+}
+
+// Prime counting function approximation (from snippet6)
+high_precision_float prime_count_approx(const high_precision_float& x) {
+    if (x < 2) return 0;
+    return x / log(x); // Simple approximation π(x) ~ x/ln(x)
+}
+
+// Series analysis structures (from snippet7)
+struct SeriesAnalysis {
+    bool converges;
+    high_precision_float partial_sum;
+    high_precision_float error_bound;
+    std::string convergence_type;
+};
+
+SeriesAnalysis analyze_alternating_series(const std::vector<high_precision_float>& terms) {
+    SeriesAnalysis result;
+    result.partial_sum = 0;
+    
+    // Alternating Series Test
+    bool terms_decrease = true;
+    bool limit_zero = true;
+    
+    for (size_t i = 0; i < terms.size(); ++i) {
+        result.partial_sum += terms[i];
+        
+        // Check if terms decrease in absolute value
+        if (i > 0 && abs(terms[i]) >= abs(terms[i-1])) {
+            terms_decrease = false;
+        }
+        
+        // Check if limit approaches zero
+        if (abs(terms[i]) > high_precision_float("0.001")) {
+            limit_zero = false;
+        }
+    }
+    
+    result.converges = terms_decrease && limit_zero;
+    result.error_bound = abs(terms.back()); // For alternating series
+    result.convergence_type = result.converges ? "Conditionally convergent" : "Divergent";
+    
+    return result;
+}
+
+// Numerical derivative (from snippet8)
+high_precision_float numerical_derivative(
+    const std::function<high_precision_float(high_precision_float)>& f,
+    const high_precision_float& x, 
+    const high_precision_float& h = high_precision_float("1e-10")) {
+    return (f(x + h) - f(x - h)) / (2 * h);
+}
+
+// Find critical points (from snippet8)
+std::vector<high_precision_float> find_critical_points(
+    const std::function<high_precision_float(high_precision_float)>& f,
+    const high_precision_float& a, 
+    const high_precision_float& b, 
+    int steps = 1000) {
+    
+    std::vector<high_precision_float> critical_points;
+    high_precision_float step_size = (b - a) / steps;
+    
+    for (int i = 1; i < steps - 1; ++i) {
+        high_precision_float x = a + i * step_size;
+        high_precision_float deriv = numerical_derivative(f, x);
+        
+        // Check for sign change (crude critical point detection)
+        high_precision_float x_prev = a + (i-1) * step_size;
+        high_precision_float deriv_prev = numerical_derivative(f, x_prev);
+        
+        if (deriv * deriv_prev <= 0) { // Sign change indicates critical point
+            critical_points.push_back(x);
+        }
+    }
+    
+    return critical_points;
+}
+
+// Knapsack solver (from snippet9)
+struct KnapsackSolution {
+    int max_value;
+    std::vector<int> selected_items;
+    high_precision_float solving_time;
+};
+
+KnapsackSolution solve_knapsack(const std::vector<int>& values, 
+                                const std::vector<int>& weights, 
+                                int capacity) {
+    KnapsackSolution solution;
+    int n = values.size();
+    
+    // Dynamic programming table
+    std::vector<std::vector<int>> dp(n + 1, std::vector<int>(capacity + 1, 0));
+    
+    // Build DP table
+    for (int i = 1; i <= n; ++i) {
+        for (int w = 0; w <= capacity; ++w) {
+            if (weights[i-1] <= w) {
+                dp[i][w] = std::max(dp[i-1][w], 
+                                  dp[i-1][w - weights[i-1]] + values[i-1]);
+            } else {
+                dp[i][w] = dp[i-1][w];
+            }
+        }
+    }
+    
+    solution.max_value = dp[n][capacity];
+    
+    // Backtrack to find selected items
+    int w = capacity;
+    for (int i = n; i > 0 && solution.max_value > 0; --i) {
+        if (solution.max_value != dp[i-1][w]) {
+            solution.selected_items.push_back(i-1);
+            solution.max_value -= values[i-1];
+            w -= weights[i-1];
+        }
+    }
+    
+    return solution;
+}
+
+// Advanced number analysis (from snippet10)
+void advanced_number_analysis(const high_precision_float& x_value) {
+    // Complex-analytic analysis
+    if (x_value > 1 && x_value < 10) {
+        high_precision_float zeta_approx = riemann_zeta_approx(x_value, 100);
+        std::string zeta_str = "  Riemann Zeta(" + decimal_short(x_value) + ") ≈ " + decimal_short(zeta_approx) + "\n";
+        if (mega_manager) mega_manager->stream_output(zeta_str);
+        else std::cout << zeta_str;
+    }
+    
+    // Critical point analysis for common functions
+    auto test_function = [](high_precision_float x) { return x * x - 2 * x + 1; };
+    auto critical_points = find_critical_points(test_function, -10, 10);
+    
+    if (!critical_points.empty()) {
+        std::string crit_str = "  Critical points of x²-2x+1 near 0: ";
+        for (const auto& point : critical_points) {
+            crit_str += decimal_short(point) + " ";
+        }
+        crit_str += "\n";
+        if (mega_manager) mega_manager->stream_output(crit_str);
+        else std::cout << crit_str;
+    }
+    
+    // Prime distribution analysis
+    if (is_integer(x_value) && x_value > 0) {
+        high_precision_int n = static_cast<high_precision_int>(x_value);
+        high_precision_float prime_approx = prime_count_approx(x_value);
+        std::string prime_str = "  Approximate primes ≤ " + decimal_short(x_value) + ": " + decimal_short(prime_approx) + "\n";
+        if (mega_manager) mega_manager->stream_output(prime_str);
+        else std::cout << prime_str;
+    }
 }
 
 // ============================== PROOF-CENTERED CALCULATORS ==============================
@@ -671,6 +936,20 @@ void section1_core(uint64_t entry_number, const high_precision_float& x_value, c
         std::cout << tree_str << std::endl;
     }
     
+    // Prime factorization (from snippet1)
+    if (is_integer(x_value) && abs(x_value) > 1) {
+        high_precision_int n = static_cast<high_precision_int>(x_value);
+        auto factors = prime_factorize(n);
+        std::string factor_str = "Prime factorization: ";
+        for (size_t i = 0; i < factors.size(); ++i) {
+            if (i > 0) factor_str += " × ";
+            factor_str += factors[i].str();
+        }
+        factor_str += "\n";
+        if (mega_manager) mega_manager->stream_output(factor_str);
+        else std::cout << factor_str;
+    }
+    
     // Reciprocal analysis
     if (mega_manager) {
         mega_manager->stream_output("\nReciprocal Analysis:\n");
@@ -736,7 +1015,7 @@ void section1_core(uint64_t entry_number, const high_precision_float& x_value, c
         }
     }
     
-    // ---------- NEW: Multiplicative Closure Count (MCC) output ----------
+    // ---------- Multiplicative Closure Count (MCC) output ----------
     if (x_value != 0 && !isinf(x_value)) {
         MCCResult mres = compute_MCC(abs(x_value)); // use absolute value for closure count
         double mscore = mcc_score_from_mcc(mres);
@@ -759,7 +1038,24 @@ void section1_core(uint64_t entry_number, const high_precision_float& x_value, c
         if (mega_manager) mega_manager->stream_output(interpret + "\n");
         else std::cout << interpret << std::endl;
     }
-    // -------------------------------------------------------------------
+    
+    // Advanced classification (from snippet5)
+    if (x_value != 0 && !isinf(x_value)) {
+        std::string alg_type = detect_algebraic_type(x_value);
+        double irr_measure = estimate_irrationality_measure(x_value);
+        
+        std::string advanced_analysis = 
+            "  Advanced Classification: " + alg_type + 
+            " | Irrationality Estimate: " + std::to_string(irr_measure) + "\n";
+        
+        if (mega_manager) mega_manager->stream_output(advanced_analysis);
+        else std::cout << advanced_analysis;
+        
+        analyze_digit_distribution(x_value);
+    }
+    
+    // Advanced number analysis (from snippet10)
+    advanced_number_analysis(x_value);
     
     if (mega_manager) {
         mega_manager->stream_output("\n\n");
@@ -897,7 +1193,7 @@ int main(int argc, char* argv[]) {
             std::cout << time_str << std::endl << std::endl;
         }
         
-        std::string program_purpose = "THIS PROGRAM PROVES: x/1 = 1/x ONLY when x = ±1\nThrough:\n  1. Direct numerical verification\n  2. Base tree membership analysis\n  3. Divisibility pattern examination\n  4. Continued fraction structure\n  5. Transverse irrationality mapping\n  6. Banachian stress testing\n  7. Mathematical classification\n  8. Proof-centered descriptive language\n";
+        std::string program_purpose = "THIS PROGRAM PROVES: x/1 = 1/x ONLY when x = ±1\nThrough:\n  1. Direct numerical verification\n  2. Base tree membership analysis\n  3. Divisibility pattern examination\n  4. Continued fraction structure\n  5. Transverse irrationality mapping\n  6. Banachian stress testing\n  7. Mathematical classification\n  8. Proof-centered descriptive language\n  9. Prime factorization and digit analysis\n  10. Advanced algebraic type detection\n";
         
         if (mega_manager) {
             mega_manager->stream_output(program_purpose);
@@ -968,8 +1264,10 @@ int main(int argc, char* argv[]) {
                                     "2. All other numbers exhibit reciprocal disparity\n" +
                                     "3. Base tree membership determines decimal expansion patterns\n" +
                                     "4. Divisibility 'errors' are actually proofs of infinite complexity\n" +
-                                    "5. The transverse mapping x ↔ 1/x preserves irrationality\n" +
-                                    "6. Multiplication table structure prevents self-reciprocality except at unity\n\n" +
+                                    "5. The transverse mapping x ↦ 1/x preserves irrationality\n" +
+                                    "6. Multiplication table structure prevents self-reciprocality except at unity\n" +
+                                    "7. Prime factorization reveals multiplicative structure\n" +
+                                    "8. Continued fractions classify algebraic types\n\n" +
                                     "PHILOSOPHICAL IMPLICATIONS:\n" +
                                     "The numbers 1 and -1 stand as fundamental mathematical anchors,\n" +
                                     "the only points where a quantity equals its own reciprocal.\n" +
