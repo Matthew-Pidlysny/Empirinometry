@@ -1,0 +1,6 @@
+Circle Focus Quadratic Equation
+===============================
+
+(x + b) - x² = z²
+
+I'm told this is fairly obvious to those with a clue.  Anyway, let me know how it goes (Oh wait, nobody can contact me...)!
