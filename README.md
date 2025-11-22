@@ -39,6 +39,8 @@ X:  https://x.com/XThe9th
 
 Facebook:  https://www.facebook.com/matthew.pidlysny/
 
+Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
+
 ==============================================================
 
 '![ News Articles ]!'
