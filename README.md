@@ -45,6 +45,11 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Analyzer Output Failure
+
+Sorry everyone, I know the outputs for the Analyzer are off right now, we're going back to the original but I have to get the 
+proper services to work.  Just be patient with me while I update the program another way to handle the burst output.
+
 # Can't Upload
 
 Haha, so the government wins again!  I just found out today, everyone things I'm a killer, and I haven't killed a single person!
