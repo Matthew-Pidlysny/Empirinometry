@@ -45,6 +45,18 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Analyzer Update
+
+I'm re-uploading an old version of the program, the one from before with the fixed Dream Sequence module.  It runs to
+10^50 entries, but my helpers are having a hard time, please bear with me as I resolve the issue for the new update.  It
+will make the program:
+
+1) Able to burst entries from a wide variety of ranges, up to 500
+
+2) Relay entries based on their classification within each entry (Prime family, Hexagon family, etc.)
+
+Hopefully this helps out alot.  Cheers!
+
 # Analyzer Output Failure
 
 Sorry everyone, I know the outputs for the Analyzer are off right now, we're going back to the original but I have to get the 
