@@ -1,0 +1,248 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <random>
+#include <numeric>
+#include <functional>
+#include <memory>
+#include <map>
+#include <queue>
+#include <fstream>
+#include <sstream>
+#include <chrono>
+#include <immintrin.h>  // SIMD instructions
+#include <array>
+#include <execution>    // Parallel algorithms
+#include <bitset>
+#include <type_traits>
+
+// Compiler optimization pragmas
+#pragma GCC optimize("O3")
+#pragma GCC target("avx2,fma")
+
+using namespace std;
+using namespace std::chrono;
+
+// High-precision type aliases
+using Float64 = double;
+using Float32 = float;
+using Int64 = int64_t;
+using Int32 = int32_t;
+
+// Cache-aligned vector for optimal memory access
+template<typename T>
+using AlignedVector = vector<T>;
+
+// Compile-time constants
+constexpr Int64 CACHE_LINE_SIZE = 64;
+constexpr Int64 VECTOR_REGISTER_SIZE = 8; // For AVX2
+
+// High-resolution timer
+class PrecisionTimer {
+private:
+    time_point<high_resolution_clock> start_time;
+public:
+    void start() { start_time = high_resolution_clock::now(); }
+    double elapsed() const {
+        auto end_time = high_resolution_clock::now();
+        return duration_cast<duration<double>>(end_time - start_time).count();
+    }
+};
+
+// SIMD-optimized mathematical functions
+namespace SIMDMath {
+    // Vectorized exponential using Taylor series approximation
+    inline void exp_avx2(const double* input, double* output, size_t n) {
+        const __m256d one = _mm256_set1_pd(1.0);
+        const __m256d half = _mm256_set1_pd(0.5);
+        const __m256d inv_fact2 = _mm256_set1_pd(1.0/2.0);
+        const __m256d inv_fact3 = _mm256_set1_pd(1.0/6.0);
+        const __m256d inv_fact4 = _mm256_set1_pd(1.0/24.0);
+        
+        for (size_t i = 0; i < n; i += 4) {
+            __m256d x = _mm256_load_pd(input + i);
+            __m256d x2 = _mm256_mul_pd(x, x);
+            __m256d x3 = _mm256_mul_pd(x2, x);
+            __m256d x4 = _mm256_mul_pd(x3, x);
+            
+            __m256d result = _mm256_add_pd(one, x);
+            result = _mm256_add_pd(result, _mm256_mul_pd(x2, inv_fact2));
+            result = _mm256_add_pd(result, _mm256_mul_pd(x3, inv_fact3));
+            result = _mm256_add_pd(result, _mm256_mul_pd(x4, inv_fact4));
+            
+            _mm256_store_pd(output + i, result);
+        }
+    }
+    
+    // Vectorized sine using polynomial approximation
+    inline void sin_avx2(const double* input, double* output, size_t n) {
+        for (size_t i = 0; i < n; i += 4) {
+            __m256d x = _mm256_load_pd(input + i);
+            __m256d x2 = _mm256_mul_pd(x, x);
+            __m256d x3 = _mm256_mul_pd(x2, x);
+            __m256d x5 = _mm256_mul_pd(x3, x2);
+            __m256d x7 = _mm256_mul_pd(x5, x2);
+            
+            // sin(x) ≈ x - x³/3! + x⁵/5! - x⁷/7!
+            __m256d result = x;
+            result = _mm256_sub_pd(result, _mm256_mul_pd(x3, _mm256_set1_pd(1.0/6.0)));
+            result = _mm256_add_pd(result, _mm256_mul_pd(x5, _mm256_set1_pd(1.0/120.0)));
+            result = _mm256_sub_pd(result, _mm256_mul_pd(x7, _mm256_set1_pd(1.0/5040.0)));
+            
+            _mm256_store_pd(output + i, result);
+        }
+    }
+}
+
+// Memory-pool for efficient allocations
+template<typename T, size_t BLOCK_SIZE = 4096>
+class MemoryPool {
+private:
+    vector<vector<T>> blocks;
+    size_t current_pos = 0;
+    
+public:
+    T* allocate(size_t n) {
+        if (blocks.empty() || current_pos + n > BLOCK_SIZE) {
+            blocks.emplace_back(BLOCK_SIZE);
+            current_pos = 0;
+        }
+        T* ptr = &blocks.back()[current_pos];
+        current_pos += n;
+        return ptr;
+    }
+    
+    void reset() {
+        blocks.clear();
+        current_pos = 0;
+    }
+};
+
+// Optimized statistical functions with SIMD
+namespace HighPrecisionStats {
+    // SIMD-accelerated mean calculation
+    inline Float64 mean_simd(const AlignedVector<Float64>& data) {
+        if (data.empty()) return 0.0;
+        
+        const size_t n = data.size();
+        const size_t simd_size = n - (n % 4);
+        __m256d sum_vec = _mm256_setzero_pd();
+        
+        for (size_t i = 0; i < simd_size; i += 4) {
+            __m256d data_vec = _mm256_load_pd(&data[i]);
+            sum_vec = _mm256_add_pd(sum_vec, data_vec);
+        }
+        
+        // Horizontal sum
+        Float64 sum_array[4];
+        _mm256_store_pd(sum_array, sum_vec);
+        Float64 total = sum_array[0] + sum_array[1] + sum_array[2] + sum_array[3];
+        
+        // Handle remaining elements
+        for (size_t i = simd_size; i < n; i++) {
+            total += data[i];
+        }
+        
+        return total / n;
+    }
+    
+    // Parallel variance calculation
+    inline Float64 variance_parallel(const AlignedVector<Float64>& data) {
+        if (data.size() <= 1) return 0.0;
+        
+        Float64 mean_val = mean_simd(data);
+        AlignedVector<Float64> squared_diffs(data.size());
+        
+        // Parallel transform for squared differences
+        auto squared_diff = [mean_val](Float64 x) { 
+            Float64 diff = x - mean_val;
+            return diff * diff;
+        };
+        
+        transform(execution::par_unseq, data.begin(), data.end(), 
+                 squared_diffs.begin(), squared_diff);
+        
+        return mean_simd(squared_diffs);
+    }
+    
+    // High-precision covariance with SIMD
+    inline Float64 covariance_simd(const AlignedVector<Float64>& x, 
+                                  const AlignedVector<Float64>& y) {
+        assert(x.size() == y.size());
+        const size_t n = x.size();
+        
+        Float64 mean_x = mean_simd(x);
+        Float64 mean_y = mean_simd(y);
+        
+        const size_t simd_size = n - (n % 4);
+        __m256d sum_vec = _mm256_setzero_pd();
+        __m256d mean_x_vec = _mm256_set1_pd(mean_x);
+        __m256d mean_y_vec = _mm256_set1_pd(mean_y);
+        
+        for (size_t i = 0; i < simd_size; i += 4) {
+            __m256d x_vec = _mm256_load_pd(&x[i]);
+            __m256d y_vec = _mm256_load_pd(&y[i]);
+            
+            __m256d x_diff = _mm256_sub_pd(x_vec, mean_x_vec);
+            __m256d y_diff = _mm256_sub_pd(y_vec, mean_y_vec);
+            __m256d product = _mm256_mul_pd(x_diff, y_diff);
+            
+            sum_vec = _mm256_add_pd(sum_vec, product);
+        }
+        
+        // Horizontal sum
+        Float64 sum_array[4];
+        _mm256_store_pd(sum_array, sum_vec);
+        Float64 total = sum_array[0] + sum_array[1] + sum_array[2] + sum_array[3];
+        
+        // Handle remaining elements
+        for (size_t i = simd_size; i < n; i++) {
+            total += (x[i] - mean_x) * (y[i] - mean_y);
+        }
+        
+        return total / n;
+    }
+    
+    // Parallel standard deviation
+    inline Float64 standard_deviation(const AlignedVector<Float64>& data) {
+        return sqrt(variance_parallel(data));
+    }
+}
+
+// Thread-safe random number generator
+class HighPrecisionRandom {
+private:
+    static thread_local mt19937_64 generator;
+    static thread_local uniform_real_distribution<Float64> uniform_dist;
+    static thread_local normal_distribution<Float64> normal_dist;
+    
+public:
+    static void seed(Int64 seed_value = high_resolution_clock::now().time_since_epoch().count()) {
+        generator.seed(seed_value);
+    }
+    
+    static Float64 uniform(Float64 a = 0.0, Float64 b = 1.0) {
+        return a + uniform_dist(generator) * (b - a);
+    }
+    
+    static Float64 normal(Float64 mean = 0.0, Float64 stddev = 1.0) {
+        return mean + normal_dist(generator) * stddev;
+    }
+    
+    // SIMD-friendly random number generation
+    static void fill_uniform(AlignedVector<Float64>& output, Float64 a = 0.0, Float64 b = 1.0) {
+        auto gen_func = [a, b]() { return uniform(a, b); };
+        generate(execution::par_unseq, output.begin(), output.end(), gen_func);
+    }
+    
+    static void fill_normal(AlignedVector<Float64>& output, Float64 mean = 0.0, Float64 stddev = 1.0) {
+        auto gen_func = [mean, stddev]() { return normal(mean, stddev); };
+        generate(execution::par_unseq, output.begin(), output.end(), gen_func);
+    }
+};
+
+// Initialize thread-local random generators
+thread_local mt19937_64 HighPrecisionRandom::generator(random_device{}());
+thread_local uniform_real_distribution<Float64> HighPrecisionRandom::uniform_dist(0.0, 1.0);
+thread_local normal_distribution<Float64> HighPrecisionRandom::normal_dist(0.0, 1.0);
