@@ -1,0 +1,205 @@
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+// Get prime factorization of n
+vector<int> getPrimeFactors(int n) {
+    vector<int> factors;
+    int temp = n;
+    
+    for (int i = 2; i * i <= temp; i++) {
+        while (temp % i == 0) {
+            factors.push_back(i);
+            temp /= i;
+        }
+    }
+    if (temp > 1) {
+        factors.push_back(temp);
+    }
+    
+    return factors;
+}
+
+// Calculate the decimal expansion cycle length for 1/n
+int getCycleLength(int n) {
+    if (n == 0) return 0;
+    
+    // Remove factors of 2 and 5 (they cause termination, not cycling)
+    int temp = n;
+    while (temp % 2 == 0) temp /= 2;
+    while (temp % 5 == 0) temp /= 5;
+    
+    if (temp == 1) return 0; // Terminates
+    
+    // Find multiplicative order of 10 modulo temp
+    int remainder = 1;
+    int length = 0;
+    map<int, int> seen;
+    
+    while (true) {
+        remainder = (remainder * 10) % temp;
+        length++;
+        
+        if (remainder == 0) return 0; // Terminates
+        if (remainder == 1) return length; // Cycle complete
+        if (seen.find(remainder) != seen.end()) {
+            return length - seen[remainder];
+        }
+        
+        seen[remainder] = length;
+        
+        if (length > temp) break; // Safety limit
+    }
+    
+    return length;
+}
+
+// Get the actual decimal cycle with pre-repeat and repeat portions
+struct DecimalInfo {
+    vector<int> preRepeat;
+    vector<int> repeat;
+    int cycleLength;
+};
+
+DecimalInfo getDecimalCycle(int n, int maxDigits = 200) {
+    DecimalInfo result;
+    int remainder = 1;
+    vector<int> digits;
+    map<int, int> remainders;
+    int position = 0;
+    
+    while (position < maxDigits) {
+        if (remainders.find(remainder) != remainders.end()) {
+            int cycleStart = remainders[remainder];
+            result.preRepeat.assign(digits.begin(), digits.begin() + cycleStart);
+            result.repeat.assign(digits.begin() + cycleStart, digits.end());
+            result.cycleLength = position - cycleStart;
+            return result;
+        }
+        
+        remainders[remainder] = position;
+        remainder *= 10;
+        int digit = remainder / n;
+        digits.push_back(digit);
+        remainder = remainder % n;
+        position++;
+        
+        if (remainder == 0) {
+            result.preRepeat = digits;
+            result.cycleLength = 0;
+            return result;
+        }
+    }
+    
+    result.preRepeat = digits;
+    result.cycleLength = 0;
+    return result;
+}
+
+// Format decimal expansion for display
+string formatDecimal(const DecimalInfo& info) {
+    string result = "0.";
+    
+    // Add pre-repeat portion
+    for (int digit : info.preRepeat) {
+        result += to_string(digit);
+    }
+    
+    // Add repeat portion in parentheses
+    if (info.repeat.size() > 0) {
+        result += "(";
+        int displayLimit = min((int)info.repeat.size(), 50);
+        for (int i = 0; i < displayLimit; i++) {
+            result += to_string(info.repeat[i]);
+        }
+        if (info.repeat.size() > 50) {
+            result += "...";
+        }
+        result += ")";
+    } else {
+        result += " [terminates]";
+    }
+    
+    return result;
+}
+
+// Main analysis function
+void analyzeNumber(int n) {
+    cout << "\n========================================" << endl;
+    cout << "PROPAGATION ANALYSIS FOR INTEGER: " << n << endl;
+    cout << "========================================\n" << endl;
+    
+    // Phase 1: Compaction (Integer)
+    cout << "PHASE 1 - COMPACTION (INTEGER)" << endl;
+    cout << "  Integer: " << n << endl;
+    
+    vector<int> factors = getPrimeFactors(n);
+    bool isPrime = (factors.size() == 1 && factors[0] == n);
+    
+    cout << "  Prime Factorization: ";
+    for (size_t i = 0; i < factors.size(); i++) {
+        cout << factors[i];
+        if (i < factors.size() - 1) cout << " × ";
+    }
+    cout << endl;
+    cout << "  Is Prime: " << (isPrime ? "Yes" : "No") << endl;
+    
+    // Phase 2: Seed (Decimal Expansion)
+    cout << "\nPHASE 2 - SEED (DECIMAL EXPANSION)" << endl;
+    cout << "  Reciprocal: 1/" << n << endl;
+    
+    DecimalInfo decimal = getDecimalCycle(n);
+    cout << "  Decimal: " << formatDecimal(decimal) << endl;
+    
+    // Phase 3: Cycle (Closure)
+    cout << "\nPHASE 3 - CYCLE (CLOSURE)" << endl;
+    
+    int cycleLength = getCycleLength(n);
+    
+    if (cycleLength == 0) {
+        cout << "  Propagation Type: TERMINAL" << endl;
+        cout << "  Cycle Length: 0 (returns to integer closure immediately)" << endl;
+        cout << "  Explanation: Denominator contains only factors of 2 and 5" << endl;
+    } else {
+        cout << "  Propagation Type: CYCLIC" << endl;
+        cout << "  Cycle Length: " << cycleLength << " digits" << endl;
+        cout << "  Explanation: Pattern repeats every " << cycleLength << " digits" << endl;
+    }
+    
+    // Propagation Metrics
+    cout << "\nPROPAGATION METRICS" << endl;
+    double complexity = (double)cycleLength / n;
+    cout << "  Propagation Complexity: " << fixed << setprecision(6) << complexity << endl;
+    cout << "  Complexity Ratio: " << cycleLength << "/" << n << endl;
+    
+    if (isPrime && cycleLength > 0) {
+        cout << "  Note: Prime with maximal cyclic structure" << endl;
+    }
+    
+    cout << "\n========================================" << endl;
+    cout << "Analysis complete for integer " << n << endl;
+    cout << "========================================\n" << endl;
+}
+
+int main() {
+    cout << "NUMBER PROPAGATION ANALYZER" << endl;
+    cout << "Compaction (Integer) → Seed (Decimal) → Cycle (Closure)\n" << endl;
+    
+    int n;
+    cout << "Enter an integer to analyze (>= 2): ";
+    cin >> n;
+    
+    if (n < 2) {
+        cout << "Error: Please enter an integer >= 2" << endl;
+        return 1;
+    }
+    
+    analyzeNumber(n);
+    
+    return 0;
+}
