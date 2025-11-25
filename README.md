@@ -45,6 +45,20 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Analyzer Update 2
+
+OK, so I need to wait for my compiling program to get active again.  I'm also sorry that this is being done all by
+AI, I don't mean to rip anyone off but the programs are free and always will be.  That being said, as I mentioned
+before, all you need to do is compile the snippets in the .txt files, as well as the irrationa-rationale-prover.py
+file, into the reciprocal-integer-analyzer-mega.cpp file using an AI and it should work out.  
+
+Please be patient, I know many of you are on real discoveries with this and need the tool active.  I can do nothing
+more.  I would use other free AI, but for some reason they don't assist me when they know the program that they are 
+using.  Same with the new Recurrence Formula, once they have it, calculations don't work out.  I hope that gets 
+resolved at a later point, but there's nothing I can do for now.
+
+Hope you are all well, search for primes!
+
 # Analyzer Update
 
 I'm re-uploading an old version of the program, the one from before with the fixed Dream Sequence module.  It runs to
