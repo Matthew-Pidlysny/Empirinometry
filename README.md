@@ -45,6 +45,18 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Requests For Changes To Analyzer
+
+Hey all!  Just wanted to let you know my status.  I'm using NinjaTech AI for my upgrades to existing snippets and
+code, that's why it's been taking so long.  For the longest time, they offered free tasks which were pretty 
+capable taskings for a limited time during one day, then the cycle would reset and you would be given more tasks.  I
+used it for a little while and then it suddenly stopped cycling back to free tasks, only to give me a big fat zero
+on the tasks icon.  That can't be helped for the next little while but tonight I will be upgrading it for real, when
+I pay for the service.  I'll have a full year's run at it, but I need your help:  What do you want to change with the
+current modifications to the existing program?  I can do all sorts of things tonight to get ready for the merger, which
+I'm certain this AI is capable of.  So, whaddya say?  Mention your name and I'll name an analysis function after you, 
+maybe your work can be helpful here!  Cheers!
+
 # Analyzer Update 2
 
 OK, so I need to wait for my compiling program to get active again.  I'm also sorry that this is being done all by
