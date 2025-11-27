@@ -1,0 +1,247 @@
+// exp_tree_analyzer.cpp
+// Burst-mode Exponential Tree Analyzer
+// - Demo burst + optional interactive burst
+// - Computes: sqrt-exponent tree, finite power-tower, general iterated-exponent maps
+// Build: g++ -O2 -std=c++17 exp_tree_analyzer.cpp -lstdc++ -lboost_system -lboost_thread
+// (Make sure Boost.Multiprecision headers available)
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cmath>
+#include <limits>
+#include <iomanip>
+#include <sstream>
+#include <boost/multiprecision/cpp_dec_float.hpp>
+
+using boost::multiprecision::cpp_dec_float_50;
+using high_t = cpp_dec_float_50;
+
+struct TreeSignature {
+    std::vector<high_t> values;        // raw iterates (as long as they fit)
+    std::vector<long double> logvals;  // ln of values for growth metrics
+    bool overflowed = false;
+    int overflow_iter = -1;
+    high_t final_value;
+    long double avg_log_increase = 0.0L;
+    long double avg_loglog_slope = 0.0L;
+};
+
+// Utility: safe ln (returns very large number if overflow)
+long double safe_ln(const high_t &x) {
+    if (x <= 0) return -INFINITY;
+    // convert to long double if within range
+    try {
+        long double v = static_cast<long double>(x);
+        if (std::isfinite(v) && v > 0.0L) return std::log(v);
+    } catch (...) {}
+    // fallback: use digits & exponent extraction via string
+    std::string s = x.convert_to<std::string>();
+    // try parse scientific form like "1.23e+45"
+    std::size_t epos = s.find('e');
+    if (epos == std::string::npos) epos = s.find('E');
+    if (epos != std::string::npos) {
+        long double mant = std::stold(s.substr(0, epos));
+        int expo = std::stoi(s.substr(epos+1));
+        return std::log(mant) + expo * std::log(10.0L);
+    }
+    // last resort: very large
+    return 1e300L;
+}
+
+// 1) Square-root exponent tree: a_{k+1} = a_k^{sqrt(a_k)}
+TreeSignature compute_sqrt_exp_tree(high_t seed, int max_iters = 12, long double overflow_log_thresh = 1e4L) {
+    TreeSignature sig;
+    high_t cur = seed;
+    sig.values.push_back(cur);
+    sig.logvals.push_back((long double)safe_ln(cur));
+    for (int k=1; k<=max_iters; ++k) {
+        // exponent = sqrt(cur)
+        if (cur <= 0) {
+            sig.overflowed = false;
+            sig.final_value = cur;
+            return sig;
+        }
+        high_t exponent = sqrt(cur); // high precision sqrt
+        // compute cur^exponent as exp(exponent * ln(cur))
+        long double ln_cur = safe_ln(cur);
+        long double ln_est = 0.0L;
+        try {
+            // try to compute using multiprecision if possible
+            high_t powval = boost::multiprecision::pow(cur, exponent);
+            sig.values.push_back(powval);
+            ln_est = safe_ln(powval);
+            sig.logvals.push_back(ln_est);
+            cur = powval;
+        } catch (...) {
+            // fallback to log-space detection
+            ln_est = (long double) (exponent.convert_to<long double>() * ln_cur);
+            if (ln_est > overflow_log_thresh) {
+                sig.overflowed = true;
+                sig.overflow_iter = k;
+                sig.final_value = cur;
+                break;
+            } else {
+                // approximate via exp(ln_est)
+                long double approx = std::expl(ln_est);
+                sig.values.push_back(high_t(approx));
+                sig.logvals.push_back(ln_est);
+                cur = high_t(approx);
+            }
+        }
+    }
+    sig.final_value = cur;
+    // compute avg log-increase and loglog slope
+    if (sig.logvals.size() >= 2) {
+        long double sum_inc = 0.0L;
+        for (size_t i=1;i<sig.logvals.size();++i) sum_inc += (sig.logvals[i] - sig.logvals[i-1]);
+        sig.avg_log_increase = sum_inc / (sig.logvals.size()-1);
+        // log-log slope: slope of ln(ln(value)) vs iter index
+        std::vector<long double> ll;
+        for (auto v : sig.logvals) {
+            if (v <= 0) ll.push_back(-INFINITY);
+            else ll.push_back(std::log(std::max((long double)1e-300L, v)));
+        }
+        long double sum_slope = 0.0L;
+        int cnt=0;
+        for (size_t i=1;i<ll.size();++i) {
+            if (std::isfinite(ll[i]) && std::isfinite(ll[i-1])) {
+                sum_slope += (ll[i]-ll[i-1]);
+                cnt++;
+            }
+        }
+        if (cnt>0) sig.avg_loglog_slope = sum_slope / cnt;
+    }
+    return sig;
+}
+
+// 2) Finite power tower: tower(base, height) = base^(base^(... height times))
+// compute iteratively in log-space; detect divergence
+TreeSignature compute_power_tower(high_t base, int height = 5, long double overflow_log_thresh = 1e4L) {
+    TreeSignature sig;
+    // compute bottom-up: t1 = base, t_{n+1} = base^{t_n}
+    high_t t = base;
+    sig.values.push_back(t);
+    sig.logvals.push_back(safe_ln(t));
+    for (int k=2; k<=height; ++k) {
+        long double ln_t = safe_ln(t);
+        long double ln_next = 0.0L;
+        // ln(next) = t * ln(base)
+        long double ln_base = safe_ln(base);
+        // if ln_t or ln_base infinite -> overflow
+        try {
+            // estimate ln_next
+            ln_next = (long double) (t.convert_to<long double>() * ln_base);
+        } catch (...) {
+            // fallback: parse strings
+            ln_next = ln_t * ln_base;
+        }
+        if (ln_next > overflow_log_thresh) {
+            sig.overflowed = true;
+            sig.overflow_iter = k;
+            sig.final_value = t;
+            break;
+        }
+        // try compute next precisely
+        try {
+            high_t next = boost::multiprecision::pow(base, t);
+            sig.values.push_back(next);
+            sig.logvals.push_back(safe_ln(next));
+            t = next;
+        } catch (...) {
+            // approximate via exp(ln_next)
+            long double approx = std::expl(ln_next);
+            sig.values.push_back(high_t(approx));
+            sig.logvals.push_back(ln_next);
+            t = high_t(approx);
+        }
+    }
+    sig.final_value = t;
+    // metrics
+    if (sig.logvals.size()>=2) {
+        long double sum_inc=0.0L;
+        for (size_t i=1;i<sig.logvals.size();++i) sum_inc += (sig.logvals[i] - sig.logvals[i-1]);
+        sig.avg_log_increase = sum_inc / (sig.logvals.size()-1);
+    }
+    return sig;
+}
+
+// 3) General iterated exponent: a_{k+1} = a_k^{f(a_k)} where f is a small family
+// We'll provide a driver that supports f(x)=sqrt(x), f(x)=log(x), f(x)=const c, f(x)=1/log(x) etc.
+
+// Small helper to print a signature summary
+void print_signature_summary(const std::string &label, const TreeSignature &sig, int show_vals = 4) {
+    std::cout << "== " << label << " ==\n";
+    if (sig.overflowed) {
+        std::cout << "  [ESCAPE] overflow detected at iter " << sig.overflow_iter << "\n";
+    }
+    std::cout << "  final_value (short): ";
+    std::cout << std::setprecision(10) << sig.final_value << "\n";
+    std::cout << "  iterations stored: " << sig.values.size() << "\n";
+    std::cout << "  avg ln-increase: " << std::setprecision(6) << sig.avg_log_increase << "\n";
+    std::cout << "  avg ln(ln) slope: " << std::setprecision(6) << sig.avg_loglog_slope << "\n";
+    std::cout << "  sample values (first " << std::min<size_t>(sig.values.size(), show_vals) << "):\n";
+    for (size_t i=0;i<std::min<size_t>(sig.values.size(), show_vals); ++i) {
+        std::cout << "    [" << i << "] = " << std::setprecision(12) << sig.values[i] << "\n";
+    }
+    std::cout << "\n";
+}
+
+// Demo burst: runs several seeds and prints two trees for each
+void demo_burst() {
+    std::cout << "=== DEMO BURST (examples) ===\n\n";
+    std::vector<high_t> seeds = {
+        high_t(2), high_t(3), high_t(4), high_t(5),
+        high_t(6), high_t(7), high_t(8), high_t(9), high_t(10),
+        high_t(1.5L), high_t(1.2L), high_t(0.5L)
+    };
+    for (auto s : seeds) {
+        std::cout << "Seed = " << s << "\n";
+        auto sig_sqrt = compute_sqrt_exp_tree(s, 8, 1e4L);
+        print_signature_summary("sqrt-exponent tree", sig_sqrt, 3);
+        auto sig_tower = compute_power_tower(s, 5, 1e4L);
+        print_signature_summary("finite power-tower (h=5)", sig_tower, 3);
+        std::cout << "---------------------------------------\n";
+    }
+}
+
+// Interactive burst: user supplies numbers (comma-separated) or single number
+void interactive_burst() {
+    std::cout << "\n=== INTERACTIVE BURST (enter numbers separated by commas; blank to exit) ===\n";
+    std::string line;
+    while (true) {
+        std::cout << "Enter list: ";
+        if (!std::getline(std::cin, line)) break;
+        if (line.empty()) break;
+        std::istringstream iss(line);
+        std::string tok;
+        while (std::getline(iss, tok, ',')) {
+            // trim
+            auto start = tok.find_first_not_of(" \t");
+            if (start==std::string::npos) continue;
+            auto end = tok.find_last_not_of(" \t");
+            std::string trimmed = tok.substr(start, end-start+1);
+            try {
+                high_t v(trimmed);
+                std::cout << "\nSeed = " << v << "\n";
+                auto sig_sqrt = compute_sqrt_exp_tree(v, 12, 1e5L);
+                print_signature_summary("sqrt-exponent tree", sig_sqrt, 4);
+                auto sig_tower = compute_power_tower(v, 7, 1e5L);
+                print_signature_summary("finite power-tower (h=7)", sig_tower, 4);
+            } catch (const std::exception &e) {
+                std::cout << "  [ERROR] parse failed for '" << trimmed << "': " << e.what() << "\n";
+            }
+        }
+    }
+}
+
+int main() {
+    std::cout << "Exponential Tree Analyzer - Burst mode\n";
+    std::cout << "Using multiprecision type: cpp_dec_float_50\n\n";
+    // Burst #1: demo
+    demo_burst();
+    // Burst #2: interactive
+    interactive_burst();
+    std::cout << "All bursts complete. Goodbye.\n";
+    return 0;
+}
