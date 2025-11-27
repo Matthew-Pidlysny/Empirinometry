@@ -1,0 +1,169 @@
+// ------------------------- Datapoint snippet -------------------------
+// Requires: TreeResult, high_prec, decimal_full(...), safe_log_long(...),
+//           shannon_entropy_fractionals(...), continued_fraction_iterative_simple(...),
+//           compute_MCC_heuristic(...), first_digit(...), benford_chi2_first_digit(...)
+
+struct DataPoint {
+    std::string seed_desc;
+    std::string transform_name;
+    std::vector<std::string> last_values;   // string representations (last up to 5)
+    std::string predicted_next;             // string (or descriptive "overflow_estimate: ln≈...")
+    bool overflow = false;
+    int overflow_iter = -1;
+    double avg_ln_increase = 0.0;
+    double avg_lnln_slope = 0.0;
+    double entropy_final = 0.0;
+    double benford_chi2_recent = 0.0;
+    size_t cf_len_final = 0;
+    std::string mcc_final;                  // string like "10^d" or denominator or "∞"
+    std::string mcc_confidence;
+};
+
+// Helper: convert high_prec to short printable string (few digits)
+static std::string hp_short(const high_prec &x, int digits = 12) {
+    std::ostringstream ss;
+    ss << std::setprecision(digits) << x;
+    return ss.str();
+}
+
+// Build a DataPoint from a TreeResult
+DataPoint make_datapoint_from_tree(const TreeResult &tr, 
+                                   const std::string &seed_desc,
+                                   const std::string &transform_name) 
+{
+    DataPoint dp;
+    dp.seed_desc = seed_desc;
+    dp.transform_name = transform_name;
+    dp.overflow = tr.overflow;
+    dp.overflow_iter = tr.overflow_iter;
+
+    size_t N = tr.iterates.size();
+    size_t take = std::min<size_t>(5, N);
+    // collect last `take` iterates
+    for (size_t i = 0; i < take; ++i) {
+        const high_prec &v = tr.iterates[N - take + i];
+        dp.last_values.push_back(decimal_full(v));
+    }
+
+    // compute log-based metrics on available iterates (prefer last up to 6 points to estimate slope)
+    std::vector<long double> lnvals;
+    for (const high_prec &v : tr.iterates) {
+        long double ln = safe_log_long(v);
+        lnvals.push_back(ln);
+    }
+
+    // compute average ln-increase over the LAST up to 5 intervals
+    if (lnvals.size() >= 2) {
+        int window = std::min<int>((int)lnvals.size() - 1, 5);
+        long double sum_inc = 0.0L;
+        int cnt = 0;
+        for (int i = (int)lnvals.size() - 1; i >= (int)lnvals.size() - 1 - (window - 1); --i) {
+            if (i <= 0) break;
+            long double inc = lnvals[i] - lnvals[i - 1];
+            if (std::isfinite(inc)) { sum_inc += inc; ++cnt; }
+        }
+        if (cnt > 0) dp.avg_ln_increase = double(sum_inc / cnt);
+    }
+
+    // compute ln-ln slope (slope of ln(ln(value)) across last values)
+    if (lnvals.size() >= 3) {
+        int window = std::min<int>((int)lnvals.size(), 6);
+        std::vector<long double> ll;
+        for (int i = (int)lnvals.size() - window; i < (int)lnvals.size(); ++i) {
+            if (i >= 0) {
+                long double v = lnvals[i];
+                if (v > 0 && std::isfinite(v)) ll.push_back(std::log(v));
+                else ll.push_back(-INFINITY);
+            }
+        }
+        long double sumds = 0.0L; int cnt = 0;
+        for (size_t i = 1; i < ll.size(); ++i) {
+            if (std::isfinite(ll[i]) && std::isfinite(ll[i-1])) {
+                sumds += (ll[i] - ll[i-1]);
+                ++cnt;
+            }
+        }
+        if (cnt > 0) dp.avg_lnln_slope = double(sumds / cnt);
+    }
+
+    // Predict next value using log-linear extrapolation:
+    // next_ln ~ last_ln + avg_ln_increase (from last up to 5 intervals).
+    dp.predicted_next = "n/a";
+    if (lnvals.size() >= 1 && std::isfinite((long double)dp.avg_ln_increase)) {
+        long double last_ln = lnvals.back();
+        long double pred_ln = last_ln + (long double)dp.avg_ln_increase;
+        // If pred_ln is ridiculously large, report overflow estimate
+        if (!std::isfinite(pred_ln) || pred_ln > OVERFLOW_LOG_THRESH) {
+            std::ostringstream os;
+            os << "overflow_estimate: ln(next) ≈ " << std::setprecision(6) << pred_ln;
+            dp.predicted_next = os.str();
+        } else {
+            // try to construct high_prec predicted value if safe
+            try {
+                long double pred_ld = std::expl(pred_ln);
+                if (!std::isfinite(pred_ld) || pred_ld > 1e300L) {
+                    std::ostringstream os;
+                    os << "overflow_estimate: ln(next) ≈ " << std::setprecision(6) << pred_ln;
+                    dp.predicted_next = os.str();
+                } else {
+                    high_prec pred_hp = high_prec(pred_ld);
+                    dp.predicted_next = decimal_full(pred_hp);
+                }
+            } catch (...) {
+                std::ostringstream os;
+                os << "overflow_estimate: ln(next) ≈ " << std::setprecision(6) << pred_ln;
+                dp.predicted_next = os.str();
+            }
+        }
+    }
+
+    // final value features (on final iterate if exists)
+    if (!tr.iterates.empty()) {
+        const high_prec &finalv = tr.final_value;
+        dp.entropy_final = shannon_entropy_fractionals(finalv);
+
+        // Benford χ² on recent iterates (use up to 20 last values)
+        std::vector<int> fdigits;
+        int take_benford = (int)std::min<size_t>(20, tr.iterates.size());
+        for (int i = (int)tr.iterates.size() - take_benford; i < (int)tr.iterates.size(); ++i) {
+            if (i < 0) continue;
+            int d = first_digit(tr.iterates[i]);
+            if (d >= 1 && d <= 9) fdigits.push_back(d);
+        }
+        dp.benford_chi2_recent = benford_chi2_first_digit(fdigits);
+
+        // CF and MCC on final value
+        auto cf = continued_fraction_iterative_simple(finalv, 120);
+        dp.cf_len_final = cf.size();
+        auto mcc = compute_MCC_heuristic(finalv);
+        dp.mcc_final = mcc.mcc_str;
+        dp.mcc_confidence = mcc.confidence;
+    }
+
+    return dp;
+}
+
+// Print a DataPoint in a compact human + machine friendly block
+void print_datapoint(const DataPoint &dp, MegaRecursionManager &mgr) {
+    std::ostringstream out;
+    out << "=== DataPoint: seed='" << dp.seed_desc << "' transform='" << dp.transform_name << "' ===\n";
+    out << "LastValues(" << dp.last_values.size() << "):\n";
+    for (size_t i=0;i<dp.last_values.size();++i) {
+        out << "  [" << i << "] " << dp.last_values[i] << "\n";
+    }
+    out << "PredictedNext: " << dp.predicted_next << "\n";
+    out << "Overflow: " << (dp.overflow ? "YES" : "NO");
+    if (dp.overflow) out << " @iter=" << dp.overflow_iter;
+    out << "\n";
+    out << "avg ln-increase: " << std::setprecision(6) << dp.avg_ln_increase 
+        << " | avg ln(ln) slope: " << std::setprecision(6) << dp.avg_lnln_slope << "\n";
+    out << "Entropy(final): " << std::setprecision(4) << dp.entropy_final 
+        << " | Benford χ²(recent): " << std::setprecision(3) << dp.benford_chi2_recent << "\n";
+    out << "CF_len(final): " << dp.cf_len_final << " | MCC(final): " << dp.mcc_final 
+        << " (" << dp.mcc_confidence << ")\n";
+    out << "====================================================\n\n";
+
+    // stream to manager (file) and also to console
+    mgr.stream_output(out.str());
+    std::cout << out.str();
+}

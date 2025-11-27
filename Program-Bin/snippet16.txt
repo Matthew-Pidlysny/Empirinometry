@@ -1,0 +1,726 @@
+// collapser.cpp
+// Collapsing-Function Analyzer (burst-mode) with adaptive fail analysis & remedies
+// Requires Boost.Multiprecision headers
+//
+// Build: g++ -O2 -std=c++17 collapser.cpp -lstdc++ -pthread -o collapser
+// Note: tune PRECISION_DECIMALS to your environment
+
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <random>
+#include <chrono>
+#include <cmath>
+#include <map>
+#include <mutex>
+#include <memory>
+#include <thread>
+#include <algorithm>
+#include <functional>
+
+#include <boost/multiprecision/cpp_dec_float.hpp>
+#include <boost/math/constants/constants.hpp>
+
+using high_prec = boost::multiprecision::cpp_dec_float_50; // default, adaptive controller can suggest higher
+
+// ---------------------- CONFIG ----------------------
+constexpr int PRECISION_DECIMALS = 50;     // starting precision (can be increased by adaptive controller)
+constexpr long double OVERFLOW_LOG_THRESH = 1e6L; // ln(value) beyond which we call it an overflow/escape
+constexpr int DEFAULT_BURST_SIZE = 200;    // demo burst size (you can change during interactive)
+const std::string WATCHLIST_FILENAME = "watchlist.txt";
+
+// ---------------------- MegaRecursionManager (lightweight) ----------------------
+// Pattern and streaming behavior adapted from your analyzer; used to write per-burst files & progress.
+// See original: MegaRecursionManager in analyzermain.txt for fuller implementation. :contentReference[oaicite:7]{index=7}
+
+class MegaRecursionManager {
+private:
+    std::ofstream output_file;
+    std::ofstream progress_file;
+    std::mutex file_mutex;
+    uint64_t current_recursion_depth = 0;
+    uint64_t max_recursion_depth = 0;
+    bool streaming_enabled = true;
+public:
+    MegaRecursionManager(const std::string& output_filename, bool enable_streaming = true)
+        : streaming_enabled(enable_streaming) {
+        if (streaming_enabled) {
+            output_file.open(output_filename, std::ios::out | std::ios::trunc);
+            progress_file.open(output_filename + ".progress", std::ios::out | std::ios::trunc);
+            if (!output_file.is_open() || !progress_file.is_open()) {
+                throw std::runtime_error("Failed to open output files for streaming");
+            }
+        }
+    }
+    ~MegaRecursionManager() {
+        if (output_file.is_open()) output_file.close();
+        if (progress_file.is_open()) progress_file.close();
+    }
+    void track_recursion_depth(uint64_t depth) {
+        current_recursion_depth = depth;
+        max_recursion_depth = std::max(max_recursion_depth, depth);
+        if (streaming_enabled && depth % 1000000 == 0) {
+            std::lock_guard<std::mutex> lock(file_mutex);
+            progress_file << "Recursion depth: " << depth << std::endl;
+            progress_file.flush();
+        }
+    }
+    void stream_output(const std::string& content) {
+        if (streaming_enabled) {
+            std::lock_guard<std::mutex> lock(file_mutex);
+            output_file << content;
+            output_file.flush();
+        } else {
+            std::cout << content;
+        }
+    }
+    void stream_progress(const std::string& content) {
+        if (streaming_enabled) {
+            std::lock_guard<std::mutex> lock(file_mutex);
+            progress_file << content;
+            progress_file.flush();
+        }
+    }
+    uint64_t get_max_depth() const { return max_recursion_depth; }
+};
+
+// ---------------------- Utilities ----------------------
+
+std::string decimal_full(const high_prec& x) {
+    std::ostringstream ss;
+    ss << std::setprecision(std::numeric_limits<high_prec>::digits10) << x;
+    return ss.str();
+}
+
+long double safe_log_long(const high_prec &x) {
+    // Attempt to get long double directly; otherwise approximate via string scientific notation
+    try {
+        long double v = static_cast<long double>(x);
+        if (std::isfinite(v) && v > 0.0L) return std::log(v);
+    } catch (...) {}
+    // fallback parsing
+    std::string s = decimal_full(x);
+    // try find 'e' or 'E'
+    std::size_t epos = s.find('e');
+    if (epos == std::string::npos) epos = s.find('E');
+    if (epos != std::string::npos) {
+        long double mant = std::stold(s.substr(0, epos));
+        int expo = std::stoi(s.substr(epos + 1));
+        return std::log(mant) + expo * std::log(10.0L);
+    }
+    // last resort, return huge
+    return 1e300L;
+}
+
+// Digit extraction (fractional digits) - limited length for speed
+std::string fractional_digits(const high_prec &x, size_t max_digits = 300) {
+    std::string s = decimal_full(x);
+    auto pos = s.find('.');
+    if (pos == std::string::npos) return "";
+    std::string frac = s.substr(pos + 1);
+    if (frac.size() > max_digits) frac.resize(max_digits);
+    // remove trailing zeros if all zeros are irrelevant
+    return frac;
+}
+
+double shannon_entropy_fractionals(const high_prec &x) {
+    std::string frac = fractional_digits(x, 500);
+    if (frac.empty()) return 0.0;
+    std::array<int,10> count = {0,0,0,0,0,0,0,0,0,0};
+    for (char c : frac) if (c >= '0' && c <= '9') ++count[c - '0'];
+    int N = 0; for (int v : count) N += v;
+    if (N == 0) return 0.0;
+    double H = 0.0;
+    for (int v : count) if (v > 0) {
+        double p = double(v) / N;
+        H -= p * std::log2(p);
+    }
+    return H;
+}
+
+// Benford first-digit chi-square (first-digit freq)
+double benford_chi2_first_digit(const std::vector<int>& first_digits) {
+    // expected probability for d = 1..9: log10(1 + 1/d)
+    std::array<double,10> expected{0,0};
+    for (int d=1; d<=9; ++d) expected[d] = std::log10(1.0 + 1.0/d);
+    std::array<int,10> observed{0,0,0,0,0,0,0,0,0,0};
+    for (int d : first_digits) if (d >= 1 && d <= 9) ++observed[d];
+    int N = 0; for (int d=1; d<=9; ++d) N += observed[d];
+    if (N == 0) return 0.0;
+    double chi2 = 0.0;
+    for (int d=1; d<=9; ++d) {
+        double expc = expected[d] * N;
+        double diff = observed[d] - expc;
+        chi2 += diff*diff / (expc + 1e-12);
+    }
+    return chi2;
+}
+
+// Extract first digit for a number (base 10)
+int first_digit(const high_prec &x) {
+    high_prec ax = boost::multiprecision::abs(x);
+    if (ax == 0) return 0;
+    // scale to [1,10)
+    long double lg = safe_log_long(ax);
+    long double expo = std::floor(lg / std::log(10.0L));
+    // try to compute mantissa via boost pow: ax / 10^expo
+    try {
+        high_prec p = pow(high_prec(10), high_prec(expo));
+        high_prec mant = ax / p;
+        // mant should be in [1,10)
+        long double m = static_cast<long double>(mant);
+        if (m < 1.0L) { mant *= 10; }
+        std::string s = decimal_full(mant);
+        char c = s[0];
+        if (c >= '1' && c <= '9') return c - '0';
+    } catch (...) {}
+    // fallback parse string
+    std::string s = decimal_full(ax);
+    if (s.empty()) return 0;
+    std::size_t pos = s.find_first_not_of("0.");
+    if (pos == std::string::npos) return 0;
+    char c = s[pos];
+    if (c >= '1' && c <= '9') return c - '0';
+    return 0;
+}
+
+// ---------------------- Collapsing functions ----------------------
+
+high_prec collapse_reciprocal(const high_prec &x) {
+    if (x == 0) return high_prec(0); // special-case undefined -> 0 marker
+    return high_prec(1) / x;
+}
+
+high_prec collapse_reciprocal_floor(const high_prec &x) {
+    try {
+        long long fl = static_cast<long long>(boost::multiprecision::floor(x));
+        if (fl == 0) return high_prec(0);
+        return high_prec(1) / high_prec(fl);
+    } catch (...) {
+        return high_prec(0);
+    }
+}
+
+high_prec collapse_floor_reciprocal(const high_prec &x) {
+    if (x == 0) return high_prec(0);
+    high_prec r = high_prec(1) / x;
+    try {
+        long long fl = static_cast<long long>(boost::multiprecision::floor(r));
+        return high_prec(fl);
+    } catch (...) {
+        return r;
+    }
+}
+
+// block-sum-of-reciprocals on a small block around n (for integer seeds)
+high_prec collapse_block_sum_reciprocals(long long n, int k = 5) {
+    // sum_{i=0..k-1} 1/(n+i)
+    if (n == 0) return high_prec(0);
+    high_prec sum = 0;
+    for (int i=0;i<k;i++) {
+        long long denom = n + i;
+        if (denom == 0) continue;
+        sum += high_prec(1) / high_prec(denom);
+    }
+    return sum;
+}
+
+// finite power tower base^(base^(...)) height h (compute iteratively bottom-up with log checks)
+struct TreeResult {
+    bool overflow = false;
+    int overflow_iter = -1;
+    high_prec final_value;
+    std::vector<high_prec> iterates;
+    double avg_log_inc = 0.0;
+};
+
+TreeResult finite_power_tower(const high_prec &base, int height = 4) {
+    TreeResult r;
+    r.iterates.clear();
+    if (height <= 0) {
+        r.final_value = base;
+        return r;
+    }
+    high_prec t = base;
+    r.iterates.push_back(t);
+    for (int h=2; h<=height; ++h) {
+        // next = base ^ t
+        // estimate ln(next) = t * ln(base)
+        long double lnbase = safe_log_long(base);
+        long double lnt = safe_log_long(t);
+        // if estimate > threshold -> overflow
+        if (!std::isfinite(lnbase) || !std::isfinite(lnt) || (lnt * lnbase) > OVERFLOW_LOG_THRESH) {
+            r.overflow = true;
+            r.overflow_iter = h;
+            r.final_value = t;
+            return r;
+        }
+        try {
+            high_prec next = boost::multiprecision::pow(base, t);
+            r.iterates.push_back(next);
+            t = next;
+        } catch (...) {
+            // fallback compute approximate via long double
+            long double approx_val = std::expl(lnt * lnbase);
+            if (!std::isfinite(approx_val) || std::isinf(approx_val) || approx_val > 1e300L) {
+                r.overflow = true;
+                r.overflow_iter = h;
+                r.final_value = t;
+                return r;
+            } else {
+                r.iterates.push_back(high_prec(approx_val));
+                t = high_prec(approx_val);
+            }
+        }
+    }
+    r.final_value = t;
+    // compute avg log increase
+    if (r.iterates.size() >= 2) {
+        double sum = 0.0;
+        for (size_t i=1;i<r.iterates.size();++i) {
+            long double lprev = safe_log_long(r.iterates[i-1]);
+            long double lnow = safe_log_long(r.iterates[i]);
+            if (std::isfinite(lnow) && std::isfinite(lprev)) sum += double(lnow - lprev);
+        }
+        r.avg_log_inc = sum / double(r.iterates.size()-1);
+    }
+    return r;
+}
+
+// sqrt-exponent tree: a_{k+1} = a_k^{sqrt(a_k)}
+TreeResult sqrt_exponent_tree(high_prec seed, int max_iters = 8) {
+    TreeResult r;
+    r.iterates.clear();
+    high_prec cur = seed;
+    r.iterates.push_back(cur);
+    for (int k=1;k<=max_iters;++k) {
+        if (cur <= 0) { r.final_value = cur; return r; }
+        // exponent = sqrt(cur)
+        try {
+            high_prec exponent = boost::multiprecision::sqrt(cur);
+            // check log-size
+            long double ln_cur = safe_log_long(cur);
+            long double ln_est = 0.0;
+            try {
+                // attempt direct power
+                high_prec next = boost::multiprecision::pow(cur, exponent);
+                r.iterates.push_back(next);
+                cur = next;
+            } catch (...) {
+                long double ex_ld = static_cast<long double>(exponent);
+                ln_est = ex_ld * ln_cur;
+                if (!std::isfinite(ln_est) || ln_est > OVERFLOW_LOG_THRESH) {
+                    r.overflow = true;
+                    r.overflow_iter = k;
+                    r.final_value = cur;
+                    return r;
+                } else {
+                    long double approx = std::expl(ln_est);
+                    r.iterates.push_back(high_prec(approx));
+                    cur = high_prec(approx);
+                }
+            }
+        } catch (...) {
+            r.final_value = cur;
+            return r;
+        }
+    }
+    r.final_value = cur;
+    return r;
+}
+
+// ---------------------- Continued fraction (simple iterative) ----------------------
+// Adapted from your continued_fraction_iterative snippet (iterative extraction).
+// This is a simpler variant; full version in analyzermain has recursion-tracking and robust EPS handling. :contentReference[oaicite:8]{index=8}
+
+std::vector<long long> continued_fraction_iterative_simple(const high_prec &x, int max_terms = 200) {
+    std::vector<long long> cf;
+    high_prec xval = x;
+    for (int i=0;i<max_terms;++i) {
+        if (boost::multiprecision::abs(xval) < high_prec(1e-60)) break;
+        long long a = static_cast<long long>(boost::multiprecision::floor(xval));
+        cf.push_back(a);
+        xval -= high_prec(a);
+        if (boost::multiprecision::abs(xval) < high_prec(1e-60)) break;
+        xval = high_prec(1) / xval;
+    }
+    return cf;
+}
+
+// ---------------------- Simplified MCC heuristic ----------------------
+// We implement a practical heuristic: if decimal expansion terminates within D digits -> MCC = 10^d / reduced.
+// If not, use CF convergents quick check (small denominators).
+// The robust compute_MCC in analyzermain is more elaborate; this is a pragmatic version for the tool. :contentReference[oaicite:9]{index=9}
+
+struct MCCResult {
+    bool finite;
+    std::string mcc_str;
+    std::string confidence;
+};
+
+MCCResult compute_MCC_heuristic(const high_prec &x) {
+    MCCResult r; r.finite = false; r.mcc_str = "∞"; r.confidence = "infinite";
+    if (x == 0) { r.finite = true; r.mcc_str = "1"; r.confidence = "degenerate"; return r; }
+    // try string decimal check (look for 'e' and finite fractional length)
+    std::string s = decimal_full(x);
+    if (s.find('e') == std::string::npos && s.find('E') == std::string::npos) {
+        auto pos = s.find('.');
+        if (pos == std::string::npos) { r.finite = true; r.mcc_str = "1"; r.confidence="high"; return r; }
+        std::string frac = s.substr(pos+1);
+        // trim trailing zeros
+        while (!frac.empty() && frac.back() == '0') frac.pop_back();
+        if (!frac.empty() && frac.size() <= 200) {
+            // denom = 10^d reduced by gcd
+            // convert numerator using boost multiprecision integer tricks is heavy, so return denominator magnitude
+            r.finite = true;
+            std::ostringstream os; os << "10^" << frac.size();
+            r.mcc_str = os.str();
+            r.confidence = "high";
+            return r;
+        }
+    }
+    // CF convergent search (limited denominator)
+    auto cf = continued_fraction_iterative_simple(x, 100);
+    // compute convergents (p/q)
+    boost::multiprecision::cpp_int p_nm2 = 0, p_nm1 = 1;
+    boost::multiprecision::cpp_int q_nm2 = 1, q_nm1 = 0;
+    const boost::multiprecision::cpp_int Q_MAX = 1000000000; // 1e9
+    for (size_t i=0;i<cf.size();++i) {
+        boost::multiprecision::cpp_int a = cf[i];
+        boost::multiprecision::cpp_int p_n = a * p_nm1 + p_nm2;
+        boost::multiprecision::cpp_int q_n = a * q_nm1 + q_nm2;
+        if (q_n > 0 && q_n <= Q_MAX) {
+            // compute approx p_n/q_n and compare
+            high_prec approx = high_prec(p_n) / high_prec(q_n);
+            high_prec err = boost::multiprecision::abs(x - approx);
+            // tolerance heuristic
+            if (err < high_prec(1e-30)) {
+                r.finite = true;
+                r.mcc_str = q_n.convert_to<std::string>();
+                r.confidence = (q_n < 1000000 ? "high" : "medium");
+                return r;
+            }
+        }
+        p_nm2 = p_nm1; p_nm1 = p_n;
+        q_nm2 = q_nm1; q_nm1 = q_n;
+    }
+    r.finite = false; r.mcc_str = "∞"; r.confidence = "infinite";
+    return r;
+}
+
+// ---------------------- Analyzer per (seed, transform) ----------------------
+
+struct AnalysisRecord {
+    std::string seed_desc;
+    std::string transform_name;
+    bool overflow;
+    int overflow_iter;
+    double entropy_before;
+    double entropy_after;
+    double benford_chi2_before;
+    double benford_chi2_after;
+    std::vector<long long> cf_before;
+    std::vector<long long> cf_after;
+    MCCResult mcc_before;
+    MCCResult mcc_after;
+    std::string remedy; // suggestion if anything failed
+};
+
+// compute benford on a vector of many values by collecting first digits
+double compute_benford_chi2_for_sample(const std::vector<high_prec> &vals) {
+    std::vector<int> digits; digits.reserve(vals.size());
+    for (auto &v : vals) {
+        int d = first_digit(v);
+        if (d >= 1 && d <= 9) digits.push_back(d);
+    }
+    return benford_chi2_first_digit(digits);
+}
+
+// analyze seed with transform
+AnalysisRecord analyze_seed_transform(const high_prec &seed, const std::string &seed_desc,
+                                      const std::string &transform_name,
+                                      const std::function<std::pair<TreeResult,high_prec>(const high_prec&)> &transform,
+                                      MegaRecursionManager &mgr)
+{
+    AnalysisRecord ar;
+    ar.seed_desc = seed_desc;
+    ar.transform_name = transform_name;
+    try {
+        double Hbefore = shannon_entropy_fractionals(seed);
+        ar.entropy_before = Hbefore;
+        // quick CF and MCC before
+        ar.cf_before = continued_fraction_iterative_simple(seed, 80);
+        ar.mcc_before = compute_MCC_heuristic(seed);
+
+        // run transform (returns both tree result and representative "final" value)
+        auto pr = transform(seed);
+        TreeResult tr = pr.first;
+        high_prec finalv = pr.second;
+
+        ar.overflow = tr.overflow;
+        ar.overflow_iter = tr.overflow_iter;
+        double Hafter = shannon_entropy_fractionals(finalv);
+        ar.entropy_after = Hafter;
+
+        // benford
+        std::vector<high_prec> sample_before = {seed};
+        std::vector<high_prec> sample_after = {finalv};
+        ar.benford_chi2_before = compute_benford_chi2_for_sample(sample_before);
+        ar.benford_chi2_after = compute_benford_chi2_for_sample(sample_after);
+
+        ar.cf_after = continued_fraction_iterative_simple(finalv, 80);
+        ar.mcc_after = compute_MCC_heuristic(finalv);
+
+        // build remedy text if any faults
+        std::ostringstream rem;
+        if (ar.overflow) {
+            rem << "[ESCAPE] Overflow detected at iter " << ar.overflow_iter << ". Remedies: "
+                << "reduce iteration depth; switch to log-space arithmetic; raise overflow threshold; "
+                << "or analyze asymptotic behavior instead of raw value.\n";
+        }
+        // precision-based checks
+        if (ar.mcc_before.confidence == "infinite" && ar.mcc_after.confidence == "high") {
+            rem << "[NOTE] Transform produced a rational-like closure (MCC decreased). Consider factorization/PSLQ check.\n";
+        }
+        if (ar.cf_after.size() < 6 && ar.cf_before.size() > 20) {
+            rem << "[ANOMALY] CF shortened dramatically after transform; check rounding/precision loss. Remedy: increase PRECISION_DECIMALS and rerun.\n";
+        }
+        // suspicious Benford changes
+        if (ar.benford_chi2_after > ar.benford_chi2_before * 4.0 + 2.0) {
+            rem << "[SUSPICIOUS] Major Benford chi2 increase after transform. Remedy: test against randomized null families and increase sample size.\n";
+        }
+        std::string rems = rem.str();
+        if (rems.empty()) rems = "[OK] No immediate critical faults detected.";
+        ar.remedy = rems;
+        return ar;
+    } catch (const std::exception &e) {
+        ar.remedy = std::string("[ERROR] Exception during analysis: ") + e.what()
+                    + ". Remedy: increase precision, catch exceptions, or log value into watchlist for manual inspection.";
+        return ar;
+    }
+}
+
+// ---------------------- Transform wrappers returning (TreeResult, representative value) ----------------------
+std::pair<TreeResult, high_prec> transform_reciprocal(const high_prec &seed) {
+    TreeResult t; t.iterates.clear();
+    high_prec out = collapse_reciprocal(seed);
+    t.iterates.push_back(out);
+    t.final_value = out;
+    return {t, out};
+}
+
+std::pair<TreeResult, high_prec> transform_reciprocal_floor(const high_prec &seed) {
+    TreeResult t; t.iterates.clear();
+    high_prec out = collapse_reciprocal_floor(seed);
+    t.iterates.push_back(out);
+    t.final_value = out;
+    return {t, out};
+}
+
+std::pair<TreeResult, high_prec> transform_floor_reciprocal(const high_prec &seed) {
+    TreeResult t; t.iterates.clear();
+    high_prec out = collapse_floor_reciprocal(seed);
+    t.iterates.push_back(out);
+    t.final_value = out;
+    return {t, out};
+}
+
+std::pair<TreeResult, high_prec> transform_sqrt_tree(const high_prec &seed) {
+    TreeResult r = sqrt_exponent_tree(seed, 8);
+    return {r, r.final_value};
+}
+
+std::pair<TreeResult, high_prec> transform_power_tower_h5(const high_prec &seed) {
+    TreeResult r = finite_power_tower(seed, 5);
+    return {r, r.final_value};
+}
+
+// block-sum-of-reciprocals wrapper (only for integer seeds)
+std::pair<TreeResult, high_prec> transform_block_sum_reciprocals(const high_prec &seed) {
+    TreeResult t;
+    t.iterates.clear();
+    // try cast to integer
+    try {
+        long long n = static_cast<long long>(seed);
+        high_prec out = collapse_block_sum_reciprocals(n, 7);
+        t.iterates.push_back(out);
+        t.final_value = out;
+        return {t, out};
+    } catch (...) {
+        t.final_value = high_prec(0);
+        t.iterates.push_back(t.final_value);
+        return {t, t.final_value};
+    }
+}
+
+// ---------------------- Burst generator (log-uniform + structured seeds) ----------------------
+// Adapted from your burst generator pattern in bestsnippets (focus families, log sampling). :contentReference[oaicite:10]{index=10}
+
+enum class FocusFlag { Random, PowersOf10, Fibonacci, Harmonic, GoldenFamily, Integers };
+
+std::vector<std::pair<high_prec,std::string>> generate_burst_entries(int burst_size, FocusFlag focus) {
+    std::vector<std::pair<high_prec,std::string>> entries;
+    std::mt19937_64 rng((unsigned)std::chrono::steady_clock::now().time_since_epoch().count());
+    std::uniform_real_distribution<long double> log_dist(-50.0L, 50.0L);
+    for (int i=0;i<burst_size;++i) {
+        if (focus == FocusFlag::Random) {
+            long double expo = log_dist(rng);
+            high_prec val = pow(high_prec(10), high_prec(expo));
+            std::ostringstream ds; ds << "10^" << std::setprecision(3) << expo;
+            entries.emplace_back(val, ds.str());
+        } else if (focus == FocusFlag::PowersOf10) {
+            int exp = (i % 101) - 50;
+            high_prec val = pow(high_prec(10), high_prec(exp));
+            entries.emplace_back(val, "10^" + std::to_string(exp));
+        } else if (focus == FocusFlag::Integers) {
+            long long n = 1 + (i % 1000);
+            entries.emplace_back(high_prec(n), "int " + std::to_string(n));
+        } else if (focus == FocusFlag::Fibonacci) {
+            // ratio approximants
+            long long a=1,b=1;
+            int k = i % 50;
+            for (int t=0;t<k;++t) { long long tmp=a+b; a=b; b=tmp; }
+            high_prec val = high_prec(b) / high_prec(a);
+            entries.emplace_back(val, "FibRatio k="+std::to_string(k));
+        } else {
+            // fallback random
+            long double expo = log_dist(rng);
+            high_prec val = pow(high_prec(10), high_prec(expo));
+            entries.emplace_back(val, "10^" + std::to_string((int)expo));
+        }
+    }
+    return entries;
+}
+
+// ---------------------- Adaptive Controller (escalations & remedies) ----------------------
+
+void append_watchlist(const std::string &line) {
+    std::ofstream wf(WATCHLIST_FILENAME, std::ios::app);
+    if (wf.is_open()) {
+        wf << line << std::endl;
+        wf.close();
+    }
+}
+
+// on escalation: raise precision suggestion, switch mode, schedule deeper checks
+void adaptive_escalation(const AnalysisRecord &ar, const std::string &seed_repr, MegaRecursionManager &mgr) {
+    std::ostringstream out;
+    out << "=== ESCALATION for seed=" << seed_repr << " transform=" << ar.transform_name << " ===\n";
+    out << "Remedy suggestions:\n";
+    if (ar.overflow) {
+        out << "  - Use log-space analytics (analyze ln(value) or asymptotic growth instead of raw value).\n";
+        out << "  - Reduce iteration depth for this transform.\n";
+        out << "  - If you want to study attractors instead of overflow, consider normalizing iterates.\n";
+    }
+    if (ar.mcc_after.confidence == "high") {
+        out << "  - MCC decreased to " << ar.mcc_after.mcc_str << " (high confidence). Suggest running factorization (trial division up to bound, Pollard-Rho) or PSLQ against likely relations.\n";
+    } else if (ar.mcc_after.confidence == "infinite") {
+        out << "  - MCC remains infinite -> likely irrational-like structure. If suspicious, increase CF depth and precision, then re-run.\n";
+    }
+    if (ar.cf_after.size() < 6 && ar.cf_before.size() > 20) {
+        out << "  - CF shortened drastically. Remedy: increase numeric precision (e.g., move to cpp_dec_float_200 or higher) and re-evaluate.\n";
+    }
+    out << "  - Logging this event to watchlist for manual review.\n\n";
+    mgr.stream_output(out.str());
+    append_watchlist("seed=" + seed_repr + " transform=" + ar.transform_name + " remedy=" + ar.remedy);
+}
+
+// ---------------------- Main processing per burst ----------------------
+
+void process_burst(int burst_index, int burst_size, FocusFlag focus) {
+    std::string filename = "burst_" + std::to_string(100000 + burst_index).substr(1) + ".txt";
+    MegaRecursionManager mgr(filename, true);
+    mgr.stream_output("=== BURST " + std::to_string(burst_index) + " START ===\n");
+    mgr.stream_output("Focus: " + std::to_string((int)focus) + " size=" + std::to_string(burst_size) + "\n\n");
+
+    auto entries = generate_burst_entries(burst_size, focus);
+
+    // Define transforms to run
+    std::vector<std::pair<std::string, std::function<std::pair<TreeResult,high_prec>(const high_prec&)>>> transforms = {
+        {"reciprocal", transform_reciprocal},
+        {"reciprocal_floor", transform_reciprocal_floor},
+        {"floor_reciprocal", transform_floor_reciprocal},
+        {"sqrt_exp_tree", transform_sqrt_tree},
+        {"power_tower_h5", transform_power_tower_h5},
+        {"block_sum_reciprocals", transform_block_sum_reciprocals}
+    };
+
+    int entry_no = 0;
+    for (auto &e : entries) {
+        ++entry_no;
+        high_prec seed = e.first;
+        std::string seed_desc = e.second;
+        mgr.stream_output("---- Entry " + std::to_string(entry_no) + " : " + seed_desc + " ----\n");
+        mgr.stream_output("seed = " + decimal_full(seed) + "\n");
+        mgr.track_recursion_depth(entry_no);
+
+        for (auto &t : transforms) {
+            // Run analyzer
+            AnalysisRecord ar = analyze_seed_transform(seed, seed_desc, t.first, t.second, mgr);
+
+            // Compose output block
+            std::ostringstream block;
+            block << "[" << t.first << "] overflow=" << (ar.overflow ? "YES" : "NO");
+            if (ar.overflow) block << "(@iter=" << ar.overflow_iter << ")";
+            block << " | H_before=" << std::fixed << std::setprecision(4) << ar.entropy_before
+                  << " H_after=" << std::fixed << std::setprecision(4) << ar.entropy_after << "\n";
+            block << "  MCC_before=" << ar.mcc_before.mcc_str << " (" << ar.mcc_before.confidence << ")"
+                  << "  MCC_after=" << ar.mcc_after.mcc_str << " (" << ar.mcc_after.confidence << ")\n";
+            block << "  CF_before_len=" << ar.cf_before.size() << " CF_after_len=" << ar.cf_after.size() << "\n";
+            block << "  Benford_chi2_before=" << std::fixed << std::setprecision(3) << ar.benford_chi2_before
+                  << " after=" << std::fixed << std::setprecision(3) << ar.benford_chi2_after << "\n";
+            block << "  Remedy/Notes: " << ar.remedy << "\n\n";
+
+            mgr.stream_output(block.str());
+
+            // If remedy suggests escalation, call adaptive_escalation
+            if (ar.overflow || ar.remedy.find("increase PRECISION") != std::string::npos
+                || ar.mcc_after.confidence == "high") {
+                adaptive_escalation(ar, seed_desc, mgr);
+            }
+        } // end transform loop
+
+        mgr.stream_output("\n");
+    } // end entries
+
+    mgr.stream_output("=== BURST " + std::to_string(burst_index) + " END ===\n");
+    std::cout << "Burst " << burst_index << " finished → " << filename << std::endl;
+}
+
+// ---------------------- Interactive main ----------------------
+
+int main() {
+    std::cout << "Collapser: Adaptive Collapsing-Function Analyzer (C++)\n";
+    std::cout << "Starting demo burst...\n\n";
+    // Demo burst: mixture of integers + structured seeds
+    process_burst(1, DEFAULT_BURST_SIZE, FocusFlag::Random);
+
+    // Interactive loop
+    while (true) {
+        std::cout << "\n=== NEW BURST ===\n";
+        std::cout << "Enter size (default 200, 0 to quit): ";
+        std::string line;
+        std::getline(std::cin, line);
+        if (line.empty()) line = "200";
+        int size = std::stoi(line);
+        if (size == 0) break;
+
+        std::cout << "Choose focus: (r=Random, i=Integers, p=PowersOf10, f=Fib): ";
+        std::getline(std::cin, line);
+        FocusFlag focus = FocusFlag::Random;
+        if (!line.empty()) {
+            if (line[0] == 'r') focus = FocusFlag::Random;
+            if (line[0] == 'i') focus = FocusFlag::Integers;
+            if (line[0] == 'p') focus = FocusFlag::PowersOf10;
+            if (line[0] == 'f') focus = FocusFlag::Fibonacci;
+        }
+        static int burst_index = 2;
+        process_burst(burst_index++, size, focus);
+    }
+
+    std::cout << "All done. Watchlist entries (if any) were appended to '" << WATCHLIST_FILENAME << "'.\n";
+    return 0;
+}
