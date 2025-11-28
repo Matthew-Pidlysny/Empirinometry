@@ -45,6 +45,19 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Analyzer Complete (For Now)
+
+Hello!  The update process was very finnicky but such it is with big updates.  Now we have a complete working 
+DICTIONARY ENTRY system for reciprocals.  I do hope some of you will build the library of entries, if it can be
+something of a minor standardization.  Everything is generated from calculation, not preset agenda's, and stands
+to be the working numerical theory for those reciprocals.  Feel free to modify the code amalgamation so that it
+produces more reciprocal based data instead of integers, but we are studying the relationship closely in this
+program, that IS it's point.  Hopefully we get a good concise dictionary out of all this!
+
+Thank you to all of you sharing and working with this platform.  I wish the best for ALL your work, and thank
+you especially to those who stood with this data on their side already and promoted their hearts work.  Everything
+I'm doing can go away, so long as that cherishment of knowledge exists.  Cheers!
+
 # Requests For Changes To Analyzer
 
 Hey all!  Just wanted to let you know my status.  I'm using NinjaTech AI for my upgrades to existing snippets and
