@@ -1,0 +1,100 @@
+================================================================================
+PINECONE: ONE OVER THIRTEEN
+================================================================================
+
+METADATA
+--------------------------------------------------------------------------------
+Number: 0.076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923077
+Decimal Position: 0
+Target Digit: 1
+Max Digits: 75
+Timestamp: 1765491637.443312
+
+RECIPROCAL ANALYSIS
+--------------------------------------------------------------------------------
+Original Number: 0.076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923077
+Reciprocal: 13.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000...
+
+Mathematical Properties:
+  Type: Rational
+  Magnitude: 0.07692307692307693
+  Sign: positive
+  Unity: False
+  Negative Unity: False
+  Algebraic: False
+
+Symmetry Metrics:
+  Product (x × 1/x): 1.0
+  Sum (x + 1/x): 13.076923076923077
+  Difference |x - 1/x|: 12.923076923076923
+  Ratio (x / (1/x)): 0.005917159763313609
+  Geometric Mean: 1.0
+  Harmonic Mean: 0.15294117647058825
+
+Pattern Analysis:
+  Entropy: 0.0
+  Most Common Digit: 0
+  Least Common Digit: 0
+  Digit Frequencies:
+    0: 198
+
+Continued Fraction: [0, 13]
+
+COORDINATE SYSTEM ANALYSIS
+--------------------------------------------------------------------------------
+
+TRIGONOMETRIC Sphere:
+  Points Generated: 75
+  Centroid: (0.0018, 0.0017, -0.0000)
+  Spatial Spread: 1.0000
+  X Range: [-0.9948, 0.9938]
+  Y Range: [-0.9996, 0.9778]
+  Z Range: [-0.9867, 0.9867]
+
+BANACHIAN Sphere:
+  Points Generated: 75
+  Centroid: (0.0002, 0.0060, -0.0000)
+  Spatial Spread: 1.0000
+  X Range: [-0.9848, 0.9942]
+  Y Range: [-0.9697, 0.9993]
+  Z Range: [-1.0000, 1.0000]
+
+FUZZY Sphere:
+  Points Generated: 75
+  Centroid: (-0.1754, 0.0067, -0.0000)
+  Spatial Spread: 1.0353
+  X Range: [-1.0990, 0.5027]
+  Y Range: [-0.9397, 0.9539]
+  Z Range: [-1.0000, 1.0000]
+
+QUANTUM Sphere:
+  Points Generated: 75
+  Centroid: (0.0010, 0.0012, 0.0000)
+  Spatial Spread: 1.0000
+  X Range: [-0.9952, 0.9931]
+  Y Range: [-0.9996, 0.9811]
+  Z Range: [-0.9852, 0.9852]
+
+RELATIONAL Sphere:
+  Points Generated: 75
+  Centroid: (-0.0409, -0.0086, -0.0048)
+  Spatial Spread: 0.9988
+  X Range: [-0.9897, 0.9670]
+  Y Range: [-0.9455, 0.9944]
+  Z Range: [-0.9859, 0.9860]
+
+PINECONE SIGNATURE
+--------------------------------------------------------------------------------
+Reciprocal Entropy: 0.0
+Mathematical Class: Rational
+
+Coordinate Spreads:
+  trigonometric: 1.0000
+  banachian: 1.0000
+  fuzzy: 1.0353
+  quantum: 1.0000
+  relational: 0.9988
+
+================================================================================
+END OF PINECONE
+================================================================================

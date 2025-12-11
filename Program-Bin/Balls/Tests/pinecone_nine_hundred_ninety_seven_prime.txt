@@ -1,0 +1,113 @@
+================================================================================
+PINECONE: NINE HUNDRED NINETY SEVEN PRIME
+================================================================================
+
+METADATA
+--------------------------------------------------------------------------------
+Number: 997
+Decimal Position: 10
+Target Digit: 3
+Max Digits: 750
+Timestamp: 1765492615.2383766
+
+RECIPROCAL ANALYSIS
+--------------------------------------------------------------------------------
+Original Number: 997
+Reciprocal: 0.00100300902708124373119358074222668004012036108324974924774322968906720160481444332998996990972918...
+
+Mathematical Properties:
+  Type: Rational
+  Magnitude: 997.0
+  Sign: positive
+  Unity: False
+  Negative Unity: False
+  Algebraic: False
+
+Symmetry Metrics:
+  Product (x × 1/x): 1.0
+  Sum (x + 1/x): 997.001003009027
+  Difference |x - 1/x|: 996.998996990973
+  Ratio (x / (1/x)): 994009.0
+  Geometric Mean: 1.0
+  Harmonic Mean: 0.0020060160360559753
+
+Pattern Analysis:
+  Entropy: 3.2678169236475005
+  Most Common Digit: 0
+  Least Common Digit: 5
+  Digit Frequencies:
+    0: 33
+    1: 18
+    2: 24
+    3: 19
+    4: 14
+    5: 13
+    6: 17
+    7: 22
+    8: 17
+    9: 25
+
+Target Digit '3' Positions:
+  Found 19 times
+  First 20 positions: [5, 17, 19, 23, 42, 47, 59, 80, 81, 115, 116, 126, 146, 150, 155, 171, 183, 185, 189]
+
+Continued Fraction: [997]
+
+COORDINATE SYSTEM ANALYSIS
+--------------------------------------------------------------------------------
+
+TRIGONOMETRIC Sphere:
+  Points Generated: 202
+  Centroid: (-0.0460, 0.0449, 0.0000)
+  Spatial Spread: 0.9972
+  X Range: [-0.9751, 0.9931]
+  Y Range: [-0.9934, 0.9952]
+  Z Range: [-0.9950, 0.9950]
+
+BANACHIAN Sphere:
+  Points Generated: 202
+  Centroid: (-0.0082, -0.0080, 0.0031)
+  Spatial Spread: 0.9999
+  X Range: [-0.9992, 0.9725]
+  Y Range: [-0.9910, 0.9981]
+  Z Range: [-1.0000, 1.0000]
+
+FUZZY Sphere:
+  Points Generated: 202
+  Centroid: (0.1090, -0.0676, 0.0000)
+  Spatial Spread: 1.0418
+  X Range: [-1.0902, 1.0789]
+  Y Range: [-1.0972, 0.9373]
+  Z Range: [-1.0000, 1.0000]
+
+QUANTUM Sphere:
+  Points Generated: 202
+  Centroid: (-0.0002, -0.0028, -0.0000)
+  Spatial Spread: 1.0000
+  X Range: [-0.9967, 0.9928]
+  Y Range: [-0.9992, 0.9964]
+  Z Range: [-0.9941, 0.9941]
+
+RELATIONAL Sphere:
+  Points Generated: 202
+  Centroid: (0.0066, -0.0186, -0.0046)
+  Spatial Spread: 0.9997
+  X Range: [-0.9911, 0.9938]
+  Y Range: [-0.9971, 0.9890]
+  Z Range: [-0.9973, 0.9999]
+
+PINECONE SIGNATURE
+--------------------------------------------------------------------------------
+Reciprocal Entropy: 3.2678169236475005
+Mathematical Class: Rational
+
+Coordinate Spreads:
+  trigonometric: 0.9972
+  banachian: 0.9999
+  fuzzy: 1.0418
+  quantum: 1.0000
+  relational: 0.9997
+
+================================================================================
+END OF PINECONE
+================================================================================

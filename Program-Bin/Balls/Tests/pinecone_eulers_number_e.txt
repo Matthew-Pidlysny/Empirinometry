@@ -1,0 +1,113 @@
+================================================================================
+PINECONE: EULERS NUMBER E
+================================================================================
+
+METADATA
+--------------------------------------------------------------------------------
+Number: 2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274274663919320030599218174135966290435729003342952605956307273100853237805275106368648701695314186550
+Decimal Position: 25
+Target Digit: 2
+Max Digits: 800
+Timestamp: 1765492615.304695
+
+RECIPROCAL ANALYSIS
+--------------------------------------------------------------------------------
+Original Number: 2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274274663919320030599218174135966290435729003342952605956307273100853237805275106368648701695314186550
+Reciprocal: 0.36787944117144232159552377016146086744581113103176783450783680169746149574489980335714727434591964...
+
+Mathematical Properties:
+  Type: Irrational
+  Magnitude: 2.718281828459045
+  Sign: positive
+  Unity: False
+  Negative Unity: False
+  Algebraic: False
+
+Symmetry Metrics:
+  Product (x × 1/x): 1.0
+  Sum (x + 1/x): 3.0861612696304874
+  Difference |x - 1/x|: 2.3504023872876028
+  Ratio (x / (1/x)): 7.38905609893065
+  Geometric Mean: 1.0
+  Harmonic Mean: 0.6480542736638853
+
+Pattern Analysis:
+  Entropy: 3.2931632323244395
+  Most Common Digit: 7
+  Least Common Digit: 2
+  Digit Frequencies:
+    0: 16
+    1: 22
+    2: 14
+    3: 16
+    4: 25
+    5: 19
+    6: 20
+    7: 27
+    8: 18
+    9: 23
+
+Target Digit '2' Positions:
+  Found 14 times
+  First 20 positions: [14, 16, 22, 87, 103, 106, 108, 117, 120, 128, 133, 139, 170, 182]
+
+Continued Fraction: [2, 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8, 1, 1, 10, 1, 1, 12, 1, 1]
+
+COORDINATE SYSTEM ANALYSIS
+--------------------------------------------------------------------------------
+
+TRIGONOMETRIC Sphere:
+  Points Generated: 200
+  Centroid: (-0.0809, 0.0390, -0.0000)
+  Spatial Spread: 0.9947
+  X Range: [-0.9994, 0.9931]
+  Y Range: [-0.9943, 0.9997]
+  Z Range: [-0.9950, 0.9950]
+
+BANACHIAN Sphere:
+  Points Generated: 200
+  Centroid: (-0.0618, 0.0502, 0.0030)
+  Spatial Spread: 0.9957
+  X Range: [-0.9998, 0.9805]
+  Y Range: [-0.9992, 0.9997]
+  Z Range: [-1.0000, 1.0000]
+
+FUZZY Sphere:
+  Points Generated: 200
+  Centroid: (0.0179, -0.0646, -0.0000)
+  Spatial Spread: 1.0495
+  X Range: [-1.0838, 1.0911]
+  Y Range: [-1.0929, 0.9506]
+  Z Range: [-1.0000, 1.0000]
+
+QUANTUM Sphere:
+  Points Generated: 200
+  Centroid: (0.0061, -0.0046, 0.0000)
+  Spatial Spread: 1.0000
+  X Range: [-0.9973, 0.9926]
+  Y Range: [-0.9989, 0.9944]
+  Z Range: [-0.9940, 0.9940]
+
+RELATIONAL Sphere:
+  Points Generated: 200
+  Centroid: (-0.0528, 0.0119, -0.0246)
+  Spatial Spread: 0.9977
+  X Range: [-0.9963, 0.9825]
+  Y Range: [-0.9994, 0.9754]
+  Z Range: [-0.9999, 0.9993]
+
+PINECONE SIGNATURE
+--------------------------------------------------------------------------------
+Reciprocal Entropy: 3.2931632323244395
+Mathematical Class: Irrational
+
+Coordinate Spreads:
+  trigonometric: 0.9947
+  banachian: 0.9957
+  fuzzy: 1.0495
+  quantum: 1.0000
+  relational: 0.9977
+
+================================================================================
+END OF PINECONE
+================================================================================
