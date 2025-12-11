@@ -58,6 +58,7 @@ from mpmath import mp
 from collections import Counter, defaultdict
 import sys
 import os
+import psutil
 
 # Set high precision
 mp.dps = 50100
@@ -66,9 +67,40 @@ class BallsGenerator:
     """Generate sphere representations using Hadwiger-Nelson inspired algorithm"""
     
     def __init__(self):
-        self.max_digits = 50000
+        self.max_digits = float('inf')  # No hard limit
         self.min_digits = 100  # Minimum required for trigonometric algorithm
         self.transcendental_catalog = self.build_transcendental_catalog()
+        
+        # Calculate machine-specific limits
+        self.compute_limits = self.calculate_machine_limits()
+    
+    def calculate_machine_limits(self):
+        """Calculate computational limits based on available system resources"""
+        import psutil
+        import os
+        
+        # Get available memory
+        available_ram_gb = psutil.virtual_memory().available / (1024**3)
+        
+        # Get CPU count
+        cpu_count = os.cpu_count() or 2
+        
+        # Estimate maximum digits based on memory
+        # Rough estimate: ~2 KB per digit for full analysis
+        estimated_max_digits = int((available_ram_gb * 1024 * 1024 * 0.5) / 2)  # Use 50% of available RAM
+        
+        # Estimate time per digit (rough approximation)
+        # Based on testing: ~0.004 seconds per digit on average hardware
+        time_per_digit = 0.004
+        
+        return {
+            'available_ram_gb': available_ram_gb,
+            'cpu_count': cpu_count,
+            'estimated_max_digits': estimated_max_digits,
+            'time_per_digit': time_per_digit,
+            'recommended_max': min(estimated_max_digits, 100000),  # Cap at 100k for practicality
+            'warning_threshold': 50000
+        }
         
     def build_transcendental_catalog(self):
         """Build catalog of available transcendental numbers"""
@@ -336,6 +368,26 @@ class BallsGenerator:
             print(f"Adjusting to {self.min_digits} digits...")
             num_digits = self.min_digits
         
+        # Verify geometric patterns can be found at this depth
+        if num_digits >= 10000:
+            print(f"✓ Digit count ({num_digits:,}) is excellent for rich geometric patterns")
+        elif num_digits >= 1000:
+            print(f"✓ Digit count ({num_digits:,}) is sufficient for rich geometric patterns")
+        elif num_digits >= 500:
+            print(f"⚠ Digit count ({num_digits:,}) is adequate but patterns may be limited")
+        elif num_digits >= self.min_digits:
+            print(f"⚠ Digit count ({num_digits:,}) is minimal - geometric patterns will be sparse")
+        
+        # Check if we can find meaningful relationships
+        expected_pairs = (num_digits * (num_digits - 1)) // 2
+        sample_pairs = min(1000, expected_pairs)
+        print(f"✓ Will analyze up to {sample_pairs:,} geometric relationships")
+        
+        # Memory check for very large digit counts
+        if num_digits > 100000:
+            estimated_memory_gb = (num_digits * 2) / (1024 * 1024)
+            print(f"⚠ Large digit count - estimated memory: {estimated_memory_gb:.2f} GB")
+        
         print(f"\nAnalyzing {display_name} using Hadwiger-Nelson inspired algorithm...")
         print(f"Extracting {num_digits} digits...")
         
@@ -578,8 +630,46 @@ def main():
     generator = BallsGenerator()
     generated_files = []
     
+    # Display machine capabilities
+    limits = generator.compute_limits
+    print("\nMACHINE CAPABILITIES:")
+    print("="*80)
+    print(f"Available RAM: {limits['available_ram_gb']:.2f} GB")
+    print(f"CPU Cores: {limits['cpu_count']}")
+    print(f"Estimated Maximum Digits: {limits['estimated_max_digits']:,}")
+    print(f"Recommended Maximum: {limits['recommended_max']:,} digits")
+    print(f"Warning Threshold: {limits['warning_threshold']:,} digits")
+    print("="*80)
+    
+    # Ask for default digit count at the start
+    print("\nDEFAULT DIGIT CONFIGURATION:")
+    print("="*80)
+    print(f"Set the default number of digits for sphere generation.")
+    print(f"Minimum: {generator.min_digits} digits (required for trigonometric algorithm)")
+    print(f"Maximum: Unlimited (but constrained by machine resources)")
+    print(f"Recommended: 5,000-10,000 digits for good geometric patterns")
+    print("="*80)
+    
+    default_digits_input = input(f"\nEnter default digits [press Enter for 5000]: ").strip()
+    default_digits = int(default_digits_input) if default_digits_input else 5000
+    default_digits = max(generator.min_digits, default_digits)
+    
+    # Check if default exceeds recommendations
+    if default_digits > limits['recommended_max']:
+        print(f"\n⚠ WARNING: {default_digits:,} digits exceeds recommended maximum!")
+        print(f"  Recommended max: {limits['recommended_max']:,} digits")
+        print(f"  Estimated time: {default_digits * limits['time_per_digit'] / 60:.1f} minutes")
+        print(f"  Estimated memory: {default_digits * 2 / 1024:.1f} MB")
+        confirm = input(f"\nContinue with {default_digits:,} digits? (y/n): ").strip().lower()
+        if confirm != 'y':
+            print("Adjusting to recommended maximum...")
+            default_digits = limits['recommended_max']
+    
+    print(f"\n✓ Default set to {default_digits} digits")
+    print(f"  (You can override this for each sphere generation)")
+    
     while True:
-        print("\nSELECT NUMBER TYPE:")
+        print("\n\nSELECT NUMBER TYPE:")
         print("="*80)
         print("1. Transcendental Numbers (π, e, γ, ζ(3), log(2), etc.)")
         print("2. Irrational Numbers (√2, √3, φ, etc.)")
@@ -620,11 +710,45 @@ def main():
             print("Invalid choice. Please try again.")
             continue
         
-        # Get number of digits
-        print(f"\nHow many digits to analyze? ({generator.min_digits}-{generator.max_digits})")
-        num_digits_input = input(f"Enter number of digits [default: 50000]: ").strip()
-        num_digits = int(num_digits_input) if num_digits_input else 50000
-        num_digits = min(max(generator.min_digits, num_digits), generator.max_digits)
+        # Get number of digits (with default from earlier)
+        print(f"\nDIGIT CONFIGURATION:")
+        print(f"Current default: {default_digits:,} digits")
+        print(f"Minimum: {generator.min_digits} digits")
+        print(f"Recommended max: {limits['recommended_max']:,} digits")
+        num_digits_input = input(f"Enter number of digits [press Enter for {default_digits:,}]: ").strip()
+        num_digits = int(num_digits_input) if num_digits_input else default_digits
+        num_digits = max(generator.min_digits, num_digits)
+        
+        # Check computational limits
+        if num_digits > limits['warning_threshold']:
+            print(f"\n⚠ COMPUTATIONAL LIMIT WARNING:")
+            print(f"  Requested: {num_digits:,} digits")
+            
+            if num_digits > limits['estimated_max_digits']:
+                print(f"  ⚠ CRITICAL: Exceeds estimated machine capacity!")
+                print(f"  Machine can handle: ~{limits['estimated_max_digits']:,} digits")
+                print(f"  Available RAM: {limits['available_ram_gb']:.2f} GB")
+                print(f"  This may cause memory errors or system instability!")
+            elif num_digits > limits['recommended_max']:
+                print(f"  ⚠ Exceeds recommended maximum: {limits['recommended_max']:,} digits")
+            
+            # Estimate time and memory
+            estimated_time_min = (num_digits * limits['time_per_digit']) / 60
+            estimated_memory_mb = (num_digits * 2) / 1024
+            
+            print(f"\n  Estimated processing time: {estimated_time_min:.1f} minutes")
+            print(f"  Estimated memory usage: {estimated_memory_mb:.1f} MB")
+            print(f"  File size: ~{num_digits * 0.07:.1f} KB")
+            
+            confirm = input(f"\nProceed with {num_digits:,} digits? (y/n): ").strip().lower()
+            if confirm != 'y':
+                print("Reverting to default...")
+                num_digits = default_digits
+            else:
+                print(f"✓ Proceeding with {num_digits:,} digits (user confirmed)")
+        
+        if num_digits != default_digits:
+            print(f"✓ Using {num_digits:,} digits for this sphere (overriding default)")
         
         # Get sphere radius
         radius_input = input("Enter sphere radius [default: 1.0]: ").strip()
