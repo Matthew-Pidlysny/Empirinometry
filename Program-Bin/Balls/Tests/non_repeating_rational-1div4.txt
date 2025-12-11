@@ -1,0 +1,91 @@
+================================================================================
+BALLS - The Hairy Part of Math
+================================================================================
+SPHERE ANALYSIS: 1/4
+================================================================================
+
+ALGORITHM: Hadwiger-Nelson Inspired Trigonometric Polynomial Method
+Based on chromatic number of the plane problem
+T(θ) = cos²(3πθ) × cos²(6πθ)
+Forbidden angular separation: s = 1/6 (π/3 radians)
+
+Total digits analyzed: 3
+Sphere radius: 1.0
+Value (first 100 chars): 0.25...
+
+DIGIT STATISTICS:
+--------------------------------------------------------------------------------
+Digit frequencies: {0: 1, 2: 1, 5: 1}
+Most common digits: [(0, 1), (2, 1), (5, 1)]
+Least common digits: [(0, 1), (2, 1), (5, 1)]
+
+Prime digits (2,3,5,7): 2 (66.67%)
+Zero digits: 1 (33.33%)
+
+SPHERE COORDINATES (Hadwiger-Nelson Algorithm):
+--------------------------------------------------------------------------------
+Format: Position | Digit | Type | X | Y | Z
+
+     0 | 0 | ZERO      |   0.122613 |   0.969466 |   0.212373
+     1 | 2 | PRIME     |  -0.978684 |  -0.205371 |   0.000000
+     2 | 5 | PRIME     |   0.434660 |  -0.494249 |  -0.752854
+
+================================================================================
+HADWIGER-NELSON CONSTRAINT ANALYSIS:
+================================================================================
+
+UNIT DISTANCE RELATIONSHIPS (≈1.0 ± 0.1):
+--------------------------------------------------------------------------------
+
+Total unit distance pairs found (sample): 0
+
+
+================================================================================
+PRIME-ZERO GEOMETRIC RELATIONSHIPS:
+================================================================================
+
+Total prime digits: 2
+Total zero digits: 1
+Total prime-zero pairs: 2
+
+SAMPLE PRIME-ZERO RELATIONSHIPS (first 1000 pairs):
+--------------------------------------------------------------------------------
+Format: Prime_Pos | Prime_Digit | Zero_Pos | Distance | Angle | Constraints
+
+     1 | 2 |      0 |   1.624254 |     108.61 | NONE
+     2 | 5 |      0 |   1.780869 |     125.86 | NONE
+
+================================================================================
+DIGIT CLUSTERING ANALYSIS:
+================================================================================
+
+
+Digit 0: [ZERO]
+  Occurrences: 1
+  Percentage: 33.3333%
+  Centroid (from 1 samples): (0.122613, 0.969466, 0.212373)
+  Average spread from centroid: 0.000000
+
+Digit 2: [PRIME]
+  Occurrences: 1
+  Percentage: 33.3333%
+  Centroid (from 1 samples): (-0.978684, -0.205371, 0.000000)
+  Average spread from centroid: 0.000000
+
+Digit 5: [PRIME]
+  Occurrences: 1
+  Percentage: 33.3333%
+  Centroid (from 1 samples): (0.434660, -0.494249, -0.752854)
+  Average spread from centroid: 0.000000
+
+================================================================================
+UNIQUENESS ANALYSIS:
+================================================================================
+
+Unique digits (appearing only once): 3
+Unique digit values: [0, 2, 5]
+
+================================================================================
+ANALYSIS COMPLETE
+Hadwiger-Nelson inspired trigonometric polynomial method applied
+================================================================================
