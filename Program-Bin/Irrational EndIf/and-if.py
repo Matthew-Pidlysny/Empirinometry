@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Transcendental Numbers Program
-Generates and displays 200 mathematical constants using their formulas
+Transcendental Numbers Program - Enhanced Version
+Generates and displays 250 mathematical constants using their formulas
 with comprehensive repetition tracking and analysis.
+Now includes 50 Quantum Numbers as a new category!
 """
 
 import math
@@ -11,6 +12,7 @@ from fractions import Fraction
 import sys
 from typing import List, Dict, Tuple, Set
 from collections import defaultdict
+import random
 
 # Set high precision for calculations
 getcontext().prec = 100
@@ -215,7 +217,7 @@ class NumberCollection:
         # Trigonometric transcendentals
         for i in range(1, 8):
             angle = Decimal(i) / Decimal(10)
-            numbers.append((f"sin({i}/10)", f"sin({i}/10)", angle.sin() if hasattr(angle, 'sin') else Decimal(math.sin(float(angle)))))
+            numbers.append((f"sin({i}/10)", f"sin({i}/10)", Decimal(math.sin(float(angle)))))
             
         # More transcendentals
         numbers.append(("e^(-1)", "1/e", Decimal(1) / e))
@@ -319,6 +321,45 @@ class NumberCollection:
                 
         return numbers[:50]
     
+    def get_quantum_numbers(self) -> List[Tuple[str, str, Decimal]]:
+        """Get 50 quantum numbers using the 4 fundamental quantum number types"""
+        numbers = []
+        
+        for i in range(50):
+            # Generate principal quantum number (n >= 1)
+            # Use a weighted distribution favoring lower energy levels
+            n = random.choices(
+                range(1, 8),
+                weights=[40, 25, 15, 10, 5, 3, 2]
+            )[0]
+            
+            # Generate azimuthal quantum number (0 <= l < n)
+            l = random.randint(0, n-1)
+            
+            # Generate magnetic quantum number (-l <= m_l <= l)
+            m_l = random.randint(-l, l)
+            
+            # Generate spin quantum number (+1/2 or -1/2)
+            m_s = random.choice([-0.5, 0.5])
+            
+            # Create a composite quantum number value
+            # Encode as: n.lmmss where mm is m_l+10 and ss is spin (50 for +0.5, 00 for -0.5)
+            spin_code = 50 if m_s > 0 else 0
+            m_l_code = m_l + 10
+            quantum_value = Decimal(f"{n}.{l:01d}{m_l_code:02d}{spin_code:02d}")
+            
+            # Classify orbital
+            orbital_names = {0: 's', 1: 'p', 2: 'd', 3: 'f', 4: 'g', 5: 'h', 6: 'i'}
+            orbital = f"{n}{orbital_names.get(l, f'l={l}')}"
+            spin_symbol = "↑" if m_s > 0 else "↓"
+            
+            name = f"Q{i+1}"
+            formula = f"({n},{l},{m_l},{m_s:+.1f}) {orbital}{spin_symbol}"
+            
+            numbers.append((name, formula, quantum_value))
+        
+        return numbers
+    
     @staticmethod
     def _is_perfect_square(n: int) -> bool:
         """Check if a number is a perfect square"""
@@ -351,31 +392,32 @@ class TableDisplay:
             
     def display_introduction(self, collections: Dict[str, List[Tuple[str, str, Decimal]]]):
         """Display introduction with all numbers and their formulas"""
-        self.write("=" * 100)
-        self.write("TRANSCENDENTAL NUMBERS PROGRAM".center(100))
-        self.write("=" * 100)
+        self.write("="*100)
+        self.write("TRANSCENDENTAL NUMBERS PROGRAM - ENHANCED VERSION".center(100))
+        self.write("="*100)
         self.write("")
-        self.write("This program generates 200 mathematical constants using their formulas:")
+        self.write("This program generates 250 mathematical constants using their formulas:")
         self.write("  • 50 Transcendental Numbers")
         self.write("  • 50 Non-Repeating Decimals (including Quantum Extremes)")
         self.write("  • 50 Repeating Decimals")
         self.write("  • 50 Irrational Numbers")
+        self.write("  • 50 Quantum Numbers (NEW!)")
         self.write("")
         self.write("Each number is computed from its mathematical formula, not from language constants.")
         self.write("The program tracks various repetition patterns during generation.")
         self.write("")
         
         for category, numbers in collections.items():
-            self.write(f"\n{'=' * 100}")
+            self.write(f"\n{'='*100}")
             self.write(f"{category.upper()}".center(100))
-            self.write(f"{'=' * 100}\n")
+            self.write(f"{'='*100}\n")
             
             for i, (name, formula, value) in enumerate(numbers, 1):
                 self.write(f"{i:2d}. {name:15s} = {formula:40s}")
                 
-        self.write("\n" + "=" * 100)
+        self.write("\n" + "="*100)
         self.write("NOTATION GUIDE".center(100))
-        self.write("=" * 100)
+        self.write("="*100)
         self.write("π  = Pi (3.14159...)")
         self.write("e  = Euler's number (2.71828...)")
         self.write("φ  = Golden ratio (1.61803...)")
@@ -386,14 +428,17 @@ class TableDisplay:
         self.write("ln = Natural logarithm")
         self.write("α  = Fine structure constant")
         self.write("ℓP = Planck length (scaled)")
-        self.write("=" * 100)
+        self.write("Q  = Quantum number (n,l,m_l,m_s)")
+        self.write("↑  = Spin up (+1/2)")
+        self.write("↓  = Spin down (-1/2)")
+        self.write("="*100)
         self.write("")
         
     def display_table(self, all_numbers: List[Tuple[str, str, str, Decimal]], tracker: RepetitionTracker):
         """Display numbers in aligned table format"""
-        self.write("\n" + "=" * 100)
+        self.write("\n" + "="*100)
         self.write("DECIMAL REPRESENTATION TABLE".center(100))
-        self.write("=" * 100)
+        self.write("="*100)
         self.write("")
         
         # Find maximum floor length
@@ -401,7 +446,7 @@ class TableDisplay:
         
         # Group by floor length
         self.write(f"{'Category':<15} {'Name':<20} {'Floor':<{max_floor_len}} {'Decimal Digits'}")
-        self.write("-" * 100)
+        self.write("-"*100)
         
         for category, name, formula, value in all_numbers:
             floor_val = int(value)
@@ -433,12 +478,12 @@ class TableDisplay:
             
             self.write(f"{category:<15} {name:<20} {floor_padded} .{decimal_str}")
             
-        self.write("\n" + "=" * 100)
+        self.write("\n" + "="*100)
 
 
 def main():
     """Main program execution"""
-    print("Initializing Transcendental Numbers Program...")
+    print("Initializing Transcendental Numbers Program - Enhanced Version...")
     
     # Create components
     collection = NumberCollection(precision=60)
@@ -450,7 +495,8 @@ def main():
         "Transcendental Numbers": collection.get_transcendentals(),
         "Non-Repeating Decimals": collection.get_non_repeating_decimals(),
         "Repeating Decimals": collection.get_repeating_decimals(),
-        "Irrational Numbers": collection.get_irrationals()
+        "Irrational Numbers": collection.get_irrationals(),
+        "Quantum Numbers": collection.get_quantum_numbers()
     }
     
     # Open output file
@@ -460,9 +506,9 @@ def main():
     display.display_introduction(collections)
     
     # Wait for user input
-    print("\n" + "=" * 100)
+    print("\n" + "="*100)
     input("Press ENTER to begin the operation and display the decimal table...")
-    print("=" * 100 + "\n")
+    print("="*100 + "\n")
     
     # Combine all numbers with category labels
     all_numbers = []
