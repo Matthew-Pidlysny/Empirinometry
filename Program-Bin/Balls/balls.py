@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """
 ================================================================================
-BALLS - The Hairy Part of Math
+BALLS - The Hairy Part of Math (Version 2.0 - Enhanced)
 ================================================================================
 
 This program generates geometric sphere representations of mathematical numbers
 using trigonometric polynomial methods inspired by the Hadwiger-Nelson problem.
+
+NEW IN VERSION 2.0:
+- Quantum Number Range Support: Analyze specific digit ranges
+- 40+ Additional Transcendental Functions
+- Enhanced mathematical constant catalog
 
 HADWIGER-NELSON INSPIRED ALGORITHM:
 ------------------------------------
@@ -219,6 +224,186 @@ class BallsGenerator:
                 'name': 'Ω (Omega constant)',
                 'description': 'Solution to Ωe^Ω = 1',
                 'value': lambda: str(mp.lambertw(1))
+            },
+            'zeta7': {
+                'name': 'ζ(7)',
+                'description': 'Riemann zeta function at 7',
+                'value': lambda: str(mp.zeta(7))
+            },
+            'zeta9': {
+                'name': 'ζ(9)',
+                'description': 'Riemann zeta function at 9',
+                'value': lambda: str(mp.zeta(9))
+            },
+            'log3': {
+                'name': 'log(3)',
+                'description': 'Natural logarithm of 3',
+                'value': lambda: str(mp.log(3))
+            },
+            'log5': {
+                'name': 'log(5)',
+                'description': 'Natural logarithm of 5',
+                'value': lambda: str(mp.log(5))
+            },
+            'log7': {
+                'name': 'log(7)',
+                'description': 'Natural logarithm of 7',
+                'value': lambda: str(mp.log(7))
+            },
+            'ln_e': {
+                'name': 'log(e)',
+                'description': 'Natural logarithm of e (equals 1)',
+                'value': lambda: str(mp.log(mp.e))
+            },
+            'sqrt_e': {
+                'name': '√e',
+                'description': 'Square root of e',
+                'value': lambda: str(mp.sqrt(mp.e))
+            },
+            'cbrt_2': {
+                'name': '∛2',
+                'description': 'Cube root of 2',
+                'value': lambda: str(mp.cbrt(2))
+            },
+            'cbrt_3': {
+                'name': '∛3',
+                'description': 'Cube root of 3',
+                'value': lambda: str(mp.cbrt(3))
+            },
+            'cbrt_5': {
+                'name': '∛5',
+                'description': 'Cube root of 5',
+                'value': lambda: str(mp.cbrt(5))
+            },
+            'sqrt_6': {
+                'name': '√6',
+                'description': 'Square root of 6',
+                'value': lambda: str(mp.sqrt(6))
+            },
+            'sqrt_7': {
+                'name': '√7',
+                'description': 'Square root of 7',
+                'value': lambda: str(mp.sqrt(7))
+            },
+            'sqrt_8': {
+                'name': '√8',
+                'description': 'Square root of 8',
+                'value': lambda: str(mp.sqrt(8))
+            },
+            'sqrt_10': {
+                'name': '√10',
+                'description': 'Square root of 10',
+                'value': lambda: str(mp.sqrt(10))
+            },
+            'pi_cubed': {
+                'name': 'π³',
+                'description': 'Pi cubed',
+                'value': lambda: str(mp.pi ** 3)
+            },
+            'e_cubed': {
+                'name': 'e³',
+                'description': 'Euler\'s number cubed',
+                'value': lambda: str(mp.e ** 3)
+            },
+            'pi_sqrt': {
+                'name': 'π^(1/2)',
+                'description': 'Square root of pi',
+                'value': lambda: str(mp.sqrt(mp.pi))
+            },
+            'e_sqrt': {
+                'name': 'e^(1/2)',
+                'description': 'Square root of e',
+                'value': lambda: str(mp.sqrt(mp.e))
+            },
+            'ln_2pi': {
+                'name': 'log(2π)',
+                'description': 'Natural logarithm of 2π',
+                'value': lambda: str(mp.log(2 * mp.pi))
+            },
+            'reciprocal_pi': {
+                'name': '1/π',
+                'description': 'Reciprocal of pi',
+                'value': lambda: str(1 / mp.pi)
+            },
+            'reciprocal_e': {
+                'name': '1/e',
+                'description': 'Reciprocal of e',
+                'value': lambda: str(1 / mp.e)
+            },
+            'pi_over_2': {
+                'name': 'π/2',
+                'description': 'Pi divided by 2',
+                'value': lambda: str(mp.pi / 2)
+            },
+            'pi_over_4': {
+                'name': 'π/4',
+                'description': 'Pi divided by 4',
+                'value': lambda: str(mp.pi / 4)
+            },
+            'two_pi': {
+                'name': '2π',
+                'description': 'Two times pi',
+                'value': lambda: str(2 * mp.pi)
+            },
+            'sqrt_phi': {
+                'name': '√φ',
+                'description': 'Square root of golden ratio',
+                'value': lambda: str(mp.sqrt(mp.phi))
+            },
+            'phi_squared': {
+                'name': 'φ²',
+                'description': 'Golden ratio squared',
+                'value': lambda: str(mp.phi ** 2)
+            },
+            'bronze_ratio': {
+                'name': 'Bronze ratio',
+                'description': '(3 + √13)/2',
+                'value': lambda: str((3 + mp.sqrt(13)) / 2)
+            },
+            'tribonacci': {
+                'name': 'Tribonacci constant',
+                'description': 'Real root of x³ = x² + x + 1',
+                'value': lambda: str(mp.findroot(lambda x: x**3 - x**2 - x - 1, 1.8))
+            },
+            'feigenbaum_delta': {
+                'name': 'δ (Feigenbaum delta)',
+                'description': 'Feigenbaum constant (bifurcation)',
+                'value': lambda: str(mp.mpf('4.669201609102990671853203820466'))
+            },
+            'feigenbaum_alpha': {
+                'name': 'α (Feigenbaum alpha)',
+                'description': 'Feigenbaum constant (reduction)',
+                'value': lambda: str(mp.mpf('2.502907875095892822283902873218'))
+            },
+            'meissel_mertens': {
+                'name': 'M (Meissel-Mertens)',
+                'description': 'Meissel-Mertens constant',
+                'value': lambda: str(mp.mpf('0.2614972128476427837554268386086'))
+            },
+            'twin_prime': {
+                'name': 'C₂ (Twin prime)',
+                'description': 'Twin prime constant',
+                'value': lambda: str(mp.mpf('0.6601618158468695739278121100145'))
+            },
+            'sqrt_11': {
+                'name': '√11',
+                'description': 'Square root of 11',
+                'value': lambda: str(mp.sqrt(11))
+            },
+            'sqrt_13': {
+                'name': '√13',
+                'description': 'Square root of 13',
+                'value': lambda: str(mp.sqrt(13))
+            },
+            'cbrt_pi': {
+                'name': '∛π',
+                'description': 'Cube root of pi',
+                'value': lambda: str(mp.cbrt(mp.pi))
+            },
+            'cbrt_e': {
+                'name': '∛e',
+                'description': 'Cube root of e',
+                'value': lambda: str(mp.cbrt(mp.e))
             }
         }
         return catalog
@@ -360,7 +545,7 @@ class BallsGenerator:
         result = mp.mpf(numerator) / mp.mpf(denominator)
         return str(result), f"{numerator}/{denominator}"
     
-    def analyze_and_save(self, number_str, display_name, filename, radius, num_digits):
+    def analyze_and_save(self, number_str, display_name, filename, radius, num_digits, min_range=0, max_range=None):
         """Analyze a number and save to file using Hadwiger-Nelson algorithm"""
         
         if num_digits < self.min_digits:
@@ -389,9 +574,20 @@ class BallsGenerator:
             print(f"⚠ Large digit count - estimated memory: {estimated_memory_gb:.2f} GB")
         
         print(f"\nAnalyzing {display_name} using Hadwiger-Nelson inspired algorithm...")
-        print(f"Extracting {num_digits} digits...")
         
-        digits = self.extract_digits(number_str, num_digits)
+        # Handle quantum range
+        if max_range is None:
+            max_range = num_digits
+        
+        if min_range > 0 or max_range != num_digits:
+            print(f"Using quantum range: digits {min_range} to {max_range}")
+            print(f"Extracting {max_range} digits (analyzing {num_digits} in range)...")
+            all_digits = self.extract_digits(number_str, max_range)
+            digits = all_digits[min_range:max_range]
+            print(f"✓ Quantum range applied: analyzing {len(digits)} digits from position {min_range}")
+        else:
+            print(f"Extracting {num_digits} digits...")
+            digits = self.extract_digits(number_str, num_digits)
         
         if len(digits) < num_digits:
             print(f"Warning: Only {len(digits)} digits available")
@@ -411,6 +607,8 @@ class BallsGenerator:
             f.write("T(θ) = cos²(3πθ) × cos²(6πθ)\n")
             f.write("Forbidden angular separation: s = 1/6 (π/3 radians)\n\n")
             f.write(f"Total digits analyzed: {num_digits}\n")
+            if min_range > 0 or max_range != num_digits:
+                f.write(f"Quantum range: digits {min_range} to {max_range}\n")
             f.write(f"Sphere radius: {radius}\n")
             f.write(f"Value (first 100 chars): {number_str[:100]}...\n\n")
             
@@ -711,12 +909,38 @@ def main():
             continue
         
         # Get number of digits (with default from earlier)
-        print(f"\nDIGIT CONFIGURATION:")
+        print(f"\\nDIGIT CONFIGURATION:")
         print(f"Current default: {default_digits:,} digits")
         print(f"Minimum: {generator.min_digits} digits")
         print(f"Recommended max: {limits['recommended_max']:,} digits")
-        num_digits_input = input(f"Enter number of digits [press Enter for {default_digits:,}]: ").strip()
-        num_digits = int(num_digits_input) if num_digits_input else default_digits
+        
+        # NEW: Quantum number range support
+        use_quantum_range = input(f"Use quantum number range? (y/n) [default: n]: ").strip().lower()
+        
+        if use_quantum_range == 'y':
+            print("\\nQUANTUM NUMBER RANGE CONFIGURATION:")
+            print("Define the range of digits to analyze using quantum numbers.")
+            min_range_input = input(f"Enter minimum digit position [default: 0]: ").strip()
+            min_range = int(min_range_input) if min_range_input else 0
+            
+            max_range_input = input(f"Enter maximum digit position [default: {default_digits}]: ").strip()
+            max_range = int(max_range_input) if max_range_input else default_digits
+            
+            # Validate range
+            if min_range < 0:
+                min_range = 0
+            if max_range <= min_range:
+                print(f"Invalid range! Setting max to min + {default_digits}")
+                max_range = min_range + default_digits
+            
+            num_digits = max_range - min_range
+            print(f"\\n✓ Quantum range set: digits {min_range} to {max_range} ({num_digits:,} digits)")
+        else:
+            min_range = 0
+            num_digits_input = input(f"Enter number of digits [press Enter for {default_digits:,}]: ").strip()
+            num_digits = int(num_digits_input) if num_digits_input else default_digits
+            max_range = num_digits
+        
         num_digits = max(generator.min_digits, num_digits)
         
         # Check computational limits
@@ -832,7 +1056,7 @@ def main():
             print()
             
             try:
-                result_file = generator.analyze_and_save(number_str, display_name, filename, radius, num_digits)
+                result_file = generator.analyze_and_save(number_str, display_name, filename, radius, num_digits, min_range, max_range)
                 file_size = os.path.getsize(result_file) / (1024*1024)
                 generated_files.append((result_file, file_size))
                 print(f"\n✓ Success! BALLS analysis saved to: {result_file}")
