@@ -45,6 +45,11 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Update for Syntaxia
+
+Sorry for the misdirection, I'm working on the new version of Syntaxia right now, will just be a moment.  Sorry
+again for the truncations, was NOT my intention.
+
 # Analyzer Complete (For Now)
 
 Hello!  The update process was very finnicky but such it is with big updates.  Now we have a complete working 
