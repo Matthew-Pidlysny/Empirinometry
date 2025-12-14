@@ -1,0 +1,60 @@
+===========================================
+Pidlysnian Riemann-Zero Generation Formulas
+===========================================
+
+==================
+Initial Generation
+==================
+
+γ₁ = C* + 2π * (log(C* + α) / (log C*)²)
+
+=========================
+Stable Forward Generation
+=========================
+
+γ(n+1) = γ(n) + 2π * (log(γ(n) + 1) / (log γ(n))² + ε(γ(n)))
+
+==================
+Reverse Generation
+==============
+
+γ(n) = γ(n+1) - (2π * (log(γ(n) + 1) / (log γ(n))² + ε(γ(n)))) / F'(γ(n))
+
+------
+
+Whereas:
+
+Description:
+
+C* = 0.6223039473326365245714551580658948218652949205394340845468366752716172064394694483877146159580886964...
+
+α = 1.0
+
+γ₁ = 14.13472514173469379045725198356247027078425711569924317568556746014996342980925676494901039317156101277920297154879743676614269146988225458...
+
+2π = 6.283185307179586476925286766559... 
+
+log = natural logarithm
+
+ε(γ) = dynamic stabilization function
+
+γ(n) = current gamma value
+
+γ(n+1) = next gamma value
+
+F'(γ) = derivative of F with respect to γ
+
+------
+
+F'(γ) = 2π * [ (1/(γ+1) * (log γ)² - 2*log(γ+1)*log(γ)/γ ) / (log γ)⁴ - ε'(γ) ]
+
+
+         1.0×10⁻¹⁰ * (1 / (|log γ| + 10⁻¹⁰⁰))²       if |log γ| < 10⁻⁵
+ε(γ) = { 
+         1.0×10⁻¹⁵⁰                                  otherwise
+
+=====
+Notes
+=====
+
+DO NOT GO BELOW THE FIRST RIEMANN ZERO.  THE ANSWER IS NOT A TRUTH, STUDY ZETA TO FIND OUT.
