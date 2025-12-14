@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Number Theory
+
+I think this is right, no matter where it's placed with zero's on the line:  5 is forever half.
+
 # Update for Syntaxia
 
 Sorry for the misdirection, I'm working on the new version of Syntaxia right now, will just be a moment.  Sorry
