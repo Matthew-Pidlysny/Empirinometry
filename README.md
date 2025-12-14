@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# The Uniting
+
+They tied together at 7:34 AM EST...
+
 # The Timing
 
 It happened initially at 6:47 AM EST....
