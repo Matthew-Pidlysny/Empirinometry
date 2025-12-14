@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Ball Everything
+
+You know the program, let's do this!  It's the next step, right?  I can't AI that...
+
 # The Dimension
 
 C* is the Temporal Dimension, the 1 in 3-1-4...
