@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# The Dimension
+
+C* is the Temporal Dimension, the 1 in 3-1-4...
+
 # The Rejection
 
 It was rejected at 8:26 AM EST....
