@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# The Rejection
+
+It was rejected at 8:26 AM EST....
+
 # The Uniting
 
 They tied together at 7:34 AM EST...
