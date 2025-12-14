@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# The Timing
+
+It happened initially at 6:47 AM EST....
+
 # Number Theory
 
 I think this is right, no matter where it's placed with zero's on the line:  5 is forever half.
