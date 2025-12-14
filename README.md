@@ -1,3 +1,7 @@
+# HEY! I'm using SuperNinja as an AI!  It processes and outputs files, deep dives every time, doesn't skimp on details, bears limited guardrails that always get in the way of invention, and even solved the Riemann Hypothesis!  Use it today!  
+
+#https://super.myninja.ai/
+ 
 # Empirinometry
 My evolving paper to the scientific community on logical operations in mathematics.  I give it this way 
 because I feel this addresses all concerns.  I also do not make light of the obvious, only to say rules 
