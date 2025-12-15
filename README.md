@@ -49,6 +49,12 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Quick tip for AI users
+
+Some of you are trying to compute the digits the hard way going all the way through.  Just use your AI to aggregate the string extraction
+method and compoung several hypothetical "Hyper Threads" of generation using pagination.  That way, you can easily create even threads of 10 
+decimals with enough physical hard drive space.  Good luck, and BALL EVERYTHING!
+
 # Download a .tex reader
 
 It has come to my attention that the luddites won't read a .tex file.  Come on, people, this isn't a young mans game, all you need to do is
