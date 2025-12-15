@@ -49,6 +49,14 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Download a .tex reader
+
+It has come to my attention that the luddites won't read a .tex file.  Come on, people, this isn't a young mans game, all you need to do is
+download the right software, I will not tell you which one that is but there are many.  They have plugins for different programs and the
+programs themselves, if you already have a PDF reader that acts as a standalone operation or reads in your browser then you will have no 
+problem getting the program running.  I am NOT converting anything to PDF, you ARE missing out on research that you are lazily waiting
+for, and you are the ones suffering, nobody else.  Get with the program, I'm not using a different format.
+
 # In progress
 
 Theorem 4: Composite Torsion Closure
