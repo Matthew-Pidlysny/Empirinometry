@@ -49,6 +49,22 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# In progress
+
+Theorem 4: Composite Torsion Closure
+
+Statement: The set of terminating decimals (NT_term) is closed under all four arithmetic operations.
+
+Proof:
+
+Let a/b and c/d be terminating in base B
+Then b and d have only prime factors from B
+a/b + c/d = (ad + bc)/(bd)
+bd has only prime factors from B
+Therefore sum terminates
+Similar for -, ×, ÷
+QED
+
 # Forks
 
 OK, just making fun of the system here.  Since I got 170+ clones yesterday, if anyone wants to fork the repository, please do so.  I wouldn't mind
