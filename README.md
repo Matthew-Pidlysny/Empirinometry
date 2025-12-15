@@ -49,6 +49,11 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Forks
+
+OK, just making fun of the system here.  Since I got 170+ clones yesterday, if anyone wants to fork the repository, please do so.  I wouldn't mind
+some stars as well, and if you want to be part of the "Watching" group, please do so!  XD
+
 # Ball Everything
 
 You know the program, let's do this!  It's the next step, right?  I can't AI that...
