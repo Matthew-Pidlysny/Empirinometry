@@ -49,6 +49,17 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# All has been balled
+
+In exactly 11 places.  We have toppled empires today unknowingly, that I was just told by God that they had bets against Earth succeeding in
+something this is related to and it has failed.  The good win, the evil lose, and we are not to blame.  That was in their risk assessment.
+
+But now you know it.  Space is a thin place we can go, Voyager proved the last bit but we just proved the first bit.  So go for it, ye all!
+
+Globers were wrong!  Flat Earth was wrong!  CERN might publish that sooner than later, whether they do or not is irrelevant but someone will.
+
+Tell them all, get with the program when it comes!
+
 # Quick tip for AI users
 
 Some of you are trying to compute the digits the hard way going all the way through.  Just use your AI to aggregate the string extraction
