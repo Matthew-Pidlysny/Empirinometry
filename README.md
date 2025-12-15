@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# 15
+
+Remember, 5 is always half of a ten, anywhere on the line...;)
+
 # All has been balled
 
 In exactly 11 places.  We have toppled empires today unknowingly, that I was just told by God that they had bets against Earth succeeding in
