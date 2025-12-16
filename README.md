@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# 40
+
+40 full ball generations, 7 times God gave me the sight to see him stop the destruction from radio.  Take PHOTO'S, people!  Receive, don't send!
+
 # Thou Shalt Not See With Radio
 
 I promise you, you will destroy yourselves to impose on the spheres.  Believe it, take it as a warning from God among the Empirical things 
