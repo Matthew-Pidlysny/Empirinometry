@@ -49,6 +49,12 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# For those creating demo's
+
+Anyone making the peer.py executable for show might be interested in the update, will require a bit more storage but will be effective.  I just
+want to take the stupidity of AI seriously when it says it's "circular reasoning" and "nothing about the Zero function was used here", so I 
+got the "ball buster" :)  Just be patient, almost done, it's a self contained peer review machine, going over ALL your little quirky assessments!
+
 # 40
 
 40 full ball generations, 7 times God gave me the sight to see him stop the destruction from radio.  Take PHOTO'S, people!  Receive, don't send!
