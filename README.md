@@ -49,6 +49,15 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Free Idea
+
+This was someone else's idea which was shut down.  The Banachian Sphere we have designed is designed to hold a number at a threshold, in sequence
+mind you.  This can be useful in the application of it I provided in Orbis.  Consider that any Hexadecimal value can also be made to be the same
+way, or any base denomination for that matter, even letters and special characters as long as the algorithm can handle it.  Such as it is, this 
+will soon be used to thwart us on a massive scale, so we should develop Memory Modules of the Banachian Sphere type, as a GPL idea, get the money
+flowing people.  It can be as flat as a dime and STILL be a perfect sphere, and 3 times as round I predict.  We need POGS, let's call it Project
+Pogs.  Good luck, and 8bit channel those algorithms, that will be YOUR invention!
+
 # For those creating demo's
 
 Anyone making the peer.py executable for show might be interested in the update, will require a bit more storage but will be effective.  I just
