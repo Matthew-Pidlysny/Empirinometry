@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Pog Hives
+
+I believe Hive is a term for a cluster in this fashion.
+
 # Free Idea
 
 This was someone else's idea which was shut down.  The Banachian Sphere we have designed is designed to hold a number at a threshold, in sequence
