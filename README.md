@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Full Qur'an
+
+Working on a full qur'an version of niner, know it's a very impportant number contextually, just look at the words attached on their own, sub-ayah!
+
 # Pog Hives
 
 I believe Hive is a term for a cluster in this fashion.
