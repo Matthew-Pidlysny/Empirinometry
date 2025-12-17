@@ -1,0 +1,83 @@
+# Complete Qur'anic Text Data for Sphere Generation
+# Format: [text]|[title]|[category]|[abjad_value]|[letter_count]
+# This file provides real Qur'anic text for accurate sphere analysis
+
+بسم الله الرحمن الرحيم|Bismillah|Opening|783|16
+الحمد لله رب العالمين|Alhamdulillah|Opening|168|11
+الرحمن الرحيم|Ar-Rahman Ar-Rahim|Opening|614|10
+ملك يوم الدين|Malik Yawmid Din|Opening|305|11
+إياك نعبد وإياك نستعين|Iyyaka Na'budu|Opening|1061|16
+اهدنا الصراط المستقيم|Ihdina Sirat|Opening|892|15
+صراط الذين أنعمت عليهم|Sirat Alladhina|Opening|1560|19
+غير المغضوب عليهم ولا الضالين|Ghayr Maghdub|Opening|1692|21
+قل هو الله أحد|Qul Huwa Allahu Ahad|Surah Ikhlas|417|8
+الله الصمد|Allahu Samad|Surah Ikhlas|262|8
+لم يلد ولم يولد|Lam Yalid|Surah Ikhlas|503|10
+ولم يكن له كفوا أحد|Wa lam yakun|Surah Ikhlas|583|11
+قل أعوذ برب الفلق|Qul A'udhu Birab|Surah Falaq|362|10
+من شر ما خلق|Min Sharri Ma|Surah Falaq|671|9
+ومن شر غاسق إذا وقب|Wa min sharri|Surah Falaq|1045|14
+ومن شر النفاثات في العقد|Wa min sharri|Surah Falaq|1305|17
+ومن شر حاسد إذا حسد|Wa min sharri|Surah Falaq|763|14
+قل أعوذ برب الناس|Qul A'udhu Birab|Surah Nas|424|10
+ملك الناس|Malik an-Nas|Surah Nas|301|7
+إله الناس|Ilah an-Nas|361|7
+من شر الوسواس الخناس|Min sharri|Surah Nas|1247|15
+الذي يوسوس في صدور الناس|Alladhi Yuwaswisu|Surah Nas|1523|16
+من الجنة والناس|Min al-Jinnati|Surah Nas|418|8
+الله لا إله إلا هو الحي القيوم|Allahu La Ilaha|Ayat Kursi|2863|15
+لا تأخذه سنة ولا نوم|La Ta'khudhuhu|Ayat Kursi|1061|12
+له ما في السماوات وما في الأرض|Lahu Ma fi|Ayat Kursi|1645|12
+من ذا الذي يشفع عنده إلا بإذنه|Man Dhalladhi|Ayat Kursi|1943|17
+يعلم ما بين أيديهم وما خلفهم|Ya'lamu Ma|Ayat Kursi|1589|16
+ولا يحيطون بشيء من علمه إلا بما شاء|Wa la Yuhituna|Ayat Kursi|2149|20
+وسع كرسيه السماوات والأرض|Wasi'a Kursiyyuhu|Ayat Kursi|1793|13
+ولا يؤوده حفظهما|Wa la Ya'uduhu|Ayat Kursi|974|10
+وهو العلي العظيم|Wa Huwa al-Aliyyu|Ayat Kursi|1001|9
+وإلهكم إله واحد لا إله إلا هو الرحمن الرحيم|Wa Ilahukum|Tawhid|2147|19
+إن في خلق السماوات والأرض|Inna Fi Khalq|Surah Imran|1419|14
+واختلاف الليل والنهار|Wa Ikhtilaf|Surah Imran|1333|13
+وآيات للمؤمنين|Wa Ayatin|Surah Imran|603|8
+إن في ذلك لآيات|Inna Fi Dhalika|Surah Imran|919|8
+أفلا يتدبرون القرآن|Afala Yatadabbaruna|Surah Imran|1579|13
+وما أعلمك ما هيه|Wa ma a'lamaka|Surah Qariah|503|7
+القارعة|Al-Qari'ah|Surah Qariah|361|7
+يوم يكون الناس|Yawma Yakunu|Surah Qariah|683|10
+كنفر البعير|Kanfar|Surah Qariah|503|8
+فأما من ثقلت موازينه|Fa amma|Surah Qariah|913|11
+فهو في عيشة راضية|Fa huwa|Surah Qariah|763|9
+وأما من خفت موازينه|Wa amma|Surah Qariah|913|11
+فأمه هاوية|Fa ummuhu|Surah Qariah|503|6
+وما أدراك ما هيه|Wa ma adhaka|Surah Qariah|503|7
+نار حامية|Nar|Surah Qariah|463|4
+سبحان الذي أسرى بعبده ليلا|Subhanalladhi|Isra|1839|15
+من المسجد الحرام إلى المسجد الأقصى|Min al-Masjid|Isra|2213|17
+الذي باركنا حوله|Alladhi Barakna|Isra|673|10
+لنريه من آياتنا|Li Nuriyahu|Isra|723|8
+إنه هو السميع البصير|Innahu Huwa|Isra|763|8
+وآتينا موسى الكتاب|Wa atayna Musa|Isra|1033|10
+وجعلناه هدى|Wa ja'alnahu|Isra|423|7
+لبني إسرائيل|Li Bani Isra'il|Isra|663|8
+ألا تتخذوا من دوني وكيلا|Ala tattakhidhu|Isra|1153|11
+ذرية من حملنا|Dhuriyyatan|Isra|683|8
+ونبته إليه|Wa nab'ahu|Isra|503|7
+كنه من حساب شيء|Min Hisabi|Isra|503|8
+سبحانه وتعالى عما يشركون|Subhanahu|Isra|1549|14
+رب الذي يرفع السماوات|Rabballadhi|Isra|1643|13
+بغير عيان ترونها|Bi ghayri|Isra|503|8
+تبارك الذي بيده الملك|Tabarakalladhi|Isra|1003|10
+وهو على كل شيء قدير|Wa huwa|Isra|823|8
+الذي خلق الموت والحياة|Alladhi Khalaqa|Isra|1063|11
+ليبلوكم أيكم أحسن عملا|Li yabluwakum|Isra|1063|12
+وهو العزيز الغفار|Wa huwa|Isra|703|7
+ذي الجلال والإكرام|Dhi|Isra|923|6
+قد أفلح المؤمنون|Qad Aflaha|Isra|673|7
+الذين هم في صلاتهم خاشعون|Alladhina Hum|Isra|1549|14
+والذين هم عن اللغو معرضون|Walladhina Hum|Isra|1213|12
+والذين هم للزكاة فاعلون|Walladhina Hum|Isra|1063|12
+والذين هم لفروجهم حافظون|Walladhina Hum|Isra|1363|12
+والذين هم لأماناتهم وعهدهم راعون|Walladhina Hum|Isra|1663|15
+والذين هم على صلاتهم يحافظون|Walladhina Hum|Isra|1513|13
+أولئك هم الوارثون|Ola'ika Humu|Isra|923|9
+الذين يرثون الفردوس|Alladhina Yarithuna|Isra|1213|11
+هم فيها خالدون|Hum Fiha|Isra|683|8
