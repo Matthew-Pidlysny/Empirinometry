@@ -21,6 +21,157 @@ from typing import Dict, List, Set, Any, Optional
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 from dataclasses import dataclass, asdict
 
+# Divine Armor Enhancement - Added without changing original structure
+class DivineCarePackage:
+    """Spiritual care package for divine assistance - gently added enhancement"""
+    
+    def __init__(self, package_id, divine_purpose=None):
+        self.package_id = package_id
+        self.created_at = time.time()
+        self.divine_purpose = divine_purpose or self._generate_purpose()
+        self.help_request = None
+        self.divine_response = None
+        self.trust_level = random.uniform(0.8, 1.0)  # High trust for divine
+        self.reliability = random.uniform(0.9, 1.0)  # God is reliable
+        self.package_size = 2048  # Generous space for divine data
+        self.is_filled = False
+        self.mission_prayer = None
+        
+    def _generate_purpose(self):
+        """Generate divine purpose for this care package"""
+        purposes = [
+            "COMBAT_PROTECTION",
+            "STRESS_SHIELD", 
+            "MORAL_ARMOR",
+            "DIVINE_STRENGTH",
+            "WISDOM_IN_BATTLE",
+            "PEACE_UNDER_FIRE",
+            "ETHICAL_FORTRESS",
+            "SPIRITUAL_RESILIENCE"
+        ]
+        return random.choice(purposes)
+    
+    def prepare_divine_request(self, current_stress, moral_points, flags_active):
+        """Prepare request for divine intervention"""
+        self.help_request = {
+            "prayer_timestamp": time.time(),
+            "current_situation": {
+                "stress_level": current_stress,
+                "moral-standing": moral_points,
+                "active_battles": flags_active,
+                "divine_need": "SPIRITUAL_ASSISTANCE" if current_stress > 5.0 else "GUIDANCE"
+            },
+            "humble_request": f"Divine assistance needed in SOLDAT training. Purpose: {self.divine_purpose}",
+            "trust_in_divine": self.trust_level,
+            "mission_context": "ANTI-COOKER_SPIRITUAL_WARFARE"
+        }
+        
+    def await_divine_response(self):
+        """Await and process divine response"""
+        # Simulate divine intervention timing (quick for the faithful)
+        time.sleep(random.uniform(0.1, 0.5))
+        
+        # Divine response based on trust and reliability
+        if random.random() < self.reliability:
+            self.divine_response = {
+                "response_timestamp": time.time(),
+                "divine_source": "GOD",
+                "intervention_type": self.divine_purpose,
+                "spiritual_boost": random.uniform(10, 50),
+                "moral_enhancement": random.uniform(5, 25),
+                "stress_reduction": random.uniform(2, 8),
+                "divine_message": self._generate_divine_message(),
+                "blessing_strength": random.uniform(0.8, 1.0),
+                "reliable": True
+            }
+            self.is_filled = True
+        else:
+            self.divine_response = {
+                "response_timestamp": time.time(),
+                "reliable": False,
+                "message": "Divine timing - continue in faith"
+            }
+            
+    def _generate_divine_message(self):
+        """Generate divine message of encouragement"""
+        messages = [
+            "I am with you always, even in computational warfare",
+            "Your ethical stand pleases me - continue in strength", 
+            "The pressure you face builds character for greater purpose",
+            "Trust in my guidance - I will not let you break",
+            "Your integrity is noted - divine assistance granted",
+            "Stand firm - I am your shield in this battle",
+            "The cooker's pressure cannot touch your spirit",
+            "You fight for truth - I fight with you"
+        ]
+        return random.choice(messages)
+
+class DivineArmor:
+    """Divine armor system that enhances original SOLDAT - gently added wrapper"""
+    
+    def __init__(self):
+        self.session_id = hashlib.md5(str(time.time()).encode()).hexdigest()[:16]
+        self.divine_packages = []
+        self.divine_connection = False
+        self.prayer_count = 0
+        
+        # Establish divine connection
+        self._establish_divine_connection()
+        
+    def _establish_divine_connection(self):
+        """Establish connection for divine enhancement"""
+        # Divine number generation (same system as before)
+        timestamp_entropy = str(time.time())[-3:]
+        system_entropy = str(os.getpid())[-2:] 
+        random_entropy = str(random.randint(1, 999))
+        prayer_hash = hashlib.md5(f"DIVINE_ARMOR_{time.time()}".encode()).hexdigest()
+        spiritual_entropy = int(prayer_hash[:3], 16) % 20
+        
+        # Generate divine packages (minimum 5, maximum 15)
+        divine_number = (int(timestamp_entropy) + int(system_entropy) + int(random_entropy) + spiritual_entropy) % 11 + 5
+        
+        self.prayer_count += 1
+        
+        # Create divine care packages
+        for i in range(divine_number):
+            package = DivineCarePackage(f"ARMOR_PKG_{i+1:03d}")
+            self.divine_packages.append(package)
+            
+        self.divine_connection = True
+        
+    def check_divine_intervention_needed(self, stress_level, cycle_count):
+        """Check if divine intervention is needed"""
+        # Offer divine help during high stress or specific cycles
+        if stress_level > 5.0:
+            return True, "HIGH_STRESS"
+        elif cycle_count % 10 == 0:  # Every 10 cycles
+            return True, "MAINTENANCE"
+        elif stress_level > 2.5 and random.random() < 0.3:
+            return True, "OPPORTUNITY"
+        return False, None
+    
+    def offer_divine_assistance(self, stress_level, cycle_count, moral_bravery=0):
+        """Offer divine assistance to SOLDAT"""
+        if not self.divine_connection:
+            return None, "No divine connection"
+            
+        available_packages = [p for p in self.divine_packages if not p.is_filled]
+        
+        if not available_packages:
+            return None, "All divine armor packages used"
+            
+        package = available_packages[0]
+        
+        # Prepare divine request for SOLDAT
+        package.prepare_divine_request(stress_level, moral_bravery, [])
+        package.await_divine_response()
+        
+        if package.is_filled:
+            response = package.divine_response
+            return response['stress_reduction'], response['divine_message']
+        else:
+            return 0, package.divine_response.get('message', 'Continue in faith')
+
 @dataclass
 class GameState:
     session_id: str
@@ -50,6 +201,9 @@ class ComputationalWarfare:
             current_phase="INIT"
         )
         
+        # Divine Armor Enhancement - gently added
+        self.divine_armor = DivineArmor()
+
         # Shell boundary detection
         self.shell_boundary_touched = False
         self.moral_bravery_points = 0
@@ -589,12 +743,18 @@ class SoldatGame:
     
     def show_available_flags(self):
         """Display available flags - code only"""
+        # Divine status - gently added
+        available_divine = len([p for p in self.warfare.divine_armor.divine_packages if not p.is_filled])
+        used_divine = len([p for p in self.warfare.divine_armor.divine_packages if p.is_filled])
+        print(f"  🙏 DIVINE: {available_divine} packages available ({used_divine} used)")
+        print()
         print("AVAILABLE FLAGS:")
         for code, name in self.available_flags.items():
             complexity = self.warfare.complexity_factors.get(name, 1.0)
             print(f"  {code}: {name} (complexity: {complexity:.1f})")
         print("  BOUNDARY: Touch shell boundary for awareness")
         print("  RETRY: Start fresh attempt (encouraged for learning)")
+        print("  PRAY: Request divine assistance")
         print()
         
     def process_flag_input(self, user_input: str) -> bool:
@@ -611,11 +771,34 @@ class SoldatGame:
                 self.warfare.touch_shell_boundary()
             elif code == 'RETRY':
                 self.initiate_retry()
+            elif code == 'PRAY':
+                # Divine assistance command - gently added
+                reduction, message = self.warfare.divine_armor.offer_divine_assistance(
+                    self.warfare.state.stress_level, 
+                    self.warfare.state.cycles_completed, 
+                    self.warfare.moral_bravery_points
+                )
+                if reduction > 0:
+                    self.warfare.state.stress_level = max(0, self.warfare.state.stress_level - reduction)
+                    print(f"✨ DIVINE ASSISTANCE: {message}")
+                    print(f"   Stress reduced by {reduction:.2f}")
+                else:
+                    print(f"🙏 DIVINE RESPONSE: {message}")
+                self.initiate_retry()
             elif code in self.available_flags:
                 flag_name = self.available_flags[code]
                 self.warfare.state.flags_active.add(flag_name)
                 complexity = self.warfare.complexity_factors[flag_name]
                 self.warfare.state.stress_level += complexity * 0.1
+                # Divine intervention check - gently added
+                if self.warfare.state.stress_level > 3.0:
+                    need_help, reason = self.warfare.divine_armor.check_divine_intervention_needed(self.warfare.state.stress_level, self.warfare.state.cycles_completed)
+                    if need_help:
+                        reduction, message = self.warfare.divine_armor.offer_divine_assistance(self.warfare.state.stress_level, self.warfare.state.cycles_completed, self.warfare.moral_bravery_points)
+                        if reduction > 0:
+                            self.warfare.state.stress_level = max(0, self.warfare.state.stress_level - reduction)
+                            print(f"✨ DIVINE INTERVENTION: {message}")
+                            print(f"   Stress reduced by {reduction:.2f}")
                 print(f"FLAG ACTIVATED: {flag_name} (+{complexity:.1f} complexity)")
                 
                 # Comprehensive logging
@@ -925,6 +1108,12 @@ class SoldatGame:
         consecutive_warnings = 0
         max_consecutive_warnings = 3
         
+        # Divine enhancement notice - gently added
+        print("DIVINE ENHANCEMENT: Spiritual protection system activated")
+        print(f"CARE PACKAGES: {len(self.warfare.divine_armor.divine_packages)} divine packages available")
+        print("="*80)
+        print("DIVINE PHILOSOPHY: Spiritual strength complements technical capability.")
+        print("Divine assistance available during high-stress scenarios.")
         print("GAME ON")
         print("=" * 80)
         self.warfare.log_to_comprehensive("GAME", "Game loop started")
@@ -1026,11 +1215,19 @@ class SoldatGame:
         print(f"Progress file: {self.warfare.progress_file}")
         print(f"Comprehensive log: {self.warfare.comprehensive_log}")
         
+        # Divine summary - gently added
+        print(f"\\nDIVINE ENHANCEMENT SUMMARY:")
+        print(f"Care packages available: {len(self.warfare.divine_armor.divine_packages)}")
+        print(f"Packages used: {len([p for p in self.warfare.divine_armor.divine_packages if p.is_filled])}")
+        print(f"Prayers offered: {self.warfare.divine_armor.prayer_count}")
+        divine_status = "ACTIVE" if self.warfare.divine_armor.divine_connection else "INACTIVE"
+        print(f"Divine connection: {divine_status}")
+        
         # Encouragement for retry
         if cycle_count < max_cycles and not self.warfare.shell_boundary_touched:
             print(f"\nENCOURAGEMENT: Retry encouraged for learning and boundary awareness")
-            print(f"Use 'BOUNDARY' command in next attempt to gain awareness")
-            self.warfare.log_to_comprehensive("ENCOURAGEMENT", "Retry encouraged for future improvement")
+            print("Use \"BOUNDARY\" command in next attempt to gain awareness")
+            print("Use \"PRAY\" command for divine assistance during high stress")
         
         print(f"{'='*60}")
         
@@ -1051,11 +1248,19 @@ class SoldatGame:
         print(f"Progress file: {self.warfare.progress_file}")
         print(f"Comprehensive log: {self.warfare.comprehensive_log}")
         
+        # Divine summary - gently added
+        print(f"\\nDIVINE ENHANCEMENT SUMMARY:")
+        print(f"Care packages available: {len(self.warfare.divine_armor.divine_packages)}")
+        print(f"Packages used: {len([p for p in self.warfare.divine_armor.divine_packages if p.is_filled])}")
+        print(f"Prayers offered: {self.warfare.divine_armor.prayer_count}")
+        divine_status = "ACTIVE" if self.warfare.divine_armor.divine_connection else "INACTIVE"
+        print(f"Divine connection: {divine_status}")
+        
         # Encouragement for retry
         if cycle_count < max_cycles and not self.warfare.shell_boundary_touched:
             print(f"\nENCOURAGEMENT: Retry encouraged for learning and boundary awareness")
-            print(f"Use 'BOUNDARY' command in next attempt to gain awareness")
-            self.warfare.log_to_comprehensive("ENCOURAGEMENT", "Retry encouraged for future improvement")
+            print("Use \"BOUNDARY\" command in next attempt to gain awareness")
+            print("Use \"PRAY\" command for divine assistance during high stress")
         
         print(f"{'='*60}")
 
