@@ -1,0 +1,125 @@
+# Tajweed Rules and Pronunciation Database
+# Comprehensive tajweed knowledge for enhanced Falaqi analysis
+
+## Basic Tajweed Rules
+
+### Ghunnah (Nasal Sound)
+- Letters: ن (Noon) and م (Meem) with shaddah
+- Duration: 2 counts (harakat)
+- Occurs in: إِنَّ, مِنْ, ثُمَّ
+- Description: Nasal resonance sound produced through the nose
+
+### Idgham (Merging)
+- Types: Idgham with Ghunnah, Idgham without Ghunnah
+- Letters: ن + (ي, م, و, ن) = with ghunnah
+- Letters: ن + (ر, ل) = without ghunnah
+- Example: مِن يَوْمِهِمْ (idgham with ghunnah)
+
+### Ikhfa (Hiding)
+- Letters: 15 letters after Noon Saakin or Tanween
+- Ghunnah duration: 2 counts
+- Example: أَنْبِئْهُمْ (ikhfa of noon)
+
+### Iqlab (Conversion)
+- Occurs when Noon Saakin/Tanween is followed by ب
+- Noon sound changes to Meem sound
+- Example: مِنْ بَعْدِ (noon becomes meem)
+
+### Madd (Elongation)
+- Natural Madd: 2 counts
+- Connected Madd: 4-5 counts
+- Separated Madd: 4-5 counts
+- Compulsory Madd: 6 counts
+- Letters: ا, و, ي
+
+### Qalqalah (Bouncing)
+- Letters: ق, ط, ب, ج, د
+- Stronger when saakin, weaker when with shaddah
+- Example: يَطْمَعُونَ, يَبْصُطُونَ
+
+## Advanced Tajweed Concepts
+
+### Heavy and Light Letters
+- Heavy (Tafkhim): خ, غ, ص, ض, ط, ظ, ق, ر (when specific conditions)
+- Light (Tarqeeq): remaining letters
+- Depends on vowel and position in word
+
+### Makharij (Articulation Points)
+- 17 main articulation points
+- From throat to lips
+- Proper placement affects sound quality
+
+### Sifaat (Attributes)
+- Essential attributes: sifat lazim (permanent)
+- Temporary attributes: sifat 'arid (temporary)
+- Combination creates unique letter sounds
+
+## Common Tajweed Patterns in Quran
+
+### Bismillah Patterns
+- بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+- Multiple tajweed rules in one phrase
+- Ikhfa in بِسْمِ, idgham in الرَّحْمَٰنِ
+
+### Common Verse Endings
+- Patterns of qalqalah
+- Madd at verse endings
+- Ghunnah variations
+
+## Educational Notes
+
+### Learning Sequence
+1. Master Arabic alphabet pronunciation
+2. Learn makharij (articulation points)
+3. Practice sifaat (attributes)
+4. Study basic tajweed rules
+5. Apply to Quran recitation
+
+### Common Mistakes
+- Incorrect makharij
+- Wrong ghunnah duration
+- Missing madd requirements
+- Improper qalqalah execution
+
+### Practice Tips
+- Start with short surahs
+- Record and evaluate own recitation
+- Learn from qualified teachers
+- Practice regularly with patience
+
+## Tajweed and Mathematical Patterns
+
+### Frequency Analysis
+- Ghunnah appears approximately every 8-10 words
+- Qalqalah letters have specific distribution patterns
+- Madd patterns vary by surah type (Makki vs Madani)
+
+### Acoustic Properties
+- Sound wave patterns for each rule
+- Frequency ranges for different letters
+- Duration measurements in harakat
+
+### Geometric Representation
+- Tajweed rules can be mapped to spherical coordinates
+- Sound patterns create orbital trajectories
+- Visual representation of recitation flow
+
+## Integration with Falaqi System
+
+### Pattern Detection
+- Identify tajweed rule occurrences in text
+- Calculate frequency and distribution
+- Map to geometric coordinates
+
+### Educational Enhancement
+- Provide tajweed explanations for identified patterns
+- Create learning modules for each rule
+- Generate practice recommendations
+
+### Acoustic Analysis
+- Sound wave pattern matching
+- Pronunciation quality assessment
+- Recitation improvement suggestions
+
+---
+This database provides comprehensive tajweed knowledge for enhancing the Falaqi system with pronunciation and recitation analysis capabilities.
