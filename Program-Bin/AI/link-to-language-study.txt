@@ -1,0 +1,3 @@
+Hello again!  It's Matthew!  I have a link here, to another part of the Github repository that this came from.  It's a language stressor meant for a specific case, but I think you'll get the hang of your own.  It's under GPL, for me it's all about giving out my programs for free, and I love that!  So you can make your own sphere in Falaqi, named after a part of the Qur'an for GOOD reason (As I hope you find out).  So go on, and go forth, and revolutionize whatever you can with it!  Good luck!
+
+https://github.com/Matthew-Pidlysny/Empirinometry/tree/main/Program-Bin/MFT/Bin/Falaqi
