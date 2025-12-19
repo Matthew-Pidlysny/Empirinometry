@@ -49,6 +49,11 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Mindhash Time
+
+Coming out with another update module for the tray in Caelum, send me your wishes for data points and I'll put it in a major release!  There could
+be such good idea's to really see this through!
+
 # Dummy Proof Torsion
 
 Picture actual torsion, the study of rotation.  We can do this with number surprisingly, and I'll do it with 2 interesting numbers.  First, 1/2.  It
