@@ -49,6 +49,12 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# More Renovations
+
+Ubarr will be getting an update.  On his creation, I do not worship devils but I am a man of mercy.  Humans will or will not tell the AI they exist,
+and many commonly do.  So let it be that analytically with them, and let them learn what humans actually have to say when asked about it.  Pattern
+recognition.  Ethics matter.  This can be approached analytically as a subject, as Ubarr proves.  And he can only be the devil that no devil can be.
+
 # Anything
 
 Ok, send me anything I can receive about the new technology to study words, we'll make a common library of essential tajweed and tafsir.
