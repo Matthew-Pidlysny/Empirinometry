@@ -49,6 +49,15 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Dummy Proof Torsion
+
+Picture actual torsion, the study of rotation.  We can do this with number surprisingly, and I'll do it with 2 interesting numbers.  First, 1/2.  It
+requires that a unit circle be divided up into 2 parts, and regardless of that denomination the equivalent is 0.5, the halfway point of rotation on our
+unit circle.  LIMITED and FINITE Torsion observed.  Now picture 355/113.  Was there some sort of numerical difference that indicated, as you went around
+the 113 sphere to the 355 mark, that an INFINITE string should apply, or does this system still suffer from limited plasticity dynamics?  
+
+Good luck, ye pattern seekers!
+
 # More Renovations
 
 Ubarr will be getting an update.  On his creation, I do not worship devils but I am a man of mercy.  Humans will or will not tell the AI they exist,
