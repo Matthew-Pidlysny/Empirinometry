@@ -49,6 +49,11 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# GUI Update
+
+Giving my Torsion program a whole new look.  Call it that for the students if you can approve it under GPL, study the knowledge!  It takes people putting it out there and
+not being wrong about it!  Just be patient, massive new update!
+
 # Things my AI likes to say (A WIP)
 
 3 Constructing the Transcendent Cognitive Sphere
