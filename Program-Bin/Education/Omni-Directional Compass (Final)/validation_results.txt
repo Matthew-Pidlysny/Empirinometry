@@ -1,0 +1,68 @@
+# SUBSTANTIATION VALIDATION REPORT
+
+Generated: 2025-12-21 10:08:56
+Total Tests: 24
+
+## SUMMARY
+- ✅ SUCCESS: 15
+- ⚠️  WARNING: 4
+- ❌ CRITICAL: 5
+
+## CRITICAL ISSUES
+### empirinometry_multiplication
+Formula: `10 # 5`
+Expected: 12.5
+Actual: 12.5
+Message: Empirinometry multiplication ERROR for 10 # 5: unsupported operand type(s) for -: 'decimal.Decimal' and 'float'
+
+### empirinometry_multiplication
+Formula: `1 # 1`
+Expected: 0.25
+Actual: 0.25
+Message: Empirinometry multiplication ERROR for 1 # 1: unsupported operand type(s) for -: 'decimal.Decimal' and 'float'
+
+### empirinometry_multiplication
+Formula: `-10 # 5`
+Expected: -12.5
+Actual: -12.5
+Message: Empirinometry multiplication ERROR for -10 # 5: unsupported operand type(s) for -: 'decimal.Decimal' and 'float'
+
+### operator_precedence
+Formula: `(2 + 3) * 4`
+Expected: 20
+Actual: None
+Message: Operator precedence ERROR for (2 + 3) * 4: unsupported operand type(s) for -: 'NoneType' and 'int'
+
+### operator_precedence
+Formula: `10 # 5 + 3`
+Expected: 15.5
+Actual: None
+Message: Operator precedence ERROR for 10 # 5 + 3: unsupported operand type(s) for -: 'NoneType' and 'float'
+
+## WARNINGS
+### dimensional_analysis
+Formula: `meter`
+Expected: 1.0
+Actual: 1.0
+Message: Dimensional analysis deviation for meter
+
+### dimensional_analysis
+Formula: `kilometer`
+Expected: 1000.0
+Actual: 1000.0
+Message: Dimensional analysis deviation for kilometer
+
+### dimensional_analysis
+Formula: `centimeter`
+Expected: 0.01
+Actual: 0.01
+Message: Dimensional analysis deviation for centimeter
+
+### dimensional_analysis
+Formula: `millimeter`
+Expected: 0.001
+Actual: 0.001
+Message: Dimensional analysis deviation for millimeter
+
+## SUCCESSFUL VALIDATIONS
+All 15 tests passed successfully.
