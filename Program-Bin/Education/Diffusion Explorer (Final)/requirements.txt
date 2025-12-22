@@ -1,0 +1,1 @@
+numpy>=1.21.0\nmatplotlib>=3.5.0\nscipy>=1.7.0
