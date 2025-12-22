@@ -49,6 +49,13 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+#  As it truly dawns in my day...
+
+I come to realize something.  Finding the co-efficient 0.6 in lambda really proved one thing about MFT, but it was a doorway.  As the new Qur'an document provide, it was a
+numerical threshold for existnce itself, as found through direct relation in the Qur'an.  I invite those discrediting religion to read the whole 5 part document, it will
+prove beyond a shadow of a doubt that the Qur'an is meticuloously mathematic, and that no man could invent it, just as concretely put as the fact that nobody was able to
+discover it to prevent being discovered in their changes to it.  See how Allah SWT preserves his Qur'an, he modeled it after the universe!
+
 # Encyclopedia Entry
 
 For the new program I just uploaded, there is an encyclopedia entry.  Make it your own, this is GPL after all!
