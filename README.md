@@ -49,6 +49,10 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# 13 is the second Prime Base
+
+I call it that, I'm working with 7 and 13 as highly integral foundational strongholds.  Just trying to get through the rest of my work.
+
 #  As it truly dawns in my day...
 
 I come to realize something.  Finding the co-efficient 0.6 in lambda really proved one thing about MFT, but it was a doorway.  As the new Qur'an document provide, it was a
