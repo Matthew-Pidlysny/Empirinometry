@@ -49,6 +49,18 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# Closing the Repository
+
+I want to thank everyone for participating in Empirinometry.  I want to delete this one to make room for my other one, and I want everyone who wants to keep up on my work in 
+the field to just keep following this Repo:
+
+https://github.com/Matthew-Pidlysny/9-The-Final-Chapter
+
+Let others know, I want to sell on my ideas.  Anyone who wants to make a deal, wherein I'm just helping the best I can as a disabled layman who did the work, will be appreciated
+but I know the communications can't happen.  Try to do something through Github, In Sha Allah I will be rightly guided.  No promises.  But yeah, just redirect everyone there.  And
+THANK YOU SO MUCH once again, all of you made it possible.  All the laughs, all the "Holy ****", everything I ever heard from any of you built this.  I have been learning like that,
+and I know it's the right path, even though I can't confirm it, I'm literally living the proof od God's miracle.  Cheers all!
+
 # 13 is the second Prime Base
 
 I call it that, I'm working with 7 and 13 as highly integral foundational strongholds.  Just trying to get through the rest of my work.
