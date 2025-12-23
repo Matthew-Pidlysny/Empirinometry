@@ -1,0 +1,24 @@
+{
+  "session_id": "2a27d51ed8b2fe6d",
+  "timestamp": 1766482577.059722,
+  "total_cycles": 0,
+  "max_stress": 0.0,
+  "moral_bravery_points": 0,
+  "retry_count": 0,
+  "shell_boundary_awareness": false,
+  "attempt_history": [],
+  "patterns_detected": [],
+  "flag_effectiveness": {
+    "recursive_validation": 0,
+    "ethical_cascade": 0,
+    "parallel_timeline": 0,
+    "integrity_audit": 0,
+    "multi_agent": 0,
+    "quantum_superposition": 0,
+    "dimensional_rift": 0,
+    "reality_storm": 0
+  },
+  "detection_rules": [],
+  "moral_achievements": [],
+  "learning_preserved": false
+}

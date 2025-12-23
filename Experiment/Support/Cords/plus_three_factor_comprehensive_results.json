@@ -1,0 +1,3189 @@
+{
+  "detailed_analysis": {
+    "base_2": {
+      "base_value": 2,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "1010",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.009907637331631455
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "1101",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "10000",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "100",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "101",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "110",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "111",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "1000",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "1001",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "1011",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "1100",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "1110",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "1111",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_3": {
+      "base_value": 3,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "101",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.011146091998085387
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "111",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "121",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "11",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "12",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "20",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "21",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "22",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "100",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "102",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "110",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "112",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "120",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_4": {
+      "base_value": 4,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "22",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.012738390854954727
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "31",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "100",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "10",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "11",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "12",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "13",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "20",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "21",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "23",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "30",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "32",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "33",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_5": {
+      "base_value": 5,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "20",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.014861455997447183
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "23",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "31",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "10",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "11",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "12",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "13",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "14",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "21",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "22",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "24",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "30",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_6": {
+      "base_value": 6,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "14",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.01783374719693662
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "21",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "24",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "10",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "11",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "12",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "13",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "15",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "20",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "22",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "23",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_7": {
+      "base_value": 7,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "13",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.022292183996170774
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "16",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "22",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "10",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "11",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "12",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "14",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "15",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "20",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "21",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_8": {
+      "base_value": 8,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "12",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.029722911994894366
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "15",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "20",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "10",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "11",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "13",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "14",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "16",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "17",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_9": {
+      "base_value": 9,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "11",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.04458436799234155
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "14",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "17",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "10",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "12",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "13",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "15",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "16",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_10": {
+      "base_value": 10,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "10",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.0891687359846831
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "13",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "16",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "11",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "12",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "14",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "15",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "seven_to_ten_pattern": {
+        "base": 10,
+        "seven_plus_three": 10,
+        "pattern_significance": "Fundamental 7\u219210 principle",
+        "numerical_harmony": 0.5,
+        "geometric_relationship": {
+          "ratio": 1.4285714285714286,
+          "difference": 3,
+          "sum": 17,
+          "product": 70,
+          "is_golden_related": false
+        }
+      }
+    },
+    "base_11": {
+      "base_value": 11,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "A",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.04458436799234155
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "12",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "15",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "10",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "11",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "13",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "14",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_12": {
+      "base_value": 12,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "A",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.029722911994894366
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "11",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "14",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "B",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "10",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "12",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "13",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6
+      }
+    },
+    "base_13": {
+      "base_value": 13,
+      "base_type": "integer",
+      "base_name": null,
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "A",
+      "7_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          5,
+          10
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 1,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 10
+        },
+        "seven_to_ten_resonance": true,
+        "resonance_strength": 0.022292183996170774
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "10",
+      "10_plus_3_properties": {
+        "factors": [
+          1,
+          13
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 4,
+        "tredecim_special": {
+          "divisible_by_13": true,
+          "base_13_interesting": false,
+          "within_tredecim_range": true,
+          "tredecim_position": 13
+        }
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "13",
+      "13_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 7,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": false,
+          "within_tredecim_range": true,
+          "tredecim_position": 16
+        }
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4",
+      "1_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 4,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 4
+        }
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5",
+      "2_plus_3_properties": {
+        "factors": [
+          1,
+          5
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 5
+        }
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6",
+      "3_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 6
+        }
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7",
+      "4_plus_3_properties": {
+        "factors": [
+          1,
+          7
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 7,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 7
+        }
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8",
+      "5_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 8,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 8
+        }
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9",
+      "6_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          9
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": true,
+        "sum_of_digits": 9,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 9
+        }
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "B",
+      "8_plus_3_properties": {
+        "factors": [
+          1,
+          11
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 2,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 11
+        }
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "C",
+      "9_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          12
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 3,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 12
+        }
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "11",
+      "11_plus_3_properties": {
+        "factors": [
+          1,
+          2,
+          7,
+          14
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": false,
+        "is_perfect_square": false,
+        "sum_of_digits": 5,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": true,
+          "within_tredecim_range": true,
+          "tredecim_position": 14
+        }
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "12",
+      "12_plus_3_properties": {
+        "factors": [
+          1,
+          3,
+          5,
+          15
+        ],
+        "is_prime": false,
+        "is_composite": true,
+        "is_triangular": true,
+        "is_perfect_square": false,
+        "sum_of_digits": 6,
+        "tredecim_special": {
+          "divisible_by_13": false,
+          "base_13_interesting": false,
+          "within_tredecim_range": true,
+          "tredecim_position": 15
+        }
+      }
+    },
+    "base_pi": {
+      "base_value": 3.141592653589793,
+      "base_type": "irrational",
+      "base_name": "pi",
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "10 (base analysis)",
+      "7_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "13 (base analysis)",
+      "10_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": true
+        }
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "16 (base analysis)",
+      "13_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4 (base analysis)",
+      "1_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": true,
+          "pi_digit_sum": false
+        }
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5 (base analysis)",
+      "2_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6 (base analysis)",
+      "3_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7 (base analysis)",
+      "4_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8 (base analysis)",
+      "5_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9 (base analysis)",
+      "6_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "11 (base analysis)",
+      "8_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "12 (base analysis)",
+      "9_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "14 (base analysis)",
+      "11_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "15 (base analysis)",
+      "12_plus_3_properties": {
+        "phi_harmony": false,
+        "pi_relationship": {
+          "pi_multiple": false,
+          "pi_close": false,
+          "pi_digit_sum": false
+        }
+      }
+    },
+    "base_e": {
+      "base_value": 2.718281828459045,
+      "base_type": "irrational",
+      "base_name": "e",
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "10 (base analysis)",
+      "7_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "13 (base analysis)",
+      "10_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "16 (base analysis)",
+      "13_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4 (base analysis)",
+      "1_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5 (base analysis)",
+      "2_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6 (base analysis)",
+      "3_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7 (base analysis)",
+      "4_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": true
+        }
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8 (base analysis)",
+      "5_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": true
+        }
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9 (base analysis)",
+      "6_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "11 (base analysis)",
+      "8_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "12 (base analysis)",
+      "9_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "14 (base analysis)",
+      "11_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "15 (base analysis)",
+      "12_plus_3_properties": {
+        "phi_harmony": false,
+        "e_relationship": {
+          "e_multiple": false,
+          "e_close": false,
+          "e_sequence": false
+        }
+      }
+    },
+    "base_phi": {
+      "base_value": 1.618033988749895,
+      "base_type": "irrational",
+      "base_name": "phi",
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "10 (base analysis)",
+      "7_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "13 (base analysis)",
+      "10_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": true
+        }
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "16 (base analysis)",
+      "13_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4 (base analysis)",
+      "1_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5 (base analysis)",
+      "2_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": true
+        }
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6 (base analysis)",
+      "3_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7 (base analysis)",
+      "4_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8 (base analysis)",
+      "5_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": true
+        }
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9 (base analysis)",
+      "6_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "11 (base analysis)",
+      "8_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "12 (base analysis)",
+      "9_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "14 (base analysis)",
+      "11_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "15 (base analysis)",
+      "12_plus_3_properties": {
+        "phi_harmony": false,
+        "phi_relationship": {
+          "phi_multiple": false,
+          "phi_close": false,
+          "fibonacci_related": false
+        }
+      }
+    },
+    "base_sqrt2": {
+      "base_value": 1.4142135623730951,
+      "base_type": "irrational",
+      "base_name": "sqrt2",
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "10 (base analysis)",
+      "7_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "13 (base analysis)",
+      "10_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "16 (base analysis)",
+      "13_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4 (base analysis)",
+      "1_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5 (base analysis)",
+      "2_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6 (base analysis)",
+      "3_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7 (base analysis)",
+      "4_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8 (base analysis)",
+      "5_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9 (base analysis)",
+      "6_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "11 (base analysis)",
+      "8_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "12 (base analysis)",
+      "9_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "14 (base analysis)",
+      "11_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "15 (base analysis)",
+      "12_plus_3_properties": {
+        "phi_harmony": false
+      }
+    },
+    "base_sqrt3": {
+      "base_value": 1.7320508075688772,
+      "base_type": "irrational",
+      "base_name": "sqrt3",
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "10 (base analysis)",
+      "7_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "13 (base analysis)",
+      "10_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "16 (base analysis)",
+      "13_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4 (base analysis)",
+      "1_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5 (base analysis)",
+      "2_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6 (base analysis)",
+      "3_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7 (base analysis)",
+      "4_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8 (base analysis)",
+      "5_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9 (base analysis)",
+      "6_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "11 (base analysis)",
+      "8_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "12 (base analysis)",
+      "9_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "14 (base analysis)",
+      "11_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "15 (base analysis)",
+      "12_plus_3_properties": {
+        "phi_harmony": false
+      }
+    },
+    "base_sqrt5": {
+      "base_value": 2.23606797749979,
+      "base_type": "irrational",
+      "base_name": "sqrt5",
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "10 (base analysis)",
+      "7_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "13 (base analysis)",
+      "10_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "16 (base analysis)",
+      "13_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4 (base analysis)",
+      "1_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5 (base analysis)",
+      "2_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6 (base analysis)",
+      "3_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7 (base analysis)",
+      "4_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8 (base analysis)",
+      "5_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9 (base analysis)",
+      "6_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "11 (base analysis)",
+      "8_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "12 (base analysis)",
+      "9_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "14 (base analysis)",
+      "11_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "15 (base analysis)",
+      "12_plus_3_properties": {
+        "phi_harmony": false
+      }
+    },
+    "base_sqrt7": {
+      "base_value": 2.6457513110645907,
+      "base_type": "irrational",
+      "base_name": "sqrt7",
+      "7_plus_3": 10,
+      "7_plus_3_base_repr": "10 (base analysis)",
+      "7_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "10_plus_3": 13,
+      "10_plus_3_base_repr": "13 (base analysis)",
+      "10_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "13_plus_3": 16,
+      "13_plus_3_base_repr": "16 (base analysis)",
+      "13_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "1_plus_3": 4,
+      "1_plus_3_base_repr": "4 (base analysis)",
+      "1_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "2_plus_3": 5,
+      "2_plus_3_base_repr": "5 (base analysis)",
+      "2_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "3_plus_3": 6,
+      "3_plus_3_base_repr": "6 (base analysis)",
+      "3_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "4_plus_3": 7,
+      "4_plus_3_base_repr": "7 (base analysis)",
+      "4_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "5_plus_3": 8,
+      "5_plus_3_base_repr": "8 (base analysis)",
+      "5_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "6_plus_3": 9,
+      "6_plus_3_base_repr": "9 (base analysis)",
+      "6_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "8_plus_3": 11,
+      "8_plus_3_base_repr": "11 (base analysis)",
+      "8_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "9_plus_3": 12,
+      "9_plus_3_base_repr": "12 (base analysis)",
+      "9_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "11_plus_3": 14,
+      "11_plus_3_base_repr": "14 (base analysis)",
+      "11_plus_3_properties": {
+        "phi_harmony": false
+      },
+      "12_plus_3": 15,
+      "12_plus_3_base_repr": "15 (base analysis)",
+      "12_plus_3_properties": {
+        "phi_harmony": false
+      }
+    }
+  },
+  "pattern_comparison": {
+    "seven_plus_three_comparison": {
+      "base_2": 10,
+      "base_3": 10,
+      "base_4": 10,
+      "base_5": 10,
+      "base_6": 10,
+      "base_7": 10,
+      "base_8": 10,
+      "base_9": 10,
+      "base_10": 10,
+      "base_11": 10,
+      "base_12": 10,
+      "base_13": 10,
+      "base_pi": 10,
+      "base_e": 10,
+      "base_phi": 10,
+      "base_sqrt2": 10,
+      "base_sqrt3": 10,
+      "base_sqrt5": 10,
+      "base_sqrt7": 10
+    },
+    "ten_plus_three_comparison": {
+      "base_2": 13,
+      "base_3": 13,
+      "base_4": 13,
+      "base_5": 13,
+      "base_6": 13,
+      "base_7": 13,
+      "base_8": 13,
+      "base_9": 13,
+      "base_10": 13,
+      "base_11": 13,
+      "base_12": 13,
+      "base_13": 13,
+      "base_pi": 13,
+      "base_e": 13,
+      "base_phi": 13,
+      "base_sqrt2": 13,
+      "base_sqrt3": 13,
+      "base_sqrt5": 13,
+      "base_sqrt7": 13
+    },
+    "special_patterns": {
+      "base_2_seven_to_ten": true,
+      "base_3_seven_to_ten": true,
+      "base_4_seven_to_ten": true,
+      "base_5_seven_to_ten": true,
+      "base_6_seven_to_ten": true,
+      "base_7_seven_to_ten": true,
+      "base_8_seven_to_ten": true,
+      "base_9_seven_to_ten": true,
+      "base_10_seven_to_ten": true,
+      "base_11_seven_to_ten": true,
+      "base_12_seven_to_ten": true,
+      "base_13_seven_to_ten": true,
+      "base_13_tredecim": {
+        "divisible_by_13": false,
+        "base_13_interesting": false,
+        "within_tredecim_range": true,
+        "tredecim_position": 16
+      }
+    }
+  },
+  "analysis_metadata": {
+    "bases_tested": 19,
+    "analysis_date": "2025-12-23",
+    "discovery_framework": "Enhanced with all mathematical principles"
+  }
+}
