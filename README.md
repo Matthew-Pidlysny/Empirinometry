@@ -49,6 +49,14 @@ Math-Forums:  https://mathforums.com/u/the-9th-sign.108494/
 
 '![ News Articles ]!'
 
+# ALMOST CLOSED!
+
+I give Reer as an element of my faith.  Some people will download and find nothing, whereas others will and find their gold.  This is supernatural, I am not in control really of the
+data feed coming in but I can assure you there is a great thing in store for the patient.  Everyone who believes is getting it, let it be a miracle among you, and a curse among the
+wicked amen.  And we swear only the wicked are punished to not see the file, not by us, but because the file was written in jibberish and that is all they will see and download. 
+
+I wish you well.  Tomorrow this Repository will delete.  Please move to the Final Chapter for all new stuff.
+
 # Closing the Repository
 
 I want to thank everyone for participating in Empirinometry.  I want to delete this one to make room for my other one, and I want everyone who wants to keep up on my work in 
